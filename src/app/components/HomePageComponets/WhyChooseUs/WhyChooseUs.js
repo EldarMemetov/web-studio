@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Импорт стилей AOS
+import "aos/dist/aos.css";
 import {
   FaHandHoldingHeart,
   FaLightbulb,
@@ -15,9 +15,10 @@ import styles from "./WhyChooseUs.module.css";
 export default function WhyChooseUs() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Продолжительность анимации
-      easing: "ease-in-out-bounce", // Тип анимации
-      once: true, // Анимация выполняется только один раз
+      duration: 1000,
+      easing: "ease-in-out-bounce",
+      once: true,
+      offset: 10,
     });
   }, []);
 

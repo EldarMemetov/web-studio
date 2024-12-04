@@ -7,7 +7,11 @@ import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function TitleHome() {
   useEffect(() => {
-    AOS.init({ duration: 1500, easing: "ease-in-out-bounce" }); // Инициализация AOS с настройками
+    AOS.init({
+      duration: 1500,
+      easing: "ease-in-out-bounce",
+      offset: 20,
+    });
   }, []);
 
   return (

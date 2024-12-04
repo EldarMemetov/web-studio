@@ -104,7 +104,14 @@
     text-align: center;
   }
   .featuresList {
-    flex-direction: row;
+  }
+  .description {
+    font-size: 26;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    width: 700px;
   }
 }
 
