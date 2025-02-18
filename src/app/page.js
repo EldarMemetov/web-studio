@@ -1,7 +1,7 @@
 import Head from "next/head";
 import TitleHome from "./components/HomePageComponets/TitleHome/TitleHome";
 import WhyChooseUs from "./components/HomePageComponets/WhyChooseUs/WhyChooseUs";
-
+import style from "./page.module.css";
 export default function Home() {
   return (
     <main>
@@ -28,8 +28,10 @@ export default function Home() {
           content="PixelPro Studio ist ein Unternehmen für Webentwicklung und Videografie in Deutschland."
         />
       </Head>
-      <TitleHome />
-      <WhyChooseUs />
+      <div className={style.divContainer}>
+        <TitleHome />
+        <WhyChooseUs />
+      </div>
     </main>
   );
 }
