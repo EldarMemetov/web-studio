@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
     setIsOpen(false);
   };
 
-  // Фильтруем список языков, исключая текущий язык
+
   const availableLanguages = ["ua", "en", "de"].filter(
     (lang) => lang !== currentLocale,
   );

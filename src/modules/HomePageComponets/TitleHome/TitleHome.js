@@ -37,7 +37,6 @@ export default function TitleHome() {
               </p>
             </div>
             <div className={styles.containerButton}>
-              {/* Используем кастомные кнопки */}
               <Button
                 variant="variant3"
                 data-aos="zoom-in"
