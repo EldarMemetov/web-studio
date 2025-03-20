@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from "./TitleHome.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 import Container from "@/shared/container/Container";
 import Button from "../../../shared/components/button/Button";
-
+import Splent from "@/modules/Spline/Splent";
 export default function TitleHome() {
   const { t } = useTranslation("titleHome");
 
@@ -55,7 +55,7 @@ export default function TitleHome() {
           </div>
           <div className={styles.imageContainer}>
             <div className={styles.cube}>
-              <Image
+              {/* <Image
                 src="/image/3d-shape.png"
                 alt="3D Cube"
                 width={563}
@@ -63,7 +63,8 @@ export default function TitleHome() {
                 className={styles.cubeFace}
                 data-aos="zoom-in"
                 data-aos-delay="1000"
-              />
+              /> */}
+              <Splent />
             </div>
           </div>
         </div>

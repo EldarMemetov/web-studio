@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 
 import styles from "./ErrorBoundary.module.scss";
+import Button from "../button/Button";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -30,9 +31,9 @@ class ErrorBoundary extends Component {
             <p className={styles.message}>
               {this.state.error?.message || t("errorMessage")}
             </p>
-            <button className={styles.button} onClick={this.resetError}>
+            <Button className={styles.button} onClick={this.resetError}>
               {t("tryAgain")}
-            </button>
+            </Button>
           </div>
         </section>
       );
