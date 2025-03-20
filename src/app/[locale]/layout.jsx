@@ -68,7 +68,10 @@ export default async function Layout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <body className={clsx(montserrat.variable, open_sans.variable)}>
+      <body
+        suppressHydrationWarning={true}
+        className={clsx(montserrat.variable, open_sans.variable)}
+      >
         <TranslationsProvider locale={locale}>
           <ErrorBoundaryWithTranslation>
             <Header />

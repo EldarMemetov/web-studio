@@ -54,8 +54,8 @@ export default function TitleHome() {
             </div>
           </div>
           <div className={styles.imageContainer}>
-            <div className={styles.cube}>
-              {/* <Image
+            {/* <div className={styles.cube}> */}
+            {/* <Image
                 src="/image/3d-shape.png"
                 alt="3D Cube"
                 width={563}
@@ -64,8 +64,9 @@ export default function TitleHome() {
                 data-aos="zoom-in"
                 data-aos-delay="1000"
               /> */}
-              <Splent />
-            </div>
+
+            {/* </div> */}
+            <Splent />
           </div>
         </div>
       </Container>
