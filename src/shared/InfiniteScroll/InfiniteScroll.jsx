@@ -8,8 +8,10 @@ export default function InfiniteScroll({
   direction = "left",
 }) {
   return (
-    <Marquee speed={speed} gradient={gradient} direction={direction}>
-      {children}
-    </Marquee>
+    <div>
+      <Marquee speed={speed} gradient={gradient} direction={direction}>
+        {children}
+      </Marquee>
+    </div>
   );
 }

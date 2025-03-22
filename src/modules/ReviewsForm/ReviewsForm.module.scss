@@ -1,63 +1,125 @@
-.input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+.ContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.input:focus {
-  border-color: #007bff;
+.containerForm {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid black;
+  position: relative;
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .containerNameEmail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+  }
+}
+.containerBig {
+  display: flex;
+  gap: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #fff;
+}
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 15px;
+}
+
+.rightColumn {
+  flex: 1;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #222;
+  border-radius: 5px;
+  background: #000;
+  color: white;
+  font-size: 16px;
+  transition:
+    border-color 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: #6a57d5;
+    transform: scale(1.03);
+  }
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+}
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+
+  &:checked {
+    background: #000;
+  }
+
+  &:checked::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .error {
   color: red;
   font-size: 12px;
-  margin-top: 5px;
-}
-
-.checkbox {
-  margin-right: 10px;
-}
-
-.submitButton {
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.submitButton:hover {
-  background-color: #0056b3;
-}
-
-.fieldContainer {
-  margin-bottom: 15px;
-}
-
-.checkboxContainer {
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-
-.checkboxLabel {
-  font-size: 14px;
-}
-
-.status {
-  font-size: 16px;
-  margin-top: 20px;
-}
-
-.successStatus {
-  color: green; /* Зеленый цвет для успешных сообщений */
-}
-
-.errorStatus {
-  color: red; /* Красный цвет для ошибок */
 }
