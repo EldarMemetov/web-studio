@@ -7,7 +7,7 @@ import styles from "./ReviewsForm.module.scss";
 import Container from "@/shared/container/Container";
 import { sendReviews } from "../../services/api";
 
-export default function ReviewsForm() {
+export default function ReviewsForm({ onAddReview }) {
   const { t } = useTranslation("reviewsForm");
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
@@ -27,6 +27,9 @@ export default function ReviewsForm() {
         type: "success",
         message: response.message || t("successMessage"),
       });
+
+      onAddReview(response.review);
+
       resetForm();
     } catch (error) {
       setSubmissionStatus({

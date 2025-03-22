@@ -1,7 +1,17 @@
 export const handleError = (error) => {
-  if (error.response && error.response.data) {
-    return new Error(error.response.data.error || "Error sending the form");
-  }
+  if (axios.isAxiosError(error)) {
+    const status = error.response?.status;
+    const message = error.response?.data?.error || "Server error";
 
-  return new Error("An error occurred. Please try again.");
+    if (status === 400) {
+      return new Error(message || "Invalid request");
+    }
+    if (status === 404) {
+      return new Error("Requested resource not found");
+    }
+    if (status === 500) {
+      return new Error("Internal server error. Try again later.");
+    }
+  }
+  return new Error("Network error. Please check your connection.");
 };
