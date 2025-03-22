@@ -5,113 +5,70 @@
 //     <div className={styles.containerD}>
 //       <Spline
 //         className={styles.img}
-//         scene="https://prod.spline.design/iUgR258erK4HcA9p/scene.splinecode"
+//         scene="https://prod.spline.design/BLmv7eE0ot9gzP2p/scene.splinecode"
 //       />
 //     </div>
 //   );
 // }
-"use client";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Spline from "@splinetool/react-spline";
+import styles from "./splent.module.scss";
 
 export default function Splent() {
-  const [scaleFactor, setScaleFactor] = useState(1);
-  const [cameraPosition, setCameraPosition] = useState({ x: 0, y: 0, z: 1000 });
+  const [size, setSize] = useState(700);
+  const [splineInstance, setSplineInstance] = useState(null);
 
-  // Обновляем размер и камеру в зависимости от экрана
-  const updateScene = () => {
-    const width = window.innerWidth;
-
-    if (width < 600) {
-      setScaleFactor(0.5);
-      setCameraPosition({ x: 0, y: 0, z: 2 });
-    } else if (width < 1024) {
-      setScaleFactor(1);
-      setCameraPosition({ x: 0, y: 0, z: 2 });
-    } else {
-      setScaleFactor(1.5);
-      setCameraPosition({ x: 0, y: 0, z: 2 });
-    }
-  };
-
+  // Отслеживаем изменение размеров окна
   useEffect(() => {
-    updateScene();
-    window.addEventListener("resize", updateScene);
-    return () => window.removeEventListener("resize", updateScene);
+    const updateSize = () => {
+      if (window.innerWidth < 768) {
+        setSize(300);
+      } else if (window.innerWidth < 1024) {
+        setSize(400);
+      } else {
+        setSize(700);
+      }
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
   }, []);
 
-  function onLoad(splineApp) {
-    const ball = splineApp.findObjectByName("Sphere"); // Название объекта в Spline
-    const camera = splineApp.findObjectByName("Camera"); // Название камеры в Spline
-
-    if (ball) {
-      ball.scale.set(scaleFactor, scaleFactor, scaleFactor);
+  // Обновляем параметры камеры и масштаб сцены после загрузки Spline или изменения размера
+  useEffect(() => {
+    if (splineInstance) {
+      // Обновляем aspect камеры, так как контейнер квадратный (size x size)
+      if (splineInstance.camera) {
+        splineInstance.camera.aspect = 1;
+        splineInstance.camera.updateProjectionMatrix();
+      }
+      // Вычисляем коэффициент масштабирования относительно базового размера 500px
+      const scale = size / 500;
+      if (splineInstance.scene) {
+        splineInstance.scene.scale.set(scale, scale, scale);
+      }
     }
-
-    if (camera) {
-      camera.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
-    }
-  }
+  }, [size, splineInstance]);
 
   return (
-    <div style={{ width: "500px", height: "500px", margin: "0 auto" }}>
+    <div className={styles.containerD} style={{ width: size, height: size }}>
       <Spline
-        scene="https://prod.spline.design/iUgR258erK4HcA9p/scene.splinecode"
-        onLoad={onLoad}
+        scene="https://prod.spline.design/BLmv7eE0ot9gzP2p/scene.splinecode"
+        onLoad={(spline) => {
+          setSplineInstance(spline);
+          // Первоначальная настройка камеры
+          if (spline.camera) {
+            spline.camera.aspect = 1;
+            spline.camera.updateProjectionMatrix();
+          }
+          // Применяем масштабирование сразу после загрузки сцены
+          const scale = size / 700;
+          if (spline.scene) {
+            spline.scene.scale.set(scale, scale, scale);
+          }
+        }}
       />
     </div>
   );
 }
-
-// import { Canvas } from "@react-three/fiber";
-// import { OrbitControls, useGLTF } from "@react-three/drei";
-// import { Suspense } from "react";
-
-// export default function Splent() {
-//   return (
-//     <Canvas style={{ width: "500px", height: "500px", margin: "0 auto" }}>
-//       <ambientLight intensity={0.5} />
-//       <directionalLight position={[2, 2, 2]} />
-//       <Suspense fallback={null}>
-//         <Model />
-//       </Suspense>
-//       <OrbitControls enableZoom={false} />
-//     </Canvas>
-//   );
-// }
-
-// function Model() {
-//   const { scene } = useGLTF("/image/ai_brain.gltf"); // Убедись, что путь правильный
-//   return <primitive object={scene} scale={1.5} />;
-// }
-// import { Canvas } from "@react-three/fiber";
-// import { OrbitControls, useGLTF, useTexture } from "@react-three/drei";
-// import { Suspense } from "react";
-// import * as THREE from "three"; // Для использования материалов и других классов Three.js
-
-// export default function Splent() {
-//   return (
-//     <Canvas style={{ width: "500px", height: "500px", margin: "0 auto" }}>
-//       <ambientLight intensity={0.5} />
-//       <directionalLight position={[2, 2, 2]} />
-//       <Suspense fallback={null}>
-//         <Model />
-//       </Suspense>
-//       <OrbitControls enableZoom={false} />
-//     </Canvas>
-//   );
-// }
-
-// function Model() {
-//   const { scene } = useGLTF("/image/ai_brain.gltf"); // Загружаем модель
-//   const texture = useTexture("/image/brain_texture.png"); // Загружаем текстуру
-
-//   // Применяем текстуру к материалу
-//   scene.traverse((child) => {
-//     if (child.isMesh) {
-//       child.material = new THREE.MeshStandardMaterial({ map: texture });
-//     }
-//   });
-
-//   return <primitive object={scene} scale={1.5} />;
-// }
