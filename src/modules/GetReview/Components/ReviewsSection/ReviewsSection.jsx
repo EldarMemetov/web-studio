@@ -1,4 +1,5 @@
 "use client";
+import s from "./ReviewsSection.module.scss";
 
 import React, { useState } from "react";
 import ReviewsForm from "../../../ReviewsForm/ReviewsForm";
@@ -12,9 +13,9 @@ export default function ReviewsSection({ initialReviews }) {
   };
 
   return (
-    <>
+    <div className={s.containerReview}>
       <ReviewsForm onAddReview={addReview} />
       <ReviewsList reviews={reviews} />
-    </>
+    </div>
   );
 }

@@ -7,6 +7,7 @@
   z-index: 1000;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
 
   @include media(tablet) {
     padding: 20px 60px;
