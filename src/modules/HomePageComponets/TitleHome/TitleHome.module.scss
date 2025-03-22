@@ -10,17 +10,33 @@
 
 .title {
   font-weight: 700;
-  font-size: 42px;
-  line-height: 130%;
   color: white;
-  width: 650px;
+  width: 300px;
+  font-size: 35px;
+  @include media(tablet) {
+    font-size: 38px;
+    width: 500px;
+  }
+  @include media(desktop) {
+    width: 650px;
+    font-size: 42px;
+    line-height: 130%;
+  }
 }
+
 .description {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 136%;
+  font-size: 18px;
   color: white;
   text-align: left;
+
+  @include media(tablet) {
+    font-size: 20px;
+  }
+  @include media(desktop) {
+    font-size: 24px;
+    line-height: 136%;
+  }
 }
 .container {
   padding: 10px;

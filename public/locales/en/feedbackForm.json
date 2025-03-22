@@ -1,0 +1,33 @@
+{
+  "title": "Let's Connect",
+  "description": "Ready to collaborate? Let's discuss your project",
+  "subtitle": "We will reply to you within 24 hours",
+  "fields": {
+    "name": "Name*",
+    "email": "Your email*",
+    "message": "Message",
+    "agree": "I agree with the privacy terms"
+  },
+  "submitButton": "Contact Us",
+  "successMessage": "Feedback successfully sent!",
+  "errorMessage": "An error occurred. Please try again.",
+  "status": {
+    "success": "Form successfully submitted!",
+    "error": "Error submitting the form. Please try again."
+  },
+  "validation": {
+    "name": {
+      "min": "Minimum 3 characters",
+      "required": "Enter your name"
+    },
+    "email": {
+      "invalid": "Invalid email format",
+      "required": "Enter your email"
+    },
+    "message": {
+      "min": "Minimum 10 characters",
+      "required": "Enter your message"
+    },
+    "agree": "You must agree with the privacy terms"
+  }
+}

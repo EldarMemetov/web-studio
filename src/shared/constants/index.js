@@ -11,6 +11,11 @@ export const ROUTES = {
 
 export const LANGUAGES = { UA: "ua", EN: "en", DE: "de" };
 
-export const NAMESPACES = ["header", "titleHome"];
+export const NAMESPACES = [
+  "header",
+  "titleHome",
+  "feedbackForm",
+  "reviewsForm",
+];
 
 export const FLIPPED_TIME_MS = 15000;

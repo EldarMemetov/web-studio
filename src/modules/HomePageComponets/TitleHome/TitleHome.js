@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import styles from "./TitleHome.module.css";
+import styles from "./TitleHome.module.scss";
 // import Image from "next/image";
 import Container from "@/shared/container/Container";
 import Button from "../../../shared/components/button/Button";
@@ -66,7 +66,7 @@ export default function TitleHome() {
               /> */}
 
             {/* </div> */}
-            <Splent />
+            <Splent data-aos="zoom-in" data-aos-delay="1000" />
           </div>
         </div>
       </Container>

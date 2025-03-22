@@ -1,0 +1,63 @@
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.input:focus {
+  border-color: #007bff;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.submitButton {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.fieldContainer {
+  margin-bottom: 15px;
+}
+
+.checkboxContainer {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+}
+
+.status {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.successStatus {
+  color: green; /* Зеленый цвет для успешных сообщений */
+}
+
+.errorStatus {
+  color: red; /* Красный цвет для ошибок */
+}
