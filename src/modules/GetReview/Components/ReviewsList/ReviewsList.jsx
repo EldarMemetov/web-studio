@@ -1,9 +1,13 @@
+"use client";
 import React from "react";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import s from "./ReviewsList.module.scss";
 import InfiniteScroll from "../../../../shared/InfiniteScroll/InfiniteScroll";
+import { useReviews } from "../ReviewsSection/ReviewsSection";
 
-export default function ReviewsList({ reviews }) {
+export default function ReviewsList() {
+  const { reviews } = useReviews();
+
   if (!reviews?.length) return <p>Відгуків немає</p>;
 
   return (

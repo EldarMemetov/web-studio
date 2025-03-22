@@ -1,11 +1,9 @@
 "use client";
-import s from "./ReviewsSection.module.scss";
+import React, { createContext, useContext, useState } from "react";
 
-import React, { useState } from "react";
-import ReviewsForm from "../../../ReviewsForm/ReviewsForm";
-import ReviewsList from "../ReviewsList/ReviewsList";
+const ReviewsContext = createContext();
 
-export default function ReviewsSection({ initialReviews }) {
+export function ReviewsSection({ initialReviews = [], children } = {}) {
   const [reviews, setReviews] = useState(initialReviews);
 
   const addReview = (newReview) => {
@@ -13,9 +11,16 @@ export default function ReviewsSection({ initialReviews }) {
   };
 
   return (
-    <div className={s.containerReview}>
-      <ReviewsForm onAddReview={addReview} />
-      <ReviewsList reviews={reviews} />
-    </div>
+    <ReviewsContext.Provider value={{ reviews, addReview }}>
+      {children}
+    </ReviewsContext.Provider>
   );
+}
+
+export function useReviews() {
+  const context = useContext(ReviewsContext);
+  if (!context) {
+    throw new Error("useReviews must be used within a ReviewsProvider");
+  }
+  return context;
 }

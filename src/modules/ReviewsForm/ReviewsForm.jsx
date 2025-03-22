@@ -5,10 +5,12 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import styles from "./ReviewsForm.module.scss";
 import Container from "@/shared/container/Container";
-import { sendReviews } from "../../services/api";
+import { sendReviews } from "@/services/api";
+import { useReviews } from "../GetReview/Components/ReviewsSection/ReviewsSection";
 
-export default function ReviewsForm({ onAddReview }) {
+export default function ReviewsForm() {
   const { t } = useTranslation("reviewsForm");
+  const { addReview } = useReviews();
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const initialValues = {
@@ -28,7 +30,7 @@ export default function ReviewsForm({ onAddReview }) {
         message: response.message || t("successMessage"),
       });
 
-      onAddReview(response.review);
+      addReview(response.review);
 
       resetForm();
     } catch (error) {
@@ -71,7 +73,11 @@ export default function ReviewsForm({ onAddReview }) {
 
         {submissionStatus && (
           <p
-            className={`${styles.status} ${submissionStatus.type === "error" ? styles.errorStatus : styles.successStatus}`}
+            className={`${styles.status} ${
+              submissionStatus.type === "error"
+                ? styles.errorStatus
+                : styles.successStatus
+            }`}
           >
             {submissionStatus.message}
           </p>
