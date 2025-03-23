@@ -130,16 +130,18 @@
 // }
 
 .title {
+  font-family: $primary-font-family;
   font-weight: 700;
   color: white;
-  width: 300px;
+
   font-size: 35px;
+  text-transform: uppercase;
   @include media(tablet) {
     font-size: 38px;
     width: 500px;
   }
   @include media(desktop) {
-    width: 650px;
+    width: 600px;
     font-size: 42px;
     line-height: 130%;
   }
@@ -152,6 +154,7 @@
   text-align: left;
 
   @include media(tablet) {
+    width: 600px;
     font-size: 20px;
   }
   @include media(desktop) {
@@ -174,8 +177,10 @@
 }
 .containerButton {
   display: flex;
+  flex-direction: column;
   gap: 27px;
   @include media(tablet) {
+    flex-direction: row;
   }
   @include media(desktop) {
   }
@@ -184,7 +189,6 @@
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
   @include media(tablet) {
   }
   @include media(desktop) {

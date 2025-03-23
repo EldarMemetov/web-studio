@@ -6,7 +6,7 @@
 .languageButton {
   border: none;
   background: transparent;
-  padding: 10px 20px;
+  padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
   width: 100%;
@@ -16,6 +16,9 @@
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  @include media(tablet) {
+    padding: 15px 20px;
+  }
 }
 
 .languageButton:hover {
@@ -40,8 +43,8 @@
 .languageOption {
   background-color: #1e1e2f;
   border: none;
-  padding: 10px 20px;
-  text-align: left;
+  padding: 10px 10px;
+  text-align: center;
   width: 100%;
   cursor: pointer;
   border-radius: 5px;

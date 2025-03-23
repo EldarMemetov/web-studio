@@ -1,19 +1,12 @@
-// .containerD {
-//   width: 100%;
-//   height: auto;
-//   position: relative;
-// }
-// .containerD {
-//   position: relative;
-//   width: 100%;
-//   height: 100vh; /* Высота во весь экран */
-// }
-
 .spline {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%); /* Центрирование */
-  width: 500px; /* Размер 3D-сцены */
-  height: 500px;
+  transform: translate(-30%, -60%);
+
+  pointer-events: none;
+}
+.containerD {
+  overflow: visible;
+  pointer-events: auto;
 }

@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { useLanguageChanger } from "../../../i18n/utils/LanguageChanger";
-import styles from "./LanguageSwitcher.module.css";
+import { useState } from 'react';
+import { useLanguageChanger } from '../../../i18n/utils/LanguageChanger';
+import styles from './LanguageSwitcher.module.scss';
 
 const LanguageSwitcher = () => {
   const { handleChangeLanguage, currentLocale } = useLanguageChanger();
@@ -13,9 +13,8 @@ const LanguageSwitcher = () => {
     setIsOpen(false);
   };
 
-
-  const availableLanguages = ["ua", "en", "de"].filter(
-    (lang) => lang !== currentLocale,
+  const availableLanguages = ['ua', 'en', 'de'].filter(
+    (lang) => lang !== currentLocale
   );
 
   return (

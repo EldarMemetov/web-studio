@@ -1,10 +1,10 @@
-import clsx from "clsx";
-import s from "./Button.module.scss";
+import clsx from 'clsx';
+import s from './Button.module.scss';
 
 const Button = ({
   children,
-  type = "button",
-  variant = "variant1",
+  type = 'button',
+  variant = 'variant1',
   className,
   onClick,
   ...props
