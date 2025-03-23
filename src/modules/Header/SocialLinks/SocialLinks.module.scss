@@ -1,0 +1,30 @@
+.socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #0a030f;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: #00d4ff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.socialsIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.list {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
