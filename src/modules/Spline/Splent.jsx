@@ -74,8 +74,8 @@
 //   );
 // }
 
-import Spline from "@splinetool/react-spline";
-import styles from "./splent.module.scss";
+import Spline from '@splinetool/react-spline';
+import styles from './splent.module.scss';
 
 export default function Splent() {
   return (
