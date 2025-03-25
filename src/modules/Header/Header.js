@@ -8,7 +8,7 @@ import styles from './Header.module.scss';
 import LanguageSwitcher from '@/shared/components/LanguageSwitcher/LanguageSwitcher';
 import Button from '@/shared/components/button/Button';
 import Icon from '../../shared/Icon/Icon';
-// import { SocialLinks } from './SocialLinks/SocialLinks';
+import { SocialLinks } from './SocialLinks/SocialLinks';
 
 function HeaderComponent() {
   const { t, i18n } = useTranslation('header');
@@ -133,12 +133,14 @@ function HeaderComponent() {
               </ul>
             )}
           </li>
+          {isMenuOpen && (
+            <li className={styles['nav-list-item']}>
+              <div className={styles.socialContainer}>
+                <SocialLinks />
+              </div>
+            </li>
+          )}
         </ul>
-        {/* {isMenuOpen && (
-          <div className={styles.socialContainer}>
-            <SocialLinks />
-          </div>
-        )} */}
       </nav>
 
       <div className={styles.containerButtonTrans}>

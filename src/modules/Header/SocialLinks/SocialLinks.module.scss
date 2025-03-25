@@ -1,30 +1,133 @@
+// .socialLink {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 12px;
+//   border-radius: 4px;
+//   width: 48px;
+//   height: 48px;
+//   background: rgba(
+//     255,
+//     255,
+//     255,
+//     0.1
+//   );
+//   overflow: hidden;
+// }
+
+// .socialLink::after {
+//   content: '';
+//   position: absolute;
+//   top: -50%;
+//   left: -50%;
+//   width: 200%;
+//   height: 200%;
+//   background: conic-gradient(
+//     from 0deg,
+//     #02079d,
+//     #9624e2,
+//     #ce63eb,
+//     #efc4fb,
+//     #02079d
+//   );
+//   filter: blur(20px);
+//   opacity: 0;
+//   transform: rotate(0deg) scale(0.5);
+//   transition:
+//     opacity 0.5s ease,
+//     transform 0.5s ease;
+//   z-index: 0;
+// }
+
+// .socialLink:hover::after {
+//   opacity: 1;
+//   transform: rotate(360deg) scale(1);
+// }
+// .socialLink > * {
+//   position: relative;
+//   z-index: 1;
+// }
+// .socialsIcon {
+//   width: 24px;
+//   height: 24px;
+//   fill: white;
+// }
+// .iconInstagram {
+//   width: 24px;
+//   height: 24px;
+//   stroke: white;
+// }
+// .list {
+//   display: flex;
+//   gap: 10px;
+//   justify-content: center;
+//   align-items: center;
+// }
 .socialLink {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  border-radius: 50%;
-  padding: 6px;
-  background-color: #0a030f;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  padding: 12px;
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(153, 153, 153, 0.5) 100%
+  );
+  overflow: hidden;
+  transition: background 0.5s ease;
 }
 
-.socialLink:hover {
-  background-color: #00d4ff;
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.socialLink::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    #02079d 0%,
+    #9624e2 47.28%,
+    #ce63eb 82.32%,
+    #efc4fb 100%
+  );
+  filter: blur(10px);
+  opacity: 0;
+  transform: rotate(0deg) scale(0.5);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  z-index: 0;
+}
+
+.socialLink:hover::after {
+  opacity: 1;
+  transform: rotate(360deg) scale(1);
+}
+
+.socialLink > * {
+  position: relative;
+  z-index: 1;
 }
 
 .socialsIcon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  fill: white;
 }
-
+.iconInstagram {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
 .list {
   display: flex;
   gap: 10px;
+  justify-content: center;
   align-items: center;
 }

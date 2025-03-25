@@ -6,6 +6,7 @@ import ReviewsList from '@/modules/GetReview/Components/ReviewsList/ReviewsList'
 import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/ReviewsSection';
 import { GetReviews } from '@/services/api';
 import style from './page.module.css';
+import { SocialLinks } from '@/modules/Header/SocialLinks/SocialLinks';
 
 export default async function Home() {
   const reviews = await GetReviews();
@@ -16,7 +17,7 @@ export default async function Home() {
         <TitleHome />
         <WhyChooseUs />
         <FeedbackForm />
-
+        <SocialLinks />
         <ReviewsSection initialReviews={reviews}>
           <ReviewsForm />
           <ReviewsList />
