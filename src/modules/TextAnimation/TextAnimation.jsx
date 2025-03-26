@@ -20,78 +20,46 @@
 //   );
 // }
 'use client';
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Подключаем стили для AOS
 import s from './TextAnimation.module.scss';
 import Container from '@/shared/container/Container';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function TextAnimation() {
-  const sectionRef = useRef(null);
-
+  // Инициализируем AOS
   useEffect(() => {
-    const section = sectionRef.current;
-
-    // Взрывная анимация для текста
-    gsap.fromTo(
-      section.querySelectorAll(
-        `.${s.textInterested}, .${s.textGo}, .${s.textWork}`
-      ),
-      {
-        opacity: 0,
-        y: 100,
-        scale: 0.8,
-        rotationX: 45,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        rotationX: 0,
-        stagger: 0.4,
-        duration: 1.5,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          end: 'bottom top',
-          scrub: true,
-        },
-      }
-    );
-
-    // Взрывная анимация для окружности
-    gsap.fromTo(
-      section.querySelector(`.${s.containerWork}::before`),
-      { scale: 0, opacity: 0 },
-      {
-        scale: 1.5,
-        opacity: 0.8,
-        duration: 1.2,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 60%',
-          end: 'bottom top',
-          scrub: true,
-        },
-      }
-    );
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out-bounce', // Для плавного эффекта
+      once: true, // Анимация будет запускаться только один раз
+      offset: 100, // Отступ до начала анимации
+    });
   }, []);
 
   return (
-    <section ref={sectionRef}>
+    <section>
       <Container>
         <div>
           <div>
-            <h2 className={s.textInterested}>зацікавило?</h2>
+            <h2
+              className={s.textInterested}
+              data-aos="zoom-in-up"
+              data-aos-delay="300"
+            >
+              зацікавило?
+            </h2>
           </div>
           <div>
-            <h2 className={s.textGo}>тоді давай</h2>
+            <h2 className={s.textGo} data-aos="zoom-in-up" data-aos-delay="500">
+              тоді давай
+            </h2>
           </div>
-          <div className={s.containerWork}>
+          <div
+            className={s.containerWork}
+            data-aos="zoom-in-up"
+            data-aos-delay="700"
+          >
             <h2 className={s.textWork}>співпрацювати</h2>
           </div>
         </div>

@@ -11,6 +11,7 @@
 //   line-height: 130%;
 //   text-transform: uppercase;
 //   margin-bottom: 200px;
+//   text-align: center;
 // }
 
 // .containerWork {
@@ -18,7 +19,7 @@
 //   display: flex;
 //   justify-content: center;
 //   align-items: center;
-
+//   margin-bottom: 200px;
 //   &::before {
 //     content: '';
 //     position: absolute;
@@ -44,22 +45,41 @@
 //   line-height: 130%;
 //   text-transform: uppercase;
 //   position: relative;
-//   margin-bottom: 200px;
 // }
-.textInterested,
-.textGo,
-.textWork {
+.textInterested {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 40px;
   line-height: 130%;
   text-transform: uppercase;
-  text-align: center;
   margin-bottom: 200px;
   opacity: 0;
-  transform: translateY(100px); /* Элемент начнёт ниже экрана */
+  transform: scale(0.8);
   transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  @include media(tablet) {
+    font-size: 80px;
+  }
+}
+
+.textGo {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 130%;
+  text-transform: uppercase;
+  margin-bottom: 200px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out;
+
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  @include media(tablet) {
+    font-size: 80px;
+  }
 }
 
 .containerWork {
@@ -67,13 +87,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-bottom: 200px;
+  transform: scale(0.8);
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out;
   &::before {
     content: '';
     position: absolute;
     width: 300px;
     height: 300px;
-    border-radius: 50%;
+    border-radius: 100%;
     background: linear-gradient(
       225deg,
       #02079d 0%,
@@ -84,10 +108,21 @@
     );
     filter: blur(80px);
     z-index: -1;
-    opacity: 0;
-    transform: scale(0);
-    transition:
-      opacity 0.5s ease,
-      transform 0.5s ease;
+  }
+}
+
+.textWork {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  text-transform: uppercase;
+  position: relative;
+  transform: scale(0.8);
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  @include media(tablet) {
+    font-size: 80px;
   }
 }
