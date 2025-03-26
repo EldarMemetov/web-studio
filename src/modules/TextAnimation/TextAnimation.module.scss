@@ -126,6 +126,120 @@
 //     font-size: 80px;
 //   }
 // }
+// .section {
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .textContainer {
+//   position: relative;
+//   height: 100px;
+// }
+
+// .text {
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   opacity: 0;
+//   transition:
+//     opacity 0.5s ease,
+//     transform 0.5s ease;
+// }
+
+// .text:first-child {
+//   opacity: 1;
+// }
+
+// .textGo {
+//   font-weight: 500;
+//   font-size: 40px;
+//   line-height: 130%;
+//   text-transform: uppercase;
+//   margin-bottom: 200px;
+//   text-align: center;
+//   @include media(tablet) {
+//     font-size: 80px;
+//   }
+// }
+
+// .containerWork {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 150px;
+//   margin-bottom: 200px;
+//   transform: scale(0.8);
+//   transition:
+//     transform 0.5s ease-out,
+//     opacity 0.5s ease-out;
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     width: 300px;
+//     height: 300px;
+//     border-radius: 100%;
+//     background: linear-gradient(
+//       225deg,
+//       #02079d 0%,
+//       #0a10b9 26.7%,
+//       #9624e2 55.5%,
+//       #ce63eb 82.38%,
+//       #efc4fb 100%
+//     );
+//     filter: blur(80px);
+//     z-index: -1;
+//   }
+// }
+
+// .textWork {
+//   font-weight: 700;
+//   font-size: 40px;
+//   line-height: 130%;
+//   text-transform: uppercase;
+//   text-align: center;
+//   position: relative;
+
+//   @include media(tablet) {
+//     font-size: 80px;
+//   }
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     height: 300px;
+//     border-radius: 100%;
+//     background: linear-gradient(
+//       225deg,
+//       #02079d 0%,
+//       #0a10b9 26.7%,
+//       #9624e2 55.5%,
+//       #ce63eb 82.38%,
+//       #efc4fb 100%
+//     );
+//     filter: blur(60px);
+//     z-index: -1;
+//     top: 50%;
+//     left: 53%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
+
+// .textInterested {
+//   font-weight: 500;
+//   font-size: 40px;
+//   line-height: 130%;
+//   text-transform: uppercase;
+//   margin-bottom: 200px;
+
+//   @include media(tablet) {
+//     font-size: 80px;
+//   }
+// }
 .section {
   height: 100vh;
   display: flex;
@@ -158,7 +272,7 @@
   font-size: 40px;
   line-height: 130%;
   text-transform: uppercase;
-  margin-bottom: 200px;
+
   text-align: center;
   @include media(tablet) {
     font-size: 80px;
@@ -171,7 +285,7 @@
   justify-content: center;
   align-items: center;
   min-height: 150px;
-  margin-bottom: 200px;
+
   transform: scale(0.8);
   transition:
     transform 0.5s ease-out,
@@ -207,6 +321,7 @@
     font-size: 80px;
   }
 
+  // Градиент на последнем слове
   &::before {
     content: '';
     position: absolute;
@@ -234,7 +349,6 @@
   font-size: 40px;
   line-height: 130%;
   text-transform: uppercase;
-  margin-bottom: 200px;
 
   @include media(tablet) {
     font-size: 80px;
