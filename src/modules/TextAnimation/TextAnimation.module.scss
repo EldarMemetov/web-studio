@@ -321,11 +321,10 @@
     font-size: 80px;
   }
 
-  // Градиент на последнем слове
   &::before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 320px;
     height: 300px;
     border-radius: 100%;
     background: linear-gradient(
@@ -341,6 +340,14 @@
     top: 50%;
     left: 53%;
     transform: translate(-50%, -50%);
+
+    @include media(tablet) {
+      width: 600px;
+    }
+
+    @include media(desktop) {
+      width: 750px;
+    }
   }
 }
 
