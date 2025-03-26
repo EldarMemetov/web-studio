@@ -87,7 +87,7 @@ export default function TextAnimation() {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top top',
-        end: '+=300%',
+        end: '+=200%',
         scrub: true,
         pin: true,
       },
@@ -97,8 +97,7 @@ export default function TextAnimation() {
       if (index > 0) {
         tl.to(elements[index - 1], {
           opacity: 0,
-          scale: 0.8,
-          filter: 'blur(10px)',
+          scale: 1.2,
           duration: 0.5,
         }).to(el, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.5 });
       }
