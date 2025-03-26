@@ -81,8 +81,8 @@ import 'aos/dist/aos.css';
 import styles from './TitleHome.module.scss';
 import Container from '@/shared/container/Container';
 import Button from '../../../shared/components/button/Button';
-import Splent from '@/modules/Spline/Splent';
-
+// import Splent from '@/modules/Spline/Splent';
+import Image from 'next/image';
 export default function TitleHome() {
   const { t } = useTranslation('titleHome');
 
@@ -98,7 +98,7 @@ export default function TitleHome() {
     <section className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
-          <Splent data-aos="zoom-in" data-aos-delay="1000" />
+          {/* <Splent data-aos="zoom-in" data-aos-delay="1000" /> */}
 
           <div className={styles.overlayText}>
             <div className={styles.containerText}>
@@ -129,6 +129,17 @@ export default function TitleHome() {
                 </Button>
               </div>
             </div>
+          </div>
+          <div className={styles.cube}>
+            <Image
+              src="/image/3d-shape.png"
+              alt="3D Cube"
+              width={563}
+              height={586}
+              className={styles.cubeFace}
+              data-aos="zoom-in"
+              data-aos-delay="1000"
+            />
           </div>
         </div>
       </Container>

@@ -7,6 +7,7 @@ import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/Re
 import { GetReviews } from '@/services/api';
 import style from './page.module.css';
 import { SocialLinks } from '@/modules/Header/SocialLinks/SocialLinks';
+import TextAnimation from '@/modules/TextAnimation/TextAnimation';
 
 export default async function Home() {
   const reviews = await GetReviews();
@@ -16,6 +17,7 @@ export default async function Home() {
       <div className={style.divContainer}>
         <TitleHome />
         <WhyChooseUs />
+        <TextAnimation />
         <FeedbackForm />
         <SocialLinks />
         <ReviewsSection initialReviews={reviews}>

@@ -189,8 +189,39 @@
 .wrapper {
   display: flex;
   align-items: center;
+  flex-direction: column;
   @include media(tablet) {
+    flex-direction: column;
   }
   @include media(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cube {
+  animation: pulse 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+.cubeFace {
+  width: 253px;
+  height: 258px;
+  @include media(tablet) {
+    width: 563px;
+    height: 568px;
+  }
+  @include media(desktop) {
+    width: 563px;
+    height: 568px;
   }
 }
