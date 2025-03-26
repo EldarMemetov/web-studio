@@ -316,7 +316,9 @@
   text-transform: uppercase;
   text-align: center;
   position: relative;
-
+  @include media(tablet) {
+    font-size: 80px;
+  }
   //   @include media(tablet) {
   //     font-size: 80px;
   //   }
