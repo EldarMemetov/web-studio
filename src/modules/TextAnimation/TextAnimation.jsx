@@ -67,69 +67,6 @@
 //     </section>
 //   );
 // }
-// 'use client';
-// import { useEffect, useRef } from 'react';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import s from './TextAnimation.module.scss';
-// import Container from '@/shared/container/Container';
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// export default function TextAnimation() {
-//   const sectionRef = useRef(null);
-//   const textRefs = useRef([]);
-
-//   useEffect(() => {
-//     const elements = textRefs.current;
-
-//     let tl = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: sectionRef.current,
-//         start: 'top top',
-//         end: '+=300%',
-//         scrub: true,
-//         pin: true,
-//       },
-//     });
-
-//     elements.forEach((el, index) => {
-//       if (index > 0) {
-//         tl.to(elements[index - 1], {
-//           opacity: 0,
-//           scale: 0.8,
-//           filter: 'blur(10px)',
-//           duration: 0.5,
-//         }).to(el, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.5 });
-//       }
-//     });
-
-//     return () => {
-//       ScrollTrigger.getAll().forEach((st) => st.kill());
-//     };
-//   }, []);
-
-//   return (
-//     <section ref={sectionRef} className={s.section}>
-//       <Container>
-//         <div className={s.textContainer}>
-//           <div
-//             ref={(el) => (textRefs.current[0] = el)}
-//             className={`${s.text} ${s.active}`}
-//           >
-//             <h2 className={s.textInterested}>зацікавило?</h2>
-//           </div>
-//           <div ref={(el) => (textRefs.current[1] = el)} className={s.text}>
-//             <h2 className={s.textGo}>тоді давай</h2>
-//           </div>
-//           <div ref={(el) => (textRefs.current[2] = el)} className={s.text}>
-//             <h2 className={s.textWork}>співпрацювати</h2>
-//           </div>
-//         </div>
-//       </Container>
-//     </section>
-//   );
-// }
 'use client';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
@@ -156,24 +93,14 @@ export default function TextAnimation() {
       },
     });
 
-    // "Бум" эффект для текста, без размытия
     elements.forEach((el, index) => {
       if (index > 0) {
         tl.to(elements[index - 1], {
           opacity: 0,
           scale: 0.8,
+          filter: 'blur(10px)',
           duration: 0.5,
-        })
-          .to(el, {
-            opacity: 1,
-            scale: 1.2, // эффект "бум"
-            duration: 0.5,
-            ease: 'back.out(1.7)', // для плавного отскока
-          })
-          .to(el, {
-            scale: 1, // возвращаем в нормальное состояние
-            duration: 0.3,
-          });
+        }).to(el, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 0.5 });
       }
     });
 
@@ -203,6 +130,79 @@ export default function TextAnimation() {
     </section>
   );
 }
+// 'use client';
+// import { useEffect, useRef } from 'react';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import s from './TextAnimation.module.scss';
+// import Container from '@/shared/container/Container';
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// export default function TextAnimation() {
+//   const sectionRef = useRef(null);
+//   const textRefs = useRef([]);
+
+//   useEffect(() => {
+//     const elements = textRefs.current;
+
+//     let tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: sectionRef.current,
+//         start: 'top top',
+//         end: '+=300%',
+//         scrub: true,
+//         pin: true,
+//       },
+//     });
+
+//     // "Бум" эффект для текста, без размытия
+//     elements.forEach((el, index) => {
+//       if (index > 0) {
+//         tl.to(elements[index - 1], {
+//           opacity: 0,
+//           scale: 0.8,
+//           duration: 0.5,
+//         })
+//           .to(el, {
+//             opacity: 1,
+//             scale: 1.2, // эффект "бум"
+//             duration: 0.5,
+//             ease: 'back.out(1.7)', // для плавного отскока
+//           })
+//           .to(el, {
+//             scale: 1, // возвращаем в нормальное состояние
+//             duration: 0.3,
+//           });
+//       }
+//     });
+
+//     return () => {
+//       ScrollTrigger.getAll().forEach((st) => st.kill());
+//     };
+//   }, []);
+
+//   return (
+//     <section ref={sectionRef} className={s.section}>
+//       <Container>
+//         <div className={s.textContainer}>
+//           <div
+//             ref={(el) => (textRefs.current[0] = el)}
+//             className={`${s.text} ${s.active}`}
+//           >
+//             <h2 className={s.textInterested}>зацікавило?</h2>
+//           </div>
+//           <div ref={(el) => (textRefs.current[1] = el)} className={s.text}>
+//             <h2 className={s.textGo}>тоді давай</h2>
+//           </div>
+//           <div ref={(el) => (textRefs.current[2] = el)} className={s.text}>
+//             <h2 className={s.textWork}>співпрацювати</h2>
+//           </div>
+//         </div>
+//       </Container>
+//     </section>
+//   );
+// }
 // 'use client';
 // import { useEffect, useRef } from 'react';
 // import { gsap } from 'gsap';
