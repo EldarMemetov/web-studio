@@ -23,6 +23,7 @@
   overflow: hidden;
   cursor: pointer;
   pointer-events: auto;
+  z-index: 1;
 }
 
 .itemList::after {
@@ -43,6 +44,7 @@
   transition:
     transform 0.6s ease-out,
     opacity 0.6s ease-out;
+  z-index: 0;
 }
 
 .itemList:hover::after {
@@ -78,4 +80,8 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 146%;
+}
+.linkItem {
+  position: relative;
+  z-index: 2;
 }

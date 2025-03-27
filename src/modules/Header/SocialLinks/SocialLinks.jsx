@@ -1,7 +1,6 @@
 import Container from '@/shared/container/Container';
 import Icon from '../../../shared/Icon/Icon';
 import s from './SocialLinks.module.scss';
-import Loading from '@/app/[locale]/loading';
 import LoadingBar from '@/shared/components/LoadingBar/LoadingBar';
 export const SocialLinks = () => {
   return (
