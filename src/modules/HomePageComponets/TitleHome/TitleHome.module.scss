@@ -128,7 +128,9 @@
 //   animation: pulse 6s ease-in-out infinite;
 //   transition: transform 0.3s ease;
 // }
-
+.section {
+  padding-bottom: 100px;
+}
 .title {
   font-family: $primary-font-family;
   font-weight: 700;

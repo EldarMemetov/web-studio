@@ -1,6 +1,5 @@
 .button {
   background-color: #ffffff;
-
   padding: 16px 44px;
   border: none;
   border-radius: 32px;
@@ -35,12 +34,15 @@
     width: 100%;
     height: 100%;
     background: #9624e2;
-
-    transition: left 0.4s ease-in-out;
+    transition:
+      left 0.4s ease-in-out,
+      transform 0.4s ease-in-out;
+    transform: skewX(0deg);
   }
 
   &:hover::before {
     left: 0;
+    transform: skewX(-10deg);
   }
 
   span {
@@ -55,7 +57,7 @@
     border: 1px solid transparent;
     background:
       linear-gradient(#ffffff, #ffffff) padding-box,
-      linear-gradient(90deg, #9624e2, #24c2e2) border-box;
+      linear-gradient(90deg, #9624e2, #12069f) border-box;
     color: #000;
     overflow: hidden;
 
@@ -75,6 +77,8 @@
       height: 55px;
       border-radius: 32px;
       padding: 16px 44px;
+      border: none !important;
+      background: transparent;
     }
 
     &:hover span {

@@ -1,0 +1,81 @@
+.sectionBar {
+  padding-bottom: 200px;
+}
+
+.ListContainer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.itemList {
+  position: relative;
+  padding: 18px;
+  width: 288px;
+  height: 175px;
+  background: linear-gradient(
+    44deg,
+    rgba(34, 34, 209, 0.46) 0%,
+    rgba(110, 114, 132, 0) 30%
+  );
+
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.itemList::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(206, 99, 235, 0.6) 5%,
+    rgba(2, 7, 157, 0.3) 30%,
+    rgb(42 48 191 / 0%) 50%
+  );
+  opacity: 0;
+  transform: translate(-50%, 50%) rotate(20deg);
+  transition:
+    transform 0.6s ease-out,
+    opacity 0.6s ease-out;
+}
+
+.itemList:hover::after {
+  transform: translate(0%, 0%) rotate(0deg);
+  opacity: 1;
+}
+
+.socialLink {
+  display: flex;
+  padding: 12px;
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(153, 153, 153, 0.5) 100%
+  );
+  margin-bottom: 24px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 136%;
+  margin-bottom: 8px;
+}
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 146%;
+}

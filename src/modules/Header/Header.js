@@ -20,6 +20,8 @@ function HeaderComponent() {
     setCurrentLocale(i18n.language);
   }, [i18n.language]);
 
+  const [buttonText, setButtonText] = useState(t('kontakt'));
+
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -163,8 +165,14 @@ function HeaderComponent() {
       <div className={styles.containerButtonTrans}>
         <LanguageSwitcher />
         <div className={styles.buttonContact}>
-          <Button variant="variant1" data-aos="zoom-in" data-aos-delay="1000">
-            {t('kontakt')}
+          <Button
+            variant="variant1"
+            data-aos="zoom-in"
+            data-aos-delay="1000"
+            onMouseEnter={() => setButtonText(t('talk'))}
+            onMouseLeave={() => setButtonText(t('kontakt'))}
+          >
+            {buttonText}
           </Button>
         </div>
         <button
@@ -183,6 +191,7 @@ function HeaderComponent() {
 }
 
 export const Header = React.memo(HeaderComponent);
+
 // 'use client';
 // import React, { useState, useEffect, useMemo } from 'react';
 // import { useTranslation } from 'react-i18next';
