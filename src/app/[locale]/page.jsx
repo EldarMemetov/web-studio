@@ -10,7 +10,7 @@ import { SocialLinks } from '@/modules/Header/SocialLinks/SocialLinks';
 import TextAnimation from '@/modules/TextAnimation/TextAnimation';
 import FetchServices from '@/modules/FetchServices/FetchServices';
 import PixelPerfectBlock from '@/modules/PixelPerfectBlock/PixelPerfectBlock';
-
+import OurTeam from '../../modules/OurTeam/OurTeam';
 export default async function Home() {
   const reviews = await GetReviews();
 
@@ -20,7 +20,7 @@ export default async function Home() {
         <TitleHome />
         <FetchServices />
         <PixelPerfectBlock />
-
+        <OurTeam />
         <TextAnimation />
         <FeedbackForm />
         <SocialLinks />
