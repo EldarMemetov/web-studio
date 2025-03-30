@@ -47,8 +47,109 @@
 //   );
 // }
 
+// 'use client';
+// import { useEffect, useRef } from 'react';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import s from './TextAnimation.module.scss';
+// import Container from '@/shared/container/Container';
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// export default function TextAnimation() {
+//   const sectionRef = useRef(null);
+//   const textRefs = useRef([]);
+
+//   useEffect(() => {
+//     const sections = textRefs.current;
+
+//     // Создаем timeline для плавных переходов
+//     let tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: sectionRef.current,
+//         start: 'top top',
+//         end: '+=300%', // Длина скролла
+//         scrub: 1, // Плавность
+//         pin: true, // Фиксируем секцию на экране
+//         snap: 1 / (sections.length - 1), // Фиксируем скролл по секциям
+//       },
+//     });
+
+//     sections.forEach((el, index) => {
+//       if (index > 0) {
+//         tl.to(sections[index - 1], {
+//           x: '-100%', // Уходит влево
+//           opacity: 0,
+//           scale: 0.8,
+//           duration: 0.7,
+//           ease: 'power2.inOut',
+//         }).fromTo(
+//           el,
+//           { x: '100%', opacity: 0, scale: 1.2 },
+//           { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
+//         );
+//       } else {
+//         tl.fromTo(
+//           el,
+//           { x: '100%', opacity: 0, scale: 1.2 },
+//           { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
+//         );
+//       }
+//     });
+
+//     // Анимация последнего слова (по буквам с вращением)
+//     const lastWord = sections[2];
+//     const letters = lastWord.querySelectorAll('span');
+
+//     gsap.set(letters, { opacity: 0, rotateY: 180 });
+
+//     tl.to(letters, {
+//       opacity: 1,
+//       rotateY: 0,
+//       duration: 0.8,
+//       stagger: 0.1,
+//       ease: 'back.out(1.7)',
+//     });
+
+//     return () => {
+//       ScrollTrigger.getAll().forEach((st) => st.kill());
+//     };
+//   }, []);
+
+//   return (
+//     <section ref={sectionRef} className={s.section}>
+//       <Container>
+//         <div className={s.textContainer}>
+//           <div ref={(el) => (textRefs.current[0] = el)} className={s.text}>
+//             <h2 className={s.textInterested}>зацікавило?</h2>
+//           </div>
+//           <div ref={(el) => (textRefs.current[1] = el)} className={s.text}>
+//             <h2 className={s.textGo}>тоді давай</h2>
+//           </div>
+//           <div ref={(el) => (textRefs.current[2] = el)} className={s.text}>
+//             <h2 className={s.textWork}>
+//               <span>с</span>
+//               <span>п</span>
+//               <span>і</span>
+//               <span>в</span>
+//               <span>п</span>
+//               <span>р</span>
+//               <span>а</span>
+//               <span>ц</span>
+//               <span>ю</span>
+//               <span>в</span>
+//               <span>а</span>
+//               <span>т</span>
+//               <span>и</span>
+//             </h2>
+//           </div>
+//         </div>
+//       </Container>
+//     </section>
+//   );
+// }
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import s from './TextAnimation.module.scss';
@@ -59,62 +160,72 @@ gsap.registerPlugin(ScrollTrigger);
 export default function TextAnimation() {
   const sectionRef = useRef(null);
   const textRefs = useRef([]);
+  const [animationPlayed, setAnimationPlayed] = useState(false);
 
   useEffect(() => {
     const sections = textRefs.current;
 
-    // Создаем timeline для плавных переходов
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: '+=300%', // Длина скролла
-        scrub: 1, // Плавность
-        pin: true, // Фиксируем секцию на экране
-        snap: 1 / (sections.length - 1), // Фиксируем скролл по секциям
-      },
-    });
+    const createAnimation = () => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '+=300%',
+          scrub: false,
+          pin: true,
+          snap: 1 / (sections.length - 1),
+          onLeave: () => setAnimationPlayed(true), // Запоминаем, что анимация завершилась
+        },
+      });
 
-    sections.forEach((el, index) => {
-      if (index > 0) {
-        tl.to(sections[index - 1], {
-          x: '-100%', // Уходит влево
-          opacity: 0,
-          scale: 0.8,
-          duration: 0.7,
-          ease: 'power2.inOut',
-        }).fromTo(
-          el,
-          { x: '100%', opacity: 0, scale: 1.2 },
-          { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
-        );
-      } else {
-        tl.fromTo(
-          el,
-          { x: '100%', opacity: 0, scale: 1.2 },
-          { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
-        );
-      }
-    });
+      sections.forEach((el, index) => {
+        if (index > 0) {
+          tl.to(sections[index - 1], {
+            x: '-100%',
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.7,
+            ease: 'power2.inOut',
+          }).fromTo(
+            el,
+            { x: '100%', opacity: 0, scale: 1.2 },
+            { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
+          );
+        } else {
+          tl.fromTo(
+            el,
+            { x: '100%', opacity: 0, scale: 1.2 },
+            { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
+          );
+        }
+      });
 
-    // Анимация последнего слова (по буквам с вращением)
-    const lastWord = sections[2];
-    const letters = lastWord.querySelectorAll('span');
+      const lastWord = sections[2];
+      const letters = lastWord.querySelectorAll('span');
 
-    gsap.set(letters, { opacity: 0, rotateY: 180 });
+      gsap.set(letters, { opacity: 0, rotateY: 180 });
 
-    tl.to(letters, {
-      opacity: 1,
-      rotateY: 0,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: 'back.out(1.7)',
-    });
+      tl.to(letters, {
+        opacity: 1,
+        rotateY: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'back.out(1.7)',
+      });
+    };
+
+    if (!animationPlayed) {
+      createAnimation();
+    } else {
+      // Если анимация уже была, сразу показываем последнее слово
+      gsap.set(textRefs.current, { opacity: 0, x: '-100%' });
+      gsap.set(textRefs.current[2], { opacity: 1, x: '0%' });
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
-  }, []);
+  }, [animationPlayed]);
 
   return (
     <section ref={sectionRef} className={s.section}>
@@ -148,3 +259,161 @@ export default function TextAnimation() {
     </section>
   );
 }
+// 'use client';
+// import { useEffect, useRef, useState } from 'react';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import s from './TextAnimation.module.scss';
+// import Container from '@/shared/container/Container';
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// export default function TextAnimation() {
+//   const sectionRef = useRef(null);
+//   const textRefs = useRef([]);
+//   const staticRefs = useRef([]);
+//   const [animationPlayed, setAnimationPlayed] = useState(false);
+
+//   useEffect(() => {
+//     const sections = textRefs.current;
+
+//     const createAnimation = () => {
+//       let tl = gsap.timeline({
+//         scrollTrigger: {
+//           trigger: sectionRef.current,
+//           start: 'top top',
+//           end: '+=200%', // Уменьшаем область прокрутки для первого блока, чтобы ускорить анимацию
+//           scrub: false,
+//           pin: true,
+//           snap: 1 / (sections.length - 1),
+//           onLeave: () => {
+//             setAnimationPlayed(true); // Запоминаем, что анимация завершена
+//           },
+//         },
+//       });
+
+//       sections.forEach((el, index) => {
+//         if (index > 0) {
+//           tl.to(sections[index - 1], {
+//             x: '-100%',
+//             opacity: 0,
+//             scale: 0.8,
+//             duration: 0.7,
+//             ease: 'power2.inOut',
+//           }).fromTo(
+//             el,
+//             { x: '100%', opacity: 0, scale: 1.2 },
+//             { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
+//           );
+//         } else {
+//           tl.fromTo(
+//             el,
+//             { x: '100%', opacity: 0, scale: 1.2 },
+//             { x: '0%', opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out' }
+//           );
+//         }
+//       });
+
+//       const lastWord = sections[2];
+//       const letters = lastWord.querySelectorAll('span');
+
+//       gsap.set(letters, { opacity: 0, rotateY: 180 });
+
+//       tl.to(letters, {
+//         opacity: 1,
+//         rotateY: 0,
+//         duration: 0.8,
+//         stagger: 0.1,
+//         ease: 'back.out(1.7)',
+//       });
+//     };
+
+//     if (!animationPlayed) {
+//       createAnimation();
+//     } else {
+//       // Плавный переход на статичный блок
+//       gsap.to(staticRefs.current[0], {
+//         x: '0%',
+//         opacity: 1,
+//         duration: 1,
+//         ease: 'power2.out',
+//       });
+
+//       gsap.to(staticRefs.current[1], {
+//         x: '0%',
+//         opacity: 1,
+//         duration: 1,
+//         ease: 'power2.out',
+//         delay: 0.2, // Задержка для второго слова
+//       });
+
+//       gsap.to(staticRefs.current[2], {
+//         y: '0%',
+//         opacity: 1,
+//         duration: 1,
+//         ease: 'power2.out',
+//         delay: 0.4, // Задержка для третьего слова
+//       });
+//     }
+
+//     return () => {
+//       ScrollTrigger.getAll().forEach((st) => st.kill());
+//     };
+//   }, [animationPlayed]);
+
+//   return (
+//     <section ref={sectionRef} className={s.section}>
+//       <Container>
+//         {!animationPlayed ? (
+//           <div className={s.textContainer}>
+//             <div ref={(el) => (textRefs.current[0] = el)} className={s.text}>
+//               <h2 className={s.textInterested}>зацікавило?</h2>
+//             </div>
+//             <div ref={(el) => (textRefs.current[1] = el)} className={s.text}>
+//               <h2 className={s.textGo}>тоді давай</h2>
+//             </div>
+//             <div ref={(el) => (textRefs.current[2] = el)} className={s.text}>
+//               <h2 className={s.textWork}>
+//                 <span>с</span>
+//                 <span>п</span>
+//                 <span>і</span>
+//                 <span>в</span>
+//                 <span>п</span>
+//                 <span>р</span>
+//                 <span>а</span>
+//                 <span>ц</span>
+//                 <span>ю</span>
+//                 <span>в</span>
+//                 <span>а</span>
+//                 <span>т</span>
+//                 <span>и</span>
+//               </h2>
+//             </div>
+//           </div>
+//         ) : (
+//           // Статичные слова с эффектом вылета
+//           <div className={s.staticContainer}>
+//             <h2
+//               ref={(el) => (staticRefs.current[0] = el)}
+//               className={s.staticText}
+//             >
+//               зацікавило?
+//             </h2>
+//             <h2
+//               ref={(el) => (staticRefs.current[1] = el)}
+//               className={s.staticText}
+//             >
+//               тоді давай
+//             </h2>
+//             <h2
+//               ref={(el) => (staticRefs.current[2] = el)}
+//               className={s.staticText}
+//             >
+//               співпрацювати
+//             </h2>
+//           </div>
+//         )}
+//       </Container>
+//     </section>
+//   );
+// }
