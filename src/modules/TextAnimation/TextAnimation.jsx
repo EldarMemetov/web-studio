@@ -397,7 +397,7 @@ export default function TextAnimation() {
             </h2>
             <h2
               ref={(el) => (staticRefs.current[2] = el)}
-              className={s.textWork}
+              className={s.staticText}
             >
               співпрацювати
             </h2>
