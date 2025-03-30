@@ -1,11 +1,4 @@
-import {
-  Manrope,
-  Oswald,
-  PT_Sans,
-  Raleway,
-  Rubik,
-  Orbitron,
-} from 'next/font/google';
+import { Oswald, Raleway, Rubik } from 'next/font/google';
 import clsx from 'clsx';
 import initTranslations from '@/i18n/utils/i18n';
 import TranslationsProvider from '@/i18n/utils/TranslationsProvider';
@@ -16,46 +9,25 @@ import i18nConfig from '../../../i18nConfig';
 
 import '../globals.scss';
 
-const manrope = Manrope({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-manrope',
-});
-
 const oswald = Oswald({
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
+  weight: ['400'],
   display: 'swap',
   variable: '--font-oswald',
 });
 
-const ptSans = PT_Sans({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-pt-sans',
-});
-
 const raleway = Raleway({
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
+  weight: ['600'],
   display: 'swap',
   variable: '--font-raleway',
 });
 
 const rubik = Rubik({
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '700'],
+  weight: ['400'],
   display: 'swap',
   variable: '--font-rubik',
-});
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-orbitron',
 });
 
 export const metadata = {
@@ -77,14 +49,7 @@ export default async function Layout({ children, params }) {
     <html lang={locale}>
       <body
         suppressHydrationWarning={true}
-        className={clsx(
-          manrope.variable,
-          oswald.variable,
-          ptSans.variable,
-          raleway.variable,
-          rubik.variable,
-          orbitron.variable
-        )}
+        className={clsx(rubik.variable, raleway.variable, oswald.variable)}
       >
         <TranslationsProvider
           namespaces={NAMESPACES}

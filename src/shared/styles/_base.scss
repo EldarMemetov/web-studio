@@ -1,72 +1,50 @@
-// @font-face {
-//   font-family: 'Fixel Display';
-//   src:
-//     url('/fonts/FixelDisplay-Regular.woff2') format('woff2'),
-//     url('/fonts/FixelDisplay-Regular.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Univermag';
-//   src:
-//     url('/fonts/Univermag-Regular.woff2') format('woff2'),
-//     url('/fonts/Univermag-Regular.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Kyiv*Type Sans';
-//   src:
-//     url('/fonts/KyivTypeSans-Regular.woff2') format('woff2'),
-//     url('/fonts/KyivTypeSans-Regular.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'NAMU';
-//   src:
-//     url('/fonts/NAMU-Regular.woff2') format('woff2'),
-//     url('/fonts/NAMU-Regular.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Unbounded';
-//   src:
-//     url('/fonts/Unbounded-Regular.woff2') format('woff2'),
-//     url('/fonts/Unbounded-Regular.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Zen Dots';
-//   src:
-//     url('/fonts/ZenDots-Regular.woff2') format('woff2'),
-//     url('/fonts/ZenDots-Regular.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
-
-:root {
-  --font-family: 'Fixel Display', sans-serif;
-  --second-family: 'Univermag', sans-serif;
-  --third-family: 'Kyiv*Type Sans', sans-serif;
-  --font3: 'NAMU', sans-serif;
-  --font4: 'Unbounded', sans-serif;
-  --font5: 'Zen Dots', sans-serif;
+@font-face {
+  font-family: 'Fixel Display';
+  src:
+    local('Fixel Display Regular'),
+    url('/fonts/FixelDisplay/FixelDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Fixel Display';
+  src:
+    local('Fixel Display Medium'),
+    url('/fonts/FixelDisplay/FixelDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  src:
+    local('Fixel Display SemiBold'),
+    url('/fonts/FixelDisplay/FixelDisplay-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  src:
+    local('Fixel Display Bold'),
+    url('/fonts/FixelDisplay/FixelDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Kyiv Type Sans';
+  src: url('/fonts/KyivTypeSans-Bold2.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Univermag';
+  src: url('/fonts/Univermag-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   font-weight: 400;
   color: #fff;
@@ -74,18 +52,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // --font-family: 'Fixel Display', sans-serif;
-  // --second-family: 'Univermag', sans-serif;
-  // --third-family: 'Kyiv*Type Sans', sans-serif;
-  // --font3: 'NAMU', sans-serif;
-  // --font4: 'Unbounded', sans-serif;
-  // --font5: 'Zen Dots', sans-serif;
-  --font-family: var(--font-manrope); /* "Manrope" */
-  --second-family: var(--font-oswald); /* "Oswald" */
-  --third-family: var(--font-pt-sans); /* "PT Sans" */
-  --font3: var(--font-raleway); /* "Raleway" */
-  --font4: var(--font-rubik); /* "Rubik" */
-  --font5: var(--font-orbitron); /* "Orbitron" */
+  --font-family: 'Fixel Display', sans-serif; /* Основной шрифт */
+  --second-family: 'Oswald', sans-serif; /* "Oswald" (для Zen Dots) */
+  --third-family: 'Raleway', sans-serif; /* "Raleway" (для Unbounded) */
+  --font3: 'Rubik', sans-serif; /* "Rubik" (для NAMU) */
+  --font6: 'Kyiv Type Sans', sans-serif; /* "Kyiv Type Sans" */
+  --font7: 'Univermag', sans-serif; /* "Univermag" */
 }
 
 html {
@@ -93,7 +65,7 @@ html {
 }
 
 body {
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-family);
 }
 
 *,
