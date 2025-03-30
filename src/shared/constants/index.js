@@ -23,6 +23,7 @@ export const NAMESPACES = [
   'titleHome',
   'feedbackForm',
   'reviewsForm',
+  'pixelPerfectBlock',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

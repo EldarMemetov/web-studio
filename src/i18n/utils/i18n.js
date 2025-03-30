@@ -1,50 +1,87 @@
-import i18next from "i18next";
-import { initReactI18next } from "react-i18next";
-import { NAMESPACES } from "../../shared/constants";
+// import { createInstance } from 'i18next';
+// import resourcesToBackend from 'i18next-resources-to-backend';
+// import { initReactI18next } from 'react-i18next/initReactI18next';
+// import i18nConfig from '/i18nConfig';
 
-const loadTranslationFile = async (locale, namespace) => {
-  try {
-    const url = `/locales/${locale}/${namespace}.json`;
-    const res = await fetch(url);
-    if (!res.ok) {
-      throw new Error(
-        `Failed to load translation for ${namespace} in ${locale}`,
-      );
-    }
-    return await res.json();
-  } catch (error) {
-    console.error(error);
-    return {};
+// export default async function initTranslations(
+//   locale,
+//   namespaces,
+//   existingInstance,
+//   resources
+// ) {
+//   const i18nInstance = existingInstance || createInstance();
+
+//   i18nInstance.use(initReactI18next);
+
+//   if (!resources) {
+//     i18nInstance.use(
+//       resourcesToBackend(
+//         (language, namespace) =>
+//           import(`@/i18n/locales/${language}/${namespace}.json`)
+//       )
+//     );
+//   }
+
+//   await i18nInstance.init({
+//     lng: locale,
+//     resources,
+//     fallbackLng: i18nConfig.defaultLocale,
+//     supportedLngs: i18nConfig.locales,
+//     defaultNS: namespaces[0],
+//     fallbackNS: namespaces[0],
+//     ns: namespaces,
+//     preload: resources ? [] : i18nConfig.locales,
+//     interpolation: { escapeValue: false },
+//   });
+
+//   return {
+//     i18n: i18nInstance,
+//     resources: i18nInstance.services.resourceStore.data,
+//     t: i18nInstance.t,
+//   };
+// }
+import { createInstance } from 'i18next';
+import resourcesToBackend from 'i18next-resources-to-backend';
+import { initReactI18next } from 'react-i18next/initReactI18next';
+import i18nConfig from '/i18nConfig';
+
+export default async function initTranslations(
+  locale,
+  namespaces,
+  existingInstance,
+  resources
+) {
+  const i18nInstance = existingInstance || createInstance();
+  i18nInstance.use(initReactI18next);
+
+  if (!resources) {
+    i18nInstance.use(
+      resourcesToBackend(async (language, namespace) => {
+        try {
+          return await import(`@/i18n/locales/${language}/${namespace}.json`);
+        } catch (error) {
+          console.error(`Ошибка загрузки ${namespace} для ${language}:`, error);
+          return {};
+        }
+      })
+    );
   }
-};
 
-export async function initTranslations(locale = "ua", namespaces = NAMESPACES) {
-  if (!i18next.isInitialized) {
-    const resources = {};
+  await i18nInstance.init({
+    lng: locale,
+    resources,
+    fallbackLng: i18nConfig.defaultLocale,
+    supportedLngs: i18nConfig.locales,
+    defaultNS: namespaces[0],
+    fallbackNS: namespaces[0],
+    ns: namespaces,
+    preload: resources ? [] : i18nConfig.locales,
+    interpolation: { escapeValue: false },
+  });
 
-    for (const namespace of namespaces) {
-      const translation = await loadTranslationFile(locale, namespace);
-      resources[locale] = {
-        ...resources[locale],
-        [namespace]: translation,
-      };
-    }
-
-    await i18next.use(initReactI18next).init({
-      resources,
-      lng: locale,
-      fallbackLng: "ua",
-      interpolation: { escapeValue: false },
-    });
-  } else {
-    for (const namespace of namespaces) {
-      if (!i18next.hasResourceBundle(locale, namespace)) {
-        const translation = await loadTranslationFile(locale, namespace);
-        i18next.addResourceBundle(locale, namespace, translation, true, true);
-      }
-    }
-    await i18next.changeLanguage(locale);
-  }
-
-  return i18next;
+  return {
+    i18n: i18nInstance,
+    resources: i18nInstance.services.resourceStore.data,
+    t: i18nInstance.t,
+  };
 }

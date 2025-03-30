@@ -1,27 +1,21 @@
-'use client';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AnimationInitializer from '../../../shared/AnimationInitializer/AnimationInitializer';
 import styles from './TitleHome.module.scss';
 import Container from '@/shared/container/Container';
 import Button from '../../../shared/components/button/Button';
-
 import Image from 'next/image';
-export default function TitleHome() {
-  const { t } = useTranslation('titleHome');
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,
-      easing: 'ease-in-out-bounce',
-      offset: 20,
-    });
-  }, []);
-
+import { initServerI18n } from '@/i18n/utils/serverI18n';
+export default async function TitleHome({ locale }) {
+  const { t } = await initServerI18n(locale, ['titleHome']);
   return (
     <section className={styles.section}>
       <Container>
+        <AnimationInitializer
+          options={{
+            duration: 1500,
+            easing: 'ease-in-out-bounce',
+            offset: 20,
+          }}
+        />
         <div className={styles.wrapper}>
           <div className={styles.overlayText}>
             <div className={styles.containerText}>
