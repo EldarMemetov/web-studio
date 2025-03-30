@@ -272,28 +272,12 @@ export default function TextAnimation() {
   const [animationPlayed, setAnimationPlayed] = useState(false);
 
   useEffect(() => {
-    // Функции для отключения/включения скролла
-    const disableScroll = () => {
-      document.body.style.overflow = 'hidden';
-      // Можно также заблокировать события колесика мыши и touchmove, если требуется:
-      window.addEventListener('wheel', preventDefault, { passive: false });
-      window.addEventListener('touchmove', preventDefault, { passive: false });
-    };
-    const enableScroll = () => {
-      document.body.style.overflow = 'auto';
-      window.removeEventListener('wheel', preventDefault);
-      window.removeEventListener('touchmove', preventDefault);
-    };
-    const preventDefault = (e) => e.preventDefault();
-
     // Функция запуска основной анимации текста
     const startAnimation = () => {
-      disableScroll();
       const sections = textRefs.current;
       const tl = gsap.timeline({
         onComplete: () => {
           setAnimationPlayed(true);
-          enableScroll();
         },
       });
 
@@ -349,9 +333,7 @@ export default function TextAnimation() {
       observer.observe(sectionRef.current);
     }
 
-    return () => {
-      enableScroll();
-    };
+    return () => {};
   }, [animationPlayed]);
 
   // Анимация статичного контейнера (вторая стадия) запускается при изменении animationPlayed на true
@@ -415,7 +397,7 @@ export default function TextAnimation() {
             </h2>
             <h2
               ref={(el) => (staticRefs.current[2] = el)}
-              className={s.staticText}
+              className={s.textWork}
             >
               співпрацювати
             </h2>
