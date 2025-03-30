@@ -1,4 +1,3 @@
-// src/modules/PixelPerfectBlock/PixelPerfectBlock.server.js
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import Container from '@/shared/container/Container';
 import s from './PixelPerfectBlock.module.scss';
@@ -11,10 +10,12 @@ export default async function PixelPerfectBlock({ locale }) {
       <Container>
         <div className="pixel-perfect-block">
           <p className={s.description}>
+            {t('description.part1')}{' '}
             <span className={s.title}>{t('description.highlight1')}</span>{' '}
-            {t('description.part2')}
+            {t('description.part2')}{' '}
             <span className={s.title}>{t('description.highlight2')}</span>{' '}
-            {t('description.part3')} <span>{t('description.highlight3')}</span>{' '}
+            {t('description.part3')}{' '}
+            <span className={s.title}>{t('description.highlight3')}</span>{' '}
             {t('description.part4')}{' '}
             <span className={s.title}>{t('description.highlight4')}</span>{' '}
             {t('description.part5')}
