@@ -21,7 +21,7 @@ export default function OurTeam() {
                 height={420}
                 className={s.teamImg}
               />
-              <h4 className={s.backgroundName}>Soloveychenko</h4>
+              <h4 className={s.backgroundName}>Maria Soloveychenko</h4>
             </li>
             <li className={s.itemList}>
               <h3 className={s.name}>Maria Soloveychenko</h3>
@@ -34,7 +34,7 @@ export default function OurTeam() {
                 height={420}
                 className={s.teamImg}
               />
-              <h4 className={s.backgroundName}>Soloveychenko</h4>
+              <h4 className={s.backgroundName}>Maria Soloveychenko</h4>
             </li>
             <li className={s.itemList}>
               <h3 className={s.name}>Maria Soloveychenko</h3>
@@ -47,7 +47,7 @@ export default function OurTeam() {
                 height={420}
                 className={s.teamImg}
               />
-              <h4 className={s.backgroundName}>Soloveychenko</h4>
+              <h4 className={s.backgroundName}>Maria Soloveychenko</h4>
             </li>
             <li className={s.itemList}>
               <h3 className={s.name}>Maria Soloveychenko</h3>
@@ -60,7 +60,7 @@ export default function OurTeam() {
                 height={420}
                 className={s.teamImg}
               />
-              <h4 className={s.backgroundName}>Soloveychenko</h4>
+              <h4 className={s.backgroundName}>Maria Soloveychenko</h4>
             </li>
             <li className={s.itemList}>
               <h3 className={s.name}>Maria Soloveychenko</h3>
@@ -73,7 +73,7 @@ export default function OurTeam() {
                 height={420}
                 className={s.teamImg}
               />
-              <h4 className={s.backgroundName}>Soloveychenko</h4>
+              <h4 className={s.backgroundName}>Maria Soloveychenko</h4>
             </li>
           </ul>
         </div>

@@ -30,6 +30,7 @@
     rgba(25, 63, 185, 0.1) 70%,
     rgba(25, 63, 185, 0) 90%
   );
+
   z-index: 20;
   pointer-events: none;
   transition: background 0.5s ease-in-out;
@@ -37,11 +38,11 @@
 
 .itemList:hover::before {
   background: radial-gradient(
-      circle at 0% 0%,
-      rgba(255, 210, 150, 0.4) 0%,
-      rgba(255, 210, 150, 0.25) 40%,
-      rgba(255, 255, 255, 0.1) 60%,
-      rgba(255, 255, 255, 0) 100%
+      circle at 50% 0%,
+      rgb(244 232 217 / 37%) 0%,
+      rgb(244 214 175 / 25%) 30%,
+      rgb(255 255 255 / 7%) 60%,
+      rgb(255 255 255 / 5%) 100%
     ),
     radial-gradient(
       circle at 100% 100%,
@@ -59,16 +60,20 @@
   line-height: 146%;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 60%;
   transform: translate(-16%, -50%) scale(1);
   z-index: 1;
   transition:
     transform 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
+  white-space: nowrap;
 }
 
 .itemList:hover .backgroundName {
-  transform: translate(-40%, -48%) scale(0.99);
+  transform: translate(-30%, -48%) scale(0.99);
   opacity: 0.95;
 }
 
@@ -78,7 +83,23 @@
   left: 100px;
   z-index: 2;
 }
+.itemList::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 59 255 / 14%);
+  mix-blend-mode: multiply;
+  transition: background 0.5s ease-in-out;
+  z-index: 3;
+}
 
+/* Меняем оттенок при ховере */
+.itemList:hover::after {
+  background: rgba(140, 20, 220, 0.24);
+}
 .title {
   font-weight: 500;
   font-size: 80px;

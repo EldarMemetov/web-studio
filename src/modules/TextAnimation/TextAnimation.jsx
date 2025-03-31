@@ -1,21 +1,14 @@
-'use client';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Подключаем стили для AOS
 import s from './TextAnimation.module.scss';
 import Container from '@/shared/container/Container';
-
+import AnimationInitializer from '@/shared/AnimationInitializer/AnimationInitializer';
 export default function TextAnimation() {
-  // Инициализируем AOS
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out-bounce', // Для плавного эффекта
-      once: true, // Анимация будет запускаться только один раз
-      offset: 100, // Отступ до начала анимации
-    });
-  }, []);
-
+  <AnimationInitializer
+    options={{
+      duration: 1500,
+      easing: 'ease-in-out-bounce',
+      offset: 20,
+    }}
+  />;
   return (
     <section>
       <Container>
