@@ -284,11 +284,18 @@ export default function TextAnimation() {
         end: '+=300%', // регулировать в зависимости от количества секций
         scrub: true, // анимация синхронизирована со скроллом
         pin: true, // пинит секцию на экране до завершения анимации
+
         onLeave: (self) => {
           // Если пользователь проскроллил дальше, принудительно переводим timeline в финальное состояние
           tl.progress(1);
           setAnimationPlayed(true);
-          self.kill(); // деактивируем ScrollTrigger, чтобы он больше не реагировал на скролл
+          self.kill();
+          setTimeout(() => {
+            window.scrollTo({
+              top: sectionRef.current.offsetTop,
+              behavior: 'smooth',
+            });
+          }, 50);
         },
       },
       onComplete: () => setAnimationPlayed(true),
