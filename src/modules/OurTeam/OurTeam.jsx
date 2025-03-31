@@ -3,7 +3,7 @@ import Image from 'next/image';
 import s from './OurTeam.module.scss';
 export default function OurTeam() {
   return (
-    <section>
+    <section className={s.section}>
       <Container>
         <div>
           <h2 className={s.title}>

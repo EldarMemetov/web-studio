@@ -10,6 +10,7 @@ import TextAnimation from '@/modules/TextAnimation/TextAnimation';
 import FetchServices from '@/modules/FetchServices/FetchServices';
 import PixelPerfectBlock from '@/modules/PixelPerfectBlock/PixelPerfectBlock';
 import OurTeam from '../../modules/OurTeam/OurTeam';
+import GetBusinessSolutions from '@/modules/GetBusinessSolutions/GetBusinessSolutions';
 
 export default async function Home({ params: rawParams }) {
   // const { locale } = await rawParams;
@@ -28,6 +29,7 @@ export default async function Home({ params: rawParams }) {
         <FetchServices />
         <PixelPerfectBlock locale={locale} />
         <OurTeam />
+        <GetBusinessSolutions locale={locale} />
         <TextAnimation />
         <FeedbackForm />
         <SocialLinks />
