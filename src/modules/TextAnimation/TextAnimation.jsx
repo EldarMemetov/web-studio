@@ -275,33 +275,37 @@ export default function TextAnimation() {
   const [animationPlayed, setAnimationPlayed] = useState(false);
 
   useEffect(() => {
+    // Фикс 100vh для мобильных устройств
+    const setVh = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setVh();
+    window.addEventListener('resize', setVh);
+
+    return () => window.removeEventListener('resize', setVh);
+  }, []);
+
+  useEffect(() => {
     const sections = textRefs.current;
-    // Создаем timeline, привязанный к скроллу
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top top',
-        end: '+=300%', // регулировать в зависимости от количества секций
-        scrub: true, // анимация синхронизирована со скроллом
-        pin: true, // пинит секцию на экране до завершения анимации
+        end: '+=300%',
+        scrub: true,
+        pin: true,
 
         onLeave: (self) => {
-          // Если пользователь проскроллил дальше, принудительно переводим timeline в финальное состояние
           tl.progress(1);
           setAnimationPlayed(true);
           self.kill();
-          setTimeout(() => {
-            window.scrollTo({
-              top: sectionRef.current.offsetTop,
-              behavior: 'smooth',
-            });
-          }, 50);
+          ScrollTrigger.refresh(); // Пересчет триггеров после завершения анимации
         },
       },
       onComplete: () => setAnimationPlayed(true),
     });
 
-    // Эффект перелистывания: каждая секция уходит влево, а следующая появляется справа
     sections.forEach((el, index) => {
       if (index > 0) {
         tl.to(sections[index - 1], {
@@ -324,22 +328,21 @@ export default function TextAnimation() {
       }
     });
 
-    // Анимация букв последнего текстового блока (например, слово "співпрацювати")
+    // Анимация букв
     const lastText = sections[sections.length - 1];
-    const letters = lastText.querySelectorAll('span');
-    gsap.set(letters, { opacity: 0, rotateY: 180 });
-    tl.to(letters, {
-      opacity: 1,
-      rotateY: 0,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: 'back.out(1.7)',
-    });
+    const letters = lastText?.querySelectorAll('span');
+    if (letters) {
+      gsap.set(letters, { opacity: 0, rotateY: 180 });
+      tl.to(letters, {
+        opacity: 1,
+        rotateY: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'back.out(1.7)',
+      });
+    }
   }, []);
 
-  // После завершения основной анимации (при флаге animationPlayed === true)
-  // можно запустить дополнительную анимацию для статичного контейнера,
-  // если требуется. Например, плавное появление остальных блоков.
   useEffect(() => {
     if (animationPlayed) {
       gsap.set(staticRefs.current, { x: '100%', opacity: 0, scale: 1.2 });
@@ -384,7 +387,6 @@ export default function TextAnimation() {
             </div>
           </div>
         ) : (
-          // Статичный контейнер после завершения анимации (остается на финальном блоке)
           <div className={s.staticContainer}>
             <h2
               ref={(el) => (staticRefs.current[1] = el)}
