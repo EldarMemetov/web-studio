@@ -11,6 +11,7 @@ import FetchServices from '@/modules/FetchServices/FetchServices';
 import PixelPerfectBlock from '@/modules/PixelPerfectBlock/PixelPerfectBlock';
 import OurTeam from '../../modules/OurTeam/OurTeam';
 import GetBusinessSolutions from '@/modules/GetBusinessSolutions/GetBusinessSolutions';
+import BrandTransformation from '@/modules/BrandTransformation/BrandTransformation';
 
 export default async function Home({ params: rawParams }) {
   // const { locale } = await rawParams;
@@ -30,6 +31,7 @@ export default async function Home({ params: rawParams }) {
         <PixelPerfectBlock locale={locale} />
         <OurTeam />
         <GetBusinessSolutions locale={locale} />
+        <BrandTransformation />
         <TextAnimation />
         <FeedbackForm />
         <SocialLinks />

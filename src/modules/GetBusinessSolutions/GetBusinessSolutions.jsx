@@ -7,11 +7,11 @@ export default async function GetBusinessSolutions({ locale }) {
   const { t } = await initServerI18n(locale, ['getBusinessSolutions']);
 
   return (
-    <section>
+    <section className={styles.section}>
       <Container>
         <div>
           <h2 className={styles.newTitle}>
-            {t('titleStart')}{' '}
+            {t('titleStart')}
             <span className={styles.spanNewTitle}>{t('titleHighlight')}</span>
           </h2>
 
