@@ -167,8 +167,6 @@ function HeaderComponent() {
         <div className={styles.buttonContact}>
           <Button
             variant="variant1"
-            data-aos="zoom-in"
-            data-aos-delay="1000"
             onMouseEnter={() => setButtonText(t('talk'))}
             onMouseLeave={() => setButtonText(t('kontakt'))}
           >
