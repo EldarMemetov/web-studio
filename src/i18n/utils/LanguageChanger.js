@@ -37,7 +37,6 @@
 
 import { useRouter, usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
-import i18nConfig from '/i18nConfig';
 
 export function useLanguageChanger() {
   const { i18n } = useTranslation();

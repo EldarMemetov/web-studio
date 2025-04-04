@@ -9,6 +9,7 @@ import LanguageSwitcher from '@/shared/components/LanguageSwitcher/LanguageSwitc
 import Button from '@/shared/components/button/Button';
 import Icon from '../../shared/Icon/Icon';
 import { SocialLinks } from './SocialLinks/SocialLinks';
+import Logo from '@/shared/Logo/Logo';
 
 function HeaderComponent() {
   const { t, i18n } = useTranslation('header');
@@ -22,6 +23,7 @@ function HeaderComponent() {
 
   const [buttonText, setButtonText] = useState(t('kontakt'));
 
+  // Используем состояние для отображения подменю "services"
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -45,8 +47,6 @@ function HeaderComponent() {
     [pathname, currentLocale]
   );
 
-  const toggleServices = () => setIsServicesOpen((prev) => !prev);
-
   const toggleMenu = () => {
     setIsMenuOpen((prev) => {
       if (!prev) {
@@ -58,14 +58,16 @@ function HeaderComponent() {
     });
   };
 
+  // Закрываем как основное меню, так и подменю services
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsServicesOpen(false);
     document.body.style.overflow = 'auto';
   };
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>PixelPro Studio</div>
+      <Logo />
       <nav>
         <ul
           className={clsx(styles['nav-list'], {
@@ -98,19 +100,6 @@ function HeaderComponent() {
           </li>
           <li
             className={clsx(styles['nav-list-item'], {
-              [styles['nav-list-item-active']]: activeClass.portfolio,
-            })}
-          >
-            <Link
-              href={`/${currentLocale}/portfolio`}
-              className={styles['nav-list-link']}
-              onClick={closeMenu}
-            >
-              {t('portfolio')}
-            </Link>
-          </li>
-          <li
-            className={clsx(styles['nav-list-item'], {
               [styles['nav-list-item-active']]: activeClass.aboutUs,
             })}
           >
@@ -123,10 +112,24 @@ function HeaderComponent() {
             </Link>
           </li>
           <li
+            className={clsx(styles['nav-list-item'], {
+              [styles['nav-list-item-active']]: activeClass.portfolio,
+            })}
+          >
+            <Link
+              href={`/${currentLocale}/portfolio`}
+              className={styles['nav-list-link']}
+              onClick={closeMenu}
+            >
+              {t('portfolio')}
+            </Link>
+          </li>
+          <li
             className={clsx(styles['nav-list-item'], styles['nav-services'], {
               [styles['nav-list-item-active']]: activeClass.services,
             })}
-            onClick={toggleServices}
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
           >
             <span className={styles['nav-list-link']}>{t('services')}</span>
             {isServicesOpen && (
@@ -201,7 +204,7 @@ export const Header = React.memo(HeaderComponent);
 // import Button from '@/shared/components/button/Button';
 // import Icon from '../../shared/Icon/Icon';
 // import { SocialLinks } from './SocialLinks/SocialLinks';
-
+// import Logo from '@/shared/Logo/Logo';
 // function HeaderComponent() {
 //   const { t, i18n } = useTranslation('header');
 //   const pathname = usePathname();
@@ -229,7 +232,6 @@ export const Header = React.memo(HeaderComponent);
 //   const activeClass = useMemo(
 //     () => ({
 //       home: pathname === `/${currentLocale}`,
-//       portfolio: pathname === `/${currentLocale}/portfolio`,
 //       aboutUs: pathname === `/${currentLocale}/about-us`,
 //       webDevelopment: pathname === `/${currentLocale}/web-development`,
 //       videography: pathname === `/${currentLocale}/videography`,
@@ -253,7 +255,7 @@ export const Header = React.memo(HeaderComponent);
 
 //   return (
 //     <header className={styles.header}>
-//       <div className={styles.logo}>PixelPro Studio</div>
+//       <Logo />
 //       <nav>
 //         <ul
 //           className={clsx(styles['nav-list'], {
@@ -287,19 +289,6 @@ export const Header = React.memo(HeaderComponent);
 //           </li>
 //           <li
 //             className={clsx(styles['nav-list-item'], {
-//               [styles['nav-list-item-active']]: activeClass.portfolio,
-//             })}
-//           >
-//             <Link
-//               href={`/${currentLocale}/portfolio`}
-//               className={styles['nav-list-link']}
-//               onClick={closeMenu}
-//             >
-//               {t('portfolio')}
-//             </Link>
-//           </li>
-//           <li
-//             className={clsx(styles['nav-list-item'], {
 //               [styles['nav-list-item-active']]: activeClass.aboutUs,
 //             })}
 //           >
@@ -311,7 +300,7 @@ export const Header = React.memo(HeaderComponent);
 //               {t('aboutUs')}
 //             </Link>
 //           </li>
-//           {/* Прямой вывод ссылок на услуги, без "services" */}
+//           {/* Прямой вывод ссылок на услуги */}
 //           <li
 //             className={clsx(styles['nav-list-item'], {
 //               [styles['nav-list-item-active']]: activeClass.webDevelopment,

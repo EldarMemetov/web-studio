@@ -1,0 +1,12 @@
+.logoContainer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

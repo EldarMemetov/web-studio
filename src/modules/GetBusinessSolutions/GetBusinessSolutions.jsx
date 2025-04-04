@@ -12,7 +12,7 @@ export default async function GetBusinessSolutions({ locale }) {
         <div>
           <h2 className={styles.newTitle}>
             {t('titleStart')}
-            <span className={styles.spanNewTitle}>{t('titleHighlight')}</span>
+            <span className={styles.spanNewTitle}> {t('titleHighlight')}</span>
           </h2>
 
           <List items={t('items', { returnObjects: true }) || []} />
