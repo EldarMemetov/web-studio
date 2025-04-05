@@ -1,12 +1,12 @@
 const nextConfig = {
   trailingSlash: false,
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ['res.cloudinary.com'],
   },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
+      use: ['@svgr/webpack'],
     });
     return config;
   },
@@ -17,6 +17,9 @@ const nextConfig = {
       @import "src/shared/styles/_mixins.scss";
       @import "src/shared/styles/_variables.scss";
     `,
+  },
+  experimental: {
+    reactRefresh: false,
   },
 };
 

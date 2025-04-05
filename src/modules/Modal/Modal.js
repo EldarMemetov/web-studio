@@ -1,8 +1,8 @@
-"use client";
-import Image from "next/image";
-import React, { Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import styles from "./Modal.module.css";
+'use client';
+import Image from 'next/image';
+import React, { Fragment } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import styles from './Modal.module.scss';
 
 export default function Modal({ show, onClose, children }) {
   return (
