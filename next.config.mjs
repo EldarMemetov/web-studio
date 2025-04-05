@@ -18,9 +18,6 @@ const nextConfig = {
       @import "src/shared/styles/_variables.scss";
     `,
   },
-  experimental: {
-    reactRefresh: false,
-  },
 };
 
 export default nextConfig;

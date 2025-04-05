@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 24px;
 }
 
 .itemList {
@@ -55,14 +56,18 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  .description {
+  .containerOn {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     transition:
       opacity 0.3s ease-in-out,
       max-height 0.3s ease-in-out;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
   }
 
   .game {
@@ -79,7 +84,7 @@
       transform: translateY(-12px);
     }
 
-    .description {
+    .containerOn {
       opacity: 1;
       max-height: 200px;
     }
@@ -110,4 +115,37 @@
     transition: transform 0.3s ease-out;
     z-index: -1;
   }
+}
+.arrow {
+  width: 24px;
+  height: 24px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.button {
+  border-radius: 60px;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 2px solid rgb(44, 42, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(206, 99, 235, 0.8) 0%,
+    rgba(168, 60, 220, 0.6) 40%,
+    rgba(100, 45, 200, 0.4) 70%,
+    rgba(2, 7, 157, 0.2) 100%
+  );
+}
+
+.button:hover .arrow {
+  transform: rotate(45deg);
 }

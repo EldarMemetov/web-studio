@@ -81,8 +81,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  gap: 15px;
+  gap: 24px;
   margin: 0;
   padding: 20px;
   z-index: 999;
@@ -113,23 +112,23 @@
   font-size: 16px;
   line-height: 146%;
   transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 32px;
   cursor: pointer;
   @include media(desktop) {
     font-size: 18px;
   }
 }
 
-// .nav-list-link:hover,
-// .nav-list-span:hover {
-//   color: #00d4ff;
-//   transform: scale(1.1);
-// }
+.nav-list-link:hover,
+.nav-list-span:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
-// .nav-list-item-active .nav-list-link,
-// .nav-list-item-active .nav-list-span {
-//   color: #00d4ff;
-//   border-bottom: 2px solid #00d4ff;
-// }
+.nav-list-item-active .nav-list-link,
+.nav-list-item-active .nav-list-span {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 .nav-services {
   display: flex;
@@ -152,12 +151,13 @@
   color: #fff;
   font-size: 14px;
   text-decoration: none;
+  border-radius: 32px;
+  padding: 10px;
 }
 
-// .submenu-link:hover {
-//   background-color: #00d4ff;
-//   border-radius: 4px;
-// }
+.submenu-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 .mobileHeader {
   width: 100%;
@@ -225,7 +225,7 @@
     padding: 10px 0;
     margin: 0;
     min-width: 180px;
-    backdrop-filter: blur(200px);
+    // backdrop-filter: blur(200px);
     background: linear-gradient(
       180deg,
       rgba(2, 7, 157, 0.04) 0%,

@@ -51,21 +51,17 @@
   background: linear-gradient(
       to bottom,
       rgb(0 0 0 / 36%) 0%,
-      /* мягкий прозрачный чёрный вверху */ rgb(0 0 0) 20%,
-      /* чёрный на 20% */ rgb(0 0 0) 100% /* чёрный до конца */
+      rgb(0 0 0) 20%,
+      rgb(0 0 0) 100%
     ),
     linear-gradient(
       to right,
       #00008b 0%,
-      /* тёмно-синий */ #00004d 30%,
-      /* очень темно-синий */ #2c0bd4 50%,
-      /* яркий синий */ #8a2be2 80%,
-      /* фиолетовый (расширен на 80%) */ #8a2be2 100%
-        /* фиолетовый (протягиваем до конца) */
+      #00004d 30%,
+      #2c0bd4 50%,
+      #8a2be2 80%,
+      #8a2be2 100%
     );
-  background-size: 100% 100%;
-  background-position: top left;
-  background-blend-mode: normal;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
