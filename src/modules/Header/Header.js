@@ -21,8 +21,6 @@ function HeaderComponent() {
     setCurrentLocale(i18n.language);
   }, [i18n.language]);
 
-  const [buttonText, setButtonText] = useState(t('kontakt'));
-
   // Используем состояние для отображения подменю "services"
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -168,13 +166,7 @@ function HeaderComponent() {
       <div className={styles.containerButtonTrans}>
         <LanguageSwitcher />
         <div className={styles.buttonContact}>
-          <Button
-            variant="variant1"
-            onMouseEnter={() => setButtonText(t('talk'))}
-            onMouseLeave={() => setButtonText(t('kontakt'))}
-          >
-            {buttonText}
-          </Button>
+          <Button variant="variant1">{t('kontakt')}</Button>
         </div>
         <button
           onClick={toggleMenu}

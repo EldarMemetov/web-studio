@@ -31,18 +31,18 @@ export default async function TitleHome({ locale }) {
               </p>
               <div className={styles.containerButton}>
                 <Button
-                  variant="variant3"
-                  data-aos="zoom-in"
-                  data-aos-delay="1000"
-                >
-                  {t('contactButton')}
-                </Button>
-                <Button
                   variant="variant2"
                   data-aos="zoom-in"
                   data-aos-delay="1000"
                 >
                   {t('servicesButton')}
+                </Button>
+                <Button
+                  variant="variant3"
+                  data-aos="zoom-in"
+                  data-aos-delay="1000"
+                >
+                  {t('contactButton')}
                 </Button>
               </div>
             </div>
