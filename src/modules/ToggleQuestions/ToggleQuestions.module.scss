@@ -1,3 +1,4 @@
+
 .section {
   padding-bottom: 150px;
 }
@@ -52,8 +53,9 @@
   border: 1px solid;
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
 
+  // Исходный градиент
   background: radial-gradient(
-    circle at bottom right,
+    circle at top right,
     rgba(206, 99, 235, 0.237) 5%,
     rgb(2 7 157 / 0%) 20%,
     rgba(42, 48, 191, 0) 50%
@@ -63,13 +65,39 @@
 
 .containerList:hover {
   background: radial-gradient(
-    circle at bottom right,
+    circle at top right,
     rgb(206 99 235 / 60%) 5%,
     rgba(2, 7, 157, 0) 20%,
     rgba(42, 48, 191, 0) 50%
   );
 }
 
+@keyframes gradientMove {
+  0% {
+    background: radial-gradient(
+      circle at top right,
+      rgba(206, 99, 235, 0.237) 5%,
+      rgb(2 7 157 / 0%) 20%,
+      rgba(42, 48, 191, 0) 50%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle at bottom left,
+
+      rgba(206, 99, 235, 0.6) 5%,
+      rgba(2, 7, 157, 0.3) 30%,
+      rgb(42 48 191 / 0%) 50%
+    );
+  }
+}
+
+// Класс, который будет запускать анимацию при открытии
+.containerList.open {
+  animation: gradientMove 0.5s forwards;
+}
+
+// Остальной CSS
 .containerIcon {
   display: flex;
   align-items: center;

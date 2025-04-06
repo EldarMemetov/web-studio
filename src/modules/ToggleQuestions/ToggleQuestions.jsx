@@ -26,7 +26,7 @@ export default function ToggleQuestions() {
             </p>
             <ul>
               <li
-                className={`${s.containerList} ${isOpen ? s.containerOpen : ''}`}
+                className={`${s.containerList} ${isOpen ? s.containerOpen : ''} ${isOpen ? s.open : ''}`}
                 onClick={toggleOpen}
               >
                 <div className={s.containerIcon}>
