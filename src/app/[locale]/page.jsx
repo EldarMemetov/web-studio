@@ -27,7 +27,7 @@ export default async function Home({ params: rawParams }) {
   return (
     <main>
       <div className={style.divContainer}>
-        <TitleHome locale={locale} />
+        {/* <TitleHome locale={locale} />
         <FetchServices />
         <PixelPerfectBlock locale={locale} />
         <OurTeam />
@@ -40,7 +40,58 @@ export default async function Home({ params: rawParams }) {
         <ReviewsSection initialReviews={reviews}>
           <ReviewsForm />
           <ReviewsList />
+        </ReviewsSection> */}
+        {console.log('Before TitleHome')}
+        <TitleHome locale={locale} />
+        {console.log('After TitleHome')}
+
+        {console.log('Before FetchServices')}
+        <FetchServices />
+        {console.log('After FetchServices')}
+
+        {console.log('Before PixelPerfectBlock')}
+        <PixelPerfectBlock locale={locale} />
+        {console.log('After PixelPerfectBlock')}
+
+        {console.log('Before OurTeam')}
+        <OurTeam />
+        {console.log('After OurTeam')}
+
+        {console.log('Before GetBusinessSolutions')}
+        <GetBusinessSolutions locale={locale} />
+        {console.log('After GetBusinessSolutions')}
+
+        {console.log('Before BrandTransformation')}
+        <BrandTransformation />
+        {console.log('After BrandTransformation')}
+
+        {console.log('Before TextAnimation')}
+        <TextAnimation />
+        {console.log('After TextAnimation')}
+
+        {console.log('Before ToggleQuestions')}
+        <ToggleQuestions />
+        {console.log('After ToggleQuestions')}
+
+        {console.log('Before FeedbackForm')}
+        <FeedbackForm />
+        {console.log('After FeedbackForm')}
+
+        {console.log('Before SocialLinks')}
+        <SocialLinks />
+        {console.log('After SocialLinks')}
+
+        {console.log('Before ReviewsSection')}
+        <ReviewsSection initialReviews={reviews}>
+          {console.log('Inside ReviewsSection - Before ReviewsForm')}
+          <ReviewsForm />
+          {console.log('Inside ReviewsSection - After ReviewsForm')}
+
+          {console.log('Inside ReviewsSection - Before ReviewsList')}
+          <ReviewsList />
+          {console.log('Inside ReviewsSection - After ReviewsList')}
         </ReviewsSection>
+        {console.log('After ReviewsSection')}
       </div>
     </main>
   );

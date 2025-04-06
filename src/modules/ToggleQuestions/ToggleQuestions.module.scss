@@ -40,17 +40,34 @@
   align-items: center;
 }
 .containerList {
-  background-color: #9624e2;
   border-radius: 4px;
   width: 808px;
   overflow: hidden;
-  transition: height 1s ease-in-out;
   padding: 24px 18px;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
+
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(206, 99, 235, 0.237) 5%,
+    rgb(2 7 157 / 0%) 20%,
+    rgba(42, 48, 191, 0) 50%
+  );
+  transition: background 0.26s ease-in-out;
+}
+
+.containerList:hover {
+  background: radial-gradient(
+    circle at bottom right,
+    rgb(206 99 235 / 60%) 5%,
+    rgba(2, 7, 157, 0) 20%,
+    rgba(42, 48, 191, 0) 50%
+  );
 }
 
 .containerIcon {
@@ -62,8 +79,17 @@
 .icon {
   width: 28px;
   height: 28px;
+  transition: transform 0.3s ease;
 }
 
 .iconRotated {
   transform: rotate(45deg) rotateY(180deg);
+  transform-origin: center;
 }
+
+// background: radial-gradient(
+//   circle at bottom right,
+//   rgba(206, 99, 235, 0.6) 5%,
+//   rgba(2, 7, 157, 0.3) 30%,
+//   rgb(42 48 191 / 0%) 50%
+// );
