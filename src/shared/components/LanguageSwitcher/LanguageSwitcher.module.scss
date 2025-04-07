@@ -8,6 +8,7 @@
   background: transparent;
   padding: 5px 10px;
   cursor: pointer;
+
   border-radius: 5px;
   width: 100%;
   font-size: 16px;
@@ -39,14 +40,6 @@
   position: absolute;
   top: 100%;
   left: 0;
-  backdrop-filter: blur(200px);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 7, 157, 0.04) 0%,
-    rgba(150, 36, 226, 0.04) 47.28%,
-    rgba(206, 99, 235, 0.04) 82.32%,
-    rgba(239, 196, 251, 0.04) 100%
-  );
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -55,14 +48,7 @@
 }
 
 .languageOption {
-  backdrop-filter: blur(200px);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 7, 157, 0.04) 0%,
-    rgba(150, 36, 226, 0.04) 47.28%,
-    rgba(206, 99, 235, 0.04) 82.32%,
-    rgba(239, 196, 251, 0.04) 100%
-  );
+  background: transparent;
   border: none;
   padding: 10px 10px;
   text-align: center;

@@ -6,8 +6,6 @@ const LanguageSwitcher = () => {
   const { handleChangeLanguage, currentLocale } = useLanguageChanger();
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
-
   const changeLanguage = (locale) => {
     handleChangeLanguage(locale);
     setIsOpen(false);
@@ -18,8 +16,12 @@ const LanguageSwitcher = () => {
   );
 
   return (
-    <div className={styles.languageSwitcherContainer}>
-      <button className={styles.languageButton} onClick={toggleDropdown}>
+    <div
+      className={styles.languageSwitcherContainer}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button className={styles.languageButton}>
         {currentLocale.toUpperCase()}
       </button>
 

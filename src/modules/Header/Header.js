@@ -74,7 +74,7 @@ function HeaderComponent() {
         >
           {isMenuOpen && (
             <div className={styles.mobileHeader}>
-              <div className={styles.logoMobile}>PixelPro Studio</div>
+              <Logo />
             </div>
           )}
 
@@ -186,6 +186,7 @@ function HeaderComponent() {
 export const Header = React.memo(HeaderComponent);
 
 // 'use client';
+
 // import React, { useState, useEffect, useMemo } from 'react';
 // import { useTranslation } from 'react-i18next';
 // import Link from 'next/link';
@@ -197,19 +198,17 @@ export const Header = React.memo(HeaderComponent);
 // import Icon from '../../shared/Icon/Icon';
 // import { SocialLinks } from './SocialLinks/SocialLinks';
 // import Logo from '@/shared/Logo/Logo';
+
 // function HeaderComponent() {
 //   const { t, i18n } = useTranslation('header');
 //   const pathname = usePathname();
 
-//   // Текущий язык
 //   const [currentLocale, setCurrentLocale] = useState(i18n.language);
 //   useEffect(() => {
 //     setCurrentLocale(i18n.language);
 //   }, [i18n.language]);
 
-//   // Состояние мобильного меню
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   // Ширина окна для адаптивности
 //   const [windowWidth, setWindowWidth] = useState(0);
 //   useEffect(() => {
 //     if (typeof window !== 'undefined') {
@@ -220,18 +219,17 @@ export const Header = React.memo(HeaderComponent);
 //     }
 //   }, []);
 
-//   // Определяем активный класс для подсветки ссылки
 //   const activeClass = useMemo(
 //     () => ({
 //       home: pathname === `/${currentLocale}`,
 //       aboutUs: pathname === `/${currentLocale}/about-us`,
 //       webDevelopment: pathname === `/${currentLocale}/web-development`,
 //       videography: pathname === `/${currentLocale}/videography`,
+//       blog: pathname === `/${currentLocale}/blog`,
 //     }),
 //     [pathname, currentLocale]
 //   );
 
-//   // Открытие/закрытие мобильного меню
 //   const toggleMenu = () => {
 //     setIsMenuOpen((prev) => {
 //       document.body.style.overflow = !prev ? 'hidden' : 'auto';
@@ -239,7 +237,6 @@ export const Header = React.memo(HeaderComponent);
 //     });
 //   };
 
-//   // Закрытие меню
 //   const closeMenu = () => {
 //     setIsMenuOpen(false);
 //     document.body.style.overflow = 'auto';
@@ -254,7 +251,6 @@ export const Header = React.memo(HeaderComponent);
 //             [styles['open-menu']]: isMenuOpen,
 //           })}
 //         >
-//           {/* Мобильная шапка */}
 //           {isMenuOpen && (
 //             <div className={styles.mobileHeader}>
 //               <div className={styles.logoMobile}>PixelPro Studio</div>
@@ -265,7 +261,6 @@ export const Header = React.memo(HeaderComponent);
 //               <Icon iconName="icon-close" className={styles.iconClose} />
 //             </button>
 //           )}
-//           {/* Основные ссылки */}
 //           <li
 //             className={clsx(styles['nav-list-item'], {
 //               [styles['nav-list-item-active']]: activeClass.home,
@@ -292,7 +287,6 @@ export const Header = React.memo(HeaderComponent);
 //               {t('aboutUs')}
 //             </Link>
 //           </li>
-//           {/* Прямой вывод ссылок на услуги */}
 //           <li
 //             className={clsx(styles['nav-list-item'], {
 //               [styles['nav-list-item-active']]: activeClass.webDevelopment,
@@ -317,6 +311,20 @@ export const Header = React.memo(HeaderComponent);
 //               onClick={closeMenu}
 //             >
 //               {t('videography')}
+//             </Link>
+//           </li>
+//           {/* 🔥 Новый пункт меню — Блог */}
+//           <li
+//             className={clsx(styles['nav-list-item'], {
+//               [styles['nav-list-item-active']]: activeClass.blog,
+//             })}
+//           >
+//             <Link
+//               href={`/${currentLocale}/blog`}
+//               className={styles['nav-list-link']}
+//               onClick={closeMenu}
+//             >
+//               {t('blog')}
 //             </Link>
 //           </li>
 //           {isMenuOpen && (

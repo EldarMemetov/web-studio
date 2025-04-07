@@ -225,7 +225,7 @@
     padding: 10px 0;
     margin: 0;
     min-width: 180px;
-    // backdrop-filter: blur(200px);
+
     background: linear-gradient(
       180deg,
       rgba(2, 7, 157, 0.04) 0%,
@@ -233,6 +233,7 @@
       rgba(206, 99, 235, 0.04) 82.32%,
       rgba(239, 196, 251, 0.04) 100%
     );
+    backdrop-filter: blur(200px);
     z-index: 1001;
   }
 
