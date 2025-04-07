@@ -1,0 +1,32 @@
+{
+  "titleBefore": "got",
+  "titleHighlight": "questions",
+  "titleAfter": "that’s normal",
+  "description": "We’re always ready to answer all your questions. Book a consultation – we’ll be happy to help!",
+  "faq": [
+    {
+      "question": "How long does it take to develop a website?",
+      "answer": "The development time depends on the website’s functionality, design complexity, and content volume. For example, a simple landing page can be ready within 1–2 weeks, while a complex online store or corporate portal may take 4 to 8 weeks. We carefully analyze each project’s requirements to determine the exact timeline."
+    },
+    {
+      "question": "What web development services do you offer?",
+      "answer": "We offer a wide range of web development services: building websites from scratch, redesigning existing platforms, developing online stores, corporate portals, and landing pages. We also provide full technical support, SEO optimization, and integration of modern technologies to enhance your website’s performance."
+    },
+    {
+      "question": "Do you provide support after the website launch?",
+      "answer": "Yes, we provide reliable post-launch support. Our service includes regular content updates, ongoing performance monitoring, fast issue resolution, and expert consultations to ensure your website runs smoothly at all times."
+    },
+    {
+      "question": "What types of video production do you offer?",
+      "answer": "We create a variety of video content: corporate videos, promotional clips, educational videos, event coverage, and animated videos. Each project is tailored to the client’s unique needs to deliver standout, engaging content."
+    },
+    {
+      "question": "How is the cost of video production determined?",
+      "answer": "The cost of video production is calculated individually and depends on several factors: script complexity, video length, number of shooting days, involvement of actors, and use of special effects. We go over all details with the client to offer the best value for the budget."
+    },
+    {
+      "question": "Do you offer location and casting services?",
+      "answer": "Yes, we manage the entire production process: professional location scouting, casting of actors and models, and providing all necessary props and modern equipment to ensure your video is as high-quality and impactful as possible."
+    }
+  ]
+}

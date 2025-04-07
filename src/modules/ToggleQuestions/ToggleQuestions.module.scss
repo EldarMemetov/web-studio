@@ -1,12 +1,15 @@
-
 .section {
   padding-bottom: 150px;
+  transition: all 0.5s ease-in-out;
 }
+
 .title {
   font-weight: 500;
   font-size: 80px;
   line-height: 130%;
   text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 80px;
 }
 
 .titleAnd {
@@ -15,109 +18,18 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out;
 }
+
 .description {
   font-weight: 400;
   font-size: 18px;
   line-height: 146%;
+  transition: all 0.5s ease-in-out;
 }
-.titleOpen {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 136%;
-}
-.descriptionOpen {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 146%;
-}
-.icon {
-  width: 28px;
-  height: 28px;
-}
-.containerIcon {
+
+.containerContent {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.containerList {
-  border-radius: 4px;
-  width: 808px;
-  overflow: hidden;
-  padding: 24px 18px;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 24px;
-  border: 1px solid;
-  border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
-
-  // Исходный градиент
-  background: radial-gradient(
-    circle at top right,
-    rgba(206, 99, 235, 0.237) 5%,
-    rgb(2 7 157 / 0%) 20%,
-    rgba(42, 48, 191, 0) 50%
-  );
-  transition: background 0.26s ease-in-out;
 }
-
-.containerList:hover {
-  background: radial-gradient(
-    circle at top right,
-    rgb(206 99 235 / 60%) 5%,
-    rgba(2, 7, 157, 0) 20%,
-    rgba(42, 48, 191, 0) 50%
-  );
-}
-
-@keyframes gradientMove {
-  0% {
-    background: radial-gradient(
-      circle at top right,
-      rgba(206, 99, 235, 0.237) 5%,
-      rgb(2 7 157 / 0%) 20%,
-      rgba(42, 48, 191, 0) 50%
-    );
-  }
-  100% {
-    background: radial-gradient(
-      circle at bottom left,
-
-      rgba(206, 99, 235, 0.6) 5%,
-      rgba(2, 7, 157, 0.3) 30%,
-      rgb(42 48 191 / 0%) 50%
-    );
-  }
-}
-
-// Класс, который будет запускать анимацию при открытии
-.containerList.open {
-  animation: gradientMove 0.5s forwards;
-}
-
-// Остальной CSS
-.containerIcon {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.icon {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
-}
-
-.iconRotated {
-  transform: rotate(45deg) rotateY(180deg);
-  transform-origin: center;
-}
-
-// background: radial-gradient(
-//   circle at bottom right,
-//   rgba(206, 99, 235, 0.6) 5%,
-//   rgba(2, 7, 157, 0.3) 30%,
-//   rgb(42 48 191 / 0%) 50%
-// );

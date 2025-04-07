@@ -25,6 +25,7 @@ export const NAMESPACES = [
   'reviewsForm',
   'pixelPerfectBlock',
   'getBusinessSolutions',
+  'toggleQuestions',
 ];
 
 export const FLIPPED_TIME_MS = 15000;
