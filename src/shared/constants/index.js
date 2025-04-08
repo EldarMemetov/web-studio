@@ -26,6 +26,7 @@ export const NAMESPACES = [
   'pixelPerfectBlock',
   'getBusinessSolutions',
   'toggleQuestions',
+  'IdeasToReality',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

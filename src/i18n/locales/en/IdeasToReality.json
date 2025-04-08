@@ -1,0 +1,51 @@
+{
+  "heading": {
+    "title": "Your ideas — our",
+    "highlight": "realization"
+  },
+  "items": [
+    {
+      "title": "Websites",
+      "description": "For businesses of any scale",
+      "info": "WEBSITES",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "Video Production",
+      "description": "For businesses of any scale",
+      "info": "VIDEO PRODUCTION",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "Online Stores",
+      "description": "For businesses of any scale",
+      "info": "ONLINE STORES",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "Landing Pages",
+      "description": "For businesses of any scale",
+      "info": "LANDING PAGES",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "For businesses of any scale",
+      "info": "UI/UX DESIGN",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "SEO Optimization",
+      "description": "For businesses of any scale",
+      "info": "SEO OPTIMIZATION",
+      "icon": "icon-ideas"
+    },
+
+    {
+      "title": "Technical Support",
+      "description": "For businesses of any scale",
+      "info": "TECHNICAL SUPPORT",
+      "icon": "icon-ideas"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import ReviewsForm from '@/modules/ReviewsForm/ReviewsForm';
 import ReviewsList from '@/modules/GetReview/Components/ReviewsList/ReviewsList';
 import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/ReviewsSection';
 import { GetReviews } from '@/services/api';
-import style from './page.module.css';
+
 import { SocialLinks } from '@/modules/Header/SocialLinks/SocialLinks';
 import TextAnimation from '@/modules/TextAnimation/TextAnimation';
 import FetchServices from '@/modules/FetchServices/FetchServices';
@@ -27,13 +27,13 @@ export default async function Home({ params: rawParams }) {
 
   return (
     <main>
-      <div className={style.divContainer}>
+      <div>
         <TitleHome locale={locale} />
         <FetchServices />
         <PixelPerfectBlock locale={locale} />
         <OurTeam />
         <GetBusinessSolutions locale={locale} />
-        <IdeasToReality />
+        <IdeasToReality locale={locale} />
         <BrandTransformation />
         <TextAnimation />
         <ToggleQuestions locale={locale} />

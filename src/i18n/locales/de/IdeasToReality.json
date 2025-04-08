@@ -1,0 +1,51 @@
+{
+  "heading": {
+    "title": "Ihre Ideen — unsere",
+    "highlight": "Verwirklichung"
+  },
+  "items": [
+    {
+      "title": "Websites",
+      "description": "Für Unternehmen jeder Größe",
+      "info": "WEBSITES",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "Videoproduktion",
+      "description": "Für Unternehmen jeder Größe",
+      "info": "VIDEOPRODUKTION",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "Online-Shops",
+      "description": "Für Unternehmen jeder Größe",
+      "info": "ONLINE-SHOPS",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "Landing Pages",
+      "description": "Für Unternehmen jeder Größe",
+      "info": "LANDING PAGES",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "UI/UX-Design",
+      "description": "Für Unternehmen jeder Größe",
+      "info": "UI/UX-DESIGN",
+      "icon": "icon-ideas"
+    },
+    {
+      "title": "SEO-Optimierung",
+      "description": "Für Unternehmen jeder Größe",
+      "info": "SEO-OPTIMIERUNG",
+      "icon": "icon-ideas"
+    },
+
+    {
+      "title": "Technische Unterstützung",
+      "description": "Für Unternehmen jeder Größe",
+      "info": "TECHNISCHE UNTERSTÜTZUNG",
+      "icon": "icon-ideas"
+    }
+  ]
+}
