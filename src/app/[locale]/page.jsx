@@ -13,6 +13,7 @@ import OurTeam from '../../modules/OurTeam/OurTeam';
 import GetBusinessSolutions from '@/modules/GetBusinessSolutions/GetBusinessSolutions';
 import BrandTransformation from '@/modules/BrandTransformation/BrandTransformation';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
+import IdeasToReality from '@/modules/IdeasToReality/IdeasToReality';
 
 export default async function Home({ params: rawParams }) {
   // const { locale } = await rawParams;
@@ -32,6 +33,7 @@ export default async function Home({ params: rawParams }) {
         <PixelPerfectBlock locale={locale} />
         <OurTeam />
         <GetBusinessSolutions locale={locale} />
+        <IdeasToReality />
         <BrandTransformation />
         <TextAnimation />
         <ToggleQuestions locale={locale} />
