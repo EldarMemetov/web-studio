@@ -7,11 +7,14 @@
   height: 500px;
   background: radial-gradient(
       circle at top right,
-      rgba(27, 11, 248, 0.129) 0%,
+      rgba(27, 11, 248, 0.258) 0%,
       rgba(0, 0, 0, 0.1) 50%
     ),
     #010227;
   transition: background 0.5s ease-in-out;
+  flex: 0 0 auto;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #d3d1d176, #41404072) 1;
 }
 
 .itemList:hover::after {
