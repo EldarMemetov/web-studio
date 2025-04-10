@@ -1,22 +1,23 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import styles from "./ReviewsForm.module.scss";
-import Container from "@/shared/container/Container";
-import { sendReviews } from "@/services/api";
-import { useReviews } from "../GetReview/Components/ReviewsSection/ReviewsSection";
-import Button from "@/shared/components/button/Button";
+'use client';
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import styles from './ReviewsForm.module.scss';
+import Container from '@/shared/container/Container';
+import { sendReviews } from '@/services/api';
+import { useReviews } from '../GetReview/Components/ReviewsSection/ReviewsSection';
+import Button from '@/shared/components/button/Button';
+
 export default function ReviewsForm() {
-  const { t } = useTranslation("reviewsForm");
+  const { t } = useTranslation('reviewsForm');
   const { addReview } = useReviews();
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const initialValues = {
-    name: "",
-    email: "",
-    text: "",
+    name: '',
+    email: '',
+    text: '',
     agree: false,
   };
 
@@ -26,8 +27,8 @@ export default function ReviewsForm() {
     try {
       const response = await sendReviews(values);
       setSubmissionStatus({
-        type: "success",
-        message: response.message || t("successMessage"),
+        type: 'success',
+        message: response.message || t('successMessage'),
       });
 
       addReview(response.review);
@@ -35,29 +36,29 @@ export default function ReviewsForm() {
       resetForm();
     } catch (error) {
       setSubmissionStatus({
-        type: "error",
-        message: error.message || t("errorMessage"),
+        type: 'error',
+        message: error.message || t('errorMessage'),
       });
     }
   };
 
   const validationSchema = Yup.object({
     name: Yup.string()
-      .min(3, t("validation.name.min"))
-      .required(t("validation.name.required")),
+      .min(3, t('validation.name.min'))
+      .required(t('validation.name.required')),
     email: Yup.string()
-      .email(t("validation.email.invalid"))
-      .required(t("validation.email.required")),
+      .email(t('validation.email.invalid'))
+      .required(t('validation.email.required')),
     text: Yup.string()
-      .min(10, t("validation.message.min"))
-      .required(t("validation.message.required")),
+      .min(10, t('validation.message.min'))
+      .required(t('validation.message.required')),
     agree: Yup.boolean()
-      .oneOf([true], t("validation.agree"))
-      .required(t("validation.agree")),
+      .oneOf([true], t('validation.agree'))
+      .required(t('validation.agree')),
   });
 
   useEffect(() => {
-    if (submissionStatus && submissionStatus.type === "success") {
+    if (submissionStatus && submissionStatus.type === 'success') {
       const timer = setTimeout(() => {
         setSubmissionStatus(null);
       }, 5000);
@@ -68,14 +69,14 @@ export default function ReviewsForm() {
   return (
     <Container>
       <div className={styles.ContentContainer}>
-        <h2 className={styles.title}>{t("title")}</h2>
+        <h2 className={styles.title}>{t('title')}</h2>
         <div className={styles.containerForm}>
-          <p>{t("description")}</p>
+          <p>{t('description')}</p>
 
           {submissionStatus && (
             <p
               className={`${styles.status} ${
-                submissionStatus.type === "error"
+                submissionStatus.type === 'error'
                   ? styles.errorStatus
                   : styles.successStatus
               }`}
@@ -98,7 +99,7 @@ export default function ReviewsForm() {
                       type="text"
                       name="name"
                       id="name"
-                      placeholder={t("fields.name")}
+                      placeholder={t('fields.name')}
                     />
                     <ErrorMessage
                       name="name"
@@ -112,7 +113,7 @@ export default function ReviewsForm() {
                       type="email"
                       name="email"
                       id="email"
-                      placeholder={t("fields.email")}
+                      placeholder={t('fields.email')}
                     />
                     <ErrorMessage
                       name="email"
@@ -127,7 +128,7 @@ export default function ReviewsForm() {
                     type="text"
                     name="text"
                     id="text"
-                    placeholder={t("fields.message")}
+                    placeholder={t('fields.message')}
                   />
                   <ErrorMessage
                     name="text"
@@ -144,7 +145,7 @@ export default function ReviewsForm() {
                   className={styles.checkbox}
                 />
                 <label htmlFor="agree" className={styles.checkboxLabel}>
-                  {t("fields.agree")}
+                  {t('fields.agree')}
                 </label>
               </div>
               <ErrorMessage
@@ -154,7 +155,7 @@ export default function ReviewsForm() {
               />
 
               <Button variant="variant2" data-aos="zoom-in">
-                {t("submitButton")}
+                {t('submitButton')}
               </Button>
             </Form>
           </Formik>

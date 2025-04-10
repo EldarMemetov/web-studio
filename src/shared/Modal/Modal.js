@@ -1,8 +1,8 @@
 'use client';
-import Image from 'next/image';
 import React, { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import styles from './Modal.module.scss';
+import Icon from '../Icon/Icon';
 
 export default function Modal({ show, onClose, children }) {
   return (
@@ -22,7 +22,12 @@ export default function Modal({ show, onClose, children }) {
 
         <Dialog.Panel className={styles.modal}>
           <button className={styles.closeButton} onClick={onClose}>
-            <Image src="/icons/close.svg" alt="Close" width={12} height={12} />
+            <Icon
+              iconName="icon-close"
+              width={12}
+              height={12}
+              className={styles.icon}
+            />
           </button>
           {children}
         </Dialog.Panel>
