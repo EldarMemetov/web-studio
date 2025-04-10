@@ -1,15 +1,3 @@
-.arrows {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.iconLeft,
-.iconRight {
-  width: 40px;
-  height: 40px;
-  fill: #d7d0d0;
-}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -31,12 +19,27 @@
 
 .containerList {
   display: flex;
-  flex-wrap: nowrap;
   gap: 24px;
   padding: 10px 0;
+  /* Добавляем scroll snap */
+  scroll-snap-type: x mandatory;
 }
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
 .buttonSlid {
   cursor: pointer;
   background: none;
   border: none;
+}
+
+.iconLeft,
+.iconRight {
+  width: 32px;
+  height: 32px;
+  fill: #d7d0d0;
 }

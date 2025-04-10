@@ -15,8 +15,12 @@
   flex: 0 0 auto;
   border: 1px solid;
   border-image: linear-gradient(to bottom, #d3d1d176, #41404072) 1;
+  scroll-snap-align: center;
 }
-
+.itemList:active {
+  transform: scale(0.97);
+  transition: transform 0.3s ease;
+}
 .itemList:hover::after {
   width: 650px;
   height: 650px;
