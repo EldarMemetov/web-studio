@@ -6,10 +6,14 @@ import * as Yup from 'yup';
 import styles from './FeedbackForm.module.scss';
 import Container from '@/shared/container/Container';
 import { sendFeedback } from '../../services/api';
+import Image from 'next/image';
+import Button from '@/shared/components/button/Button';
+import FadeError from '@/shared/components/FadeError/FadeError';
 
 export default function FeedbackForm() {
   const { t } = useTranslation('feedbackForm');
   const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const initialValues = {
     name: '',
@@ -62,85 +66,110 @@ export default function FeedbackForm() {
 
   return (
     <Container>
-      <h2>{t('title')}</h2>
-      <div className={styles.containerForm}>
-        <h3>{t('description')}</h3>
-        <p>{t('subtitle')}</p>
+      <section>
+        <h2 className={styles.title}>
+          {t('title')} <span className={styles.andTitle}>{t('andTitle')}</span>
+        </h2>
+        <div className={styles.bigContainer}>
+          <div className={styles.containerForm}>
+            <h3 className={styles.description}>{t('description')}</h3>
+            <p className={styles.subtitle}>{t('subtitle')}</p>
 
-        {submissionStatus && (
-          <p
-            className={`${styles.status} ${submissionStatus.type === 'error' ? styles.errorStatus : styles.successStatus}`}
-          >
-            {submissionStatus.message}
-          </p>
-        )}
-
-        <Formik
-          initialValues={initialValues}
-          onSubmit={handleSubmit}
-          validationSchema={validationSchema}
-        >
-          <Form className={styles.form}>
-            <div className={styles.fieldContainer}>
-              <Field
-                className={styles.input}
-                type="text"
-                name="name"
-                id="name"
-                placeholder={t('fields.name')}
+            {submissionStatus && (
+              <p
+                className={`${styles.status} ${submissionStatus.type === 'error' ? styles.errorStatus : styles.successStatus}`}
+              >
+                {submissionStatus.message}
+              </p>
+            )}
+            <div className={styles.containerImg}>
+              <Image
+                src="/image/feedback.png"
+                alt="feedback"
+                width={568}
+                height={390}
+                className={`${styles.feedback} ${isHovered ? styles.imageHover : ''}`}
               />
-              <ErrorMessage
-                name="name"
-                component="p"
-                className={styles.error}
-              />
+              <Formik
+                initialValues={initialValues}
+                onSubmit={handleSubmit}
+                validationSchema={validationSchema}
+              >
+                <Form className={styles.form}>
+                  <div className={styles.fieldContainer}>
+                    <Field
+                      className={styles.input}
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder={t('fields.name')}
+                    />
+                    <ErrorMessage name="name">
+                      {(msg) => (
+                        <FadeError message={msg} className={styles.error} />
+                      )}
+                    </ErrorMessage>
+                  </div>
+                  <div className={styles.fieldContainer}>
+                    <Field
+                      className={styles.input}
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder={t('fields.email')}
+                    />
+                    <ErrorMessage name="email">
+                      {(msg) => (
+                        <FadeError message={msg} className={styles.error} />
+                      )}
+                    </ErrorMessage>
+                  </div>
+                  <div className={styles.fieldContainer}>
+                    <Field
+                      className={styles.inputText}
+                      as="textarea"
+                      name="message"
+                      id="message"
+                      placeholder={t('fields.message')}
+                    />
+                    <ErrorMessage name="message">
+                      {(msg) => (
+                        <FadeError message={msg} className={styles.error} />
+                      )}
+                    </ErrorMessage>
+                  </div>
+                  <div className={styles.checkboxContainer}>
+                    <Field
+                      type="checkbox"
+                      name="agree"
+                      id="agree"
+                      className={styles.checkbox}
+                    />
+                    <label htmlFor="agree" className={styles.checkboxLabel}>
+                      {t('fields.agree')}
+                    </label>
+                  </div>
+                  <ErrorMessage name="agree">
+                    {(msg) => (
+                      <FadeError message={msg} className={styles.error} />
+                    )}
+                  </ErrorMessage>
+                  <div className={styles.buttonWrapper}>
+                    <Button
+                      type="submit"
+                      variant="variant3"
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                    >
+                      {t('submitButton')}
+                    </Button>
+                  </div>
+                </Form>
+              </Formik>
             </div>
-            <div className={styles.fieldContainer}>
-              <Field
-                className={styles.input}
-                type="email"
-                name="email"
-                id="email"
-                placeholder={t('fields.email')}
-              />
-              <ErrorMessage
-                name="email"
-                component="p"
-                className={styles.error}
-              />
-            </div>
-            <div className={styles.fieldContainer}>
-              <Field
-                className={styles.input}
-                type="text"
-                name="message"
-                id="message"
-                placeholder={t('fields.message')}
-              />
-              <ErrorMessage
-                name="message"
-                component="p"
-                className={styles.error}
-              />
-            </div>
-            <div className={styles.checkboxContainer}>
-              <Field
-                type="checkbox"
-                name="agree"
-                id="agree"
-                className={styles.checkbox}
-              />
-              <label htmlFor="agree" className={styles.checkboxLabel}>
-                {t('fields.agree')}
-              </label>
-            </div>
-            <ErrorMessage name="agree" component="p" className={styles.error} />
-            <button className={styles.submitButton} type="submit">
-              {t('submitButton')}
-            </button>
-          </Form>
-        </Formik>
-      </div>
+          </div>
+        </div>
+      </section>
     </Container>
   );
 }

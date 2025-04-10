@@ -1,14 +1,15 @@
 {
-  "title": "Let's Connect",
+  "title": "Let's",
+  "andTitle": "connect",
   "description": "Ready to collaborate? Let's discuss your project",
-  "subtitle": "We will reply to you within 24 hours",
+  "subtitle": "We will respond within 24 hours",
   "fields": {
     "name": "Name*",
     "email": "Your email*",
-    "message": "Message",
-    "agree": "I agree with the privacy terms"
+    "message": "Comment",
+    "agree": "I agree to the privacy policy"
   },
-  "submitButton": "Contact Us",
+  "submitButton": "Contact us",
   "successMessage": "Feedback successfully sent!",
   "errorMessage": "An error occurred. Please try again.",
   "status": {
@@ -18,16 +19,16 @@
   "validation": {
     "name": {
       "min": "Minimum 3 characters",
-      "required": "Enter your name"
+      "required": "Please enter your name"
     },
     "email": {
       "invalid": "Invalid email format",
-      "required": "Enter your email"
+      "required": "Please enter your email"
     },
     "message": {
       "min": "Minimum 10 characters",
-      "required": "Enter your message"
+      "required": "Please enter a message"
     },
-    "agree": "You must agree with the privacy terms"
+    "agree": "You must agree to the privacy policy"
   }
 }

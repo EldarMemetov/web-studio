@@ -1,12 +1,13 @@
 {
-  "title": "Lass uns verbinden",
+  "title": "Lass uns",
+  "andTitle": "verbinden",
   "description": "Bereit zur Zusammenarbeit? Lass uns dein Projekt besprechen",
-  "subtitle": "Wir antworten Ihnen innerhalb von 24 Stunden",
+  "subtitle": "Wir antworten innerhalb von 24 Stunden",
   "fields": {
     "name": "Name*",
     "email": "Deine E-Mail*",
-    "message": "Nachricht",
-    "agree": "Ich stimme den Datenschutzbedingungen zu"
+    "message": "Kommentar",
+    "agree": "Ich stimme der Datenschutzerklärung zu"
   },
   "submitButton": "Kontaktiere uns",
   "successMessage": "Feedback erfolgreich gesendet!",
@@ -18,16 +19,16 @@
   "validation": {
     "name": {
       "min": "Mindestens 3 Zeichen",
-      "required": "Geben Sie Ihren Namen ein"
+      "required": "Bitte gib deinen Namen ein"
     },
     "email": {
       "invalid": "Ungültiges E-Mail-Format",
-      "required": "Geben Sie Ihre E-Mail ein"
+      "required": "Bitte gib deine E-Mail ein"
     },
     "message": {
       "min": "Mindestens 10 Zeichen",
-      "required": "Geben Sie Ihre Nachricht ein"
+      "required": "Bitte gib eine Nachricht ein"
     },
-    "agree": "Sie müssen den Datenschutzbedingungen zustimmen"
+    "agree": "Du musst der Datenschutzerklärung zustimmen"
   }
 }

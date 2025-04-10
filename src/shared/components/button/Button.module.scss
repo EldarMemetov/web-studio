@@ -107,10 +107,6 @@
     width: 150px;
     height: 32px;
     border: none;
-    // border: 1px solid transparent;
-    // background:
-    //   linear-gradient(#ffffff, #ffffff) padding-box,
-    //   linear-gradient(90deg, #9624e2, #24c2e2) border-box;
     color: #ffffff;
     background: linear-gradient(30deg, #9624e2 0%, #02079d 100%);
 
@@ -133,7 +129,7 @@
     width: 150px;
     height: 32px;
     border: 1px solid #fff;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
 
     @include media(tablet) {
