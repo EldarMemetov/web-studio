@@ -49,6 +49,7 @@ const metadataDict = {
 };
 
 export const generateMetadata = ({ params: { locale } }) => {
+  // Берем мета-данные для выбранной локали
   const meta = metadataDict[locale] || metadataDict.en;
 
   return {
@@ -59,15 +60,13 @@ export const generateMetadata = ({ params: { locale } }) => {
       description: meta.description,
       url: `https://web-studio-pied.vercel.app/${locale}`,
       siteName: 'QVRIX',
-      locale,
+      locale: locale,
       type: 'website',
-      image: `https://web-studio-pied.vercel.app/image/logo.png`,
     },
     twitter: {
       card: 'summary_large_image',
       title: meta.title,
       description: meta.description,
-      image: `https://web-studio-pied.vercel.app/image/logo.png`,
     },
   };
 };
