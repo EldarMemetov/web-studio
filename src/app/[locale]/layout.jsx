@@ -61,11 +61,13 @@ export const generateMetadata = ({ params: { locale } }) => {
       siteName: 'QVRIX',
       locale,
       type: 'website',
+      image: 'https://qvrix.com/image/logo.png',
     },
     twitter: {
       card: 'summary_large_image',
       title: meta.title,
       description: meta.description,
+      image: 'https://qvrix.com/image/logo.png',
     },
   };
 };
