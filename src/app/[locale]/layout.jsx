@@ -7,7 +7,6 @@ import ErrorBoundaryWithTranslation from '@/shared/components/ErrorBoundary/Erro
 import { Header } from '../../modules/Header/Header';
 import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
-import { dir } from 'i18next';
 
 const oswald = Oswald({
   subsets: ['latin', 'cyrillic'],
@@ -48,8 +47,8 @@ const metadataDict = {
   },
 };
 
-export const generateMetadata = ({ params: { locale } }) => {
-  // Берем мета-данные для выбранной локали
+export async function generateMetadata({ params }) {
+  const { locale } = await Promise.resolve(params);
   const meta = metadataDict[locale] || metadataDict.en;
 
   return {
@@ -58,9 +57,9 @@ export const generateMetadata = ({ params: { locale } }) => {
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://web-studio-pied.vercel.app/${locale}`,
+      url: `https://qvrix.com/${locale}`,
       siteName: 'QVRIX',
-      locale: locale,
+      locale,
       type: 'website',
     },
     twitter: {
@@ -69,19 +68,24 @@ export const generateMetadata = ({ params: { locale } }) => {
       description: meta.description,
     },
   };
-};
+}
 
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
 
 export default async function Layout({ children, params }) {
-  const { locale } = params;
+  const awaitedParams = await Promise.resolve(params);
+  const { locale } = awaitedParams;
 
   const { resources } = await initTranslations(locale, NAMESPACES);
+  // console.log(
+  //   'Rendering on:',
+  //   typeof window === 'undefined' ? 'SERVER' : 'CLIENT'
+  // );
 
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang={locale}>
       <body
         suppressHydrationWarning={true}
         className={clsx(rubik.variable, raleway.variable, oswald.variable)}
@@ -93,6 +97,7 @@ export default async function Layout({ children, params }) {
         >
           <ErrorBoundaryWithTranslation>
             <Header />
+
             <main>{children}</main>
           </ErrorBoundaryWithTranslation>
         </TranslationsProvider>
