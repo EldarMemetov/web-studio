@@ -43,56 +43,28 @@ export default async function Layout({ children, params }) {
   const { locale } = awaitedParams;
 
   const { resources } = await initTranslations(locale, NAMESPACES);
-  console.log(
-    'Rendering on:',
-    typeof window === 'undefined' ? 'SERVER' : 'CLIENT'
-  );
+  // console.log(
+  //   'Rendering on:',
+  //   typeof window === 'undefined' ? 'SERVER' : 'CLIENT'
+  // );
 
   return (
-    // <html lang={locale}>
-    //   <body
-    //     suppressHydrationWarning={true}
-    //     className={clsx(rubik.variable, raleway.variable, oswald.variable)}
-    //   >
-    //     <TranslationsProvider
-    //       namespaces={NAMESPACES}
-    //       locale={locale}
-    //       resources={resources}
-    //     >
-    //       <ErrorBoundaryWithTranslation>
-    //         <Header />
-
-    //         <main>{children}</main>
-    //       </ErrorBoundaryWithTranslation>
-    //     </TranslationsProvider>
-    //   </body>
-    // </html>
     <html lang={locale}>
       <body
         suppressHydrationWarning={true}
         className={clsx(rubik.variable, raleway.variable, oswald.variable)}
       >
-        {console.log('Layout: before TranslationsProvider')}
         <TranslationsProvider
           namespaces={NAMESPACES}
           locale={locale}
           resources={resources}
         >
-          {console.log('Layout: inside TranslationsProvider')}
-          {console.log('Layout: before ErrorBoundaryWithTranslation')}
           <ErrorBoundaryWithTranslation>
-            {console.log('Layout: inside ErrorBoundary')}
-            {console.log('Layout: before Header')}
             <Header />
-            {console.log('Layout: after Header')}
 
-            {console.log('Layout: before main')}
             <main>{children}</main>
-            {console.log('Layout: after main')}
           </ErrorBoundaryWithTranslation>
-          {console.log('Layout: after ErrorBoundary')}
         </TranslationsProvider>
-        {console.log('Layout: after TranslationsProvider')}
       </body>
     </html>
   );
