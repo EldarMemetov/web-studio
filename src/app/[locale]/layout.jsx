@@ -57,17 +57,17 @@ export const generateMetadata = ({ params: { locale } }) => {
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://qvrix.com/${locale}`,
+      url: `https://web-studio-pied.vercel.app/${locale}`,
       siteName: 'QVRIX',
       locale,
       type: 'website',
-      image: 'https://qvrix.com/image/logo.png',
+      image: `https://web-studio-pied.vercel.app/image/logo.png`,
     },
     twitter: {
       card: 'summary_large_image',
       title: meta.title,
       description: meta.description,
-      image: 'https://qvrix.com/image/logo.png',
+      image: `https://web-studio-pied.vercel.app/image/logo.png`,
     },
   };
 };
