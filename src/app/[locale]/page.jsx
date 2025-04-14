@@ -4,7 +4,6 @@ import ReviewsForm from '@/modules/ReviewsForm/ReviewsForm';
 import ReviewsList from '@/modules/GetReview/Components/ReviewsList/ReviewsList';
 import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/ReviewsSection';
 import { GetReviews } from '@/services/api';
-
 import { SocialLinks } from '@/modules/Header/SocialLinks/SocialLinks';
 import TextAnimation from '@/modules/TextAnimation/TextAnimation';
 import FetchServices from '@/modules/FetchServices/FetchServices';
@@ -14,7 +13,7 @@ import GetBusinessSolutions from '@/modules/GetBusinessSolutions/GetBusinessSolu
 import BrandTransformation from '@/modules/BrandTransformation/BrandTransformation';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import IdeasToReality from '@/modules/IdeasToReality/IdeasToReality';
-
+import s from './page.module.scss';
 export default async function Home({ params: rawParams }) {
   // const { locale } = await rawParams;
 
@@ -27,7 +26,7 @@ export default async function Home({ params: rawParams }) {
 
   return (
     <main>
-      <div>
+      <div className={s.container}>
         <TitleHome locale={locale} />
         <FetchServices />
         <PixelPerfectBlock locale={locale} />
