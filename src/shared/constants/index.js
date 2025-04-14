@@ -28,6 +28,7 @@ export const NAMESPACES = [
   'toggleQuestions',
   'IdeasToReality',
   'errorBoundary',
+  'errorGlobal',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

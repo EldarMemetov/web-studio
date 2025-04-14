@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useTranslation } from "react-i18next";
-import ErrorBoundary from "../ErrorBoundary";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import ErrorBoundary from '../ErrorBoundary';
 
 const ErrorBoundaryWithTranslation = (props) => {
-  const { t } = useTranslation("errorBoundary");
+  const { t } = useTranslation('errorGlobal');
   return <ErrorBoundary {...props} t={t} />;
 };
 

@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 export default function GlobalError({ error, reset }) {
-  const { t } = useTranslation("errorBoundary");
+  const { t } = useTranslation('errorGlobal');
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h2>{t("errorTitle")}</h2>
-      <p>{error?.message || t("errorMessage")}</p>
+    <div style={{ textAlign: 'center', padding: '20px' }}>
+      <h2>{t('errorTitle')}</h2>
+      <p>{error?.message || t('errorMessage')}</p>
       <button
         onClick={() => {
           reset();
           window.location.reload();
         }}
       >
-        {t("tryAgain")}
+        {t('tryAgain')}
       </button>
     </div>
   );
