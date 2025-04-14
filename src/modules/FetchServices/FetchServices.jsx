@@ -12,10 +12,7 @@ const FetchServices = () => {
         <div className={s.ContainerContent}>
           <ul className={s.ListContainer}>
             <li className={s.itemList}>
-              <LinkButton
-                path={`/${ROUTES.SERVICES}/web-development`}
-                className={s.linkItem}
-              >
+              <LinkButton path={`/web-development`} className={s.linkItem}>
                 <div className={s.socialLink}>
                   <Icon iconName="icon-mobile" className={s.icon} />
                 </div>
@@ -24,10 +21,7 @@ const FetchServices = () => {
               </LinkButton>
             </li>
             <li className={s.itemList}>
-              <LinkButton
-                path={`/${ROUTES.SERVICES}/web-development`}
-                className={s.linkItem}
-              >
+              <LinkButton path={`/web-development`} className={s.linkItem}>
                 <div className={s.socialLink}>
                   <Icon iconName="icon-web" className={s.icon} />
                 </div>
@@ -36,10 +30,7 @@ const FetchServices = () => {
               </LinkButton>
             </li>
             <li className={s.itemList}>
-              <LinkButton
-                path={`/${ROUTES.SERVICES}/videography`}
-                className={s.linkItem}
-              >
+              <LinkButton path={`/videography`} className={s.linkItem}>
                 <div className={s.socialLink}>
                   <Icon iconName="icon-video" className={s.icon} />
                 </div>
