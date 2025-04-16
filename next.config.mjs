@@ -16,6 +16,9 @@ const nextConfig = {
       @import "src/shared/styles/_variables.scss";
     `,
   },
+  images: {
+    domains: ['example.com'],
+  },
 };
 
 export default nextConfig;

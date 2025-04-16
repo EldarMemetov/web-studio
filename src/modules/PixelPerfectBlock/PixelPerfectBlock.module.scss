@@ -12,3 +12,77 @@
 .title {
   font-weight: 700;
 }
+.imageWrapper {
+  position: relative;
+  width: 350px; // фиксированная ширина монитора
+  height: 350px; // фиксированная высота монитора
+  padding: 20px;
+  border-radius: 16px;
+  background: #0c0c15;
+  overflow: hidden; // скрываем всё, что выходит за пределы
+  display: inline-block;
+
+  // Градиентный фон на заднем плане
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #7e33ff, #00c6ff);
+    background-size: 300%;
+    filter: blur(15px);
+    z-index: -1;
+    animation: gradientFlow 4s ease-in-out infinite;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+.monitorImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: 0.4s ease;
+}
+
+/* Статичный блок для кода с мигающим курсором */
+.codeText {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50px, -50px);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: #ffffff;
+  white-space: pre;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Псевдоэлемент для мигающего курсора */
+// .codeText::after {
+//   content: '';
+//   display: inline-block;
+//   width: 1ch; // ширина, соответствующая одному символу
+//   height: 1em;
+//   margin-left: 2px;
+//   background: #ffffff;
+//   animation: blinkCursor 1s step-end infinite;
+// }
+
+@keyframes blinkCursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
