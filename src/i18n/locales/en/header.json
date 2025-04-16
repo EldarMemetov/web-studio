@@ -1,10 +1,8 @@
 {
   "home": "Home",
-  "portfolio": "Our Work",
   "aboutUs": "About Us",
-  "contact": "Contact",
-  "services": "Our Services",
   "webDevelopment": "Web Development",
   "videography": "Video Production",
-  "kontakt": "Contact"
+  "kontakt": "Contact",
+  "blog": "Blog"
 }

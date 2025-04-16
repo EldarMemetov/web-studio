@@ -8,7 +8,6 @@ import { SocialLinks } from '@/modules/Header/SocialLinks/SocialLinks';
 import TextAnimation from '@/modules/TextAnimation/TextAnimation';
 import FetchServices from '@/modules/FetchServices/FetchServices';
 import PixelPerfectBlock from '@/modules/PixelPerfectBlock/PixelPerfectBlock';
-import OurTeam from '../../modules/OurTeam/OurTeam';
 import GetBusinessSolutions from '@/modules/GetBusinessSolutions/GetBusinessSolutions';
 import BrandTransformation from '@/modules/BrandTransformation/BrandTransformation';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
@@ -18,7 +17,7 @@ export default async function Home({ params: rawParams }) {
   // const { locale } = await rawParams;
 
   const params = await rawParams;
-  const availableLocales = ['en', 'ua', 'ru'];
+  const availableLocales = ['en', 'ua', 'de'];
   const locale = availableLocales.includes(params?.locale)
     ? params.locale
     : 'en';
@@ -30,7 +29,6 @@ export default async function Home({ params: rawParams }) {
         <TitleHome locale={locale} />
         <FetchServices />
         <PixelPerfectBlock locale={locale} />
-        <OurTeam />
         <GetBusinessSolutions locale={locale} />
         <IdeasToReality locale={locale} />
         <BrandTransformation />

@@ -13,12 +13,14 @@ export default async function PixelPerfectBlock({ locale }) {
             {t('description.part1')}{' '}
             <span className={s.title}>{t('description.highlight1')}</span>{' '}
             {t('description.part2')}{' '}
-            <span className={s.title}>{t('description.highlight2')}</span>{' '}
+            <span className={s.title}>{t('description.highlight2')}</span>
             {t('description.part3')}{' '}
-            <span className={s.title}>{t('description.highlight3')}</span>{' '}
-            {t('description.part4')}{' '}
+            <span className={s.title}>{t('description.highlight3')}</span>,{' '}
             <span className={s.title}>{t('description.highlight4')}</span>{' '}
-            {t('description.part5')}
+            {t('description.part4')}{' '}
+            <span className={s.title}>{t('description.highlight5')}</span>{' '}
+            {t('description.part5')}{' '}
+            <span className={s.title}>{t('description.highlight6')}</span>.
           </p>
         </div>
       </Container>

@@ -1,32 +1,24 @@
 {
-  "titleBefore": "Sie haben",
+  "titleBefore": "Haben Sie",
   "titleHighlight": "Fragen",
-  "titleAfter": "das ist ganz normal",
-  "description": "Wir sind immer bereit, alle Ihre Fragen zu beantworten. Vereinbaren Sie ein Beratungsgespräch – wir helfen Ihnen gerne weiter!",
+  "titleAfter": "das ist normal",
+  "description": "Wir sind immer bereit, alle Ihre Fragen zu beantworten. Vereinbaren Sie eine Beratung – wir helfen Ihnen gerne weiter!",
   "faq": [
     {
-      "question": "Wie lange dauert die Entwicklung einer Website?",
-      "answer": "Die Entwicklungszeit hängt von der Funktionalität der Website, der Komplexität des Designs und dem Umfang des Inhalts ab. Eine einfache Landingpage kann innerhalb von 1–2 Wochen fertiggestellt werden, während die Erstellung eines komplexen Online-Shops oder eines Unternehmensportals 4 bis 8 Wochen in Anspruch nehmen kann. Wir analysieren die Anforderungen jedes Projekts sorgfältig, um den genauen Zeitrahmen festzulegen."
+      "question": "Wie lange dauert die Entwicklung einer Website oder die Videobearbeitung?",
+      "answer": "Die Dauer der Entwicklung einer Website oder der Videobearbeitung hängt von der Komplexität und den Anforderungen Ihres Projekts ab. In der Regel dauert der Prozess einige Wochen bis mehrere Monate. Für eine genaue Zeitrahmen bieten wir eine erste Beratung und Schätzung an."
     },
     {
-      "question": "Welche Webentwicklungsdienstleistungen bieten Sie an?",
-      "answer": "Wir bieten ein breites Spektrum an Webentwicklungsdienstleistungen an: Erstellung von Websites von Grund auf, Redesign bestehender Plattformen, Entwicklung von Online-Shops, Unternehmensportalen und Landingpages. Wir bieten auch umfassenden technischen Support, SEO-Optimierung und die Integration moderner Technologien, um die Leistung Ihrer Website zu steigern."
+      "question": "Arbeiten Sie mit internationalen Kunden?",
+      "answer": "Ja! Wir haben umfangreiche Erfahrung in der Bereitstellung von Website-Entwicklungs- und Videoproduktionsdiensten für internationale Kunden. Unabhängig von Ihrem Standort sind wir bereit, Ihr Projekt nach höchsten Standards umzusetzen."
     },
     {
-      "question": "Bieten Sie Unterstützung nach dem Website-Launch an?",
-      "answer": "Ja, wir bieten zuverlässigen Support nach dem Website-Launch. Unser Service umfasst regelmäßige Inhaltsaktualisierungen, kontinuierliche Leistungsüberwachung, schnelle Fehlerbehebung und fachliche Beratung, um sicherzustellen, dass Ihre Website immer reibungslos funktioniert."
+      "question": "Wie viel kostet es, eine Website oder ein Video zu erstellen?",
+      "answer": "Die Kosten für Website- oder Videoentwicklungsdienste hängen von Ihren spezifischen Anforderungen und der Komplexität des Projekts ab. Nach einer ersten Beratung geben wir Ihnen eine genaue Kostenschätzung basierend auf Ihren Bedürfnissen und Wünschen."
     },
     {
-      "question": "Welche Arten von Videoproduktion bieten Sie an?",
-      "answer": "Wir erstellen eine Vielzahl von Video-Inhalten: Unternehmensfilme, Werbeclips, Schulungsvideos, Eventberichterstattung und Animationsvideos. Jedes Projekt wird an die individuellen Bedürfnisse des Kunden angepasst, um herausragende und ansprechende Inhalte zu liefern."
-    },
-    {
-      "question": "Wie wird der Preis für die Videoproduktion bestimmt?",
-      "answer": "Die Kosten für die Videoproduktion werden individuell berechnet und hängen von mehreren Faktoren ab: der Komplexität des Drehbuchs, der Videolänge, der Anzahl der Drehtage, der Beteiligung von Schauspielern und dem Einsatz von Spezialeffekten. Wir besprechen alle Details mit dem Kunden, um das beste Preis-Leistungs-Verhältnis zu bieten."
-    },
-    {
-      "question": "Bieten Sie Location- und Casting-Dienste an?",
-      "answer": "Ja, wir kümmern uns um den gesamten Produktionsprozess: professionelle Location-Suche, Casting von Schauspielern und Modellen sowie die Bereitstellung von Requisiten und moderner Technik, um sicherzustellen, dass Ihr Video von höchster Qualität und Wirkung ist."
+      "question": "Was passiert, wenn ich beide Dienstleistungen bestelle – Website und Video?",
+      "answer": "Die gleichzeitige Bestellung beider Dienstleistungen ist eine ausgezeichnete Wahl! Für Kunden, die sowohl die Website-Entwicklung als auch Video-Dienste bestellen, bieten wir spezielle Bedingungen, Rabatte und umfassende Lösungen für Ihr Unternehmen an. Lassen Sie uns Ihr Projekt besprechen, und wir erstellen das beste Ergebnis."
     }
   ]
 }

@@ -1,32 +1,24 @@
 {
-  "titleBefore": "got",
+  "titleBefore": "Got",
   "titleHighlight": "questions",
-  "titleAfter": "that’s normal",
-  "description": "We’re always ready to answer all your questions. Book a consultation – we’ll be happy to help!",
+  "titleAfter": "it's normal",
+  "description": "We are always ready to answer all your questions. Schedule a consultation – we’ll be happy to assist you!",
   "faq": [
     {
-      "question": "How long does it take to develop a website?",
-      "answer": "The development time depends on the website’s functionality, design complexity, and content volume. For example, a simple landing page can be ready within 1–2 weeks, while a complex online store or corporate portal may take 4 to 8 weeks. We carefully analyze each project’s requirements to determine the exact timeline."
+      "question": "How long does website development or video editing take?",
+      "answer": "The duration of website development or video editing depends on the complexity and requirements of your project. Usually, the process takes from a few weeks to a few months. For an exact timeline, we offer a preliminary consultation and estimate."
     },
     {
-      "question": "What web development services do you offer?",
-      "answer": "We offer a wide range of web development services: building websites from scratch, redesigning existing platforms, developing online stores, corporate portals, and landing pages. We also provide full technical support, SEO optimization, and integration of modern technologies to enhance your website’s performance."
+      "question": "Do you work with international clients?",
+      "answer": "Yes! We have extensive experience in providing website development and video production services for international clients. Regardless of your location, we are ready to deliver your project to the highest standard."
     },
     {
-      "question": "Do you provide support after the website launch?",
-      "answer": "Yes, we provide reliable post-launch support. Our service includes regular content updates, ongoing performance monitoring, fast issue resolution, and expert consultations to ensure your website runs smoothly at all times."
+      "question": "How much does it cost to create a website or video?",
+      "answer": "The cost of website or video development services depends on your specific requirements and the complexity of the project. After the initial consultation, we will provide an accurate cost estimate based on your needs and preferences."
     },
     {
-      "question": "What types of video production do you offer?",
-      "answer": "We create a variety of video content: corporate videos, promotional clips, educational videos, event coverage, and animated videos. Each project is tailored to the client’s unique needs to deliver standout, engaging content."
-    },
-    {
-      "question": "How is the cost of video production determined?",
-      "answer": "The cost of video production is calculated individually and depends on several factors: script complexity, video length, number of shooting days, involvement of actors, and use of special effects. We go over all details with the client to offer the best value for the budget."
-    },
-    {
-      "question": "Do you offer location and casting services?",
-      "answer": "Yes, we manage the entire production process: professional location scouting, casting of actors and models, and providing all necessary props and modern equipment to ensure your video is as high-quality and impactful as possible."
+      "question": "What if I order both services – website and video?",
+      "answer": "Ordering both services at once is an excellent choice! For clients who order both website development and video services, we offer special conditions, discounts, and comprehensive solutions for your business. Let's discuss your project, and we'll create the best result."
     }
   ]
 }

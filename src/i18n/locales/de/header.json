@@ -1,10 +1,8 @@
 {
   "home": "Startseite",
-  "portfolio": "Unsere Arbeiten",
   "aboutUs": "Über uns",
-  "contact": "Kontakt",
-  "services": "Unsere Dienstleistungen",
   "webDevelopment": "Webentwicklung",
   "videography": "Video-Produktion",
-  "kontakt": "Kontaktieren"
+  "kontakt": "Kontaktieren",
+  "blog": "Blog"
 }
