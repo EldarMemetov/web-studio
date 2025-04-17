@@ -79,10 +79,6 @@ export default async function Layout({ children, params }) {
   const { locale } = awaitedParams;
 
   const { resources } = await initTranslations(locale, NAMESPACES);
-  // console.log(
-  //   'Rendering on:',
-  //   typeof window === 'undefined' ? 'SERVER' : 'CLIENT'
-  // );
 
   return (
     <html lang={locale}>
