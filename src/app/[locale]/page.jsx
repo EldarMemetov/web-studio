@@ -14,8 +14,6 @@ import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import IdeasToReality from '@/modules/IdeasToReality/IdeasToReality';
 import s from './page.module.scss';
 export default async function Home({ params: rawParams }) {
-  // const { locale } = await rawParams;
-
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
   const locale = availableLocales.includes(params?.locale)
