@@ -23,12 +23,10 @@ export default async function BlogId({ locale, id }) {
       <Container>
         <div>
           {post.image && (
-            <Image src={post.image} alt={post.title} width={800} height={400} />
+            <Image src={post.image} alt={post.title} width={363} height={383} />
           )}
           <h1>{post.title}</h1>
-          <p>{post.description}</p>
 
-          {/* content может быть массивом параграфов, заголовков и списков */}
           {Array.isArray(post.content) &&
             post.content.map((block, index) => (
               <div key={index}>
@@ -44,7 +42,6 @@ export default async function BlogId({ locale, id }) {
               </div>
             ))}
 
-          {/* Если content — строка */}
           {typeof post.content === 'string' && <p>{post.content}</p>}
         </div>
       </Container>
