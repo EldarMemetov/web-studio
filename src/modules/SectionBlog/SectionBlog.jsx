@@ -1,35 +1,35 @@
-export default function SectionBlog({ blog, locale }) {
-  const blogPosts = blog?.data?.blogs || [];
+import Container from '@/shared/container/Container';
+import { initServerI18n } from '@/i18n/utils/serverI18n';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default async function SectionBlog({ locale }) {
+  const { t } = await initServerI18n(locale, ['blog']);
+
+  const blogData = t('posts', { returnObjects: true });
 
   return (
-    <div>
-      {blogPosts.length > 0 ? (
-        blogPosts.map((post) => (
-          <div key={post._id}>
-            <h2>{post.title?.[locale] || 'No Title Available'}</h2>
-
-            {Array.isArray(post.content?.[locale]) ? (
-              post.content[locale].map((block, index) => (
-                <div key={index}>
-                  {block.heading && <h3>{block.heading}</h3>}
-                  {block.text && <p>{block.text}</p>}
-                  {Array.isArray(block.ulContent) && (
-                    <ul>
-                      {block.ulContent.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))
-            ) : (
-              <p>No content available for this language.</p>
-            )}
-          </div>
-        ))
-      ) : (
-        <p>No blog posts available.</p>
-      )}
-    </div>
+    <section>
+      <Container>
+        <div>
+          {Object.entries(blogData).map(([id, post]) => (
+            <Link key={id} href={`/${locale}/blog/${id}`}>
+              <div>
+                {post.image && (
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={363}
+                    height={383}
+                  />
+                )}
+                <h2>{post.title}</h2>
+                <p>{post.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 }

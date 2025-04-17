@@ -29,6 +29,7 @@ export const NAMESPACES = [
   'IdeasToReality',
   'errorBoundary',
   'errorGlobal',
+  'blog',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

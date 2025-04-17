@@ -3,7 +3,6 @@ import s from './FetchServices.module.scss';
 import Icon from '@/shared/Icon/Icon';
 import LoadingBar from '@/shared/components/LoadingBar/LoadingBar';
 import LinkButton from '@/shared/components/LinkButton/LinkButton';
-import { ROUTES } from '@/shared/constants';
 
 const FetchServices = () => {
   return (

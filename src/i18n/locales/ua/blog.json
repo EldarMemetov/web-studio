@@ -1,116 +1,56 @@
 {
-  "title": {
-    "en": "Clean Code vs Builders: Why Clean Code Always Wins",
-    "de": "Sauberer Code gegen Builder: Warum sauberer Code immer gewinnt",
-    "ua": "Чистий код проти конструкторів: чому чистий код завжди перемагає"
-  },
-  "content": {
-    "en": [
-      {
-        "text": "In the world of programming, there is often a dilemma: whether to use ready-made solutions like builders or write code manually following clean code principles. Both approaches have their advantages, but in the long run, clean code offers greater flexibility, scalability, and maintainability."
-      },
-      {
-        "heading": "What is Clean Code?",
-        "text": "Clean code is code that is easy to read, understandable, well-structured, and free from unnecessary complexity. It adheres to principles like KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself), and SOLID. Such code simplifies testing, debugging, and further development."
-      },
-      {
-        "heading": "Advantages of Clean Code",
-        "ulContent": [
-          "Ease of maintenance and extension. Clean code allows you to quickly make changes and add new features without risking existing logic. This is especially important in rapidly changing requirements.",
-          "Fewer bugs. A clear structure and lack of duplication reduce the likelihood of errors, making testing and debugging easier.",
-          "Better team collaboration. When code follows common standards, other developers can easily understand the logic and contribute to the project.",
-          "Scalability. Clean code is easier to adapt to new requirements and technologies, ensuring the long-term viability of the project."
-        ]
-      },
-      {
-        "heading": "Limitations of Builders",
-        "text": "Builders or visual programming tools can be useful for rapid prototyping or building simple applications. However, they come with several limitations:",
-        "ulContent": [
-          "Limited flexibility. Builders often do not allow for the implementation of complex logic or custom features.",
-          "Scalability issues. As the project grows, builder-generated code can become difficult to maintain and expand.",
-          "Platform dependence. Using a specific builder may tie you to a particular technology or provider."
-        ]
-      },
-      {
-        "heading": "When to Use Builders?",
-        "text": "Builders can be helpful during the prototyping phase or for creating simple websites without complex logic. They allow for quick results without requiring deep programming knowledge."
-      },
-      {
-        "heading": "Conclusion",
-        "text": "While builders can be useful tools in certain scenarios, clean code remains the foundation of reliable, scalable, and maintainable software. Choosing clean code ensures greater flexibility, fewer errors, and better teamwork, ultimately leading to project success."
-      }
-    ],
-    "de": [
-      {
-        "text": "In der Welt der Programmierung stellt sich oft die Frage: Soll man auf fertige Lösungen wie Builder zurückgreifen oder den Code manuell schreiben und dabei Prinzipien des Clean Code befolgen? Beide Ansätze haben ihre Vorteile, aber auf lange Sicht bietet Clean Code mehr Flexibilität, Skalierbarkeit und Wartbarkeit."
-      },
-      {
-        "heading": "Was ist Clean Code?",
-        "text": "Clean Code ist Code, der leicht zu lesen, verständlich, gut strukturiert und frei von unnötiger Komplexität ist. Er folgt Prinzipien wie KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself) und SOLID. Solcher Code erleichtert das Testen, Debuggen und die Weiterentwicklung."
-      },
-      {
-        "heading": "Vorteile von Clean Code",
-        "ulContent": [
-          "Einfache Wartung und Erweiterung. Clean Code ermöglicht schnelle Änderungen und das Hinzufügen neuer Funktionen, ohne bestehende Logik zu gefährden. Das ist besonders wichtig bei sich schnell ändernden Anforderungen.",
-          "Weniger Fehler. Durch klare Struktur und Vermeidung von Duplikaten sinkt die Fehleranfälligkeit, was das Testen und Debuggen erleichtert.",
-          "Bessere Teamarbeit. Wenn der Code gängigen Standards folgt, verstehen andere Entwickler schnell die Logik und können problemlos am Projekt mitarbeiten.",
-          "Skalierbarkeit. Clean Code lässt sich einfacher an neue Anforderungen und Technologien anpassen, was die langfristige Lebensfähigkeit des Projekts sichert."
-        ]
-      },
-      {
-        "heading": "Einschränkungen von Buildern",
-        "text": "Builder oder visuelle Werkzeuge zur Softwareerstellung können beim schnellen Prototyping oder für einfache Anwendungen hilfreich sein. Sie haben jedoch mehrere Einschränkungen:",
-        "ulContent": [
-          "Begrenzte Flexibilität. Builder erlauben oft keine Umsetzung komplexer Logik oder individueller Funktionen.",
-          "Skalierbarkeitsprobleme. Mit zunehmender Größe des Projekts kann der durch Builder generierte Code schwer wartbar und erweiterbar werden.",
-          "Abhängigkeit von der Plattform. Die Nutzung eines bestimmten Builders kann zu einer Bindung an eine bestimmte Technologie oder einen Anbieter führen."
-        ]
-      },
-      {
-        "heading": "Wann sollte man Builder verwenden?",
-        "text": "Builder können in der Prototyping-Phase oder für die Erstellung einfacher Websites ohne komplexe Logik hilfreich sein. Sie ermöglichen schnelle Ergebnisse, ohne tiefgehende Programmierkenntnisse zu erfordern."
-      },
-      {
-        "heading": "Fazit",
-        "text": "Auch wenn Builder in bestimmten Situationen nützliche Werkzeuge sein können, bleibt Clean Code die Grundlage für zuverlässige, skalierbare und wartbare Software. Die Entscheidung für Clean Code bietet mehr Flexibilität, weniger Fehler und bessere Teamarbeit – und trägt letztlich zum Projekterfolg bei."
-      }
-    ],
-    "ua": [
-      {
-        "text": "У світі програмування часто виникає дилема: використовувати готові рішення, такі як конструктори, чи писати код вручну, дотримуючись принципів чистого коду. Обидва підходи мають свої переваги, але в довгостроковій перспективі чистий код забезпечує більшу гнучкість, масштабованість і підтримуваність."
-      },
-      {
-        "heading": "Що таке чистий код?",
-        "text": "Чистий код — це код, який легко читається, зрозумілий, добре структурований і не містить зайвої складності. Він відповідає принципам KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself) та SOLID. Такий код спрощує тестування, налагодження й подальшу розробку."
-      },
-      {
-        "heading": "Переваги чистого коду",
-        "ulContent": [
-          "Легкість у підтримці та розширенні. Чистий код дозволяє швидко вносити зміни та додавати нові функції без ризику порушити існуючу логіку. Це особливо важливо в умовах швидко змінюваних вимог.",
-          "Зменшення кількості помилок. Завдяки чіткій структурі та відсутності дублювання знижується ймовірність виникнення помилок, що полегшує процес тестування та налагодження.",
-          "Краща командна співпраця. Коли код написано відповідно до загальноприйнятих стандартів, інші розробники швидко розуміють його логіку та можуть легко долучатися до роботи над проєктом.",
-          "Масштабованість. Чистий код простіше адаптувати до нових вимог і технологій, що забезпечує довготривалу життєздатність проєкту."
-        ]
-      },
-      {
-        "heading": "Обмеження конструкторів",
-        "text": "Конструктори або візуальні інструменти для створення програм можуть бути корисними для швидкого прототипування або розробки простих застосунків. Проте вони мають низку обмежень:",
-        "ulContent": [
-          "Обмежена гнучкість. Конструктори часто не дозволяють реалізувати складну логіку або нестандартні функції.",
-          "Проблеми з масштабованістю. У міру зростання проєкту код, створений за допомогою конструктора, може стати важким для підтримки й подальшого розширення.",
-          "Залежність від платформи. Використання конкретного конструктора може призвести до прив’язки до певної технології або провайдера."
-        ]
-      },
-      {
-        "heading": "Коли використовувати конструктори?",
-        "text": "Конструктори можуть бути корисними на етапі прототипування або для створення простих вебсайтів без складної логіки. Вони дають змогу швидко отримати результат без необхідності в глибоких знаннях програмування."
-      },
-      {
-        "heading": "Висновок",
-        "text": "Хоча конструктори можуть бути корисними інструментами в певних ситуаціях, чистий код залишається основою створення надійного, масштабованого й підтримуваного програмного забезпечення. Вибір на користь чистого коду забезпечує більшу гнучкість, знижує кількість помилок і полегшує командну роботу, що зрештою сприяє успіху проєкту."
-      }
-    ]
-  },
-  "image": "https://example.com/image.jpg",
-  "theme": "web"
+  "posts": {
+    "code": {
+      "title": "Чистий код проти конструкторів: чому чистий код завжди перемагає",
+      "description": "У світі програмування часто виникає дилема...",
+      "image": "/image/3d-shape.png",
+      "content": [
+        {
+          "text": "У світі програмування часто виникає дилема: використовувати готові рішення, такі як конструктори, чи писати код вручну, дотримуючись принципів чистого коду. Обидва підходи мають свої переваги, але в довгостроковій перспективі чистий код забезпечує більшу гнучкість, масштабованість і підтримуваність."
+        },
+        {
+          "heading": "Що таке чистий код?",
+          "text": "Чистий код — це код, який легко читається, зрозумілий, добре структурований і не містить зайвої складності. Він відповідає принципам KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself) та SOLID. Такий код спрощує тестування, налагодження й подальшу розробку."
+        },
+        {
+          "heading": "Переваги чистого коду",
+          "ulContent": [
+            "Легкість у підтримці та розширенні. Чистий код дозволяє швидко вносити зміни та додавати нові функції без ризику порушити існуючу логіку. Це особливо важливо в умовах швидко змінюваних вимог.",
+            "Зменшення кількості помилок. Завдяки чіткій структурі та відсутності дублювання знижується ймовірність виникнення помилок, що полегшує процес тестування та налагодження.",
+            "Краща командна співпраця. Коли код написано відповідно до загальноприйнятих стандартів, інші розробники швидко розуміють його логіку та можуть легко долучатися до роботи над проєктом.",
+            "Масштабованість. Чистий код простіше адаптувати до нових вимог і технологій, що забезпечує довготривалу життєздатність проєкту."
+          ]
+        },
+        {
+          "heading": "Обмеження конструкторів",
+          "text": "Конструктори або візуальні інструменти для створення програм можуть бути корисними для швидкого прототипування або розробки простих застосунків. Проте вони мають низку обмежень:",
+          "ulContent": [
+            "Обмежена гнучкість. Конструктори часто не дозволяють реалізувати складну логіку або нестандартні функції.",
+            "Проблеми з масштабованістю. У міру зростання проєкту код, створений за допомогою конструктора, може стати важким для підтримки й подальшого розширення.",
+            "Залежність від платформи. Використання конкретного конструктора може призвести до прив’язки до певної технології або провайдера."
+          ]
+        },
+        {
+          "heading": "Коли використовувати конструктори?",
+          "text": "Конструктори можуть бути корисними на етапі прототипування або для створення простих вебсайтів без складної логіки. Вони дають змогу швидко отримати результат без необхідності в глибоких знаннях програмування."
+        },
+        {
+          "heading": "Висновок",
+          "text": "Хоча конструктори можуть бути корисними інструментами в певних ситуаціях, чистий код залишається основою створення надійного, масштабованого й підтримуваного програмного забезпечення. Вибір на користь чистого коду забезпечує більшу гнучкість, знижує кількість помилок і полегшує командну роботу, що зрештою сприяє успіху проєкту."
+        }
+      ]
+    },
+    "post-1": {
+      "title": "Первый пост",
+      "description": "Краткое описание первого поста",
+      "image": "/image/3d-shape.png",
+      "content": "Полный текст первого поста. Здесь может быть много контента, параграфы, HTML и т.д."
+    },
+    "post-2": {
+      "title": "Второй пост",
+      "description": "Краткое описание второго поста",
+      "image": "/image/3d-shape.png",
+      "content": "Хоча конструктори можуть бути корисними інструментами в певних ситуаціях, чистий код залишається основою створення надійного, масштабованого й підтримуваного програмного забезпечення. Вибір на користь чистого коду забезпечує більшу гнучкість, знижує кількість помилок і полегшує командну роботу, що зрештою сприяє успіху проєкту."
+    }
+  }
 }
