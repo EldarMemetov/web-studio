@@ -1,44 +1,56 @@
-[
-  {
-    "id": "code",
-    "title": "Sauberer Code gegen Builder: Warum sauberer Code immer gewinnt",
-    "description": "In der Welt der Programmierung stellt sich oft die Frage...",
-    "content": [
-      {
-        "text": "In der Welt der Programmierung stellt sich oft die Frage: Soll man auf fertige Lösungen wie Builder zurückgreifen oder den Code manuell schreiben und dabei Prinzipien des Clean Code befolgen? Beide Ansätze haben ihre Vorteile, aber auf lange Sicht bietet Clean Code mehr Flexibilität, Skalierbarkeit und Wartbarkeit."
-      },
-      {
-        "heading": "Was ist Clean Code?",
-        "text": "Clean Code ist Code, der leicht zu lesen, verständlich, gut strukturiert und frei von unnötiger Komplexität ist. Er folgt Prinzipien wie KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself) und SOLID. Solcher Code erleichtert das Testen, Debuggen und die Weiterentwicklung."
-      },
-      {
-        "heading": "Vorteile von Clean Code",
-        "ulContent": [
-          "Einfache Wartung und Erweiterung. Clean Code ermöglicht schnelle Änderungen und das Hinzufügen neuer Funktionen, ohne bestehende Logik zu gefährden. Das ist besonders wichtig bei sich schnell ändernden Anforderungen.",
-          "Weniger Fehler. Durch klare Struktur und Vermeidung von Duplikaten sinkt die Fehleranfälligkeit, was das Testen und Debuggen erleichtert.",
-          "Bessere Teamarbeit. Wenn der Code gängigen Standards folgt, verstehen andere Entwickler schnell die Logik und können problemlos am Projekt mitarbeiten.",
-          "Skalierbarkeit. Clean Code lässt sich einfacher an neue Anforderungen und Technologien anpassen, was die langfristige Lebensfähigkeit des Projekts sichert."
-        ]
-      },
-      {
-        "heading": "Einschränkungen von Buildern",
-        "text": "Builder oder visuelle Werkzeuge zur Softwareerstellung können beim schnellen Prototyping oder für einfache Anwendungen hilfreich sein. Sie haben jedoch mehrere Einschränkungen:",
-        "ulContent": [
-          "Begrenzte Flexibilität. Builder erlauben oft keine Umsetzung komplexer Logik oder individueller Funktionen.",
-          "Skalierbarkeitsprobleme. Mit zunehmender Größe des Projekts kann der durch Builder generierte Code schwer wartbar und erweiterbar werden.",
-          "Abhängigkeit von der Plattform. Die Nutzung eines bestimmten Builders kann zu einer Bindung an eine bestimmte Technologie oder einen Anbieter führen."
-        ]
-      },
-      {
-        "heading": "Wann sollte man Builder verwenden?",
-        "text": "Builder können in der Prototyping-Phase oder für die Erstellung einfacher Websites ohne komplexe Logik hilfreich sein. Sie ermöglichen schnelle Ergebnisse, ohne tiefgehende Programmierkenntnisse zu erfordern."
-      },
-      {
-        "heading": "Fazit",
-        "text": "Auch wenn Builder in bestimmten Situationen nützliche Werkzeuge sein können, bleibt Clean Code die Grundlage für zuverlässige, skalierbare und wartbare Software. Die Entscheidung für Clean Code bietet mehr Flexibilität, weniger Fehler und bessere Teamarbeit – und trägt letztlich zum Projekterfolg bei."
-      }
-    ],
-    "image": "",
-    "theme": "web"
+{
+  "posts": {
+    "code": {
+      "title": "Sauberer Code vs. Builder: Warum sauberer Code immer gewinnt",
+      "description": "In der Welt der Programmierung taucht oft ein Dilemma auf...",
+      "image": "/image/3d-shape.png",
+      "content": [
+        {
+          "text": "In der Welt der Programmierung taucht oft ein Dilemma auf: Soll man fertige Lösungen wie Builder verwenden oder den Code manuell unter Einhaltung der Prinzipien des sauberen Codes schreiben? Beide Ansätze haben ihre Vorteile, aber langfristig bietet sauberer Code mehr Flexibilität, Skalierbarkeit und Wartbarkeit."
+        },
+        {
+          "heading": "Was ist sauberer Code?",
+          "text": "Sauberer Code ist Code, der leicht lesbar, verständlich, gut strukturiert und frei von unnötiger Komplexität ist. Er entspricht den Prinzipien von KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself) und SOLID. Solcher Code vereinfacht das Testen, Debuggen und die Weiterentwicklung."
+        },
+        {
+          "heading": "Vorteile von sauberem Code",
+          "ulContent": [
+            "Einfache Wartung und Erweiterung. Sauberer Code ermöglicht schnelle Änderungen und das Hinzufügen neuer Funktionen, ohne das Risiko, bestehende Logik zu brechen. Dies ist besonders wichtig im Kontext schnell ändernder Anforderungen.",
+            "Fehlerreduktion. Durch klare Struktur und das Fehlen von Duplikationen wird die Wahrscheinlichkeit von Fehlern verringert, was das Testen und Debuggen erleichtert.",
+            "Bessere Teamarbeit. Wenn Code nach akzeptierten Standards geschrieben ist, können andere Entwickler die Logik schnell verstehen und problemlos zum Projekt beitragen.",
+            "Skalierbarkeit. Sauberer Code lässt sich leichter an neue Anforderungen und Technologien anpassen und gewährleistet die langfristige Lebensfähigkeit des Projekts."
+          ]
+        },
+        {
+          "heading": "Einschränkungen von Buildern",
+          "text": "Builder oder visuelle Tools zum Erstellen von Programmen können nützlich sein für schnelle Prototypenerstellung oder die Entwicklung einfacher Anwendungen. Sie haben jedoch mehrere Einschränkungen:",
+          "ulContent": [
+            "Begrenzte Flexibilität. Builder ermöglichen oft nicht die Implementierung komplexer Logik oder individueller Funktionen.",
+            "Skalierbarkeitsprobleme. Wenn ein Projekt wächst, kann der mit einem Builder erstellte Code schwer zu warten und zu erweitern sein.",
+            "Plattformabhängigkeit. Die Verwendung eines bestimmten Builders kann dazu führen, dass man an eine bestimmte Technologie oder einen Anbieter gebunden ist."
+          ]
+        },
+        {
+          "heading": "Wann sollte man Builder verwenden?",
+          "text": "Builder können im Prototyping-Stadium oder für die Erstellung einfacher Webseiten ohne komplexe Logik nützlich sein. Sie ermöglichen schnelle Ergebnisse ohne tiefgehende Programmierkenntnisse."
+        },
+        {
+          "heading": "Fazit",
+          "text": "Obwohl Builder in bestimmten Situationen nützliche Werkzeuge sein können, bleibt sauberer Code die Grundlage für die Erstellung zuverlässiger, skalierbarer und wartbarer Software. Die Wahl des sauberen Codes gewährleistet mehr Flexibilität, reduziert Fehler und vereinfacht die Teamarbeit, was letztlich zum Erfolg des Projekts beiträgt."
+        }
+      ]
+    },
+    "post-1": {
+      "title": "Erster Beitrag",
+      "description": "Eine kurze Beschreibung des ersten Beitrags",
+      "image": "/image/3d-shape.png",
+      "content": "Voller Text des ersten Beitrags. Hier könnte es viel Inhalt geben, Absätze, HTML usw."
+    },
+    "post-2": {
+      "title": "Zweiter Beitrag",
+      "description": "Eine kurze Beschreibung des zweiten Beitrags",
+      "image": "/image/3d-shape.png",
+      "content": "Obwohl Builder in bestimmten Situationen nützliche Werkzeuge sein können, bleibt sauberer Code die Grundlage für die Erstellung zuverlässiger, skalierbarer und wartbarer Software. Die Wahl des sauberen Codes gewährleistet mehr Flexibilität, reduziert Fehler und vereinfacht die Teamarbeit, was letztlich zum Erfolg des Projekts beiträgt."
+    }
   }
-]
+}
