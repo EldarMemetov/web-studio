@@ -23,7 +23,12 @@ export default async function BlogId({ locale, id }) {
       <Container>
         <div>
           {post.image && (
-            <Image src={post.image} alt={post.title} width={363} height={383} />
+            <Image
+              src={post.image}
+              alt={post.title || 'web'}
+              width={363}
+              height={383}
+            />
           )}
           <h1>{post.title}</h1>
 

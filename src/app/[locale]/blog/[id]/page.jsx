@@ -1,20 +1,3 @@
-// import BlogId from '@/modules/BlogId/BlogId';
-
-// export default async function BlogIdCollection({ params: rawParams }) {
-//   const params = await rawParams;
-//   const availableLocales = ['en', 'ua', 'de'];
-//   const locale = availableLocales.includes(params?.locale)
-//     ? params.locale
-//     : 'en';
-//   const id = params?.id;
-//   return (
-//     <main>
-//       <div>
-//         <BlogId locale={locale} id={id} />
-//       </div>
-//     </main>
-//   );
-// }
 import BlogId from '@/modules/BlogId/BlogId';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 
@@ -65,14 +48,6 @@ export default async function BlogIdPage({ params: rawParams }) {
     ? params.locale
     : 'en';
   const id = params?.id;
-
-  if (!id) {
-    return (
-      <section>
-        <h1>Пост не найден</h1>
-      </section>
-    );
-  }
 
   return (
     <main>
