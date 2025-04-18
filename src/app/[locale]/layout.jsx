@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import initTranslations from '@/i18n/utils/i18n';
 import TranslationsProvider from '@/i18n/utils/TranslationsProvider';
 import ErrorBoundaryWithTranslation from '@/shared/components/ErrorBoundary/ErrorBoundaryWithTranslation/ErrorBoundaryWithTranslation';
-import { Header } from '../../modules/Header/Header';
+import Header from '@/modules/Header/Header';
 import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
 import fs from 'fs';
