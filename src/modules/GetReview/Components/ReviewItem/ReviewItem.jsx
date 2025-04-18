@@ -1,4 +1,4 @@
-import Icon from '@/shared/Icon/Icon';
+import IconGradient from '@/shared/IconGradient/IconGradient';
 import s from './ReviewItem.module.scss';
 
 export default function ReviewItem({ review }) {
@@ -16,7 +16,7 @@ export default function ReviewItem({ review }) {
           {Array.from({ length: 5 }, (_, i) => {
             const filled = i < rating;
             return (
-              <Icon
+              <IconGradient
                 key={i}
                 iconName={filled ? 'icon-star-filled' : 'icon-star-outline'}
                 className={filled ? s.filled : s.outline}

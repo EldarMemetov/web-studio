@@ -8,7 +8,7 @@ import Container from '@/shared/container/Container';
 import { sendReviews } from '@/services/api';
 import { useReviews } from '../GetReview/Components/ReviewsSection/ReviewsSection';
 import Button from '@/shared/components/button/Button';
-import Icon from '@/shared/Icon/Icon';
+import IconGradient from '@/shared/IconGradient/IconGradient';
 
 export default function ReviewsForm() {
   const { t } = useTranslation('reviewsForm');
@@ -148,7 +148,7 @@ export default function ReviewsForm() {
                   </label>
                   <div className={styles.rating}>
                     {[1, 2, 3, 4, 5].map((i) => (
-                      <Icon
+                      <IconGradient
                         key={i}
                         iconName={
                           values.rating >= i

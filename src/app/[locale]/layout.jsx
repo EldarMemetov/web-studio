@@ -7,8 +7,9 @@ import ErrorBoundaryWithTranslation from '@/shared/components/ErrorBoundary/Erro
 import { Header } from '../../modules/Header/Header';
 import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
-import fs from 'fs'; // ← добавили
-import path from 'path'; // ← добавили
+import fs from 'fs';
+import path from 'path';
+
 const oswald = Oswald({
   subsets: ['latin', 'cyrillic'],
   weight: ['400'],
