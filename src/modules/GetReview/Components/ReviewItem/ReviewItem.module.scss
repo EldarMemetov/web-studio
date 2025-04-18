@@ -47,19 +47,20 @@
   color: #ddd;
 }
 
-.star {
+// shared/Icon/Icon.module.scss
+.icon {
   width: 24px;
   height: 24px;
-  fill: none;
-  stroke: none;
   transition: all 0.3s ease;
+  /* убираем тут любые fill/stroke — задаём их в .filled/.outline */
+}
 
-  &.filled {
-    fill: url(#star-gradient);
-  }
+.filled {
+  /* тот самый градиент из sprite.svg */
+  fill: url(#star-gradient-filled);
+}
 
-  &.outline {
-    stroke: url(#star-gradient);
-    fill: none;
-  }
+.outline {
+  stroke: url(#star-gradient-outline);
+  fill: none;
 }

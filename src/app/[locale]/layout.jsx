@@ -7,7 +7,8 @@ import ErrorBoundaryWithTranslation from '@/shared/components/ErrorBoundary/Erro
 import { Header } from '../../modules/Header/Header';
 import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
-
+import fs from 'fs'; // ← добавили
+import path from 'path'; // ← добавили
 const oswald = Oswald({
   subsets: ['latin', 'cyrillic'],
   weight: ['400'],
@@ -79,13 +80,15 @@ export default async function Layout({ children, params }) {
   const { locale } = awaitedParams;
 
   const { resources } = await initTranslations(locale, NAMESPACES);
-
+  const spritePath = path.join(process.cwd(), 'public', 'icons', 'sprite.svg');
+  const sprite = fs.readFileSync(spritePath, 'utf8');
   return (
     <html lang={locale}>
       <body
         suppressHydrationWarning={true}
         className={clsx(rubik.variable, raleway.variable, oswald.variable)}
       >
+        <div aria-hidden="true" dangerouslySetInnerHTML={{ __html: sprite }} />
         <TranslationsProvider
           namespaces={NAMESPACES}
           locale={locale}
