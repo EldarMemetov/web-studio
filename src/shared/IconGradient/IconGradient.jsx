@@ -1,4 +1,3 @@
-// shared/Icon/IconGradient.jsx
 import clsx from 'clsx';
 import s from './IconGradient.module.scss';
 
