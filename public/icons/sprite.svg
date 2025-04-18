@@ -1,15 +1,5 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <linearGradient id="star-gradient-filled" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(30)">
-      <stop offset="0%" stop-color="#9624e2"/>
-      <stop offset="100%" stop-color="#02079d"/>
-    </linearGradient>
-    
-    <linearGradient id="star-gradient-outline" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(30)">
-      <stop offset="0%" stop-color="#9624e2"/>
-      <stop offset="100%" stop-color="#02079d"/>
-    </linearGradient>
-  </defs>
+<defs>
 <symbol id="icon-game" viewBox="0 0 32 32">
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M4.084 10.040c2.28-4.548 6.845-7.373 11.916-7.373 7.352 0 13.333 5.981 13.333 13.333s-5.981 13.333-13.333 13.333c-5.071 0-9.636-2.825-11.916-7.373-0.153-0.305-0.183-0.656-0.085-0.983s0.318-0.603 0.614-0.772l7.364-4.205-7.363-4.204c-0.615-0.352-0.848-1.123-0.531-1.756zM15.328 14.843c0.204 0.116 0.374 0.285 0.492 0.488s0.18 0.434 0.18 0.669c0 0.235-0.062 0.466-0.18 0.669s-0.288 0.372-0.492 0.488l-8.231 4.7c0.965 1.48 2.285 2.696 3.84 3.536s3.295 1.278 5.062 1.274c5.881 0 10.667-4.785 10.667-10.667s-4.785-10.667-10.667-10.667c-1.767-0.004-3.507 0.434-5.062 1.273s-2.875 2.055-3.841 3.535l8.231 4.701z"></path>
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M16.667 12c-1.105 0-2-0.895-2-2s0.895-2 2-2c1.105 0 2 0.895 2 2s-0.895 2-2 2z"></path>
@@ -129,11 +119,17 @@
 <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M26.667 10.667h-21.333c-0.736 0-1.333 0.597-1.333 1.333v2.667c0 0.736 0.597 1.333 1.333 1.333h21.333c0.736 0 1.333-0.597 1.333-1.333v-2.667c0-0.736-0.597-1.333-1.333-1.333z"></path>
 <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M16 10.667v17.333M16 10.667c-0.482-1.987-1.313-3.687-2.383-4.876s-2.331-1.813-3.617-1.791c-0.884 0-1.732 0.351-2.357 0.976s-0.976 1.473-0.976 2.357c0 0.884 0.351 1.732 0.976 2.357s1.473 0.976 2.357 0.976M16 10.667c0.482-1.987 1.313-3.687 2.383-4.876s2.331-1.813 3.617-1.791c0.884 0 1.732 0.351 2.357 0.976s0.976 1.473 0.976 2.357c0 0.884-0.351 1.732-0.976 2.357s-1.473 0.976-2.357 0.976M25.333 16v9.333c0 0.707-0.281 1.386-0.781 1.886s-1.178 0.781-1.886 0.781h-13.333c-0.707 0-1.386-0.281-1.886-0.781s-0.781-1.178-0.781-1.886v-9.333"></path>
 </symbol>
- <!-- Залитая иконка звезды -->
+<svg width="0" height="0" style="position: absolute;">
+  <!-- Залитая иконка -->
   <symbol id="icon-star-filled" viewBox="0 0 34 32">
-    <path
+    <defs>
+      <linearGradient id="star-gradient-filled" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(30)">
+        <stop offset="0%" stop-color="#9624e2" />
+        <stop offset="100%" stop-color="#02079d" />
+      </linearGradient>
+    </defs>
+    <path 
       fill="url(#star-gradient-filled)"
-      stroke="none"
       stroke-linejoin="miter"
       stroke-linecap="butt"
       stroke-miterlimit="4"
@@ -142,11 +138,17 @@
     />
   </symbol>
 
-  <!-- Иконка звезды только с обводкой -->
+  <!-- Иконка с обводкой -->
   <symbol id="icon-star-outline" viewBox="0 0 34 32">
-    <path
+    <defs>
+      <linearGradient id="star-gradient-outline" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(30)">
+        <stop offset="0%" stop-color="#9624e2" />
+        <stop offset="100%" stop-color="#02079d" />
+      </linearGradient>
+    </defs>
+    <path 
+      stroke="url(#star-gradient-outline)" 
       fill="none"
-      stroke="url(#star-gradient-outline)"
       stroke-linejoin="miter"
       stroke-linecap="butt"
       stroke-miterlimit="4"
@@ -154,5 +156,6 @@
       d="M19.972 11.323c0.204 0.628 0.789 1.054 1.449 1.054h10.387l-8.403 6.106c-0.467 0.34-0.697 0.908-0.61 1.466l0.057 0.237 3.21 9.879-8.403-6.106c-0.467-0.34-1.080-0.383-1.583-0.128l-0.208 0.128-8.403 6.106 3.21-9.879c0.178-0.549 0.030-1.145-0.368-1.545l-0.186-0.158-8.403-6.106h10.387c0.578 0 1.098-0.326 1.356-0.827l0.094-0.226 3.21-9.878 3.21 9.878z"
     />
   </symbol>
-
+</svg>
+</defs>
 </svg>
