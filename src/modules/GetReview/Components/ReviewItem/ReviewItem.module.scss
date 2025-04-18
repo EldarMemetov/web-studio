@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  width: 300px;
-  height: 150px;
+  border-radius: 4px;
+  width: 600px;
+  height: 294px;
   gap: 10px;
-  padding: 20px;
-  border-radius: 8px;
-  background: linear-gradient(-45deg, #2f023c, #400249, #48015a, #0f0f0f);
-  background-size: 400% 400%;
+  padding: 32px;
+  background: rgba(1, 2, 39, 0.01);
+
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.5s ease-in-out;
@@ -32,7 +32,7 @@
 }
 
 .name {
-  font-family: "Fixel Display", sans-serif;
+  font-family: 'Fixel Display', sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 136%;
@@ -40,9 +40,26 @@
 }
 
 .review {
-  font-family: "Fixel Display", sans-serif;
+  font-family: 'Fixel Display', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 146%;
   color: #ddd;
+}
+
+.star {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: none;
+  transition: all 0.3s ease;
+
+  &.filled {
+    fill: url(#star-gradient);
+  }
+
+  &.outline {
+    stroke: url(#star-gradient);
+    fill: none;
+  }
 }
