@@ -166,8 +166,6 @@ export default function ReviewsForm() {
                     className={styles.error}
                   />
                 </div>
-
-                {/* Чекбокс соглашения */}
                 <div className={styles.checkboxContainer}>
                   <Field
                     type="checkbox"
