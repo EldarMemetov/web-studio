@@ -4,10 +4,20 @@ import { Dialog, Transition } from '@headlessui/react';
 import styles from './Modal.module.scss';
 import Icon from '../Icon/Icon';
 
-export default function Modal({ show, onClose, children }) {
+export default function Modal({
+  show,
+  onClose,
+  children,
+  className = '',
+  contentClassName = '',
+}) {
   return (
     <Transition.Root show={show} as={Fragment}>
-      <Dialog as="div" className={styles.overlay} onClose={onClose}>
+      <Dialog
+        as="div"
+        className={`${styles.overlay} ${className}`}
+        onClose={onClose}
+      >
         <Transition.Child
           as={Fragment}
           enter={styles.enter}
@@ -20,7 +30,7 @@ export default function Modal({ show, onClose, children }) {
           <div className={styles.background} />
         </Transition.Child>
 
-        <Dialog.Panel className={styles.modal}>
+        <Dialog.Panel className={`${styles.modal} ${contentClassName}`}>
           <button className={styles.closeButton} onClick={onClose}>
             <Icon
               iconName="icon-close"

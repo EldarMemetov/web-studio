@@ -31,13 +31,12 @@ export default async function Home({ params: rawParams }) {
         <IdeasToReality locale={locale} />
         <BrandTransformation />
         <TextAnimation />
+        <ReviewsSection initialReviews={reviews}>
+          <ReviewsList />
+        </ReviewsSection>
         <ToggleQuestions locale={locale} />
         <FeedbackForm />
         <SocialLinks />
-        <ReviewsSection initialReviews={reviews}>
-          <ReviewsForm />
-          <ReviewsList />
-        </ReviewsSection>
       </div>
     </main>
   );
