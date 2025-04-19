@@ -7,7 +7,8 @@
     "message": "Nachricht",
     "agree": "Ich stimme den Datenschutzbedingungen zu"
   },
-  "submitButton": "Kontaktiere uns",
+  "submitButton": "Absenden",
+  "rating": "Bewerte unsere Arbeit",
   "successMessage": "Feedback erfolgreich gesendet!",
   "errorMessage": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
   "status": {

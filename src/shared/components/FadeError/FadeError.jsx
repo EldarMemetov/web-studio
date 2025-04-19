@@ -1,19 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const FadeError = ({ message, className }) => {
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    setVisible(true);
-    const timer = setTimeout(() => {
-      setVisible(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [message]);
-
-  return visible ? <p className={className}>{message}</p> : null;
+  if (!message) return null;
+  return <p className={className}>{message}</p>;
 };
 
 export default FadeError;

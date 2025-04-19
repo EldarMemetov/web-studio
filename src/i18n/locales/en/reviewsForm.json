@@ -7,7 +7,8 @@
     "message": "Message",
     "agree": "I agree with the privacy terms"
   },
-  "submitButton": "Contact Us",
+  "submitButton": "Submit",
+  "rating": "Rate our work",
   "successMessage": "Feedback successfully sent!",
   "errorMessage": "An error occurred. Please try again.",
   "status": {

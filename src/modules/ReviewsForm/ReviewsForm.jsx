@@ -1,14 +1,21 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import styles from './ReviewsForm.module.scss';
 import Container from '@/shared/container/Container';
 import { sendReviews } from '@/services/api';
 import { useReviews } from '../GetReview/Components/ReviewsSection/ReviewsSection';
 import Button from '@/shared/components/button/Button';
-import IconGradient from '@/shared/IconGradient/IconGradient';
+import Modal from '@/shared/Modal/Modal';
+
+import {
+  TextField,
+  TextAreaField,
+  CheckboxField,
+  RatingField,
+} from '@/shared/components/InputForm/InputForm';
 
 export default function ReviewsForm() {
   const { t } = useTranslation('reviewsForm');
@@ -61,7 +68,7 @@ export default function ReviewsForm() {
   };
 
   useEffect(() => {
-    if (submissionStatus?.type === 'success') {
+    if (submissionStatus?.type) {
       const timer = setTimeout(() => setSubmissionStatus(null), 5000);
       return () => clearTimeout(timer);
     }
@@ -74,123 +81,63 @@ export default function ReviewsForm() {
         <div className={styles.containerForm}>
           <p>{t('description')}</p>
 
-          {submissionStatus && (
-            <p
-              className={`
-                ${styles.status} 
-                ${
-                  submissionStatus.type === 'error'
-                    ? styles.errorStatus
-                    : styles.successStatus
-                }
-              `}
-            >
-              {submissionStatus.message}
-            </p>
-          )}
-
           <Formik
             initialValues={initialValues}
             onSubmit={handleSubmit}
             validationSchema={validationSchema}
           >
-            {({ values, setFieldValue }) => (
-              <Form className={styles.form}>
-                {/* Поля name, email, text */}
-                <div className={styles.containerBig}>
-                  <div className={styles.containerNameEmail}>
-                    <div className={styles.fieldContainer}>
-                      <Field
-                        className={styles.input}
-                        type="text"
-                        name="name"
-                        placeholder={t('fields.name')}
-                      />
-                      <ErrorMessage
-                        name="name"
-                        component="p"
-                        className={styles.error}
-                      />
-                    </div>
-                    <div className={styles.fieldContainer}>
-                      <Field
-                        className={styles.input}
-                        type="email"
-                        name="email"
-                        placeholder={t('fields.email')}
-                      />
-                      <ErrorMessage
-                        name="email"
-                        component="p"
-                        className={styles.error}
-                      />
-                    </div>
+            <Form className={styles.form}>
+              <div className={styles.containerBig}>
+                <div className={styles.containerNameEmail}>
+                  <div className={styles.fieldContainer}>
+                    <TextField
+                      name="name"
+                      type="text"
+                      placeholder={t('fields.name')}
+                    />
                   </div>
                   <div className={styles.fieldContainer}>
-                    <Field
-                      className={styles.input}
-                      as="textarea"
-                      name="text"
-                      placeholder={t('fields.message')}
-                    />
-                    <ErrorMessage
-                      name="text"
-                      component="p"
-                      className={styles.error}
+                    <TextField
+                      name="email"
+                      type="email"
+                      placeholder={t('fields.email')}
                     />
                   </div>
                 </div>
-
-                {/* Рейтинг */}
                 <div className={styles.fieldContainer}>
-                  <label className={styles.ratingLabel}>
-                    {t('fields.rating')}
-                  </label>
-                  <div className={styles.rating}>
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <IconGradient
-                        key={i}
-                        iconName={
-                          values.rating >= i
-                            ? 'icon-star-filled'
-                            : 'icon-star-outline'
-                        }
-                        className={styles.star}
-                        onClick={() => setFieldValue('rating', i)}
-                      />
-                    ))}
-                  </div>
-                  <ErrorMessage
-                    name="rating"
-                    component="p"
-                    className={styles.error}
+                  <TextAreaField
+                    name="text"
+                    placeholder={t('fields.message')}
                   />
                 </div>
-                <div className={styles.checkboxContainer}>
-                  <Field
-                    type="checkbox"
-                    name="agree"
-                    id="agree"
-                    className={styles.checkbox}
-                  />
-                  <label htmlFor="agree" className={styles.checkboxLabel}>
-                    {t('fields.agree')}
-                  </label>
-                </div>
-                <ErrorMessage
-                  name="agree"
-                  component="p"
-                  className={styles.error}
-                />
+              </div>
 
-                <Button type="submit" variant="variant2" data-aos="zoom-in">
-                  {t('submitButton')}
-                </Button>
-              </Form>
-            )}
+              {/* Rating */}
+              <RatingField label={t('rating')} />
+
+              <div className={styles.checkboxContainer}>
+                <CheckboxField name="agree">{t('fields.agree')}</CheckboxField>
+              </div>
+
+              <Button type="submit" variant="variant2" data-aos="zoom-in">
+                {t('submitButton')}
+              </Button>
+            </Form>
           </Formik>
         </div>
       </div>
+
+      <Modal
+        show={!!submissionStatus}
+        onClose={() => setSubmissionStatus(null)}
+      >
+        <h3 className={styles.status}>
+          {submissionStatus?.type === 'success'
+            ? t('status.success')
+            : t('status.error')}
+        </h3>
+        <p>{submissionStatus?.message}</p>
+      </Modal>
     </Container>
   );
 }
