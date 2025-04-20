@@ -1,30 +1,33 @@
-// import NotFoundPage from '@/modules/NotFoundPage/NotFoundPage';
+'use client';
+import dynamic from 'next/dynamic';
 
-// export default function NotFound() {
+const NotFoundPage = dynamic(
+  () => import('@/modules/NotFoundPage/NotFoundPage'),
+  { ssr: false }
+);
+
+export default function NotFound() {
+  return <NotFoundPage />;
+}
+
+// 'use client';
+// import { useTranslation } from 'react-i18next';
+// import Link from 'next/link';
+
+// import s from './notFoundPage.module.scss';
+
+// export default function NotFoundPage() {
+//   const { t } = useTranslation('errorBoundary');
+
 //   return (
-//     <div>
-//       <NotFoundPage />
-//     </div>
+//     <section className={s.section}>
+//       <div className={s.container}>
+//         <h2 className={s.title}>{t('notFoundTitle')}</h2>
+//         <p className={s.message}>{t('notFoundMessage')}</p>
+//         <Link href="/" className={s.link}>
+//           {t('backToHome')}
+//         </Link>
+//       </div>
+//     </section>
 //   );
 // }
-
-import { initServerI18n } from '@/i18n/utils/serverI18n';
-import Link from 'next/link';
-
-import s from './notFoundPage.module.scss';
-
-export default async function NotFoundPage({ locale }) {
-  const { t } = await initServerI18n(locale, ['errorBoundary']);
-
-  return (
-    <section className={s.section}>
-      <div className={s.container}>
-        <h2 className={s.title}>{t('notFoundTitle')}</h2>
-        <p className={s.message}>{t('notFoundMessage')}</p>
-        <Link href="/" className={s.link}>
-          {t('backToHome')}
-        </Link>
-      </div>
-    </section>
-  );
-}
