@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { useLanguageChanger } from '../../../i18n/utils/LanguageChanger';
 import styles from './LanguageSwitcher.module.scss';

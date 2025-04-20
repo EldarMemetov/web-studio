@@ -83,6 +83,7 @@ export default async function Layout({ children, params }) {
   const { resources } = await initTranslations(locale, NAMESPACES);
   const spritePath = path.join(process.cwd(), 'public', 'icons', 'sprite.svg');
   const sprite = fs.readFileSync(spritePath, 'utf8');
+
   return (
     <html lang={locale} dir={dir(locale)}>
       <body
