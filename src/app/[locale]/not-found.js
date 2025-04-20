@@ -7,14 +7,14 @@
 //     </div>
 //   );
 // }
-'use client';
-import { useTranslation } from 'react-i18next';
+
+import { initServerI18n } from '@/i18n/utils/serverI18n';
 import Link from 'next/link';
 
 import s from './notFoundPage.module.scss';
 
-export default function NotFoundPage() {
-  const { t } = useTranslation('errorBoundary');
+export default async function NotFoundPage({ locale }) {
+  const { t } = await initServerI18n(locale, ['errorBoundary']);
 
   return (
     <section className={s.section}>
