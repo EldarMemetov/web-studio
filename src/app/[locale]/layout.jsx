@@ -7,6 +7,7 @@ import ErrorBoundaryWithTranslation from '@/shared/components/ErrorBoundary/Erro
 import Header from '@/modules/Header/Header';
 import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
+
 import { dir } from 'i18next';
 import SvgSpriteLoader from '@/shared/constants/SvgSpriteLoader/SvgSpriteLoader';
 const oswald = Oswald({

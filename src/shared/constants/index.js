@@ -11,9 +11,8 @@ export const LINKDATA = {
   ABOUT: 'about-us',
   PORTFOLIO: 'portfolio',
   HOME: 'home',
-  SERVICES: 'services',
-  DEVELOPMENT: 'services/web-development',
-  VIDEOGRAPHY: 'services/videography',
+  DEVELOPMENT: 'web-development',
+  VIDEOGRAPHY: 'videography',
   POLICY: 'policy',
 };
 export const LANGUAGES = { UA: 'ua', EN: 'en', DE: 'de' };
