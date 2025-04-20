@@ -27,9 +27,10 @@ export const NAMESPACES = [
   'getBusinessSolutions',
   'toggleQuestions',
   'IdeasToReality',
-  'errorBoundary',
+  'notFound',
   'errorGlobal',
   'blog',
+  'reviewsList',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

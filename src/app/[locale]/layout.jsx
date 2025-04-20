@@ -9,7 +9,7 @@ import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
 import fs from 'fs';
 import path from 'path';
-
+import { dir } from 'i18next';
 const oswald = Oswald({
   subsets: ['latin', 'cyrillic'],
   weight: ['400'],
@@ -84,7 +84,7 @@ export default async function Layout({ children, params }) {
   const spritePath = path.join(process.cwd(), 'public', 'icons', 'sprite.svg');
   const sprite = fs.readFileSync(spritePath, 'utf8');
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={dir(locale)}>
       <body
         suppressHydrationWarning={true}
         className={clsx(rubik.variable, raleway.variable, oswald.variable)}

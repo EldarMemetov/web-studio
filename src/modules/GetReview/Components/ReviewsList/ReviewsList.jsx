@@ -7,11 +7,13 @@ import { useReviews } from '../ReviewsSection/ReviewsSection';
 import ReviewsFormModal from '@/modules/ReviewsForm/ReviewsFormModal/ReviewsFormModal';
 import Icon from '@/shared/Icon/Icon';
 import Container from '@/shared/container/Container';
+import { useTranslation } from 'react-i18next';
 
 export default function ReviewsList() {
+  const { t } = useTranslation('reviewsList');
   const { reviews } = useReviews();
   const [isModalOpen, setModalOpen] = useState(false);
-  if (!reviews?.length) return <p>Відгуків немає</p>;
+  if (!reviews?.length) return <p>{t('noReviews')}</p>;
 
   return (
     <div>
@@ -25,7 +27,7 @@ export default function ReviewsList() {
       <Container>
         <div>
           <button onClick={() => setModalOpen(true)} className={s.button}>
-            Додайте свій відгук{' '}
+            {t('addReview')}
             <Icon iconName="icon-arrow" className={s.icon} />
           </button>
         </div>
