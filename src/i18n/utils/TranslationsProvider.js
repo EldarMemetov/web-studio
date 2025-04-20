@@ -32,7 +32,6 @@ export default function TranslationsProvider({
   const [i18nInstance, setI18nInstance] = useState(serverI18n || null);
 
   useEffect(() => {
-    // Инициализация переводов на клиенте, если их нет
     if (!serverI18n) {
       initTranslations(locale, namespaces, undefined, resources).then(
         ({ i18n }) => {

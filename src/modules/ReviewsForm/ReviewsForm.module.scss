@@ -39,11 +39,13 @@
 .containerRating {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .checkboxContainer {
   display: flex;
   align-items: center;
   gap: 10px;
   color: #ccc;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }

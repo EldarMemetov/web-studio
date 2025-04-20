@@ -30,6 +30,7 @@ export const NAMESPACES = [
   'errorGlobal',
   'blog',
   'reviewsList',
+  'successContent',
 ];
 
 export const FLIPPED_TIME_MS = 15000;
