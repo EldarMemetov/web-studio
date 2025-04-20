@@ -10,6 +10,7 @@ import i18nConfig from '../../../i18nConfig';
 import fs from 'fs';
 import path from 'path';
 import { dir } from 'i18next';
+import SvgSpriteLoader from '@/shared/constants/SvgSpriteLoader/SvgSpriteLoader';
 const oswald = Oswald({
   subsets: ['latin', 'cyrillic'],
   weight: ['400'],
@@ -90,7 +91,7 @@ export default async function Layout({ children, params }) {
         suppressHydrationWarning={true}
         className={clsx(rubik.variable, raleway.variable, oswald.variable)}
       >
-        <div aria-hidden="true" dangerouslySetInnerHTML={{ __html: sprite }} />
+        <SvgSpriteLoader />
         <TranslationsProvider
           namespaces={NAMESPACES}
           locale={locale}
