@@ -1,24 +1,46 @@
 .listItem {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  justify-content: center;
+  margin-left: 24px;
   border-radius: 4px;
   width: 600px;
   height: 294px;
-  gap: 10px;
   padding: 32px;
   background: rgba(1, 2, 39, 0.01);
 
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.5s ease-in-out;
-
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(
+      to bottom,
+      rgb(89, 89, 89) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
   &:hover {
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
-    animation: waveGradient 3s ease-in-out infinite;
+    box-shadow: 0px 0px 20px rgba(139, 92, 246, 0.5);
   }
 }
-
+.containerTextAndIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 @keyframes waveGradient {
   0% {
     background-position: 0% 50%;
@@ -32,31 +54,33 @@
 }
 
 .name {
-  font-family: 'Fixel Display', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 136%;
   color: #fff;
+  margin-bottom: 4px;
 }
 
 .review {
-  font-family: 'Fixel Display', sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 146%;
-  color: #ddd;
+  font-size: 20px;
+  line-height: 152%;
+  color: #e6e6f5;
+  margin-bottom: 25px;
 }
-
-// shared/Icon/Icon.module.scss
+.email {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 152%;
+  color: #c6c6d1;
+}
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   transition: all 0.3s ease;
-  /* убираем тут любые fill/stroke — задаём их в .filled/.outline */
 }
 
 .filled {
-  /* тот самый градиент из sprite.svg */
   fill: url(#star-gradient-filled);
 }
 

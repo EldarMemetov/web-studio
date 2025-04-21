@@ -26,7 +26,8 @@
     },
     "message": {
       "min": "Mindestens 10 Zeichen",
-      "required": "Geben Sie Ihre Nachricht ein"
+      "required": "Geben Sie Ihre Nachricht ein",
+      "max": "Maximal 260 Zeichen erlaubt"
     },
     "agree": "Sie müssen den Datenschutzbedingungen zustimmen"
   }

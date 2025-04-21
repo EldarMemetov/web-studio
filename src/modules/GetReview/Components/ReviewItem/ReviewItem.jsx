@@ -7,7 +7,7 @@ export default function ReviewItem({ review }) {
   return (
     <li className={s.listItem}>
       <p className={s.review}>{text}</p>
-      <div>
+      <div className={s.containerTextAndIcon}>
         <div>
           <h2 className={s.name}>{name}</h2>
           <p className={s.email}>{email}</p>

@@ -26,7 +26,8 @@
     },
     "message": {
       "min": "Minimum 10 characters",
-      "required": "Enter your message"
+      "required": "Enter your message",
+      "max": "Maximum of 260 characters"
     },
     "agree": "You must agree with the privacy terms"
   }

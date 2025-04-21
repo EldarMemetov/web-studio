@@ -39,6 +39,7 @@ export default function ReviewsFormContent({ onSuccess }) {
       .required(t('validation.email.required')),
     text: Yup.string()
       .min(10, t('validation.message.min'))
+      .max(260, t('validation.message.max'))
       .required(t('validation.message.required')),
     rating: Yup.number()
       .min(1, t('validation.rating.required'))
