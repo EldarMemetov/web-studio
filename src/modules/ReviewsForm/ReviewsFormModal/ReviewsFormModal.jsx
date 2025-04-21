@@ -1,28 +1,3 @@
-// 'use client';
-// import s from './ReviewsFormModal.module.scss';
-// import Modal from '@/shared/Modal/Modal';
-// import ReviewsFormContent from '../ReviewsForm';
-// import { useState } from 'react';
-// import SuccessContent from '../SuccessContent/SuccessContent';
-
-// export default function ReviewsFormModal({ show, onClose }) {
-//   const [isSubmitted, setIsSubmitted] = useState(false);
-
-//   const handleClose = () => {
-//     setIsSubmitted(false);
-//     onClose();
-//   };
-
-//   return (
-//     <Modal show={show} onClose={handleClose} contentClassName={s.myCustomModal}>
-//       {isSubmitted ? (
-//         <SuccessContent onClose={handleClose} />
-//       ) : (
-//         <ReviewsFormContent onSuccess={() => setIsSubmitted(true)} />
-//       )}
-//     </Modal>
-//   );
-// }
 'use client';
 import s from './ReviewsFormModal.module.scss';
 import Modal from '@/shared/Modal/Modal';
@@ -36,7 +11,7 @@ export default function ReviewsFormModal({ show, onClose }) {
 
   const handleClose = () => {
     setShouldReset(true);
-    onClose(); // только закрываем модалку, не сбрасываем isSubmitted сразу
+    onClose();
   };
 
   const handleAfterClose = () => {
@@ -50,7 +25,7 @@ export default function ReviewsFormModal({ show, onClose }) {
     <Modal
       show={show}
       onClose={handleClose}
-      onAfterClose={handleAfterClose} // вот сюда
+      onAfterClose={handleAfterClose}
       contentClassName={s.myCustomModal}
     >
       {isSubmitted ? (

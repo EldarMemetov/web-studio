@@ -31,6 +31,7 @@ export const NAMESPACES = [
   'blog',
   'reviewsList',
   'successContent',
+  'brandTransformation',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

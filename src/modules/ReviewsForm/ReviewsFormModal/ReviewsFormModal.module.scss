@@ -1,6 +1,11 @@
 .myCustomModal {
   box-shadow: 0 0 36px 2px rgba(109, 28, 207, 0.64);
-  background: #010227;
+  background: radial-gradient(
+      circle at top right,
+      rgb(27 11 248 / 13%) 0%,
+      rgba(0, 0, 0, 0.1) 50%
+    ),
+    #010227;
   padding: 32px;
   width: 1200px;
   height: 620px;

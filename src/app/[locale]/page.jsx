@@ -29,7 +29,7 @@ export default async function Home({ params: rawParams }) {
         <PixelPerfectBlock locale={locale} />
         <GetBusinessSolutions locale={locale} />
         <IdeasToReality locale={locale} />
-        <BrandTransformation />
+        <BrandTransformation locale={locale} />
         <TextAnimation />
         <ReviewsSection initialReviews={reviews}>
           <ReviewsList />

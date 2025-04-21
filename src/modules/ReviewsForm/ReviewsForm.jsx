@@ -101,19 +101,30 @@ export default function ReviewsFormContent({ onSuccess }) {
               <div className={styles.containerBig}>
                 <TextField
                   name="name"
+                  id="name"
                   type="text"
+                  autoComplete="name"
                   placeholder={t('fields.name')}
                 />
                 <TextField
                   name="email"
+                  id="email"
                   type="email"
+                  autoComplete="email"
                   placeholder={t('fields.email')}
                 />
 
-                <TextAreaField name="text" placeholder={t('fields.message')} />
+                <TextAreaField
+                  name="text"
+                  id="text"
+                  autoComplete="off"
+                  placeholder={t('fields.message')}
+                />
               </div>
               <div className={styles.checkboxContainer}>
-                <CheckboxField name="agree">{t('fields.agree')}</CheckboxField>
+                <CheckboxField name="agree" id="agree">
+                  {t('fields.agree')}
+                </CheckboxField>
               </div>
               <div className={styles.containerRating}>
                 <p className={styles.textRating}>{t('rating')}</p>

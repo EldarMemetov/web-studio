@@ -117,20 +117,26 @@ export default function FeedbackForm() {
                 <Form className={styles.form}>
                   <TextField
                     name="name"
+                    id="name"
                     type="text"
+                    autoComplete="name"
                     placeholder={t('fields.name')}
                   />
                   <TextField
                     name="email"
+                    id="email"
                     type="email"
+                    autoComplete="email"
                     placeholder={t('fields.email')}
                   />
                   <TextAreaField
                     name="message"
+                    id="message"
+                    autoComplete="off"
                     placeholder={t('fields.message')}
                   />
                   <div className={styles.checkboxContainer}>
-                    <CheckboxField name="agree">
+                    <CheckboxField name="agree" id="agree">
                       {t('fields.agree')}
                     </CheckboxField>
                   </div>

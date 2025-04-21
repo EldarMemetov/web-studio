@@ -5,11 +5,18 @@ import clsx from 'clsx';
 import FadeError from '@/shared/components/FadeError/FadeError';
 import styles from './InputForm.module.scss';
 import IconGradient from '@/shared/IconGradient/IconGradient';
-export function TextField({ label, className, ...props }) {
+
+export function TextField({ label, id, autoComplete, className, ...props }) {
   const [field, meta] = useField(props);
   return (
     <div className={styles.fieldContainer}>
-      <input {...field} {...props} className={clsx(styles.input, className)} />
+      <input
+        id={id || props.name}
+        autoComplete={autoComplete || props.name}
+        {...field}
+        {...props}
+        className={clsx(styles.input, className)}
+      />
       {meta.touched && meta.error && (
         <FadeError message={meta.error} className={styles.error} />
       )}
@@ -17,11 +24,19 @@ export function TextField({ label, className, ...props }) {
   );
 }
 
-export function TextAreaField({ label, className, ...props }) {
+export function TextAreaField({
+  label,
+  id,
+  autoComplete,
+  className,
+  ...props
+}) {
   const [field, meta] = useField(props);
   return (
     <div className={styles.fieldContainer}>
       <textarea
+        id={id || props.name}
+        autoComplete={autoComplete || 'off'}
         {...field}
         {...props}
         className={clsx(styles.inputText, className)}
@@ -33,17 +48,18 @@ export function TextAreaField({ label, className, ...props }) {
   );
 }
 
-export function CheckboxField({ children, className, ...props }) {
+export function CheckboxField({ children, id, className, ...props }) {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
   return (
     <div className={styles.checkboxContainer}>
       <input
+        id={id || props.name}
         {...field}
         {...props}
         type="checkbox"
         className={clsx(styles.checkbox, className)}
       />
-      <label htmlFor={props.id || props.name} className={styles.checkboxLabel}>
+      <label htmlFor={id || props.name} className={styles.checkboxLabel}>
         {children}
       </label>
       {meta.touched && meta.error && (
