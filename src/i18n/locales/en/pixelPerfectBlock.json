@@ -1,16 +1,14 @@
 {
-  "description": {
-    "part7": "Collaboration with leading companies confirms our",
-    "highlight6": "expertise",
-    "part8": ",",
-    "highlight7": "innovative approach",
-    "part9": "and",
-    "highlight8": "creativity",
-    "part10": ", thanks to which every project becomes",
-    "highlight9": "a powerful driver",
-    "part11": "for the development of",
-    "highlight10": "business",
-    "part12": "and strengthening",
-    "highlight11": "the brand."
-  }
+  "part1": "Collaboration with leading companies confirms",
+  "part2": "our",
+  "highlight2": "expertise, innovative",
+  "highlight3": "approach and creativity,",
+  "part3": "thanks to which every project",
+  "part4": "becomes",
+  "highlight4": "a powerful driver",
+  "part41": "for",
+  "part5": "business",
+  "highlight5": "growth",
+  "part51": "and strengthening",
+  "highlight51": "the brand."
 }

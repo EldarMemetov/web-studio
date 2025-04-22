@@ -1,6 +1,5 @@
 import FeedbackForm from '../../modules/FeedbackForm/FeedbackForm';
 import TitleHome from '../../modules/HomePageComponets/TitleHome/TitleHome';
-import ReviewsForm from '@/modules/ReviewsForm/ReviewsForm';
 import ReviewsList from '@/modules/GetReview/Components/ReviewsList/ReviewsList';
 import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/ReviewsSection';
 import { GetReviews } from '@/services/api';
@@ -11,7 +10,7 @@ import PixelPerfectBlock from '@/modules/PixelPerfectBlock/PixelPerfectBlock';
 import GetBusinessSolutions from '@/modules/GetBusinessSolutions/GetBusinessSolutions';
 import BrandTransformation from '@/modules/BrandTransformation/BrandTransformation';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
-import IdeasToReality from '@/modules/IdeasToReality/IdeasToReality';
+
 import s from './page.module.scss';
 export default async function Home({ params: rawParams }) {
   const params = await rawParams;
@@ -28,7 +27,6 @@ export default async function Home({ params: rawParams }) {
         <FetchServices />
         <PixelPerfectBlock locale={locale} />
         <GetBusinessSolutions locale={locale} />
-        <IdeasToReality locale={locale} />
         <BrandTransformation locale={locale} />
         <TextAnimation />
         <ReviewsSection initialReviews={reviews}>

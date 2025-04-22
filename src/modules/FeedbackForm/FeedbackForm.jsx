@@ -1,3 +1,4 @@
+/* src/modules/FeedbackForm/FeedbackForm.jsx */
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -9,16 +10,17 @@ import Container from '@/shared/container/Container';
 import { sendFeedback } from '@/services/api';
 import Image from 'next/image';
 import Button from '@/shared/components/button/Button';
-import Modal from '../../shared/Modal/Modal';
+
 import {
   handleHoverAnimation,
   handleSubmitAnimation,
-} from '../../\/shared/RocketAnimation/RocketAnimation';
+} from '@/shared/RocketAnimation/RocketAnimation';
 import {
   TextField,
   TextAreaField,
   CheckboxField,
 } from '@/shared/components/InputForm/InputForm';
+import ModalFeedback from './ModalFeedback/ModalFeedback';
 
 export default function FeedbackForm() {
   const { t } = useTranslation('feedbackForm');
@@ -79,12 +81,6 @@ export default function FeedbackForm() {
       setModalVisible(true);
     }
   };
-
-  useEffect(() => {
-    if (!modalVisible) return;
-    const timer = setTimeout(() => setModalVisible(false), 5000);
-    return () => clearTimeout(timer);
-  }, [modalVisible]);
 
   return (
     <Container>
@@ -158,14 +154,10 @@ export default function FeedbackForm() {
         </div>
       </section>
 
-      <Modal show={modalVisible} onClose={() => setModalVisible(false)}>
-        <h3 className={styles.status}>
-          {submissionStatus?.type === 'success'
-            ? t('status.success')
-            : t('status.error')}
-        </h3>
-        <p>{submissionStatus?.message}</p>
-      </Modal>
+      <ModalFeedback
+        show={modalVisible}
+        onClose={() => setModalVisible(false)}
+      />
     </Container>
   );
 }

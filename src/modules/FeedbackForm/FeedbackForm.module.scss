@@ -16,7 +16,7 @@
 }
 .andTitle {
   font-weight: 700;
-  background: linear-gradient(30deg, #9624e2 0%, #02079d 100%);
+  background: linear-gradient(30deg, #9624e2 0%, #8808b7 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -113,4 +113,18 @@
   filter: blur(30px);
   z-index: 0;
   pointer-events: none;
+}
+.myCustomModal {
+  box-shadow: 0 0 36px 2px rgba(109, 28, 207, 0.64);
+  background: radial-gradient(
+      circle at top right,
+      rgba(27, 11, 248, 0.13) 0%,
+      rgba(0, 0, 0, 0.1) 50%
+    ),
+    #010227;
+  padding: 32px;
+  width: 1200px;
+  height: 620px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }

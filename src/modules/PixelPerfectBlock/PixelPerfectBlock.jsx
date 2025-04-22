@@ -8,20 +8,22 @@ export default async function PixelPerfectBlock({ locale }) {
   return (
     <section className={s.sectionBlock}>
       <Container>
-        <div className="pixel-perfect-block">
+        <div className={s.perfectBlock}>
+          <div className={s.gradientBlur} />
+          <p className={s.description}>{t('part1')} </p>
           <p className={s.description}>
-            {t('description.part7')}{' '}
-            <span className={s.title}>{t('description.highlight6')}</span>
-            {t('description.part8')}{' '}
-            <span className={s.title}>{t('description.highlight7')}</span>{' '}
-            {t('description.part9')}{' '}
-            <span className={s.title}>{t('description.highlight8')}</span>
-            {t('description.part10')}{' '}
-            <span className={s.title}>{t('description.highlight9')}</span>{' '}
-            {t('description.part11')}{' '}
-            <span className={s.title}>{t('description.highlight10')}</span>{' '}
-            {t('description.part12')}{' '}
-            <span className={s.title}>{t('description.highlight11')}</span>
+            {t('part2')} <span className={s.title}>{t('highlight2')}</span>
+          </p>
+          <p className={s.description}>
+            <span className={s.title}>{t('highlight3')}</span> {t('part3')}
+          </p>
+          <p className={s.description}>
+            {t('part4')} <span className={s.title}>{t('highlight4')}</span>{' '}
+            {t('part41')}
+          </p>
+          <p className={s.description}>
+            {t('part5')} <span className={s.title}>{t('highlight5')}</span>{' '}
+            {t('part51')} <span className={s.title}>{t('highlight51')}</span>
           </p>
         </div>
       </Container>
