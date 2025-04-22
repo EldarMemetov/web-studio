@@ -11,7 +11,13 @@ export default function SuccessContent({ onClose }) {
 
   const handleClick = () => {
     onClose();
-    router.push('/');
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      router.push('/').then(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   };
 
   return (
