@@ -18,24 +18,16 @@
   line-height: 146%;
 }
 
-.containerIcon {
-  display: flex;
-  align-items: center;
-}
-
 .iconStyle {
-  width: 100px;
-  height: 100px;
-  stroke: white;
-  stroke-width: 0.5px;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: none;
-  stroke-dashoffset: 0;
+  width: 132px;
+  height: 132px;
+  fill: white !important;
+  stroke: none !important;
+  opacity: 0.6;
   transition:
     transform 0.4s ease-in-out,
-    filter 0.3s ease-in-out;
+    filter 0.3s ease-in-out,
+    fill 0.2s;
 }
 
 .ContainerItem {
@@ -98,18 +90,6 @@
   &:hover::before {
     opacity: 0;
   }
-
-  &:hover .game {
-    transform: rotateY(0deg);
-  }
-
-  &:hover .iconStyle {
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: draw 10.25s linear forwards;
-    filter: drop-shadow(0px 0px 10px rgba(150, 36, 226, 0.8));
-    transform: scale(1.1);
-  }
 }
 
 @keyframes draw {
@@ -120,4 +100,14 @@
     stroke-dasharray: 300, 0;
     stroke-dashoffset: -300;
   }
+}
+.ContainerItem:hover .iconStyle {
+  fill: none !important;
+  stroke: white !important;
+  stroke-width: 0.5px;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw 10.25s linear forwards;
+  filter: drop-shadow(0px 0px 10px rgba(150, 36, 226, 0.8));
+  transform: scale(1.1);
 }
