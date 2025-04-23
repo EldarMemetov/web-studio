@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
@@ -48,7 +47,7 @@ function Header() {
       <nav>
         <NavMenu
           variant="header"
-          isMobileMenuOpen={isMenuOpen}
+          isMobileMenuOpen={isMenuOpen && windowWidth < 1154}
           onCloseMenu={closeMenu}
           onToggleMenu={toggleMenu}
           locale={locale}
@@ -56,20 +55,25 @@ function Header() {
       </nav>
 
       <div className={styles.containerButtonTrans}>
-        <LanguageSwitcher />
-        <div className={styles.buttonContact}>
-          <Button variant="variant1">{t('kontakt')}</Button>
-        </div>
         <button
           onClick={toggleMenu}
           className={clsx(styles.menuButton, {
-            [styles.hidden]: isMenuOpen && windowWidth >= 768,
+            [styles.hidden]: windowWidth >= 1154,
           })}
         >
           {!isMenuOpen && (
             <Icon iconName="icon-open" className={styles.iconOpen} />
           )}
         </button>
+
+        <div
+          className={clsx(styles.buttonContact, {
+            [styles.mobileButton]: windowWidth < 1154,
+          })}
+        >
+          <Button variant="variant1">{t('kontakt')}</Button>
+        </div>
+        <LanguageSwitcher />
       </div>
     </header>
   );

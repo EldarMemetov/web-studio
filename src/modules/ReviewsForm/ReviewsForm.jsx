@@ -96,45 +96,51 @@ export default function ReviewsFormContent({ onSuccess }) {
             initialValues={initialValues}
             onSubmit={handleSubmit}
             validationSchema={validationSchema}
+            validateOnMount
           >
-            <Form className={styles.form}>
-              <div className={styles.containerBig}>
-                <TextField
-                  name="name"
-                  id="name"
-                  type="text"
-                  autoComplete="name"
-                  placeholder={t('fields.name')}
-                />
-                <TextField
-                  name="email"
-                  id="email"
-                  type="email"
-                  autoComplete="email"
-                  placeholder={t('fields.email')}
-                />
+            {({ isValid }) => (
+              <Form className={styles.form}>
+                <div className={styles.containerBig}>
+                  <TextField
+                    name="name"
+                    id="name"
+                    type="text"
+                    autoComplete="name"
+                    placeholder={t('fields.name')}
+                  />
+                  <TextField
+                    name="email"
+                    id="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder={t('fields.email')}
+                  />
 
-                <TextAreaField
-                  name="text"
-                  id="text"
-                  autoComplete="off"
-                  placeholder={t('fields.message')}
-                />
-              </div>
-              <div className={styles.checkboxContainer}>
-                <CheckboxField name="agree" id="agree">
-                  {t('fields.agree')}
-                </CheckboxField>
-              </div>
-              <div className={styles.containerRating}>
-                <p className={styles.textRating}>{t('rating')}</p>
-                <RatingField />
-              </div>
+                  <TextAreaField
+                    name="text"
+                    id="text"
+                    autoComplete="off"
+                    placeholder={t('fields.message')}
+                  />
+                </div>
+                <div className={styles.checkboxContainer}>
+                  <CheckboxField name="agree" id="agree">
+                    {t('fields.agree')}
+                  </CheckboxField>
+                </div>
+                <div className={styles.containerRating}>
+                  <p className={styles.textRating}>{t('rating')}</p>
+                  <RatingField />
+                </div>
 
-              <Button type="submit" variant="variant3">
-                {t('submitButton')}
-              </Button>
-            </Form>
+                <Button
+                  type="submit"
+                  variant={isValid ? 'variant2' : 'variant3'}
+                >
+                  {t('submitButton')}
+                </Button>
+              </Form>
+            )}
           </Formik>
         </div>
       </div>

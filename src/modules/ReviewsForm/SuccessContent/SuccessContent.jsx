@@ -1,3 +1,4 @@
+'use client';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from 'react';
@@ -22,29 +23,35 @@ export default function SuccessContent({ onClose }) {
     tl.fromTo(
       rocketRef.current,
       { y: 100, opacity: 0, rotation: -10 },
-      { y: 0, opacity: 1, rotation: 0, duration: 1.2, ease: 'bounce.out' }
+      {
+        y: 0,
+        opacity: 1,
+        rotation: 0,
+        duration: 0.5,
+        ease: 'elastic.out(1, 0.75)',
+      }
     )
 
       .fromTo(
         titleRef.current,
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
-        '-=0.4'
+        { y: 0, opacity: 1, duration: 0.3, ease: 'power1.out' },
+        '-=0.2'
       )
+
       .fromTo(
         subtitleRef.current,
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
-        '-=0.3'
+        { y: 0, opacity: 1, duration: 0.3, ease: 'power1.out' },
+        '-=0.2'
       )
 
       .fromTo(
         buttonRef.current,
         { scale: 0.8, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.7)' },
-        '-=0.3'
+        { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.5)' },
+        '-=0.2'
       )
-
       .add(() => {
         const myCanvas = canvasRef.current;
         myCanvas.width = window.innerWidth;
@@ -61,7 +68,7 @@ export default function SuccessContent({ onClose }) {
           {},
           {
             repeat: 3,
-            repeatDelay: 0.5,
+            repeatDelay: 0.2,
             onRepeat: () =>
               myConfetti({
                 particleCount: 80,
