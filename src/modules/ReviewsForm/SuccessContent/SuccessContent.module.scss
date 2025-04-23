@@ -1,0 +1,50 @@
+.containerContent {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.confettiCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.iconWrapper {
+  z-index: 1;
+}
+
+.image {
+  width: 265px;
+  height: 281px;
+  margin-bottom: 19px;
+}
+
+.title,
+.subtitle {
+  z-index: 1;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 136%;
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  margin-bottom: 28px;
+}
+
+.button {
+  z-index: 1;
+}
