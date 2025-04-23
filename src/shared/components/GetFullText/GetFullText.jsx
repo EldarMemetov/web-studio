@@ -22,7 +22,8 @@ export function GetFullText() {
       ];
 
       let index = 0;
-      const status = document.getElementById('status');
+      const status =
+      document.getElementById('status');
 
       function showNext() {
         if (index < messages.length) {
@@ -30,7 +31,8 @@ export function GetFullText() {
           index++;
           setTimeout(showNext, 1000);
         } else {
-          status.textContent = '>>> Terminal ready.';
+          status.textContent = '>>>
+         Terminal ready.';
         }
       }
 
