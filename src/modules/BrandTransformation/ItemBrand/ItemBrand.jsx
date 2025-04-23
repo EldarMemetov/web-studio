@@ -9,9 +9,7 @@ export default function ItemBrand({ title, description, iconName }) {
         width={160}
         height={103}
       />
-
       <h3 className={styles.titleInformation}>{title}</h3>
-
       <p className={styles.description}>{description}</p>
     </li>
   );

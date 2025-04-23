@@ -13,6 +13,7 @@ import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 
 import s from './page.module.scss';
 import Circles from '@/shared/components/Сircles/Сircles';
+import IdeasHome from '@/modules/IdeasHome/IdeasHome';
 export default async function Home({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
@@ -29,6 +30,7 @@ export default async function Home({ params: rawParams }) {
         <PixelPerfectBlock locale={locale} />
         <GetBusinessSolutions locale={locale} />
         <BrandTransformation locale={locale} />
+        <IdeasHome />
         <TextAnimation />
         <ReviewsSection initialReviews={reviews}>
           <ReviewsList />
