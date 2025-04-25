@@ -11,11 +11,19 @@
 }
 .whiteWordLeft {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 40px;
   line-height: 130%;
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 32px;
+  @include media(tablet) {
+    font-size: 64px;
+    line-height: 130%;
+  }
+  @include media(desktop) {
+    font-size: 80px;
+    line-height: 130%;
+  }
   .violetWordLeft {
     background: linear-gradient(30deg, #9624e2 60%, #02079d 100%);
     background-clip: text;
@@ -25,11 +33,20 @@
 }
 .whiteWordRight {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 40px;
   line-height: 130%;
   text-transform: uppercase;
   text-align: right;
-  margin-bottom: 80px;
+  margin-bottom: 64px;
+  @include media(tablet) {
+    font-size: 64px;
+    line-height: 130%;
+  }
+  @include media(desktop) {
+    font-size: 80px;
+    line-height: 130%;
+    margin-bottom: 80px;
+  }
   .violetWordRight {
     background: linear-gradient(30deg, #9624e2 0%, #02079d 100%);
     background-clip: text;

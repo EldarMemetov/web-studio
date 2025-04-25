@@ -33,6 +33,8 @@ export const NAMESPACES = [
   'successContent',
   'brandTransformation',
   'modalFeedback',
+  'ideasHome',
+  'textAnimation',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

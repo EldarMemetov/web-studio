@@ -70,9 +70,7 @@ function Header() {
           className={clsx(styles.buttonContact, {
             [styles.mobileButton]: windowWidth < 1154,
           })}
-        >
-          <Button variant="variant1">{t('kontakt')}</Button>
-        </div>
+        ></div>
         <LanguageSwitcher />
       </div>
     </header>

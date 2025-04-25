@@ -17,11 +17,17 @@
 }
 
 .loadingContainer {
-  width: 912px;
+  width: 288px;
   height: 6px;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
+  @include media(tablet) {
+    width: 660px;
+  }
+  @include media(desktop) {
+    width: 912px;
+  }
 }
 
 .loadingBar {

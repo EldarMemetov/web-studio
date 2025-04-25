@@ -2,16 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 24px;
+  margin-left: 16px;
   border-radius: 4px;
-  width: 600px;
-  height: 294px;
-  padding: 32px;
+  padding: 24px;
+  width: 338px;
+  height: 445px;
   background: rgba(1, 2, 39, 0.01);
-
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.5s ease-in-out;
+  @include media(tablet) {
+    width: 600px;
+    height: 294px;
+    padding: 32px;
+    margin-left: 24px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -38,8 +44,12 @@
 }
 .containerTextAndIcon {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
+  @include media(tablet) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 @keyframes waveGradient {
   0% {
@@ -52,7 +62,9 @@
     background-position: 0% 50%;
   }
 }
-
+.emailAndText {
+  margin-bottom: 20px;
+}
 .name {
   font-weight: 600;
   font-size: 20px;

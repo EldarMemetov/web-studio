@@ -16,7 +16,7 @@
   justify-content: space-between;
 
   @include media(tablet) {
-    padding: 20px 60px;
+    padding: 20px 104px;
     align-items: center;
   }
 
@@ -47,13 +47,13 @@
   fill: #fff;
 }
 
-.buttonContact {
-  display: block;
+// .buttonContact {
+//   display: block;
 
-  @media (max-width: 1154px) {
-    display: block;
-  }
-}
+//   @media (max-width: 1154px) {
+//     display: block;
+//   }
+// }
 
 .mobileButton {
   order: 1;

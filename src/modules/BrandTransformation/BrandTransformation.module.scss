@@ -1,9 +1,20 @@
 .title {
   font-weight: 500;
-  font-size: 80px;
-  line-height: 130%;
+
   text-transform: uppercase;
-  margin-bottom: 80px;
+  font-size: 64px;
+  line-height: 130%;
+  margin-bottom: 64px;
+
+  @include media(tablet) {
+    font-size: 80px;
+    margin-bottom: 80px;
+    line-height: 130%;
+  }
+  @include media(desktop) {
+    font-size: 80px;
+    line-height: 130%;
+  }
 }
 
 .titleAnd {

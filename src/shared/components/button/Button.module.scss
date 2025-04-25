@@ -80,20 +80,15 @@
   }
 
   &.variant2 {
-    width: 150px;
-    height: 32px;
+    width: 338px;
+    height: 55px;
     border: none;
     color: #ffffff;
     background: linear-gradient(89deg, #9624e2 50%, #02079d 100%);
-
+    padding: 16px 44px;
     @include media(tablet) {
-      width: 250px;
-      height: 48px;
-    }
-
-    @include media(desktop) {
-      width: 300px;
-      height: 58px;
+      width: 286px;
+      height: 55px;
     }
 
     &:hover span {
@@ -102,20 +97,15 @@
   }
 
   &.variant3 {
-    width: 150px;
-    height: 32px;
+    width: 338px;
+    height: 55px;
     border: 1px solid #fff;
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
-
+    padding: 16px 44px;
     @include media(tablet) {
-      width: 250px;
-      height: 48px;
-    }
-
-    @include media(desktop) {
-      width: 300px;
-      height: 58px;
+      width: 286px;
+      height: 55px;
     }
 
     &:hover::before {

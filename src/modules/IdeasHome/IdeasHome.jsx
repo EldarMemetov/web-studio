@@ -1,48 +1,23 @@
-'use client';
 import Container from '@/shared/container/Container';
-import s from './IdeasHome.module.scss';
-import LaptopWrite from './LaptopWrite/LaptopWrite';
-import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
+import { initServerI18n } from '@/i18n/utils/serverI18n';
+import IdeasList from './IdeasList/IdeasList';
+import styles from './IdeasHome.module.scss';
 
-export default function IdeasHome() {
+export default async function IdeasHome({ locale }) {
+  const { t } = await initServerI18n(locale, ['ideasHome']);
+
   return (
-    <section className={s.section}>
+    <section className={styles.section}>
       <Container>
-        <h2 className={s.title}>
-          ваші ідеї — наша
-          <span className={s.titleSpan}>реалізація</span>
-        </h2>
         <div>
-          <div>
-            <LaptopWrite />
-            <h3>Веб-розробка</h3>
-            <p>Напрямки, які реалізовуємо:</p>
-            <ul>
-              <li>
-                <p>Вебсайти</p>
-              </li>
-              <li>
-                <p>Лендінги</p>
-              </li>
-              <li>
-                <p>Адаптивний дизайн</p>
-              </li>
-              <li>
-                <p>Інтернет-магазини</p>
-              </li>
-              <li>
-                <p>Технічна підтримка</p>
-              </li>
-              <li>
-                <p>SEO-оптимізація</p>
-              </li>
-              <li>
-                <p>UX/UI дизайн</p>
-              </li>
-            </ul>
-            <p>Клікай, щоб замовити зараз</p>
-            <ButtonArrow />
-          </div>
+          <h2 className={styles.title}>
+            {t('section.title')}
+            <span className={styles.titleSpan}> {t('section.subTitle')}</span>
+          </h2>
+
+          <IdeasList
+            items={t('section.sections', { returnObjects: true }) || []}
+          />
         </div>
       </Container>
     </section>
