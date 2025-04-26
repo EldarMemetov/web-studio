@@ -1,8 +1,7 @@
 .navList {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 100vw;
+  right: 0;
   height: 100vh;
   background-color: #1e1e2f;
   list-style: none;
@@ -12,17 +11,25 @@
   gap: 18px;
   margin: 0;
   padding: 20px;
-  z-index: 999;
-  overflow: hidden;
 
-  &.openMenu {
-    animation: slideIn 0.5s forwards;
-    right: 0;
-  }
+  /* Layer behind header */
+  z-index: 500;
 
-  &.closingMenu {
-    animation: slideOut 0.5s forwards;
-  }
+  /* Menu closed state */
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden; /* no scrolling inside */
+
+  transition:
+    width 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.navList.openMenu {
+  width: 100vw;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .navItem {
@@ -140,6 +147,8 @@
     padding: 0;
     transition: none;
     overflow: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .mobileHeader,
