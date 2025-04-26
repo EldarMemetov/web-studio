@@ -116,4 +116,24 @@
       color: #000;
     }
   }
+  &.variant4 {
+    border-radius: 32px;
+    padding: 10px 40px;
+    width: 338px;
+    height: 43px;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+
+    @include media(tablet) {
+      border-radius: 32px;
+      padding: 10px 40px;
+      width: 338px;
+      height: 43px;
+    }
+
+    &:hover span {
+      color: #000000;
+    }
+  }
 }

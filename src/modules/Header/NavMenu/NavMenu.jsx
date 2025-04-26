@@ -9,6 +9,7 @@ import styles from './NavMenu.module.scss';
 import Logo from '@/shared/Logo/Logo';
 import Icon from '@/shared/Icon/Icon';
 import { SocialLinks } from '../SocialLinks/SocialLinks';
+import Button from '@/shared/components/button/Button';
 
 export default function NavMenu({
   variant = 'header',
@@ -40,58 +41,54 @@ export default function NavMenu({
   ];
 
   return (
-    <ul
-      className={clsx(styles.navList, styles[variant], {
+    <div
+      className={clsx(styles.mobileMenuItem, {
         [styles.openMenu]: isMobileMenuOpen,
       })}
     >
-      {variant === 'header' && isMobileMenuOpen && (
+      {variant === 'header' && (
         <div className={styles.mobileHeader}>
-          <Logo />
           <button onClick={onToggleMenu} className={styles.menuClose}>
             <Icon iconName="icon-close" className={styles.iconClose} />
           </button>
+          <div className={styles.mobileContact}>
+            <h3 className={styles.titleMobile}>ЗАЛИШИЛИСЯ ПИТАННЯ?</h3>
+            <Button variant="variant4">{t('kontakt')}</Button>
+          </div>
         </div>
       )}
 
-      {links.map(({ href, key }) => (
-        <li
-          key={key}
-          className={clsx(styles.navItem, {
-            [styles.active]: activeClass[key],
-          })}
-        >
-          <Link
-            href={`/${locale}${href}`}
-            className={styles.navLink}
-            onClick={onCloseMenu}
+      <ul className={clsx(styles.navList, styles[variant])}>
+        {links.map(({ href, key }) => (
+          <li
+            key={key}
+            className={clsx(styles.navItem, {
+              [styles.active]: activeClass[key],
+            })}
           >
-            {t(key)}
-          </Link>
-        </li>
-      ))}
-
-      {variant === 'header' && isMobileMenuOpen && (
-        <li className={styles.navItem}>
-          <div className={styles.socialContainer}>
-            <SocialLinks />
-          </div>
-        </li>
-      )}
-
-      {variant === 'footer' && (
-        <>
-          <div className={styles.footerLogo}>
-            <Logo />
-          </div>
-
-          <li className={styles.navItem}>
-            <div className={styles.socialContainer}>
-              <SocialLinks />
-            </div>
+            <Link
+              href={`/${locale}${href}`}
+              className={styles.navLink}
+              onClick={onCloseMenu}
+            >
+              {t(key)}
+            </Link>
           </li>
-        </>
-      )}
-    </ul>
+        ))}
+
+        {variant === 'footer' && (
+          <>
+            <div className={styles.footerLogo}>
+              <Logo />
+            </div>
+            <li className={styles.navItem}>
+              <div className={styles.socialContainer}>
+                <SocialLinks />
+              </div>
+            </li>
+          </>
+        )}
+      </ul>
+    </div>
   );
 }
