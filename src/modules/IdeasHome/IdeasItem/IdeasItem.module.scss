@@ -6,6 +6,7 @@
   @include media(tablet) {
     font-size: 48px;
     line-height: 130%;
+    margin-right: auto;
   }
   @include media(desktop) {
     font-size: 48px;
@@ -22,6 +23,7 @@
   @include media(tablet) {
     font-size: 24px;
     line-height: 130%;
+    margin-right: auto;
   }
   @include media(desktop) {
     font-size: 24px;
@@ -62,6 +64,10 @@
   @include media(tablet) {
     font-size: 20px;
     line-height: 130%;
+    border-radius: 24px;
+    padding: 8px 20px;
+    width: auto;
+    height: 42px;
   }
 
   @include media(desktop) {
@@ -78,17 +84,26 @@
   width: 338px;
   height: auto;
   align-items: center;
-  background: linear-gradient(
-      40deg,
-      rgb(1, 2, 39) 0%,
-      rgb(1, 2, 39) 40%,
-      rgba(150, 36, 226, 0.46) 100%
+  background: radial-gradient(
+      circle at top right,
+      rgba(27, 11, 248, 0.13) 0%,
+      rgba(0, 0, 0, 0.1) 50%
     ),
     #010227;
-
   transition:
     width 0.5s ease,
     opacity 0.5s ease;
+
+  @include media(tablet) {
+    padding: 44px 32px;
+    width: 597px;
+    height: auto;
+  }
+
+  @include media(desktop) {
+    font-size: 20px;
+    line-height: 130%;
+  }
 }
 .featureItem {
   margin-bottom: 16px;
@@ -102,7 +117,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media(tablet) {
+    gap: 140px;
+  }
 }
 .features {
   margin-bottom: 64px;
+  @include media(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 0px;
+    justify-content: center;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+  }
+}
+.featuresVideo {
+  @include media(tablet) {
+    margin-bottom: 120px;
+  }
 }

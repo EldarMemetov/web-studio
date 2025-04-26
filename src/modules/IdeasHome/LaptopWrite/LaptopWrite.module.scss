@@ -23,6 +23,7 @@
   @include media(tablet) {
     width: 295px;
     height: 170px;
+    padding-left: 20px;
   }
 }
 
@@ -36,10 +37,10 @@
   pointer-events: none;
   z-index: 2;
   @include media(tablet) {
-    top: 42px;
-    left: 63px;
+    top: 50px;
+    left: 80px;
     width: 295px;
-    width: 150px;
+    height: 105px;
   }
 }
 

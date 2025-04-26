@@ -3,30 +3,41 @@ import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
 import LaptopWrite from '../LaptopWrite/LaptopWrite';
 import IdeasCamera from '../IdeasCamera/IdeasCamera';
 import styles from './IdeasItem.module.scss';
+import clsx from 'clsx';
 
 export default function IdeasItem({ title, description, icon, list, cta }) {
-  let ContentIcon = null;
+  const ContentIcon = (() => {
+    if (icon === 'LaptopWrite') return <LaptopWrite />;
+    if (icon === 'icon-cinema') return <IdeasCamera />;
+    return <Icon iconName={icon} className={styles.icon} />;
+  })();
 
-  if (icon === 'LaptopWrite') {
-    ContentIcon = <LaptopWrite />;
-  } else if (icon === 'icon-cinema') {
-    ContentIcon = <IdeasCamera />;
-  } else {
-    ContentIcon = <Icon iconName={icon} className={styles.icon} />;
-  }
+  const listClassName = clsx(styles.features, {
+    [styles.featuresWeb]: icon === 'LaptopWrite',
+    [styles.featuresVideo]: icon === 'icon-cinema',
+  });
 
   return (
     <li className={styles.item}>
       <div className={styles.header}>{ContentIcon}</div>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
-      <ul className={styles.features}>
-        {list.map((el, i) => (
-          <li key={i} className={styles.featureItem}>
-            <p className={styles.listItem}>{el}</p>
-          </li>
-        ))}
+
+      <ul className={listClassName}>
+        {list.map((el, i) => {
+          const itemClassName = clsx(styles.featureItem, {
+            [styles.featureItemWeb]: icon === 'LaptopWrite',
+            [styles.featureItemVideo]: icon === 'icon-cinema',
+          });
+
+          return (
+            <li key={i} className={itemClassName}>
+              <p className={styles.listItem}>{el}</p>
+            </li>
+          );
+        })}
       </ul>
+
       <div className={styles.ContainerClick}>
         <p className={styles.cta}>{cta}</p>
         <ButtonArrow />
