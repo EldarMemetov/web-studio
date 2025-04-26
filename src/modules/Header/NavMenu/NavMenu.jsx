@@ -52,7 +52,7 @@ export default function NavMenu({
             <Icon iconName="icon-close" className={styles.iconClose} />
           </button>
           <div className={styles.mobileContact}>
-            <h3 className={styles.titleMobile}>ЗАЛИШИЛИСЯ ПИТАННЯ?</h3>
+            <h3 className={styles.titleMobile}>{t('haveQuestions')}</h3>
             <Button variant="variant4">{t('kontakt')}</Button>
           </div>
         </div>
