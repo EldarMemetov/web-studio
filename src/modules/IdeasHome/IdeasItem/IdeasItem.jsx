@@ -17,20 +17,20 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
 
   return (
     <li className={styles.item}>
-      <div className={styles.header}>
-        {ContentIcon}
-        <h3 className={styles.title}>{title}</h3>
-      </div>
+      <div className={styles.header}>{ContentIcon}</div>
+      <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <ul className={styles.features}>
         {list.map((el, i) => (
           <li key={i} className={styles.featureItem}>
-            {el}
+            <p className={styles.listItem}>{el}</p>
           </li>
         ))}
       </ul>
-      <p className={styles.cta}>{cta}</p>
-      <ButtonArrow />
+      <div className={styles.ContainerClick}>
+        <p className={styles.cta}>{cta}</p>
+        <ButtonArrow />
+      </div>
     </li>
   );
 }

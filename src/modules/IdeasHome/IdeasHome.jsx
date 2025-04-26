@@ -9,7 +9,7 @@ export default async function IdeasHome({ locale }) {
   return (
     <section className={styles.section}>
       <Container>
-        <div>
+        <div className={styles.contentContainer}>
           <h2 className={styles.title}>
             {t('section.title')}
             <span className={styles.titleSpan}> {t('section.subTitle')}</span>
