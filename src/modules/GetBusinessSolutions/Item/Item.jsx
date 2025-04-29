@@ -1,6 +1,5 @@
 import Icon from '@/shared/Icon/Icon';
 import styles from './Item.module.scss';
-import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
 
 export default function Item({ title, description, iconName }) {
   return (
@@ -11,7 +10,6 @@ export default function Item({ title, description, iconName }) {
       </div>
       <div className={styles.containerOn}>
         <p className={styles.description}>{description}</p>
-        <ButtonArrow />
       </div>
     </li>
   );

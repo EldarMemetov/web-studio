@@ -77,7 +77,7 @@ export default function ReviewsFormContent({ onSuccess }) {
   }, [submissionStatus]);
 
   return (
-    <div>
+    <div className={styles.containerModalCenter}>
       <div className={styles.containerText}>
         <h2 className={styles.title}>{t('title')}</h2>
         <h3 className={styles.description}>{t('description')}</h3>
@@ -123,6 +123,7 @@ export default function ReviewsFormContent({ onSuccess }) {
                     placeholder={t('fields.message')}
                   />
                 </div>
+
                 <div className={styles.checkboxContainer}>
                   <CheckboxField name="agree" id="agree">
                     {t('fields.agree')}
@@ -135,7 +136,7 @@ export default function ReviewsFormContent({ onSuccess }) {
 
                 <Button
                   type="submit"
-                  variant={isValid ? 'variant2' : 'variant3'}
+                  variant={isValid ? 'variant6' : 'variant5'}
                 >
                   {t('submitButton')}
                 </Button>

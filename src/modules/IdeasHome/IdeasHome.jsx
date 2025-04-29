@@ -2,11 +2,19 @@ import Container from '@/shared/container/Container';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import IdeasList from './IdeasList/IdeasList';
 import styles from './IdeasHome.module.scss';
-import Button from '@/shared/components/button/Button';
+import ClientButton from './ClientButton/ClientButton';
 
 export default async function IdeasHome({ locale }) {
-  const { t } = await initServerI18n(locale, ['ideasHome']);
-
+  const { t } = await initServerI18n(locale, ['ideasHome', 'ideasModal']);
+  const modalContent = {
+    title: t('ideasModal:title'),
+    subtitle: t('ideasModal:subtitle'),
+    subtitleHighlight: t('ideasModal:subtitleHighlight'),
+    list: t('ideasModal:list', { returnObjects: true }),
+    ctaTitle: t('ideasModal:ctaTitle'),
+    ctaSubtitle: t('ideasModal:ctaSubtitle'),
+    ctaButton: t('ideasModal:ctaButton'),
+  };
   return (
     <section className={styles.section}>
       <Container>
@@ -19,7 +27,10 @@ export default async function IdeasHome({ locale }) {
           <IdeasList
             items={t('section.sections', { returnObjects: true }) || []}
           />
-          <Button variant="variant2">Хочу все й з бонусом</Button>
+          <ClientButton
+            buttonText={t('section.buttonText')}
+            modalContent={modalContent}
+          />
         </div>
       </Container>
     </section>

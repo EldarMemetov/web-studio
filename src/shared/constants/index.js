@@ -35,6 +35,7 @@ export const NAMESPACES = [
   'modalFeedback',
   'ideasHome',
   'textAnimation',
+  'ideasModal',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

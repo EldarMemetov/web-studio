@@ -10,10 +10,9 @@ import PixelPerfectBlock from '@/modules/PixelPerfectBlock/PixelPerfectBlock';
 import GetBusinessSolutions from '@/modules/GetBusinessSolutions/GetBusinessSolutions';
 import BrandTransformation from '@/modules/BrandTransformation/BrandTransformation';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
-
 import s from './page.module.scss';
-import Circles from '@/shared/components/Сircles/Сircles';
 import IdeasHome from '@/modules/IdeasHome/IdeasHome';
+
 export default async function Home({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
@@ -38,7 +37,6 @@ export default async function Home({ params: rawParams }) {
         <ToggleQuestions locale={locale} />
         <FeedbackForm />
         <SocialLinks />
-        <Circles />
       </div>
     </main>
   );

@@ -14,7 +14,7 @@
   overflow: hidden;
   font-size: 14px;
   line-height: 130%;
-
+  z-index: 1;
   @include media(tablet) {
     font-size: 16px;
     padding: 14px 38px;
@@ -130,6 +130,44 @@
       padding: 10px 40px;
       width: 338px;
       height: 43px;
+    }
+
+    &:hover span {
+      color: #000000;
+    }
+  }
+  &.variant5 {
+    padding: 16px 44px;
+    width: 286px;
+    height: 55px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+
+    @include media(tablet) {
+      width: 286px;
+      height: 55px;
+    }
+
+    &:hover::before {
+      background: #fff;
+    }
+
+    &:hover span {
+      color: #000;
+    }
+  }
+  &.variant6 {
+    padding: 16px 44px;
+    width: 286px;
+    height: 55px;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(89deg, #9624e2 50%, #02079d 100%);
+
+    @include media(tablet) {
+      width: 286px;
+      height: 55px;
     }
 
     &:hover span {

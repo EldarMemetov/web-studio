@@ -50,7 +50,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 1px; // толщина границы
+    padding: 1px;
     background: linear-gradient(135deg, #9624e2, #0102b9);
     border-radius: 24px;
     -webkit-mask:
@@ -85,8 +85,8 @@
   height: auto;
   align-items: center;
   background: radial-gradient(
-      circle at top right,
-      rgba(27, 11, 248, 0.13) 0%,
+      circle at right center,
+      rgb(174 25 209 / 29%) 10%,
       rgba(0, 0, 0, 0.1) 50%
     ),
     #010227;

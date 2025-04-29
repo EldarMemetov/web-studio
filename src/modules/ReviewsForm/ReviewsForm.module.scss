@@ -15,12 +15,17 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
+  align-items: center;
 }
 
 .title {
   font-weight: 500;
   font-size: 24px;
   line-height: 136%;
+  @include media(tablet) {
+    font-size: 24px;
+    line-height: 136%;
+  }
 }
 .textRating {
   font-weight: 400;
@@ -39,8 +44,15 @@
 }
 .containerRating {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 10px;
+  @include media(tablet) {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
 }
 .checkboxContainer {
   display: flex;
@@ -49,4 +61,12 @@
   color: #ccc;
   margin-bottom: 20px;
   margin-top: 10px;
+  text-align: center;
+}
+.notebook {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+  }
 }

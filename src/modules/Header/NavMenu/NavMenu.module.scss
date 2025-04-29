@@ -21,7 +21,7 @@
     width 0.5s ease,
     opacity 0.5s ease;
   z-index: 500;
-
+  padding-bottom: 40px;
   &.openMenu {
     width: 100vw;
     opacity: 1;
@@ -128,6 +128,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-bottom: 90px;
 }
 
 .menuClose {

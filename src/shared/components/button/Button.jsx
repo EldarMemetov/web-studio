@@ -6,6 +6,7 @@ const Button = ({
   type = 'button',
   variant = 'variant1',
   className,
+  spanClassName,
   onClick,
   ...props
 }) => {
@@ -16,7 +17,7 @@ const Button = ({
       onClick={onClick}
       {...props}
     >
-      <span>{children}</span>
+      <span className={spanClassName}>{children}</span>
     </button>
   );
 };

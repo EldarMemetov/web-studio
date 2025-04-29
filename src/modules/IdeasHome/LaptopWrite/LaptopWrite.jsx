@@ -5,7 +5,7 @@ import Icon from '@/shared/Icon/Icon';
 import { useState, useEffect, useRef } from 'react';
 import { GetFullText } from '@/shared/components/GetFullText/GetFullText';
 
-export default function LaptopWrite() {
+export default function LaptopWrite({ className = '' }) {
   const fullText = GetFullText();
   const [printedText, setPrintedText] = useState('');
   const codeTextRef = useRef(null);
@@ -47,10 +47,10 @@ export default function LaptopWrite() {
 
     startTyping();
     return () => clearInterval(typingInterval);
-  }, [fullText]); // добавляем зависимость
-
+  }, [fullText]);
+  const combinedClassName = `${s.imageWrapper} ${className ? className : ''}`;
   return (
-    <div className={s.imageWrapper}>
+    <div className={combinedClassName}>
       <Icon iconName="icon-laptop" className={s.monitorImg} />
       <div className={s.screenWrapper} ref={codeTextRef}>
         <div className={s.textWrapper} ref={textWrapperRef}>

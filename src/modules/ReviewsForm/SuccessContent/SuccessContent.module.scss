@@ -22,27 +22,31 @@
 }
 
 .image {
-  width: 265px;
-  height: 281px;
   margin-bottom: 19px;
+  width: 200px;
+  height: 200px;
+  @include media(tablet) {
+    width: 265px;
+    height: 281px;
+  }
 }
 
 .title,
 .subtitle {
   z-index: 1;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 136%;
+  font-size: 32px;
+  line-height: 130%;
   text-align: center;
   color: #fff;
+  @include media(tablet) {
+    font-size: 40px;
+    line-height: 136%;
+  }
 }
 
 .title {
   margin-bottom: 12px;
-}
-
-.subtitle {
-  margin-bottom: 28px;
 }
 
 .button {

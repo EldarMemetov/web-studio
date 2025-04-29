@@ -108,7 +108,7 @@ export default function SuccessContent({ onClose }) {
       <Button
         ref={buttonRef}
         className={s.button}
-        variant="variant3"
+        variant="variant5"
         onClick={handleClick}
       >
         {t('backToHome')}
