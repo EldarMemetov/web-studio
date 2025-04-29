@@ -5,7 +5,7 @@ const Icon = ({ iconName, className, ...props }) => {
   const iconClass = clsx(s.icon, className);
   return (
     <svg className={iconClass} {...props} aria-hidden="true">
-      <use href={`#${iconName}`} />
+      <use href={`/icons/sprite.svg#${iconName}`} />
     </svg>
   );
 };
