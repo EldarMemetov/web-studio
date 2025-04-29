@@ -430,15 +430,15 @@ export default function FeedbackForm() {
       setModalVisible(true);
     }
   };
-  // useEffect(() => {
-  //   if (showTabletImage) {
-  //     const timeout = setTimeout(() => {
-  //       setShowTabletImage(false);
-  //     }, 1000); // 1 секунды
+  useEffect(() => {
+    if (showTabletImage) {
+      const timeout = setTimeout(() => {
+        setShowTabletImage(false);
+      }, 2000); // 2 секунды
 
-  //     return () => clearTimeout(timeout);
-  //   }
-  // }, [showTabletImage]);
+      return () => clearTimeout(timeout);
+    }
+  }, [showTabletImage]);
 
   return (
     <Container>
