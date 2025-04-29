@@ -5,9 +5,10 @@
   width: 0;
   height: calc(100vh - 80px);
   opacity: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
   padding: 80px 32px 0;
   background: linear-gradient(
       40deg,

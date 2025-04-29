@@ -5,11 +5,20 @@
 
 .title {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 40px;
   line-height: 130%;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
-  margin-bottom: 80px;
+  margin-bottom: 32px;
+  @include media(tablet) {
+    font-size: 64px;
+    line-height: 130%;
+    margin-bottom: 40px;
+  }
+  @include media(desktop) {
+    font-size: 80px;
+    line-height: 130%;
+  }
 }
 
 .titleAnd {
@@ -26,10 +35,21 @@
   font-size: 18px;
   line-height: 146%;
   transition: all 0.5s ease-in-out;
+  margin-bottom: 64px;
+  @include media(tablet) {
+    margin-bottom: 80px;
+  }
+  @include media(desktop) {
+    margin-bottom: 0px;
+  }
 }
 
 .containerContent {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  flex-direction: column;
+
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 24px;
+  }
 }

@@ -1,13 +1,13 @@
 .containerList {
   border-radius: 4px;
-  width: 808px;
   overflow: hidden;
+  gap: 20px;
   padding: 24px 18px;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  width: 338px;
   border: 1px solid;
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   background: radial-gradient(
@@ -19,6 +19,14 @@
   transition:
     background 0.5s ease-in-out,
     all 0.5s ease-in-out;
+  @include media(tablet) {
+    width: 640px;
+  }
+  @include media(desktop) {
+    gap: 24px;
+
+    width: 808px;
+  }
 }
 
 .containerList:hover {
@@ -62,9 +70,14 @@
 
 .titleOpen {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 136%;
   transition: all 0.5s ease-in-out;
+
+  @include media(desktop) {
+    font-size: 24px;
+    line-height: 136%;
+  }
 }
 
 .icon {
