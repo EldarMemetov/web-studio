@@ -2,10 +2,10 @@ import clsx from 'clsx';
 import s from './Icon.module.scss';
 
 const Icon = ({ iconName, className, ...props }) => {
-  const iconClass = clsx(s.icon, className);
+  const iconClass = clsx(s['icon'], className && className);
   return (
-    <svg className={iconClass} {...props} aria-hidden="true">
-      <use href={`/icons/sprite.svg#${iconName}`} />
+    <svg className={iconClass} {...props}>
+      <use href={`/icons/sprite.svg#${iconName}`}></use>
     </svg>
   );
 };

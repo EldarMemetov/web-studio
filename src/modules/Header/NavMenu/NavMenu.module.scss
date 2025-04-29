@@ -21,7 +21,7 @@
     width 0.5s ease,
     opacity 0.5s ease;
   z-index: 500;
-
+  pointer-events: none;
   &.openMenu {
     width: 100vw;
     opacity: 1;
