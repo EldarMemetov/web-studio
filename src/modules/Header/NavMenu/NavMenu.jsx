@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
@@ -32,14 +32,6 @@ export default function NavMenu({
     [pathname, locale]
   );
 
-  // Блокируем прокрутку страницы при открытом меню
-  useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isMobileMenuOpen]);
-
   const links = [
     { href: '', key: 'home' },
     { href: '/about-us', key: 'aboutUs' },
@@ -66,40 +58,37 @@ export default function NavMenu({
         </div>
       )}
 
-      {/* Добавили контейнер для скролла */}
-      <div className={styles.scrollContainer}>
-        <ul className={clsx(styles.navList, styles[variant])}>
-          {links.map(({ href, key }) => (
-            <li
-              key={key}
-              className={clsx(styles.navItem, {
-                [styles.active]: activeClass[key],
-              })}
+      <ul className={clsx(styles.navList, styles[variant])}>
+        {links.map(({ href, key }) => (
+          <li
+            key={key}
+            className={clsx(styles.navItem, {
+              [styles.active]: activeClass[key],
+            })}
+          >
+            <Link
+              href={`/${locale}${href}`}
+              className={styles.navLink}
+              onClick={onCloseMenu}
             >
-              <Link
-                href={`/${locale}${href}`}
-                className={styles.navLink}
-                onClick={onCloseMenu}
-              >
-                {t(key)}
-              </Link>
-            </li>
-          ))}
+              {t(key)}
+            </Link>
+          </li>
+        ))}
 
-          {variant === 'footer' && (
-            <>
-              <div className={styles.footerLogo}>
-                <Logo />
+        {variant === 'footer' && (
+          <>
+            <div className={styles.footerLogo}>
+              <Logo />
+            </div>
+            <li className={styles.navItem}>
+              <div className={styles.socialContainer}>
+                <SocialLinks />
               </div>
-              <li className={styles.navItem}>
-                <div className={styles.socialContainer}>
-                  <SocialLinks />
-                </div>
-              </li>
-            </>
-          )}
-        </ul>
-      </div>
+            </li>
+          </>
+        )}
+      </ul>
     </div>
   );
 }
