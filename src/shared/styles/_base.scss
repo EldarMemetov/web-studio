@@ -65,6 +65,13 @@
 html {
   box-sizing: border-box;
 }
+body {
+  overflow: auto; /* Для страницы по умолчанию */
+}
+
+body.menu-open {
+  overflow: hidden; /* Блокируем прокрутку страницы, когда меню открыто */
+}
 
 body {
   font-family: var(--font-family);
