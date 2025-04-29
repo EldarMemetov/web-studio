@@ -9,7 +9,7 @@ export default async function ToggleQuestions({ locale }) {
   return (
     <section className={styles.section}>
       <Container>
-        <div>
+        <div className={styles.contentSize}>
           <h2 className={styles.title}>
             {t('titleBefore')}
             <span className={styles.titleAnd}>

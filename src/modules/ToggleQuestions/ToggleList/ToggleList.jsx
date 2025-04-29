@@ -4,7 +4,6 @@ import ToggleItem from '../ToggleItem/ToggleItem';
 import styles from './ToggleList.module.scss';
 
 export default function ToggleList({ items }) {
-  // openIndexes — объект с ключами-индексами для открытых элементов
   const [openIndexes, setOpenIndexes] = useState({});
 
   const toggleOpen = (index) => {

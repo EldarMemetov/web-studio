@@ -40,8 +40,8 @@
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   background: radial-gradient(
     circle at top right,
-    rgb(27 11 248 / 37%) 0%,
-    rgba(0, 0, 0, 0.1) 50%
+    rgba(27, 11, 248, 0.37) 0%,
+    rgb(0 0 0) 50%
   );
 
   @include media(tablet) {

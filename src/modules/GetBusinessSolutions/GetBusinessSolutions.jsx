@@ -8,8 +8,9 @@ export default async function GetBusinessSolutions({ locale }) {
 
   return (
     <section className={styles.section}>
+      <div className={styles.background}></div>
       <Container>
-        <div>
+        <div className={styles.contentContainer}>
           <h2 className={styles.newTitle}>
             {t('titleStart')}
             <span className={styles.spanNewTitle}> {t('titleHighlight')}</span>

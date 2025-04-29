@@ -28,8 +28,8 @@ export default async function Home({ params: rawParams }) {
         <FetchServices />
         <PixelPerfectBlock locale={locale} />
         <GetBusinessSolutions locale={locale} />
-        <BrandTransformation locale={locale} />
         <IdeasHome locale={locale} />
+        <BrandTransformation locale={locale} />
         <TextAnimation locale={locale} />
         <ReviewsSection initialReviews={reviews}>
           <ReviewsList />

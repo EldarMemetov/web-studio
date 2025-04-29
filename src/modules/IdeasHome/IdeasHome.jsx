@@ -32,6 +32,7 @@ export default async function IdeasHome({ locale }) {
             modalContent={modalContent}
           />
         </div>
+        <div className={styles.background}></div>
       </Container>
     </section>
   );
