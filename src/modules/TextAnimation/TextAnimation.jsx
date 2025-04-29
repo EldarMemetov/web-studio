@@ -13,7 +13,7 @@ export default async function TextAnimation({ locale }) {
     }}
   />;
   return (
-    <section>
+    <section className={s.textAnimation}>
       <Container>
         <div>
           <div>
