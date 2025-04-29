@@ -46,7 +46,7 @@ export default function NavMenu({
         [styles.openMenu]: isMobileMenuOpen,
       })}
     >
-      {variant === 'header' && (
+      {variant === 'header' && isMobileMenuOpen && (
         <div className={styles.mobileHeader}>
           <button onClick={onToggleMenu} className={styles.menuClose}>
             <Icon iconName="icon-close" className={styles.iconClose} />
