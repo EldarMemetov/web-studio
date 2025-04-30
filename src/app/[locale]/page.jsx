@@ -1,5 +1,5 @@
 import FeedbackForm from '../../modules/FeedbackForm/FeedbackForm';
-import TitleHome from '../../modules/HomePageComponets/TitleHome/TitleHome';
+
 import ReviewsList from '@/modules/GetReview/Components/ReviewsList/ReviewsList';
 import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/ReviewsSection';
 import { GetReviews } from '@/services/api';
@@ -12,6 +12,7 @@ import BrandTransformation from '@/modules/BrandTransformation/BrandTransformati
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import s from './page.module.scss';
 import IdeasHome from '@/modules/IdeasHome/IdeasHome';
+import TitleHome from '@/modules/HomePageComponets/TitleHome/TitleHome';
 
 export default async function Home({ params: rawParams }) {
   const params = await rawParams;
