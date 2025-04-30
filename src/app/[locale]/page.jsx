@@ -3,7 +3,7 @@ import TitleHome from '../../modules/HomePageComponets/TitleHome/TitleHome';
 import ReviewsList from '@/modules/GetReview/Components/ReviewsList/ReviewsList';
 import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/ReviewsSection';
 import { GetReviews } from '@/services/api';
-import { SocialLinks } from '@/modules/Header/SocialLinks/SocialLinks';
+
 import TextAnimation from '@/modules/TextAnimation/TextAnimation';
 import FetchServices from '@/modules/FetchServices/FetchServices';
 import PixelPerfectBlock from '@/modules/PixelPerfectBlock/PixelPerfectBlock';
@@ -36,7 +36,6 @@ export default async function Home({ params: rawParams }) {
         </ReviewsSection>
         <ToggleQuestions locale={locale} />
         <FeedbackForm />
-        <SocialLinks />
       </div>
     </main>
   );

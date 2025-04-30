@@ -234,3 +234,32 @@
   border: 1px solid #fff;
   opacity: 0.2;
 }
+
+.navList.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  @include media(tablet) {
+    margin-bottom: 80px;
+    max-width: 650px;
+  }
+}
+
+.navItem.footer {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.navLink.footer {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  @include media(desktop) {
+    font-size: 16px;
+    line-height: 130%;
+  }
+}

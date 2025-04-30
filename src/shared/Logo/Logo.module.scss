@@ -8,4 +8,32 @@
 
 .logo {
   object-fit: contain;
+
+  width: 34px;
+  height: 34px;
+
+  .footer & {
+    width: 50px;
+    height: 50px;
+
+    @include media(desktop) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.logoText {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  .footer & {
+    font-size: 36px;
+
+    @include media(desktop) {
+      font-size: 40px;
+    }
+  }
 }

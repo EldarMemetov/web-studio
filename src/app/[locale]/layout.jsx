@@ -10,6 +10,7 @@ import i18nConfig from '../../../i18nConfig';
 
 import { dir } from 'i18next';
 import SvgSpriteLoader from '@/shared/constants/SvgSpriteLoader/SvgSpriteLoader';
+import Footer from '@/modules/Footer/Footer';
 const oswald = Oswald({
   subsets: ['latin', 'cyrillic'],
   weight: ['400'],
@@ -98,6 +99,7 @@ export default async function Layout({ children, params }) {
             <Header />
 
             <main>{children}</main>
+            <Footer />
           </ErrorBoundaryWithTranslation>
         </TranslationsProvider>
       </body>

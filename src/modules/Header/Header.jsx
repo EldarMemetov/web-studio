@@ -48,7 +48,7 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <Logo />
+      <Logo variant="header" />
 
       <nav id="main-navigation">
         {isMenuOpen && <div className={styles.overlay} onClick={closeMenu} />}

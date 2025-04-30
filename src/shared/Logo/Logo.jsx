@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 import s from './Logo.module.scss';
 
-const Logo = () => {
+const Logo = ({ variant = 'header' }) => {
   return (
-    <Link href="/" className={s.logoContainer}>
+    <Link href="/" className={clsx(s.logoContainer, s[variant])}>
       <Image
         src="/image/logo.png"
         alt="logo"
@@ -12,7 +13,7 @@ const Logo = () => {
         height={40}
         className={s.logo}
       />
-      <h2>QVRIX</h2>
+      <h2 className={s.logoText}>QVRIX</h2>
     </Link>
   );
 };
