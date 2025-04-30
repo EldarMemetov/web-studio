@@ -8,7 +8,6 @@ import clsx from 'clsx';
 import styles from './NavMenu.module.scss';
 
 import Icon from '@/shared/Icon/Icon';
-
 import Button from '@/shared/components/button/Button';
 
 export default function NavMenu({
@@ -16,31 +15,30 @@ export default function NavMenu({
   isMobileMenuOpen = false,
   onCloseMenu = () => {},
   onToggleMenu = () => {},
-  locale,
 }) {
-  const { t } = useTranslation('header');
+  const { t, i18n } = useTranslation('header');
+  const locale = i18n.language;
   const pathname = usePathname();
 
-  const activeClass = useMemo(
-    () => ({
-      home: pathname === `/${locale}`,
-      aboutUs: pathname === `/${locale}/about-us`,
-      webDevelopment: pathname === `/${locale}/web-development`,
-      videography: pathname === `/${locale}/videography`,
-      blog: pathname === `/${locale}/blog`,
-    }),
-    [pathname, locale]
+  const links = useMemo(
+    () => [
+      { href: '', key: 'home' },
+      { href: '/about-us', key: 'aboutUs' },
+      { href: '/web-development', key: 'webDevelopment' },
+      { href: '/videography', key: 'videography' },
+      { href: '/blog', key: 'blog' },
+    ],
+    []
   );
 
-  const links = [
-    { href: '', key: 'home' },
-    { href: '/about-us', key: 'aboutUs' },
-    { href: '/web-development', key: 'webDevelopment' },
-    { href: '/videography', key: 'videography' },
-    { href: '/blog', key: 'blog' },
-  ];
+  const activeClass = useMemo(() => {
+    return links.reduce((acc, { href, key }) => {
+      acc[key] = pathname === `/${locale}${href}`;
+      return acc;
+    }, {});
+  }, [pathname, locale, links]);
 
-  // === Mobile Menu only for header variant ===
+  // Header variant: includes mobile menu wrapper
   if (variant === 'header') {
     return (
       <div
@@ -59,18 +57,17 @@ export default function NavMenu({
             </div>
           </div>
         )}
-
-        <ul className={clsx(styles.navList, styles[variant])}>
+        <ul className={clsx(styles.navList, styles.header)}>
           {links.map(({ href, key }) => (
             <li
               key={key}
-              className={clsx(styles.navItem, styles[variant], {
+              className={clsx(styles.navItem, styles.header, {
                 [styles.active]: activeClass[key],
               })}
             >
               <Link
                 href={`/${locale}${href}`}
-                className={clsx(styles.navLink, styles[variant])}
+                className={clsx(styles.navLink, styles.header)}
                 onClick={onCloseMenu}
               >
                 {t(key)}
@@ -82,7 +79,7 @@ export default function NavMenu({
     );
   }
 
-  // === Footer Variant ===
+  // Footer variant: only horizontal list
   return (
     <ul className={clsx(styles.navList, styles.footer)}>
       {links.map(({ href, key }) => (
