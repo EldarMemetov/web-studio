@@ -5,7 +5,7 @@ import ListBrand from './ListBrand/ListBrand';
 export default async function BrandTransformation({ locale }) {
   const { t } = await initServerI18n(locale, ['brandTransformation']);
   return (
-    <section>
+    <section className={styles.section}>
       <Container>
         <div>
           <h2 className={styles.title}>

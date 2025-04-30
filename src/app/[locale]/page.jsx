@@ -13,6 +13,7 @@ import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import s from './page.module.scss';
 import IdeasHome from '@/modules/IdeasHome/IdeasHome';
 import TitleHome from '@/modules/HomePageComponets/TitleHome/TitleHome';
+import Portfolio from '@/modules/Portfolio/Portfolio';
 
 export default async function Home({ params: rawParams }) {
   const params = await rawParams;
@@ -32,6 +33,7 @@ export default async function Home({ params: rawParams }) {
         <IdeasHome locale={locale} />
         <BrandTransformation locale={locale} />
         <TextAnimation locale={locale} />
+        <Portfolio />
         <ReviewsSection initialReviews={reviews}>
           <ReviewsList />
         </ReviewsSection>

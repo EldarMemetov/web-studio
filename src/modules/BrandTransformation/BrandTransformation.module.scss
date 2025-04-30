@@ -1,3 +1,9 @@
+.section {
+  padding-bottom: 160px;
+  @include media(desktop) {
+    padding-bottom: 200px;
+  }
+}
 .title {
   font-weight: 500;
 
