@@ -1,6 +1,6 @@
 .footer {
   background: #010227;
-  padding: 90px 32px 37px;
+
   position: relative;
   z-index: 1;
 
@@ -21,6 +21,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.padding {
+  padding: 90px 32px 37px;
 }
 .logoMobile {
   margin-bottom: 20px;

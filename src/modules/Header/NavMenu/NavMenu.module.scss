@@ -263,3 +263,13 @@
     line-height: 130%;
   }
 }
+/* Disable hover and active styles in footer */
+.navList.footer .navLink.footer:hover,
+.navList.footer .navSpan.footer:hover,
+.navList.footer .submenuLink.footer:hover,
+.navList.footer .navItem.footer:hover,
+.navList.footer .active .navLink.footer,
+.navList.footer .active .navSpan.footer {
+  background: none !important;
+  cursor: default;
+}
