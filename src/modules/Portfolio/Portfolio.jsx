@@ -14,8 +14,8 @@ export default function Portfolio() {
           <h3 className={s.subtitle}>це наші проекти</h3>
         </div>
         <div className={s.containerVideo}>
-          <h4 className={s.textInfo}>[відеопродакшн]</h4>
           <div className={s.videoWrapper}>
+            <h4 className={s.textInfo}>[відеопродакшн]</h4>
             <video
               className={s.video}
               src="/video/show.mp4"
@@ -26,18 +26,18 @@ export default function Portfolio() {
               muted
               playsInline
             />
-          </div>
-          <div>
             <button className={s.button}>
               Переглянути всі роботи
               <Icon iconName="icon-arrow" className={s.icon} />
             </button>
           </div>
+          <div></div>
         </div>
         <div className={s.containerImage}>
-          <h4 className={s.textInfo}>[веб-розробка]</h4>
+          <h4 className={s.textInfoDesktop}>[веб-розробка]</h4>
           <div className={s.preview}>
             <div className={s.row}>
+              <h4 className={s.textInfoWeb}>[веб-розробка]</h4>
               <div className={s.frame}>
                 <div className={s.scroll}>
                   <Image
@@ -71,14 +71,16 @@ export default function Portfolio() {
                   />
                 </div>
               </div>
+              <button className={s.buttonWeb}>
+                Переглянути всі роботи
+                <Icon iconName="icon-arrow" className={s.iconWeb} />
+              </button>
             </div>
           </div>
-          <div>
-            <button className={s.button}>
-              Переглянути всі роботи
-              <Icon iconName="icon-arrow" className={s.icon} />
-            </button>
-          </div>
+          <button className={s.buttonDesktop}>
+            Переглянути всі роботи
+            <Icon iconName="icon-arrow" className={s.iconDesktop} />
+          </button>
         </div>
       </Container>
     </section>
