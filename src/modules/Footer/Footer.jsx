@@ -3,7 +3,7 @@
 import Container from '@/shared/container/Container';
 import s from './Footer.module.scss';
 import Logo from '@/shared/Logo/Logo';
-import NavMenu from '../Header/NavMenu/NavMenu'; // import NavMenu
+import NavMenu from '../Header/NavMenu/NavMenu';
 import { SocialLinks } from '../Header/SocialLinks/SocialLinks';
 import Link from 'next/link';
 
