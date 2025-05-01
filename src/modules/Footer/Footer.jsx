@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 export default function Footer() {
   const { t, i18n } = useTranslation(['footer']);
   const locale = i18n.language;
-
+  const currentYear = new Date().getFullYear();
   return (
     <footer className={s.footer}>
       <Container>
@@ -28,7 +28,9 @@ export default function Footer() {
             </div>
           </div>
           <div className={s.privacyAndRights}>
-            <p className={s.rights}>{t('rights')}</p>
+            <p className={s.rights}>
+              {t('rights').replace('{year}', currentYear)}
+            </p>
             <div className={s.footerLinks}>
               <Link
                 href={`/${locale}/privacy-policy`}
@@ -42,7 +44,9 @@ export default function Footer() {
           <div className={s.desktop}>
             <div className={s.desktopLogo}>
               <Logo variant="footer" />
-              <p className={s.rights}>{t('rights')}</p>
+              <p className={s.rights}>
+                {t('rights').replace('{year}', currentYear)}
+              </p>
             </div>
             <div className={s.desktopSocial}>
               <SocialLinks />

@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import styles from './NavMenu.module.scss';
 
 import Icon from '@/shared/Icon/Icon';
-import Button from '@/shared/components/button/Button';
+import ScrollButton from '@/shared/ScrollButton/ScrollButton';
 
 export default function NavMenu({
   variant = 'header',
@@ -53,7 +53,14 @@ export default function NavMenu({
             </button>
             <div className={styles.mobileContact}>
               <h3 className={styles.titleMobile}>{t('haveQuestions')}</h3>
-              <Button variant="variant4">{t('kontakt')}</Button>
+
+              <ScrollButton
+                onClick={onCloseMenu}
+                targetId="feedback-form"
+                variant="variant4"
+              >
+                {t('kontakt')}
+              </ScrollButton>
             </div>
           </div>
         )}

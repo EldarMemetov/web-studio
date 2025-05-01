@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Header.module.scss';
 import LanguageSwitcher from '@/shared/components/LanguageSwitcher/LanguageSwitcher';
-import Button from '@/shared/components/button/Button';
 import Icon from '@/shared/Icon/Icon';
 import Logo from '@/shared/Logo/Logo';
 import NavMenu from './NavMenu/NavMenu';
+import ScrollButton from '@/shared/ScrollButton/ScrollButton';
 
 function Header() {
   const { t, i18n } = useTranslation('header');
@@ -63,7 +63,9 @@ function Header() {
 
       <div className={styles.containerButtonTrans}>
         <div className={styles.buttonContact}>
-          <Button variant="variant1">{t('kontakt')}</Button>
+          <ScrollButton targetId="feedback-form" variant="variant1">
+            {t('kontakt')}
+          </ScrollButton>
         </div>
 
         <LanguageSwitcher />
