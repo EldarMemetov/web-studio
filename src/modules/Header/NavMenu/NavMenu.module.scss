@@ -289,13 +289,22 @@
     line-height: 130%;
   }
 }
-/* Disable hover and active styles in footer */
-.navList.footer .navLink.footer:hover,
-.navList.footer .navSpan.footer:hover,
-.navList.footer .submenuLink.footer:hover,
-.navList.footer .navItem.footer:hover,
-.navList.footer .active .navLink.footer,
-.navList.footer .active .navSpan.footer {
-  background: none !important;
-  cursor: default;
+.navList.footer {
+  .navItem.footer,
+  .navLink.footer,
+  .navSpan.footer,
+  .submenuLink.footer {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    cursor: pointer;
+    padding: 0 !important;
+    color: inherit !important;
+  }
+
+  .navItem.footer:hover,
+  .navItem.footer.active {
+    background: none !important;
+  }
 }

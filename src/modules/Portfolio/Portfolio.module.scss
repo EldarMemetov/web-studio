@@ -3,25 +3,79 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(-870px);
+    transform: translateY(-750px);
   }
 }
-
 @keyframes scroll-up-down-organic {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-620px);
+    transform: translateY(-520px);
   }
 }
-
 @keyframes scroll-up-down-web {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-250px);
+    transform: translateY(-220px);
+  }
+}
+
+@include media(tablet) {
+  @keyframes scroll-up-down-harmony {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-1500px);
+    }
+  }
+  @keyframes scroll-up-down-organic {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(-1050px);
+    }
+  }
+  @keyframes scroll-up-down-web {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(-510px);
+    }
+  }
+}
+
+@include media(desktop) {
+  @keyframes scroll-up-down-harmony {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-870px);
+    }
+  }
+  @keyframes scroll-up-down-organic {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-620px);
+    }
+  }
+  @keyframes scroll-up-down-web {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-250px);
+    }
   }
 }
 
@@ -83,15 +137,15 @@
   animation: none;
 }
 
-.frame:hover:nth-child(1) .scroll {
+.frame:hover:nth-child(2) .scroll {
   animation: scroll-up-down-harmony 15s ease-in-out infinite alternate;
 }
 
-.frame:hover:nth-child(2) .scroll {
+.frame:hover:nth-child(3) .scroll {
   animation: scroll-up-down-organic 15s ease-in-out infinite alternate;
 }
 
-.frame:hover:nth-child(3) .scroll {
+.frame:hover:nth-child(4) .scroll {
   animation: scroll-up-down-web 15s ease-in-out infinite alternate;
 }
 
