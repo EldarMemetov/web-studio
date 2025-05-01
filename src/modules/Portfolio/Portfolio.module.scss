@@ -103,6 +103,13 @@
 .text {
   display: flex;
   flex-direction: column;
+
+  @include media(tablet) {
+    margin-left: 50px;
+  }
+  @include media(desktop) {
+    margin-left: 0px;
+  }
 }
 .title {
   font-weight: 500;
@@ -214,7 +221,7 @@
   text-transform: uppercase;
   text-align: right;
   color: rgba(207, 208, 208, 0.8);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   @include media(tablet) {
     font-size: 32px;
     line-height: 130%;
@@ -237,7 +244,7 @@
   align-items: flex-end;
   gap: 24px;
   margin-left: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   @include media(desktop) {
     display: none;
   }
@@ -295,4 +302,10 @@
     transform: rotate(45deg);
     display: block;
   }
+}
+.containerContent {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
