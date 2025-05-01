@@ -2,21 +2,24 @@ import Container from '@/shared/container/Container';
 import Image from 'next/image';
 import s from './Portfolio.module.scss';
 import Icon from '@/shared/Icon/Icon';
+import { initServerI18n } from '@/i18n/utils/serverI18n';
 
-export default function Portfolio() {
+export default async function Portfolio({ locale }) {
+  const { t } = await initServerI18n(locale, ['portfolio']);
   return (
     <section className={s.section}>
       <Container>
         <div className={s.text}>
           <h2 className={s.title}>
-            <span className={s.titleAccent}>переконайся</span> сам
+            <span className={s.titleAccent}> {t('title')}</span>{' '}
+            {t('nextTitle')}
           </h2>
-          <h3 className={s.subtitle}>це наші проекти</h3>
+          <h3 className={s.subtitle}>{t('subtitle')}</h3>
         </div>
         <div className={s.containerContent}>
           <div className={s.containerVideo}>
             <div className={s.videoWrapper}>
-              <h4 className={s.textInfo}>[відеопродакшн]</h4>
+              <h4 className={s.textInfo}>{t('videoLabel')}</h4>
               <video
                 className={s.video}
                 src="/video/show.mp4"
@@ -28,16 +31,16 @@ export default function Portfolio() {
                 playsInline
               />
               <button className={s.button}>
-                Переглянути всі роботи
+                {t('button')}
                 <Icon iconName="icon-arrow" className={s.icon} />
               </button>
             </div>
           </div>
           <div className={s.containerImage}>
-            <h4 className={s.textInfoDesktop}>[веб-розробка]</h4>
+            <h4 className={s.textInfoDesktop}>{t('webLabel')}</h4>
             <div className={s.preview}>
               <div className={s.row}>
-                <h4 className={s.textInfoWeb}>[веб-розробка]</h4>
+                <h4 className={s.textInfoWeb}>{t('webLabel')}</h4>
                 <div className={s.frame}>
                   <div className={s.scroll}>
                     <Image
@@ -72,13 +75,13 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <button className={s.buttonWeb}>
-                  Переглянути всі роботи
+                  {t('button')}
                   <Icon iconName="icon-arrow" className={s.iconWeb} />
                 </button>
               </div>
             </div>
             <button className={s.buttonDesktop}>
-              Переглянути всі роботи
+              {t('button')}
               <Icon iconName="icon-arrow" className={s.iconDesktop} />
             </button>
           </div>

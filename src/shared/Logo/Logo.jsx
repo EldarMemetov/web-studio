@@ -12,6 +12,7 @@ const Logo = ({ variant = 'header' }) => {
         width={40}
         height={40}
         className={s.logo}
+        priority
       />
       <h2 className={s.logoText}>QVRIX</h2>
     </Link>

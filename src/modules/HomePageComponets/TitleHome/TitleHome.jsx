@@ -1,4 +1,4 @@
-import AnimationInitializer from '../../../shared/AnimationInitializer/AnimationInitializer';
+import AnimationInitializer from '@/shared/AnimationInitializer/AnimationInitializer';
 import styles from './TitleHome.module.scss';
 import Container from '@/shared/container/Container';
 import Button from '../../../shared/components/button/Button';

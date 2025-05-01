@@ -11,12 +11,22 @@ export default async function GetBusinessSolutions({ locale }) {
       <div className={styles.background}></div>
       <Container>
         <div className={styles.contentContainer}>
-          <h2 className={styles.newTitle}>
+          <h2 className={styles.newTitle} data-aos="fade-up">
             {t('titleStart')}
-            <span className={styles.spanNewTitle}> {t('titleHighlight')}</span>
+            <span
+              className={styles.spanNewTitle}
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              {t('titleHighlight')}
+            </span>
           </h2>
 
-          <List items={t('items', { returnObjects: true }) || []} />
+          <List
+            items={t('items', { returnObjects: true }) || []}
+            data-aos="fade-up"
+            data-aos-delay="500"
+          />
         </div>
       </Container>
     </section>

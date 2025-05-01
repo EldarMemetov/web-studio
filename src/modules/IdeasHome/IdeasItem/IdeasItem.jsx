@@ -19,24 +19,26 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
 
   return (
     <li className={styles.item}>
-      <div className={styles.header}>{ContentIcon}</div>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
+      <div className={styles.containerContent}>
+        <div className={styles.header}>{ContentIcon}</div>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
 
-      <ul className={listClassName}>
-        {list.map((el, i) => {
-          const itemClassName = clsx(styles.featureItem, {
-            [styles.featureItemWeb]: icon === 'LaptopWrite',
-            [styles.featureItemVideo]: icon === 'icon-cinema',
-          });
+        <ul className={listClassName}>
+          {list.map((el, i) => {
+            const itemClassName = clsx(styles.featureItem, {
+              [styles.featureItemWeb]: icon === 'LaptopWrite',
+              [styles.featureItemVideo]: icon === 'icon-cinema',
+            });
 
-          return (
-            <li key={i} className={itemClassName}>
-              <p className={styles.listItem}>{el}</p>
-            </li>
-          );
-        })}
-      </ul>
+            return (
+              <li key={i} className={itemClassName}>
+                <p className={styles.listItem}>{el}</p>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
 
       <div className={styles.ContainerClick}>
         <p className={styles.cta}>{cta}</p>
