@@ -3,7 +3,7 @@
   top: 70px;
   right: 0;
   width: 0;
-  height: calc(var(--vh, 1vh) * 100 - 80px);
+  height: calc(var(--vh, 1vh) * 100);
   opacity: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -119,8 +119,9 @@
 .mobileContact {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
   margin-bottom: 90px;
+  flex-direction: column;
+  align-content: flex-end;
 }
 
 .menuClose {
@@ -170,7 +171,6 @@
   .mobileMenuItem {
     position: static;
     width: auto;
-    height: auto;
     opacity: 1;
     overflow: visible;
     padding: 0;
