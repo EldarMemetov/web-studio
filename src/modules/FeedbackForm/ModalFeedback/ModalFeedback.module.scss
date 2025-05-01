@@ -8,7 +8,7 @@
     #010227;
   padding: 26px;
   width: 338px;
-
+  max-width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
   @include media(tablet) {

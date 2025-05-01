@@ -156,7 +156,9 @@
   }
   &.variant5 {
     padding: 16px 44px;
-    width: 286px;
+    width: 100%;
+    max-width: 286px;
+
     height: 55px;
     border: 1px solid #fff;
     background: rgba(255, 255, 255, 0.1);
@@ -177,7 +179,8 @@
   }
   &.variant6 {
     padding: 16px 44px;
-    width: 286px;
+    width: 100%;
+    max-width: 286px;
     height: 55px;
     border: none;
     color: #ffffff;
