@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 80px;
   margin-bottom: 80px;
+  max-width: 100%;
   @include media(tablet) {
     margin-bottom: 65px;
   }

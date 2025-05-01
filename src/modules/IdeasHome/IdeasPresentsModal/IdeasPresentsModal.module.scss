@@ -90,6 +90,10 @@
     font-size: 20px;
     line-height: 156%;
     display: block;
+    width: 400px;
+  }
+  @include media(desktop) {
+    width: auto;
   }
 }
 .ctaTextSpan {

@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   width: 338px;
+  max-width: 100%;
   border: 1px solid;
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   background: radial-gradient(
@@ -19,6 +20,7 @@
   transition:
     background 0.5s ease-in-out,
     all 0.5s ease-in-out;
+
   @include media(tablet) {
     width: 640px;
   }

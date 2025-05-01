@@ -32,7 +32,6 @@ export default function Portfolio() {
                 <Icon iconName="icon-arrow" className={s.icon} />
               </button>
             </div>
-            <div></div>
           </div>
           <div className={s.containerImage}>
             <h4 className={s.textInfoDesktop}>[веб-розробка]</h4>
