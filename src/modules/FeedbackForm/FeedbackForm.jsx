@@ -101,7 +101,7 @@ export default function FeedbackForm() {
 
   return (
     <Container>
-      <section className={styles.section}>
+      <section className={styles.section} id="feedback-form">
         <h2 className={styles.title}>
           {t('title')} <span className={styles.andTitle}>{t('andTitle')}</span>
         </h2>

@@ -18,7 +18,7 @@ export default async function IdeasHome({ locale }) {
   };
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="ideas-home">
       <Container>
         <AnimationInitializer
           options={{
