@@ -54,6 +54,7 @@ export default async function TitleHome({ locale }) {
               width={563}
               height={586}
               className={styles.cubeFace}
+              priority
               data-aos="zoom-in"
               data-aos-delay="1000"
             />

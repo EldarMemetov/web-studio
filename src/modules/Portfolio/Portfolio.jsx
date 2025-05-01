@@ -3,21 +3,32 @@ import Image from 'next/image';
 import s from './Portfolio.module.scss';
 import Icon from '@/shared/Icon/Icon';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
+import AnimationInitializer from '@/shared/AnimationInitializer/AnimationInitializer';
 
 export default async function Portfolio({ locale }) {
   const { t } = await initServerI18n(locale, ['portfolio']);
+
   return (
     <section className={s.section}>
       <Container>
+        <AnimationInitializer
+          options={{
+            duration: 1200,
+            easing: 'ease-in-out',
+            offset: 50,
+          }}
+        />
         <div className={s.text}>
-          <h2 className={s.title}>
-            <span className={s.titleAccent}> {t('title')}</span>{' '}
-            {t('nextTitle')}
+          <h2 className={s.title} data-aos="fade-up">
+            <span className={s.titleAccent}>{t('title')}</span> {t('nextTitle')}
           </h2>
-          <h3 className={s.subtitle}>{t('subtitle')}</h3>
+          <h3 className={s.subtitle} data-aos="fade-up" data-aos-delay="200">
+            {t('subtitle')}
+          </h3>
         </div>
+
         <div className={s.containerContent}>
-          <div className={s.containerVideo}>
+          <div className={s.containerVideo} data-aos="zoom-in">
             <div className={s.videoWrapper}>
               <h4 className={s.textInfo}>{t('videoLabel')}</h4>
               <video
@@ -36,12 +47,22 @@ export default async function Portfolio({ locale }) {
               </button>
             </div>
           </div>
-          <div className={s.containerImage}>
+
+          <div
+            className={s.containerImage}
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <h4 className={s.textInfoDesktop}>{t('webLabel')}</h4>
             <div className={s.preview}>
               <div className={s.row}>
                 <h4 className={s.textInfoWeb}>{t('webLabel')}</h4>
-                <div className={s.frame}>
+
+                <div
+                  className={s.frame}
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <div className={s.scroll}>
                     <Image
                       src="/image/harmony.png"
@@ -52,7 +73,12 @@ export default async function Portfolio({ locale }) {
                     />
                   </div>
                 </div>
-                <div className={s.frame}>
+
+                <div
+                  className={s.frame}
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   <div className={s.scroll}>
                     <Image
                       src="/image/organic.jpg"
@@ -63,7 +89,12 @@ export default async function Portfolio({ locale }) {
                     />
                   </div>
                 </div>
-                <div className={s.frame}>
+
+                <div
+                  className={s.frame}
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
                   <div className={s.scroll}>
                     <Image
                       src="/image/web.png"
@@ -74,12 +105,14 @@ export default async function Portfolio({ locale }) {
                     />
                   </div>
                 </div>
+
                 <button className={s.buttonWeb}>
                   {t('button')}
                   <Icon iconName="icon-arrow" className={s.iconWeb} />
                 </button>
               </div>
             </div>
+
             <button className={s.buttonDesktop}>
               {t('button')}
               <Icon iconName="icon-arrow" className={s.iconDesktop} />

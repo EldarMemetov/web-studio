@@ -18,11 +18,21 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
   });
 
   return (
-    <li className={styles.item}>
+    <li className={styles.item} data-aos="fade-up">
       <div className={styles.containerContent}>
-        <div className={styles.header}>{ContentIcon}</div>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+        <div className={styles.header} data-aos="zoom-in">
+          {ContentIcon}
+        </div>
+        <h3 className={styles.title} data-aos="fade-up" data-aos-delay="200">
+          {title}
+        </h3>
+        <p
+          className={styles.description}
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          {description}
+        </p>
 
         <ul className={listClassName}>
           {list.map((el, i) => {
@@ -32,7 +42,12 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
             });
 
             return (
-              <li key={i} className={itemClassName}>
+              <li
+                key={i}
+                className={itemClassName}
+                data-aos="fade-up"
+                data-aos-delay={400 + i * 100}
+              >
                 <p className={styles.listItem}>{el}</p>
               </li>
             );
@@ -40,7 +55,11 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
         </ul>
       </div>
 
-      <div className={styles.ContainerClick}>
+      <div
+        className={styles.ContainerClick}
+        data-aos="fade-up"
+        data-aos-delay="800"
+      >
         <p className={styles.cta}>{cta}</p>
         <ButtonArrow />
       </div>
