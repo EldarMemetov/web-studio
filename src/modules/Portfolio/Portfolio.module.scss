@@ -179,15 +179,22 @@
   background: transparent;
   border: none;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 130%;
+  gap: 16px;
   color: #fff;
   cursor: pointer;
   display: flex;
-  align-items: flex-end;
-  gap: 24px;
   margin-left: auto;
-  margin-top: 20px;
+  margin-top: 10px;
+  @include media(tablet) {
+    font-size: 24px;
+    line-height: 130%;
+    gap: 24px;
+  }
+  @include media(tablet) {
+    align-items: flex-end;
+  }
 }
 .icon {
   width: 28px;
@@ -236,15 +243,19 @@
   background: transparent;
   border: none;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 130%;
+  gap: 16px;
   color: #fff;
   cursor: pointer;
   display: flex;
-  align-items: flex-end;
-  gap: 24px;
   margin-left: auto;
   margin-top: 10px;
+  @include media(tablet) {
+    font-size: 24px;
+    line-height: 130%;
+    gap: 24px;
+  }
   @include media(desktop) {
     display: none;
   }

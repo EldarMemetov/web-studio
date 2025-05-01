@@ -3,13 +3,26 @@
   padding: 10px 24px;
   width: 274px;
   height: 43px;
-  opacity: 0.5;
   border: 1px solid;
   background: transparent;
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   color: #aaa;
   font-size: 16px;
   line-height: 146%;
+
+  &:focus {
+    color: #fff;
+    border-image: linear-gradient(to bottom, #fffdfd, #414040) 1;
+  }
+
+  &:not(:placeholder-shown) {
+    color: #fff;
+    border-image: linear-gradient(to bottom, #fffdfd, #ffffff) 1;
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
   @include media(tablet) {
     padding: 0px 24px;
     width: 576px;
@@ -28,7 +41,6 @@
 .inputText {
   border-radius: 4px;
   font-weight: 400;
-  opacity: 0.5;
   padding: 10px 24px;
   width: 274px;
   height: 120px;
@@ -37,6 +49,20 @@
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   resize: none;
   color: #aaa;
+
+  &:focus {
+    color: #fff;
+    border-image: linear-gradient(to bottom, #fffdfd, #414040) 1;
+  }
+
+  &:not(:placeholder-shown) {
+    color: #fff;
+    border-image: linear-gradient(to bottom, #fffdfd, #ffffff) 1;
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
   @include media(tablet) {
     font-size: 18px;
     line-height: 146%;
@@ -49,10 +75,6 @@
     width: 450px;
     height: 120px;
   }
-}
-
-.inputText.input::placeholder {
-  color: #aaa;
 }
 
 .fieldContainer {
@@ -114,4 +136,11 @@
   &:hover {
     transform: scale(1.1);
   }
+}
+.input:-webkit-autofill,
+.inputText:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 9999s ease-in-out 0s;
 }
