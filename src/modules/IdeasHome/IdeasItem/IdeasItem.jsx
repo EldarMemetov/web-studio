@@ -2,8 +2,14 @@ import Icon from '@/shared/Icon/Icon';
 import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
 import LaptopWrite from '../LaptopWrite/LaptopWrite';
 import IdeasCamera from '../IdeasCamera/IdeasCamera';
+import { ROUTES } from '@/shared/constants';
 import styles from './IdeasItem.module.scss';
 import clsx from 'clsx';
+
+const routeMap = {
+  LaptopWrite: ROUTES.DEVELOPMENT,
+  'icon-cinema': ROUTES.VIDEOGRAPHY,
+};
 
 export default function IdeasItem({ title, description, icon, list, cta }) {
   const ContentIcon = (() => {
@@ -16,6 +22,8 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
     [styles.featuresWeb]: icon === 'LaptopWrite',
     [styles.featuresVideo]: icon === 'icon-cinema',
   });
+
+  const href = routeMap[icon] ? `/${routeMap[icon]}` : '/';
 
   return (
     <li className={styles.item} data-aos="fade-up">
@@ -61,7 +69,8 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
         data-aos-delay="800"
       >
         <p className={styles.cta}>{cta}</p>
-        <ButtonArrow />
+
+        <ButtonArrow href={href} />
       </div>
     </li>
   );

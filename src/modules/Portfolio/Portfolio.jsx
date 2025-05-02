@@ -4,7 +4,8 @@ import s from './Portfolio.module.scss';
 import Icon from '@/shared/Icon/Icon';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import AnimationInitializer from '@/shared/AnimationInitializer/AnimationInitializer';
-
+import LinkButton from '@/shared/components/LinkButton/LinkButton';
+import { ROUTES } from '@/shared/constants';
 export default async function Portfolio({ locale }) {
   const { t } = await initServerI18n(locale, ['portfolio']);
 
@@ -41,10 +42,10 @@ export default async function Portfolio({ locale }) {
                 muted
                 playsInline
               />
-              <button className={s.button}>
+              <LinkButton path={`/${ROUTES.VIDEOGRAPHY}`} className={s.button}>
                 {t('button')}
                 <Icon iconName="icon-arrow" className={s.icon} />
-              </button>
+              </LinkButton>
             </div>
           </div>
 
@@ -105,18 +106,22 @@ export default async function Portfolio({ locale }) {
                     />
                   </div>
                 </div>
-
-                <button className={s.buttonWeb}>
+                <LinkButton
+                  path={`/${ROUTES.DEVELOPMENT}`}
+                  className={s.buttonWeb}
+                >
                   {t('button')}
-                  <Icon iconName="icon-arrow" className={s.iconWeb} />
-                </button>
+                  <Icon iconName="icon-arrow" className={s.icon} />
+                </LinkButton>
               </div>
             </div>
-
-            <button className={s.buttonDesktop}>
+            <LinkButton
+              path={`/${ROUTES.DEVELOPMENT}`}
+              className={s.buttonDesktop}
+            >
               {t('button')}
-              <Icon iconName="icon-arrow" className={s.iconDesktop} />
-            </button>
+              <Icon iconName="icon-arrow" className={s.icon} />
+            </LinkButton>
           </div>
         </div>
       </Container>

@@ -19,7 +19,7 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(-220px);
+    transform: translateY(-200px);
   }
 }
 
@@ -357,6 +357,7 @@
     cursor: pointer;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     gap: 24px;
     margin-left: auto;
     margin-top: 20px;

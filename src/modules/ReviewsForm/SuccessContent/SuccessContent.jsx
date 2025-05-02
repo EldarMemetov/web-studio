@@ -1,5 +1,4 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -7,9 +6,8 @@ import confetti from 'canvas-confetti';
 import Button from '@/shared/components/button/Button';
 import s from './SuccessContent.module.scss';
 import Image from 'next/image';
-
+import Link from 'next/link';
 export default function SuccessContent({ onClose }) {
-  const router = useRouter();
   const { t } = useTranslation('successContent');
   const rocketRef = useRef(null);
   const canvasRef = useRef(null);
@@ -80,11 +78,6 @@ export default function SuccessContent({ onClose }) {
       });
   }, []);
 
-  const handleClick = () => {
-    onClose();
-    router.push('/');
-  };
-
   return (
     <div className={s.containerContent}>
       <canvas ref={canvasRef} className={s.confettiCanvas} />
@@ -105,14 +98,11 @@ export default function SuccessContent({ onClose }) {
         {t('reviewAcceptedSubtitle')}
       </h3>
 
-      <Button
-        ref={buttonRef}
-        className={s.button}
-        variant="variant5"
-        onClick={handleClick}
-      >
-        {t('backToHome')}
-      </Button>
+      <Link href="/" className={s.button} onClick={onClose}>
+        <Button as="div" variant="variant5">
+          {t('backToHome')}
+        </Button>
+      </Link>
     </div>
   );
 }

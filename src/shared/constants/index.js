@@ -1,7 +1,7 @@
 export const ROUTES = {
   ABOUT: 'about-us',
   PORTFOLIO: 'portfolio',
-  HOME: 'home',
+  HOME: '/',
   DEVELOPMENT: 'web-development',
   VIDEOGRAPHY: 'videography',
   POLICY: 'privacy-policy',
@@ -9,7 +9,7 @@ export const ROUTES = {
 export const LINKDATA = {
   ABOUT: 'about-us',
   PORTFOLIO: 'portfolio',
-  HOME: 'home',
+  HOME: '/',
   DEVELOPMENT: 'web-development',
   VIDEOGRAPHY: 'videography',
   POLICY: 'privacy-policy',

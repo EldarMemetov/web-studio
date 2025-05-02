@@ -93,7 +93,7 @@ export default function FeedbackForm() {
     if (showTabletImage) {
       const timeout = setTimeout(() => {
         setShowTabletImage(false);
-      }, 2000); // 2 секунды
+      }, 2000);
 
       return () => clearTimeout(timeout);
     }

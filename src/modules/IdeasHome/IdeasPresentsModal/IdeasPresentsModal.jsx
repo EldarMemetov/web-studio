@@ -6,6 +6,7 @@ import LaptopWrite from '../LaptopWrite/LaptopWrite';
 import IdeasCamera from '../IdeasCamera/IdeasCamera';
 import Icon from '@/shared/Icon/Icon';
 import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
+import { ScrollToId } from '@/shared/scrollToId/scrollToId';
 
 export default function IdeasPresentsModal({ onClose, show, modalContent }) {
   const {
@@ -17,7 +18,10 @@ export default function IdeasPresentsModal({ onClose, show, modalContent }) {
     ctaSubtitle,
     ctaButton,
   } = modalContent;
-
+  const handleCtaClick = () => {
+    onClose?.();
+    ScrollToId('feedback-form');
+  };
   return (
     <Modal contentClassName={s.myCustomModal} onClose={onClose} show={show}>
       <div className={s.containerContent}>
@@ -44,7 +48,7 @@ export default function IdeasPresentsModal({ onClose, show, modalContent }) {
             <span className={s.ctaTextSpan}>{ctaTitle}</span> {ctaSubtitle}
           </h4>
           <h4 className={s.nextTextAnd}>{ctaButton}</h4>
-          <ButtonArrow />
+          <ButtonArrow onClick={handleCtaClick} />
         </div>
       </div>
     </Modal>

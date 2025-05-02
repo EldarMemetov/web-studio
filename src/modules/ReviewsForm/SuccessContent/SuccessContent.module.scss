@@ -39,12 +39,15 @@
   line-height: 130%;
   text-align: center;
   color: #fff;
+
   @include media(tablet) {
     font-size: 40px;
     line-height: 136%;
   }
 }
-
+.subtitle {
+  margin-bottom: 10px;
+}
 .title {
   margin-bottom: 12px;
 }
