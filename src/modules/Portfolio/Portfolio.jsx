@@ -66,7 +66,7 @@ export default async function Portfolio({ locale }) {
                 >
                   <div className={s.scroll}>
                     <Image
-                      src="/image/harmony.png"
+                      src="/image/harmony.WEBP"
                       alt="harmony"
                       width={392}
                       height={870}
@@ -98,7 +98,7 @@ export default async function Portfolio({ locale }) {
                 >
                   <div className={s.scroll}>
                     <Image
-                      src="/image/web.png"
+                      src="/image/web.WEBP"
                       alt="web"
                       width={392}
                       height={250}
