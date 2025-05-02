@@ -16,9 +16,10 @@ export default function ReviewsList() {
 
   return (
     <section className={s.sectionReviews}>
+      <div className={s.background}></div>
       <div>
         <Container>
-          <div>
+          <div className={s.containerTitle}>
             <h2 className={s.whiteWordLeft}>
               {t('your')}{' '}
               <span className={s.violetWordLeft}>{t('experience')}</span>

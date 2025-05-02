@@ -6,7 +6,7 @@
   "fields": {
     "name": "Name*",
     "email": "Deine E-Mail*",
-    "message": "Kommentar",
+    "message": "Das sind deine Wünsche",
     "agree": "Ich stimme der Datenschutzerklärung zu"
   },
   "submitButton": "Kontaktiere uns",

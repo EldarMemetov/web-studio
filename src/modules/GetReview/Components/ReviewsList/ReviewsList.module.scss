@@ -1,5 +1,14 @@
 .sectionReviews {
-  margin-bottom: 200px;
+  margin-bottom: 64px;
+
+  position: relative;
+  z-index: 1;
+  @include media(tablet) {
+    margin-bottom: 180px;
+  }
+  @include media(desktop) {
+    margin-bottom: 200px;
+  }
 }
 .ListReview {
   display: flex;
@@ -14,11 +23,13 @@
   font-size: 40px;
   line-height: 130%;
   text-transform: uppercase;
-  text-align: left;
-  margin-bottom: 32px;
+  text-align: right;
+
   @include media(tablet) {
     font-size: 64px;
     line-height: 130%;
+    margin-bottom: 32px;
+    text-align: left;
   }
   @include media(desktop) {
     font-size: 80px;
@@ -71,4 +82,24 @@
   align-items: flex-end;
   gap: 24px;
   margin-left: auto;
+}
+.background {
+  position: absolute;
+  top: -350px;
+  left: 0;
+  right: 0;
+  height: calc(50% + 100px);
+  background-image: url(/image/grid.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: -1;
+  transform: translateY(50px);
+  @include media(tablet) {
+    top: -300px;
+  }
+  @include media(desktop) {
+    top: -400px;
+  }
 }

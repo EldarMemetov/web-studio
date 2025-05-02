@@ -16,6 +16,7 @@ const FetchServices = () => {
             offset: 20,
           }}
         />
+
         <div className={s.ContainerContent}>
           <ul className={s.ListContainer}>
             <li className={s.itemList} data-aos="fade-up">

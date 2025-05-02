@@ -9,19 +9,22 @@
   color: #aaa;
   font-size: 16px;
   line-height: 146%;
-
+  opacity: 0.5;
   &:focus {
     color: #fff;
     border-image: linear-gradient(to bottom, #fffdfd, #414040) 1;
+    opacity: 1;
   }
 
   &:not(:placeholder-shown) {
     color: #fff;
     border-image: linear-gradient(to bottom, #fffdfd, #ffffff) 1;
+    opacity: 1;
   }
 
   &::placeholder {
     color: #aaa;
+    opacity: 1;
   }
   @include media(tablet) {
     padding: 0px 24px;
@@ -49,19 +52,25 @@
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   resize: none;
   color: #aaa;
+  font-size: 16px;
+  line-height: 146%;
+  opacity: 0.5;
 
   &:focus {
     color: #fff;
     border-image: linear-gradient(to bottom, #fffdfd, #414040) 1;
+    opacity: 1;
   }
 
   &:not(:placeholder-shown) {
     color: #fff;
     border-image: linear-gradient(to bottom, #fffdfd, #ffffff) 1;
+    opacity: 1;
   }
 
   &::placeholder {
     color: #aaa;
+    opacity: 1;
   }
   @include media(tablet) {
     font-size: 18px;
@@ -105,12 +114,8 @@
   bottom: -20px;
   left: 0;
   color: red;
-  font-size: 12px;
+  font-size: 10px;
   margin: 0;
-  @include media(tablet) {
-  }
-  @include media(desktop) {
-  }
 }
 .fieldContainer {
   margin-bottom: 1rem;

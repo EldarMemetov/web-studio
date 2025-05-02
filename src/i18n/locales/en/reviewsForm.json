@@ -4,7 +4,7 @@
   "fields": {
     "name": "Name*",
     "email": "Your email*",
-    "message": "Message",
+    "message": "Describe your experience",
     "agree": "I agree with the privacy terms"
   },
   "submitButton": "Submit",

@@ -82,7 +82,7 @@ export default async function Portfolio({ locale }) {
                 >
                   <div className={s.scroll}>
                     <Image
-                      src="/image/organic.png"
+                      src="/image/organic.WEBP"
                       alt="organic"
                       width={392}
                       height={620}

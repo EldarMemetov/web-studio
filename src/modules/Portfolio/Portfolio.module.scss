@@ -81,6 +81,8 @@
 
 .section {
   padding-bottom: 160px;
+  position: relative;
+  z-index: 2;
   @include media(desktop) {
     padding-bottom: 200px;
   }

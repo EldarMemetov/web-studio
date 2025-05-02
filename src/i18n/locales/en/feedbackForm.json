@@ -1,12 +1,12 @@
 {
-  "title": "let's",
-  "andTitle": "start the conversation",
+  "title": "let's ",
+  "andTitle": "start the feedback",
   "description": "Ready to collaborate? Let's discuss your project",
   "subtitle": "We will respond within 24 hours",
   "fields": {
     "name": "Name*",
     "email": "Your email*",
-    "message": "Comment",
+    "message": "These are your wishes",
     "agree": "I agree to the privacy policy"
   },
   "submitButton": "Contact us",
