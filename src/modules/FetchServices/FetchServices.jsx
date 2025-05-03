@@ -8,6 +8,7 @@ const FetchServices = () => {
   return (
     <section className={s.sectionBar}>
       <Container>
+        <div className={s.background}></div>
         <div className={s.ContainerContent}>
           <ul className={s.ListContainer}>
             <li className={s.itemList}>
