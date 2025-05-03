@@ -1,4 +1,3 @@
-import AnimationInitializer from '@/shared/AnimationInitializer/AnimationInitializer';
 import Container from '@/shared/container/Container';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import List from './List/List';
@@ -10,31 +9,14 @@ export default async function GetBusinessSolutions({ locale }) {
   return (
     <section className={styles.section}>
       <Container>
-        <AnimationInitializer
-          options={{
-            duration: 1200,
-            easing: 'ease-in-out',
-            offset: 50,
-          }}
-        />
         <div className={styles.background}></div>
         <div className={styles.contentContainer}>
-          <h2 className={styles.newTitle} data-aos="fade-up">
+          <h2 className={styles.newTitle}>
             {t('titleStart')}
-            <span
-              className={styles.spanNewTitle}
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              {t('titleHighlight')}
-            </span>
+            <span className={styles.spanNewTitle}>{t('titleHighlight')}</span>
           </h2>
 
-          <List
-            items={t('items', { returnObjects: true }) || []}
-            data-aos="fade-up"
-            data-aos-delay="500"
-          />
+          <List items={t('items', { returnObjects: true }) || []} />
         </div>
       </Container>
     </section>

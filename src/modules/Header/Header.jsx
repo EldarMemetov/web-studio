@@ -62,13 +62,12 @@ function Header() {
       </nav>
 
       <div className={styles.containerButtonTrans}>
+        <LanguageSwitcher />
         <div className={styles.buttonContact}>
           <ScrollButton targetId="feedback-form" variant="variant1">
             {t('kontakt')}
           </ScrollButton>
         </div>
-
-        <LanguageSwitcher />
 
         <button
           type="button"
