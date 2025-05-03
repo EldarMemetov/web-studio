@@ -7,30 +7,27 @@
 }
 .title {
   font-weight: 700;
-  color: white;
-  font-size: 32px;
-  line-height: 130%;
+  @include font(32, 42);
   text-transform: uppercase;
   @include media(tablet) {
-    font-size: 42px;
+    @include font(42, 55);
     width: 500px;
   }
   @include media(desktop) {
     width: 600px;
-    font-size: 42px;
+    @include font(42, 55);
   }
 }
 
 .description {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 136%;
+  @include font(20, 27);
   color: white;
   text-align: left;
 
   @include media(tablet) {
     width: 600px;
-    font-size: 24px;
+    @include font(24, 33);
   }
 }
 .container {

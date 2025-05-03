@@ -96,30 +96,24 @@
 }
 .title {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 136%;
+  @include font(24, 33);
   margin-bottom: 8px;
   @include media(tablet) {
-    font-size: 20px;
-    line-height: 136%;
+    @include font(20, 27);
   }
   @include media(desktop) {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 136%;
+    @include font(24, 33);
   }
 }
 .description {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 146%;
+  @include font(18, 26);
   @include media(tablet) {
-    font-size: 16px;
-    line-height: 146%;
+    @include font(16, 23);
   }
   @include media(desktop) {
-    font-size: 18px;
-    line-height: 146%;
+    @include font(18, 26);
   }
 }
 

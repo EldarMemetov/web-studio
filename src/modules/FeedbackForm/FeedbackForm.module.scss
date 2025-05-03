@@ -15,19 +15,16 @@
 }
 .title {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 130%;
+  @include font(40, 52);
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 64px;
   @include media(tablet) {
-    font-size: 64px;
-    line-height: 130%;
+    @include font(64, 83);
     margin-bottom: 80px;
   }
   @include media(desktop) {
-    font-size: 80px;
-    line-height: 130%;
+    @include font(80, 104);
   }
 }
 .andTitle {
@@ -39,15 +36,13 @@
 }
 .description {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 136%;
+  @include font(24, 33);
   text-align: center;
   margin-bottom: 16px;
 }
 .subtitle {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 146%;
+  @include font(16, 23);
   text-align: center;
   margin-bottom: 32px;
 }

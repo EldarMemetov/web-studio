@@ -1,6 +1,5 @@
 .footer {
   background: #010227;
-
   position: relative;
   z-index: 1;
 
@@ -45,13 +44,11 @@
 }
 .privacyLink {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
+  @include font(16, 21);
 }
 .rights {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
+  @include font(16, 21);
   color: #8e8e93;
   margin-bottom: 20px;
   @include media(tablet) {

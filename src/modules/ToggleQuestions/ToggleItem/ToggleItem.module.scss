@@ -26,7 +26,6 @@
   }
   @include media(desktop) {
     gap: 24px;
-
     width: 808px;
   }
 }
@@ -72,13 +71,11 @@
 
 .titleOpen {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 136%;
+  @include font(20, 27);
   transition: all 0.5s ease-in-out;
 
   @include media(desktop) {
-    font-size: 24px;
-    line-height: 136%;
+    @include font(24, 33);
   }
 }
 
@@ -96,8 +93,7 @@
 
 .descriptionOpen {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 146%;
+  @include font(18, 26);
   transition: all 0.5s ease-in-out;
   animation: slideDownShelf 0.8s ease-out;
 }

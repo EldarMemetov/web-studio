@@ -172,17 +172,14 @@
 }
 .title {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 130%;
+  @include font(40, 52);
   text-transform: uppercase;
 
   @include media(tablet) {
-    font-size: 64px;
-    line-height: 130%;
+    @include font(64, 83);
   }
   @include media(desktop) {
-    font-size: 80px;
-    line-height: 130%;
+    @include font(80, 104);
     margin-bottom: 0px;
     text-align: left;
     margin-bottom: 32px;
@@ -197,17 +194,14 @@
 
 .subtitle {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 130%;
+  @include font(40, 52);
   text-transform: uppercase;
   margin-bottom: 64px;
   @include media(tablet) {
-    font-size: 64px;
-    line-height: 130%;
+    @include font(64, 83);
   }
   @include media(desktop) {
-    font-size: 80px;
-    line-height: 130%;
+    @include font(80, 104);
     text-align: right;
     margin-bottom: 80px;
   }
@@ -239,8 +233,7 @@
   background: transparent;
   border: none;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 130%;
+  @include font(20, 26);
   gap: 16px;
   color: #fff;
   cursor: pointer;
@@ -248,8 +241,7 @@
   margin-left: auto;
   margin-top: 10px;
   @include media(tablet) {
-    font-size: 24px;
-    line-height: 130%;
+    @include font(24, 31);
     gap: 24px;
   }
   @include media(tablet) {
@@ -269,8 +261,7 @@
 }
 .textInfo {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 130%;
+  @include font(20, 26);
   text-transform: uppercase;
   text-align: right;
   color: rgba(207, 208, 208, 0.8);
@@ -283,15 +274,13 @@
 }
 .textInfoWeb {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 130%;
+  @include font(20, 26);
   text-transform: uppercase;
   text-align: right;
   color: rgba(207, 208, 208, 0.8);
   margin-bottom: 12px;
   @include media(tablet) {
-    font-size: 32px;
-    line-height: 130%;
+    @include font(32, 42);
     margin-bottom: 24px;
   }
   @include media(desktop) {
@@ -303,8 +292,7 @@
   background: transparent;
   border: none;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 130%;
+  @include font(20, 26);
   gap: 16px;
   color: #fff;
   cursor: pointer;
@@ -312,8 +300,7 @@
   margin-left: auto;
   margin-top: 10px;
   @include media(tablet) {
-    font-size: 24px;
-    line-height: 130%;
+    @include font(24, 31);
     gap: 24px;
   }
   @include media(desktop) {
@@ -340,8 +327,7 @@
     text-transform: uppercase;
     text-align: right;
     color: rgba(207, 208, 208, 0.8);
-    font-size: 32px;
-    line-height: 130%;
+    @include font(32, 42);
     margin-bottom: 24px;
     display: block;
   }
@@ -353,8 +339,7 @@
     background: transparent;
     border: none;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 130%;
+    @include font(24, 31);
     color: #fff;
     cursor: pointer;
     display: flex;

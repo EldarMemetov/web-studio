@@ -7,13 +7,10 @@
 }
 .description {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 146%;
+  @include font(14, 20);
 
   @include media(desktop) {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 146%;
+    @include font(16, 23);
   }
 }
 .mainContent {

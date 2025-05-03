@@ -1,4 +1,6 @@
-@import './breakpoints';
+@use './breakpoints' as *;
+// @import './breakpoints';
+
 /*
 screen types: 
     mobile,

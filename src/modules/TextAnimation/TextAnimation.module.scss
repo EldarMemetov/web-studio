@@ -1,7 +1,6 @@
 .textWork {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
+  @include font(80, 104);
   text-transform: uppercase;
   text-align: center;
   position: relative;
@@ -10,15 +9,6 @@
     transform 0.5s ease-out,
     opacity 0.5s ease-out;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-
-  @include media(tablet) {
-    font-size: 64px;
-    line-height: 130%;
-  }
-  @include media(desktop) {
-    font-size: 80px;
-    line-height: 130%;
-  }
 }
 
 .section {
@@ -51,16 +41,11 @@
 
 .textGo {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 130%;
+  @include font(80, 104);
   text-transform: uppercase;
   margin-bottom: 200px;
   text-align: center;
   will-change: transform, opacity;
-
-  @include media(tablet) {
-    font-size: 80px;
-  }
 }
 
 .containerWork {
@@ -104,15 +89,10 @@
 
 .textInterested {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 130%;
+  @include font(80, 104);
   text-transform: uppercase;
   margin-bottom: 200px;
   will-change: transform, opacity;
-
-  @include media(tablet) {
-    font-size: 80px;
-  }
 }
 .textAnimation {
   display: none;

@@ -66,8 +66,7 @@
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 146%;
+  @include font(24, 35);
   transition: all 0.3s ease;
   padding: 10px;
   border-radius: 32px;
@@ -109,16 +108,14 @@
 }
 
 .submenuLink {
-  color: #fff;
-  font-size: 14px;
+  @include font(14, 19);
   text-decoration: none;
   border-radius: 32px;
   padding: 10px;
 }
 .titleMobile {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 160%;
+  @include font(32, 51);
   text-align: right;
   width: 300px;
   margin-bottom: 24px;
@@ -270,7 +267,7 @@
 
   @include media(tablet) {
     margin-bottom: 80px;
-    max-width: 650px;
+    max-width: 600px;
   }
 }
 
@@ -282,11 +279,9 @@
 
 .navLink.footer {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 130%;
+  @include font(24, 31);
   @include media(desktop) {
-    font-size: 16px;
-    line-height: 130%;
+    @include font(16, 21);
   }
 }
 .navList.footer {

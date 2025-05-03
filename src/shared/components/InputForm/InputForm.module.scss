@@ -7,8 +7,7 @@
   background: transparent;
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   color: #aaa;
-  font-size: 16px;
-  line-height: 146%;
+  @include font(16, 23);
   opacity: 0.5;
   &:focus {
     color: #fff;
@@ -30,8 +29,7 @@
     padding: 0px 24px;
     width: 576px;
     height: 48px;
-    font-size: 18px;
-    line-height: 146%;
+    @include font(18, 26);
   }
   @include media(desktop) {
     padding: 0 24px;
@@ -52,8 +50,7 @@
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
   resize: none;
   color: #aaa;
-  font-size: 16px;
-  line-height: 146%;
+  @include font(16, 23);
   opacity: 0.5;
 
   &:focus {
@@ -73,8 +70,7 @@
     opacity: 1;
   }
   @include media(tablet) {
-    font-size: 18px;
-    line-height: 146%;
+    @include font(18, 26);
     padding: 10px 24px;
     width: 576px;
     height: 120px;
@@ -104,8 +100,7 @@
 
 .checkboxLabel {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 146%;
+  @include font(16, 23);
   opacity: 0.5;
 }
 

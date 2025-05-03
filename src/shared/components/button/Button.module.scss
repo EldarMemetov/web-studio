@@ -13,8 +13,7 @@
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  font-size: 14px;
-  line-height: 130%;
+  @include font(18, 23);
   z-index: 1;
   @include media(tablet) {
     font-size: 16px;

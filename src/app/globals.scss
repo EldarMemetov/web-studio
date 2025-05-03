@@ -1,6 +1,10 @@
-// @import '/node_modules/normalize-scss/sass/normalize';
-@import 'normalize-scss/sass/normalize';
-@import '../shared/styles/breakpoints';
-@import '../shared/styles/colors';
-@import '../shared/styles/variables';
-@import '../shared/styles/base';
+@use 'normalize-scss/sass/normalize' as *;
+@use '@/shared/styles/breakpoints' as bp;
+@use '@/shared/styles/colors' as *;
+@use '@/shared/styles/variables' as *;
+@use '@/shared/styles/base' as *;
+// @import 'normalize-scss/sass/normalize';
+// @import '../shared/styles/breakpoints';
+// @import '../shared/styles/colors';
+// @import '../shared/styles/variables';
+// @import '../shared/styles/base';

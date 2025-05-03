@@ -47,31 +47,26 @@
 }
 .modalTitle {
   font-weight: 500;
-  font-size: 36px;
-  line-height: 130%;
+  @include font(36, 47);
   text-align: left;
   margin-bottom: 16px;
 
   @include media(tablet) {
-    font-size: 32px;
-    line-height: 130%;
+    @include font(32, 42);
     margin-bottom: 12px;
     text-align: center;
   }
   @include media(desktop) {
-    font-size: 40px;
-    line-height: 130%;
+    @include font(40, 52);
   }
 }
 .modalSubtitle {
   font-weight: 400;
-  font-size: 19px;
-  line-height: 140%;
+  @include font(19, 27);
   color: #c2c7d1;
   margin-bottom: 32px;
   @include media(tablet) {
-    font-size: 20px;
-    line-height: 160%;
+    @include font(20, 32);
     margin-bottom: 40px;
   }
 }
@@ -87,8 +82,7 @@
   display: none;
   @include media(tablet) {
     font-weight: 700;
-    font-size: 20px;
-    line-height: 156%;
+    @include font(20, 31);
     display: block;
     width: 400px;
   }
@@ -104,16 +98,14 @@
 }
 .nextTextAnd {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 130%;
+  @include font(24, 31);
   @include media(tablet) {
     display: none;
   }
 }
 .text {
   font-weight: 300;
-  font-size: 20px;
-  line-height: 130%;
+  @include font(20, 26);
   border-radius: 24px;
   padding: 12px 24px;
   width: auto;
@@ -142,17 +134,11 @@
   }
 
   @include media(tablet) {
-    font-size: 20px;
-    line-height: 130%;
+    @include font(20, 26);
     border-radius: 24px;
     padding: 8px 20px;
     width: auto;
     height: 42px;
-  }
-
-  @include media(desktop) {
-    font-size: 20px;
-    line-height: 130%;
   }
 }
 .modalList {

@@ -20,23 +20,19 @@
 
 .title {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 136%;
+  @include font(24, 33);
   @include media(tablet) {
-    font-size: 24px;
-    line-height: 136%;
+    @include font(24, 33);
   }
 }
 .textRating {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 146%;
+  @include font(16, 23);
 }
 
 .description {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 146%;
+  @include font(16, 23);
 }
 .fieldContainer {
   display: flex;

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { handleError } from '@/utils/errorHandler';
 
 const BASE_URL = 'https://node-reply-letter.onrender.com';
 
@@ -9,10 +10,7 @@ export const sendFeedback = async (data) => {
     });
     return response.data;
   } catch (error) {
-    if (error.response && error.response.data) {
-      throw new Error(error.response.data.error || 'Error sending form');
-    }
-    throw new Error('An error occurred. Please try again.');
+    throw handleError(error);
   }
 };
 
@@ -23,10 +21,7 @@ export const sendReviews = async (data) => {
     });
     return response.data;
   } catch (error) {
-    if (error.response && error.response.data) {
-      throw new Error(error.response.data.error || 'Error sending form');
-    }
-    throw new Error('An error occurred. Please try again.');
+    throw handleError(error);
   }
 };
 

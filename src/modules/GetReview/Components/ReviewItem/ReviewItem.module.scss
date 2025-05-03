@@ -67,23 +67,20 @@
 }
 .name {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 136%;
+  @include font(20, 27);
   color: #fff;
   margin-bottom: 4px;
 }
 
 .review {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 152%;
+  @include font(20, 30);
   color: #e6e6f5;
   margin-bottom: 25px;
 }
 .email {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 152%;
+  @include font(16, 24);
   color: #c6c6d1;
 }
 .icon {

@@ -70,6 +70,9 @@ export async function generateMetadata({ params }) {
       title: meta.title,
       description: meta.description,
     },
+    icons: {
+      icon: '/favicon.ico',
+    },
   };
 }
 

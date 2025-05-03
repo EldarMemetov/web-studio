@@ -9,18 +9,12 @@
   position: relative;
   z-index: 2;
   text-transform: uppercase;
-  font-size: 54px;
-  line-height: 130%;
+  @include font(54, 70);
   margin-bottom: 64px;
 
   @include media(tablet) {
-    font-size: 80px;
+    @include font(80, 104);
     margin-bottom: 80px;
-    line-height: 130%;
-  }
-  @include media(desktop) {
-    font-size: 80px;
-    line-height: 130%;
   }
 }
 
