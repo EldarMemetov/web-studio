@@ -18,7 +18,7 @@ import {
 import Image from 'next/image';
 
 export default function ReviewsFormContent({ onSuccess }) {
-  const { t } = useTranslation('reviewsForm');
+  const { t, i18n } = useTranslation('reviewsForm');
   const { addReview } = useReviews();
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
@@ -28,6 +28,7 @@ export default function ReviewsFormContent({ onSuccess }) {
     text: '',
     rating: 0,
     agree: false,
+    lang: i18n.language,
   };
 
   const validationSchema = Yup.object({
@@ -48,6 +49,7 @@ export default function ReviewsFormContent({ onSuccess }) {
     agree: Yup.boolean()
       .oneOf([true], t('validation.agree'))
       .required(t('validation.agree')),
+    lang: Yup.string().strip(),
   });
 
   const handleSubmit = async (values, { resetForm }) => {

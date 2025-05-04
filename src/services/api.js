@@ -10,7 +10,7 @@ export const sendFeedback = async (data) => {
     });
     return response.data;
   } catch (error) {
-    console.log('Sending feedback:', values);
+    console.error('Error sending feedback with payload:', data);
     throw handleError(error);
   }
 };
