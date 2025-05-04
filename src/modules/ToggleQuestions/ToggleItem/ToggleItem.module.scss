@@ -7,7 +7,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  width: 338px;
+  width: 100%;
   max-width: 100%;
   border: 1px solid;
   border-image: linear-gradient(to bottom, #adaaaa, #414040) 1;
@@ -22,7 +22,7 @@
     all 0.5s ease-in-out;
 
   @include media(tablet) {
-    width: 640px;
+    width: 100%;
   }
   @include media(desktop) {
     gap: 24px;
