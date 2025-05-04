@@ -1,87 +1,49 @@
 'use client';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
 import confetti from 'canvas-confetti';
 import Button from '@/shared/components/button/Button';
 import s from './SuccessContent.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+
 export default function SuccessContent({ onClose }) {
   const { t } = useTranslation('successContent');
-  const rocketRef = useRef(null);
   const canvasRef = useRef(null);
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const buttonRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    const myCanvas = canvasRef.current;
+    if (!myCanvas) return;
 
-    tl.fromTo(
-      rocketRef.current,
-      { y: 100, opacity: 0, rotation: -10 },
-      {
-        y: 0,
-        opacity: 1,
-        rotation: 0,
-        duration: 0.5,
-        ease: 'elastic.out(1, 0.75)',
+    myCanvas.width = window.innerWidth;
+    myCanvas.height = window.innerHeight;
+    const myConfetti = confetti.create(myCanvas, { resize: true });
+
+    myConfetti({
+      particleCount: 150,
+      spread: 80,
+      origin: { x: 0.5, y: 0.3 },
+    });
+
+    let repeatCount = 0;
+    const interval = setInterval(() => {
+      if (repeatCount >= 3) {
+        clearInterval(interval);
+        return;
       }
-    )
-
-      .fromTo(
-        titleRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.3, ease: 'power1.out' },
-        '-=0.2'
-      )
-
-      .fromTo(
-        subtitleRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.3, ease: 'power1.out' },
-        '-=0.2'
-      )
-
-      .fromTo(
-        buttonRef.current,
-        { scale: 0.8, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.5)' },
-        '-=0.2'
-      )
-      .add(() => {
-        const myCanvas = canvasRef.current;
-        myCanvas.width = window.innerWidth;
-        myCanvas.height = window.innerHeight;
-        const myConfetti = confetti.create(myCanvas, { resize: true });
-
-        myConfetti({
-          particleCount: 150,
-          spread: 80,
-          origin: { x: 0.5, y: 0.3 },
-        });
-
-        gsap.to(
-          {},
-          {
-            repeat: 3,
-            repeatDelay: 0.2,
-            onRepeat: () =>
-              myConfetti({
-                particleCount: 80,
-                spread: 100,
-                origin: { x: Math.random(), y: Math.random() * 0.5 },
-              }),
-          }
-        );
+      myConfetti({
+        particleCount: 80,
+        spread: 100,
+        origin: { x: Math.random(), y: Math.random() * 0.5 },
       });
+      repeatCount++;
+    }, 400);
   }, []);
 
   return (
     <div className={s.containerContent}>
       <canvas ref={canvasRef} className={s.confettiCanvas} />
-      <div ref={rocketRef} className={s.iconWrapper}>
+      <div className={s.iconWrapper}>
         <Image
           src="/image/rocket-yes.png"
           alt="rocket-yes"
@@ -91,12 +53,8 @@ export default function SuccessContent({ onClose }) {
         />
       </div>
 
-      <h2 ref={titleRef} className={s.title}>
-        {t('reviewAcceptedTitle')}
-      </h2>
-      <h3 ref={subtitleRef} className={s.subtitle}>
-        {t('reviewAcceptedSubtitle')}
-      </h3>
+      <h2 className={s.title}>{t('reviewAcceptedTitle')}</h2>
+      <h3 className={s.subtitle}>{t('reviewAcceptedSubtitle')}</h3>
 
       <Link href="/" className={s.button} onClick={onClose}>
         <Button as="div" variant="variant5">
