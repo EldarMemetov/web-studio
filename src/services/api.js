@@ -10,6 +10,7 @@ export const sendFeedback = async (data) => {
     });
     return response.data;
   } catch (error) {
+    console.log('Sending feedback:', values);
     throw handleError(error);
   }
 };
