@@ -1,0 +1,24 @@
+{
+  "titleBefore": "Have",
+  "titleHighlight": "questions",
+  "titleAfter": "It's completely normal",
+  "description": "We’re always ready to answer your questions. Book a consultation — we’ll gladly help optimize your business!",
+  "faq": [
+    {
+      "question": "Do you help with domain and hosting?",
+      "answer": "Yes, we choose the best SEO-friendly domain and reliable hosting with high uptime, configure SSL certificates and CDN for faster and secure site loading."
+    },
+    {
+      "question": "Can I order a multilingual website?",
+      "answer": "Absolutely. We implement multilingual solutions with proper content localization, hreflang tag generation for SEO, and smooth language switching."
+    },
+    {
+      "question": "Which technologies do you use?",
+      "answer": "We use a modern tech stack — HTML5, CSS3, JavaScript, React, Next.js (SSR/SSG), and Node.js — to ensure speed, scalability, and SEO-friendliness."
+    },
+    {
+      "question": "How do you test the website before launch?",
+      "answer": "We run functionality, responsiveness, speed, SEO, and security tests to ensure a stable and optimized production release."
+    }
+  ]
+}

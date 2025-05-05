@@ -1,6 +1,6 @@
 .section {
   padding-bottom: 160px;
-
+  padding-top: 65px;
   @include media(desktop) {
     padding-bottom: 200px;
   }

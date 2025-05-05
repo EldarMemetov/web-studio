@@ -1,0 +1,24 @@
+{
+  "titleBefore": "Sie haben",
+  "titleHighlight": "Fragen",
+  "titleAfter": "Das ist völlig normal",
+  "description": "Wir beantworten gerne alle Ihre Fragen. Buchen Sie eine Beratung – wir helfen Ihnen, Ihr Business optimal aufzustellen!",
+  "faq": [
+    {
+      "question": "Unterstützen Sie bei Domain und Hosting?",
+      "answer": "Ja, wir wählen einen SEO-optimierten Domainnamen, richten zuverlässiges Hosting mit hoher Verfügbarkeit ein und konfigurieren SSL-Zertifikate sowie ein CDN für schnellere Ladezeiten."
+    },
+    {
+      "question": "Kann ich eine mehrsprachige Website beauftragen?",
+      "answer": "Ja, wir bieten professionelle Mehrsprachigkeit mit korrekter Lokalisierung, hreflang-Tags für SEO und benutzerfreundlichem Sprachwechsel."
+    },
+    {
+      "question": "Welche Technologien verwenden Sie?",
+      "answer": "Wir setzen auf moderne Technologien wie HTML5, CSS3, JavaScript, React, Next.js (SSR/SSG) und Node.js – für Leistung, Skalierbarkeit und Suchmaschinenfreundlichkeit."
+    },
+    {
+      "question": "Wie testen Sie die Website vor dem Launch?",
+      "answer": "Wir prüfen Funktionalität, Responsivität, Ladegeschwindigkeit, SEO und Sicherheit, um eine stabile und leistungsstarke Website zu gewährleisten."
+    }
+  ]
+}
