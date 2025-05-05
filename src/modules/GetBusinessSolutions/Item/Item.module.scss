@@ -1,10 +1,11 @@
 .title {
+  transition: transform 0.5s ease-in-out;
   font-weight: 500;
   font-size: 20px;
   line-height: 136%;
-  transition: transform 0.5s ease-in-out;
   white-space: nowrap;
 }
+
 .description {
   font-weight: 400;
   @include font(14, 20);
@@ -13,6 +14,7 @@
     @include font(16, 23);
   }
 }
+
 .mainContent {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,8 @@
 }
 
 .itemList {
+  transition: background 0.3s ease-in-out;
+
   position: relative;
   border-radius: 4px;
   padding: 14px 18px;
@@ -52,7 +56,7 @@
     gap: 24px;
     flex: 1 1 calc((100% - 40px) / 4);
   }
-  transition: background 0.3s ease-in-out;
+
   .contentWrapper {
     display: flex;
     flex-direction: column;
