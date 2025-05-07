@@ -1,0 +1,42 @@
+{
+  "title": {
+    "prefix": "From ",
+    "highlighted": "idea ",
+    "between": "to ",
+    "highlightedNext": "launch"
+  },
+  "subtitle": "Transparency, clarity, and results",
+  "subtitleAnd": " — that’s how we work with clients. We guide you step by step so that each stage is clear and predictable.",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Introduction and Analysis",
+      "description": "We dive into your business, listen to your ideas, and define goals. Based on this, we build a strategy tailored to your specific needs.",
+      "component": "StepsOne"
+    },
+    {
+      "number": 2,
+      "title": "Design and Prototyping",
+      "description": "We create concepts, design layouts, and the structure of the future website. Everything is in your style and according to modern UI/UX standards. This is where the visual 'DNA' of the project is formed.",
+      "component": "StepsTwo"
+    },
+    {
+      "number": 3,
+      "title": "Development and Testing",
+      "description": "Our developers get to work. In parallel, we test every feature to ensure everything runs flawlessly — fast, stable, and bug-free.",
+      "component": "StepsThree"
+    },
+    {
+      "number": 4,
+      "title": "Launch",
+      "description": "Final checks, optimization, and setup — and the project is ready to go live. We launch your site to production and verify its stability in a real environment.",
+      "component": "StepFour"
+    },
+    {
+      "number": 5,
+      "title": "Support and Growth",
+      "description": "We don’t disappear after launch. We’re always here to help, update, improve, or scale the product to meet new challenges.",
+      "component": null
+    }
+  ]
+}

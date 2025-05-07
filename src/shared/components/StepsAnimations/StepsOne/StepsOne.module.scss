@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  width: 276px;
+  height: 200px;
+  border-radius: 8px;
+  background: #1d1e27;
+  box-shadow: 0 0 16px rgba(109, 28, 207, 0.2);
+  overflow: hidden;
+}
+
+.imgWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  will-change: transform;
+}

@@ -1,0 +1,42 @@
+{
+  "title": {
+    "prefix": "Von",
+    "highlighted": "der Idee",
+    "between": "bis",
+    "highlightedNext": "dem Start"
+  },
+  "subtitle": "Transparenz, Klarheit und Ergebnisse",
+  "subtitleAnd": " – so arbeiten wir mit unseren Kunden. Wir begleiten Sie Schritt für Schritt, damit jede Phase verständlich und vorhersehbar ist.",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Kennenlernen und Analyse",
+      "description": "Wir tauchen in Ihr Geschäft ein, hören Ihre Ideen und definieren Ziele. Auf dieser Grundlage entwickeln wir eine Strategie, die genau auf Ihre Bedürfnisse zugeschnitten ist.",
+      "component": "StepsOne"
+    },
+    {
+      "number": 2,
+      "title": "Design und Prototyping",
+      "description": "Wir erstellen Konzepte, Design-Layouts und die Struktur der zukünftigen Website. Alles in Ihrem Stil und nach modernen UI/UX-Standards. Hier entsteht die visuelle 'DNA' des Projekts.",
+      "component": "StepsTwo"
+    },
+    {
+      "number": 3,
+      "title": "Entwicklung und Tests",
+      "description": "Unsere Entwickler legen los. Gleichzeitig testen wir jede Funktion, damit alles einwandfrei läuft – schnell, stabil und fehlerfrei.",
+      "component": "StepsThree"
+    },
+    {
+      "number": 4,
+      "title": "Start",
+      "description": "Letzte Prüfungen, Optimierung und Konfiguration – und das Projekt ist startbereit. Wir bringen Ihre Website live und prüfen die Stabilität im realen Betrieb.",
+      "component": "StepFour"
+    },
+    {
+      "number": 5,
+      "title": "Support und Weiterentwicklung",
+      "description": "Nach dem Launch lassen wir Sie nicht allein. Wir sind jederzeit erreichbar, um zu helfen, zu aktualisieren, zu verbessern oder das Produkt für neue Anforderungen zu skalieren.",
+      "component": null
+    }
+  ]
+}
