@@ -7,10 +7,9 @@ import s from './StepsTwo.module.scss';
 export default function StepsTwo() {
   const containerRef = useRef(null);
   const wrapperRef = useRef(null);
-  const imgRef = useRef(null); // добавили imgRef для отслеживания
+  const imgWrapperRef = useRef(null); // изменено: обёртка вместо прямого img
   const [inView, setInView] = useState(false);
 
-  // Наблюдение за imgRef (центральное изображение)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -21,7 +20,7 @@ export default function StepsTwo() {
       { threshold: 0.5 }
     );
 
-    const currentImgRef = imgRef.current;
+    const currentImgRef = imgWrapperRef.current;
 
     if (currentImgRef) {
       observer.observe(currentImgRef);
@@ -34,13 +33,13 @@ export default function StepsTwo() {
     };
   }, []);
 
-  // GSAP-анимация
   useEffect(() => {
     const container = containerRef.current;
     const wrapper = wrapperRef.current;
-    if (!container || !wrapper) return;
+    const target = imgWrapperRef.current;
+    if (!container || !wrapper || !target) return;
 
-    gsap.killTweensOf(wrapper);
+    gsap.killTweensOf([wrapper, target]);
     container.style.overflow = 'hidden';
 
     const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
@@ -49,14 +48,14 @@ export default function StepsTwo() {
       tl.to(wrapper, { y: 40, duration: 5 })
         .add(() => (container.style.overflow = 'visible'))
         .to(
-          wrapper.children[1],
-          { scale: 1.3, duration: 1.2, zIndex: 2 },
+          target,
+          { scale: 1.3, duration: 1.2, zIndex: 2, opacity: 4 },
           '-=1'
         );
     } else {
-      tl.to(wrapper, { y: 0, duration: 5 })
+      tl.to(wrapper, { y: 0, duration: 9 })
         .add(() => (container.style.overflow = 'hidden'))
-        .to(wrapper.children[1], { scale: 1, duration: 0.5 }, '<');
+        .to(target, { scale: 1, duration: 0.5, opacity: 2 }, '<');
     }
 
     return () => tl.kill();
@@ -66,13 +65,14 @@ export default function StepsTwo() {
     <div className={s.container} ref={containerRef}>
       <div className={s.imgWrapper} ref={wrapperRef}>
         <Image src="/image/steps-two.png" alt="img1" width={240} height={76} />
-        <Image
-          ref={imgRef} // <- ref для наблюдения
-          src="/image/steps-two.png"
-          alt="img2"
-          width={240}
-          height={76}
-        />
+        <div className={s.centerImage} ref={imgWrapperRef}>
+          <Image
+            src="/image/steps-two.png"
+            alt="img2"
+            width={240}
+            height={76}
+          />
+        </div>
         <Image src="/image/steps-two.png" alt="img3" width={240} height={76} />
       </div>
     </div>

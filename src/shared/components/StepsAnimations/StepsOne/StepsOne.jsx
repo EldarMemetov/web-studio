@@ -43,20 +43,28 @@ export default function StepsOne() {
     });
 
     if (inView) {
-      tl.to(imgRef.current, {
-        y: -30,
-        scale: 1,
-        opacity: 1,
-        duration: 10,
-        onStart: () => {
-          if (containerRef.current) {
-            containerRef.current.style.overflow = 'visible';
-          }
+      tl.fromTo(
+        imgRef.current,
+        {
+          y: 130,
+          scale: 0.1,
+          opacity: 0.5,
         },
-      });
+        {
+          y: -30,
+          scale: 1,
+          opacity: 1,
+          duration: 10,
+          onStart: () => {
+            if (containerRef.current) {
+              containerRef.current.style.overflow = 'visible';
+            }
+          },
+        }
+      );
     } else {
       tl.to(imgRef.current, {
-        y: 0,
+        y: 100,
         scale: 0.1,
         opacity: 0.5,
         duration: 7,
