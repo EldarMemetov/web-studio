@@ -1,6 +1,10 @@
+.centerImage {
+  will-change: transform;
+}
 .container {
+  max-width: 100%;
+  width: 90%;
   position: relative;
-  width: 276px;
   height: 200px;
   display: flex;
   justify-content: center;
@@ -8,8 +12,18 @@
   background: #1d1e27;
   box-shadow: 0 0 16px rgba(109, 28, 207, 0.2);
   overflow: visible;
+  @include media(mobile) {
+    position: relative;
+    width: 276px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1d1e27;
+    box-shadow: 0 0 16px rgba(109, 28, 207, 0.2);
+    overflow: visible;
+  }
 }
-
 .imgWrapper {
   display: flex;
   flex-direction: column;
@@ -19,9 +33,5 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  will-change: transform;
-}
-
-.centerImage {
   will-change: transform;
 }

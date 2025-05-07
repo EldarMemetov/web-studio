@@ -1,17 +1,7 @@
-.container {
-  position: relative;
-  border-radius: 8px;
-  padding: 19px 20px;
-  width: 276px;
-  height: 200px;
-  box-shadow: 0 0 16px 0 rgba(109, 28, 207, 0.2);
-  background: #1d1e27;
-  z-index: 1;
-}
 .imgWrapper {
   position: absolute;
-  bottom: -20%;
-  left: 65%;
+  bottom: -40%;
+  left: 60%;
   transform: translateX(-50%);
   will-change: transform;
   z-index: 5;
@@ -37,4 +27,26 @@
   font-size: 16px;
   line-height: 140%;
   color: #9f9fa6;
+}
+
+.container {
+  max-width: 100%;
+  width: 90%;
+  position: relative;
+  border-radius: 8px;
+  padding: 19px 20px;
+  height: 200px;
+  box-shadow: 0 0 16px 0 rgba(109, 28, 207, 0.2);
+  background: #1d1e27;
+  z-index: 1;
+  @include media(mobile) {
+    position: relative;
+    border-radius: 8px;
+    padding: 19px 20px;
+    width: 276px;
+    height: 200px;
+    box-shadow: 0 0 16px 0 rgba(109, 28, 207, 0.2);
+    background: #1d1e27;
+    z-index: 1;
+  }
 }

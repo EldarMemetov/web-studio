@@ -49,7 +49,7 @@ export default function StepsTwo() {
         .add(() => (container.style.overflow = 'visible'))
         .to(
           target,
-          { scale: 1.3, duration: 1.2, zIndex: 2, opacity: 4 },
+          { scaleX: 1.083, duration: 1.2, zIndex: 2, opacity: 1 },
           '-=1'
         );
     } else {

@@ -18,16 +18,16 @@ export default function StepsItem({ number, title, description, component }) {
   const Component = component ? components[component] : null;
 
   return (
-    <li className={s.listItem} data-aos="fade-up" data-aos-duration="1000">
+    <li className={s.listItem} data-aos="fade-right" data-aos-duration="1000">
       <div className={s.containerContent}>
-        <h3 className={s.info} data-aos="fade-up" data-aos-delay="200">
+        <h3 className={s.info} data-aos="fade-top" data-aos-delay="200">
           {title}
         </h3>
-        <h4 className={s.number} data-aos="fade-up" data-aos-delay="400">
+        <h4 className={s.number} data-aos="fade-right" data-aos-delay="400">
           {number}
         </h4>
       </div>
-      <p className={s.infoTitle} data-aos="fade-up" data-aos-delay="600">
+      <p className={s.infoTitle} data-aos="fade-top" data-aos-delay="600">
         {description}
       </p>
       {Component && (
