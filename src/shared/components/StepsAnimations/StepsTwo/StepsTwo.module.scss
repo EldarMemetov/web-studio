@@ -1,13 +1,13 @@
 .container {
   position: relative;
   width: 276px;
-  height: 300px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #1d1e27;
   box-shadow: 0 0 16px rgba(109, 28, 207, 0.2);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .imgWrapper {
