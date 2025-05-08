@@ -15,6 +15,7 @@
   @include media(tablet) {
     @include font(64, 83);
     margin-bottom: 24px;
+    width: 450px;
   }
 
   @include media(desktop) {
@@ -36,9 +37,14 @@
   margin-bottom: 100px;
   width: 250px;
   color: #dadbe6;
-
+  position: relative;
+  z-index: 5;
+  @include media(tablet) {
+    width: auto;
+  }
   @include media(desktop) {
     @include font(24, 38);
+    width: auto;
   }
 }
 
@@ -63,4 +69,9 @@
 }
 .wrapper {
   position: relative;
+}
+.lineContainer {
+  @include media(tablet) {
+    position: relative;
+  }
 }

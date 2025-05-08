@@ -22,8 +22,10 @@ export default async function StepsToLaunch({ locale }) {
             <span className={styles.spanDescription}>{t('subtitle')}</span>
             {t('subtitleAnd')}
           </p>
-          <div className={styles.line} />
-          <StepsList items={t('steps', { returnObjects: true })} />
+          <div className={styles.lineContainer}>
+            <div className={styles.line} />
+            <StepsList items={t('steps', { returnObjects: true })} />
+          </div>
         </div>
       </Container>
     </section>
