@@ -1,10 +1,18 @@
 .imgWrapper {
   position: absolute;
   bottom: -40%;
-  left: 60%;
+  left: 55%;
   transform: translateX(-50%);
   will-change: transform;
   z-index: 5;
+  @include media(mobile) {
+    position: absolute;
+    bottom: -40%;
+    left: 60%;
+    transform: translateX(-50%);
+    will-change: transform;
+    z-index: 5;
+  }
 }
 
 .textContainer {
