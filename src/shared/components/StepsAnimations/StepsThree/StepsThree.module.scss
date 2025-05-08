@@ -13,6 +13,10 @@
     will-change: transform;
     z-index: 5;
   }
+  @include media(desktop) {
+    bottom: -40%;
+    left: 57%;
+  }
 }
 
 .textContainer {
@@ -24,6 +28,10 @@
   overflow: hidden;
   padding: 10px;
   z-index: 1;
+  @include media(desktop) {
+    width: 540px;
+    height: 220px;
+  }
 }
 
 .textWrapper {
@@ -56,5 +64,21 @@
     box-shadow: 0 0 16px 0 rgba(109, 28, 207, 0.2);
     background: #1d1e27;
     z-index: 1;
+  }
+  @include media(desktop) {
+    width: 560px;
+    height: 193px;
+  }
+}
+
+.imgThree {
+  @include media(desktop) {
+    display: none;
+  }
+}
+.imgThreeDesktop {
+  display: none;
+  @include media(desktop) {
+    display: block;
   }
 }

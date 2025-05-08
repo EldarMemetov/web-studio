@@ -19,6 +19,10 @@
     overflow: hidden;
     z-index: 2;
   }
+  @include media(desktop) {
+    width: 560px;
+    height: 220px;
+  }
 }
 .imgWrapper {
   position: absolute;
@@ -38,4 +42,15 @@
 .wrapper {
   position: relative;
   width: fit-content;
+}
+.imgFour {
+  @include media(desktop) {
+    display: none;
+  }
+}
+.imgFourDesktop {
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
 }

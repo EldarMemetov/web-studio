@@ -82,9 +82,18 @@ export default function StepsOne() {
       <div ref={imgRef} className={s.imgWrapper}>
         <Image
           src="/image/steps-one.png"
+          className={s.imgOne}
           alt="Step one"
           width={240}
           height={256}
+          priority
+        />
+        <Image
+          src="/image/steps-one-desktop.png"
+          className={s.imgOneDesktop}
+          alt="Step one"
+          width={459}
+          height={203}
           priority
         />
       </div>

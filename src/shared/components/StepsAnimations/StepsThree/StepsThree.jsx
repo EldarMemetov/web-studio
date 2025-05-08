@@ -3,13 +3,32 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import s from './StepsThree.module.scss';
-import { WebText } from '../../GetFullText/WebText';
+import { WebText, WebTextDesktop } from '../../GetFullText/WebText';
+
+function useIsDesktop(breakpoint = 1440) {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const updateMedia = () => {
+      setIsDesktop(window.innerWidth >= breakpoint);
+    };
+
+    updateMedia();
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia);
+  }, [breakpoint]);
+
+  return isDesktop;
+}
 
 export default function StepsThree() {
-  const fullText = WebText();
+  const isDesktop = useIsDesktop();
+  const fullText = isDesktop ? WebTextDesktop() : WebText();
+
   const [printedText, setPrintedText] = useState('');
   const textContainerRef = useRef(null);
   const textInnerRef = useRef(null);
+
   const lastOverflowRef = useRef(0);
 
   useEffect(() => {
@@ -24,6 +43,7 @@ export default function StepsThree() {
 
         const container = textContainerRef.current;
         const inner = textInnerRef.current;
+
         if (container && inner) {
           const overflow = inner.scrollHeight - container.clientHeight;
           if (overflow !== lastOverflowRef.current) {
@@ -50,7 +70,7 @@ export default function StepsThree() {
 
     startTyping();
     return () => clearInterval(typingInterval);
-  }, [fullText]);
+  }, [fullText, textContainerRef, textInnerRef]);
 
   return (
     <div className={s.container}>
@@ -58,8 +78,16 @@ export default function StepsThree() {
         <Image
           src="/image/steps-three.png"
           alt="steps-three"
+          className={s.imgThree}
           width={240}
           height={205}
+        />
+        <Image
+          src="/image/steps-three-desktop.png"
+          alt="steps-three"
+          className={s.imgThreeDesktop}
+          width={459}
+          height={203}
         />
       </div>
       <div ref={textContainerRef} className={s.textContainer}>

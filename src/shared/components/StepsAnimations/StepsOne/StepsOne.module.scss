@@ -25,4 +25,19 @@
     box-shadow: 0 0 16px rgba(109, 28, 207, 0.2);
     overflow: hidden;
   }
+  @include media(desktop) {
+    width: 560px;
+    height: 193px;
+  }
+}
+.imgOne {
+  @include media(desktop) {
+    display: none;
+  }
+}
+.imgOneDesktop {
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
 }

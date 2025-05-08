@@ -11,6 +11,7 @@
 
   @include media(desktop) {
     margin-bottom: 12px;
+    width: auto;
   }
 }
 
@@ -39,6 +40,12 @@
     left: -42%;
     right: auto;
     transform: translateX(50%);
+    top: 10px;
+  }
+  @include media(desktop) {
+    left: -15%;
+    right: auto;
+    top: 45px;
   }
 }
 
@@ -47,6 +54,10 @@
     left: auto;
     right: -42%;
     transform: translateX(-50%);
+  }
+  @include media(desktop) {
+    left: auto;
+    right: -15%;
   }
 }
 .specialNumber {
@@ -66,6 +77,9 @@
   @include media(tablet) {
     margin-bottom: 0px;
     width: 280px;
+  }
+  @include media(desktop) {
+    width: 560px;
   }
 }
 .listContent {

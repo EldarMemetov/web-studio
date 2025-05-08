@@ -30,6 +30,7 @@ export default function StepsTwo() {
           <Image
             src="/image/steps-two.png"
             alt="img1"
+            className={s.imgOne}
             width={240}
             height={76}
             {...(inView && { 'data-aos': 'fade-down' })}
@@ -42,6 +43,7 @@ export default function StepsTwo() {
             <Image
               src="/image/steps-two.png"
               alt="img2"
+              className={s.imgOne}
               width={264}
               height={76}
             />
@@ -50,8 +52,40 @@ export default function StepsTwo() {
           <Image
             src="/image/steps-two.png"
             alt="img3"
+            className={s.imgOne}
             width={240}
             height={76}
+            {...(inView && { 'data-aos': 'fade-up' })}
+          />
+
+          <Image
+            src="/image/steps-two-desktop.png"
+            alt="img1"
+            className={s.imgOneDesktop}
+            width={400}
+            height={72}
+            {...(inView && { 'data-aos': 'fade-down' })}
+          />
+
+          <div
+            className={s.centerImage}
+            {...(inView && { 'data-aos': 'fade' })}
+          >
+            <Image
+              src="/image/steps-two-desktop.png"
+              alt="img2"
+              className={s.imgOneDesktop}
+              width={457}
+              height={84}
+            />
+          </div>
+
+          <Image
+            src="/image/steps-two-desktop.png"
+            alt="img3"
+            className={s.imgOneDesktop}
+            width={400}
+            height={72}
             {...(inView && { 'data-aos': 'fade-up' })}
           />
         </div>

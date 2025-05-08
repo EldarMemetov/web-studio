@@ -78,8 +78,16 @@ export default function StepFour() {
           <Image
             src="/image/steps-four.png"
             alt="steps-four"
+            className={s.imgFour}
             width={240}
             height={264}
+          />
+          <Image
+            src="/image/steps-four-desktop.png"
+            alt="steps-four"
+            className={s.imgFourDesktop}
+            width={469}
+            height={296}
           />
         </div>
       </div>

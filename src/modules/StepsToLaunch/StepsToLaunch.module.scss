@@ -20,6 +20,7 @@
 
   @include media(desktop) {
     @include font(80, 104);
+    width: auto;
   }
 }
 
