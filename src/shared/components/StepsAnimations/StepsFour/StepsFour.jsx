@@ -78,7 +78,7 @@ export default function StepFour() {
           <Image
             src="/image/steps-four.png"
             alt="steps-four"
-            width={230}
+            width={240}
             height={264}
           />
         </div>
