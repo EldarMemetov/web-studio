@@ -16,7 +16,7 @@ export default function StepsItem({ number, title, description, component }) {
   const Component = component ? components[component] : null;
 
   return (
-    <li className={s.listItem} data-aos="fade-right" data-aos-duration="700">
+    <li className={s.listItem} data-aos="fade-right" data-aos-duration="1000">
       <div className={s.containerContent}>
         <h3 className={s.info} data-aos="fade-top" data-aos-delay="200">
           {title}
