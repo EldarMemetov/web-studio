@@ -37,21 +37,11 @@ export default async function WebHero({ locale }) {
               </p>
 
               <div className={s.containerButton}>
-                <ScrollButton
-                  targetId="feedback-form"
-                  variant="variant2"
-                  data-aos="zoom-in"
-                  data-aos-delay="1000"
-                >
+                <ScrollButton targetId="feedback-form" variant="variant2">
                   {t('servicesButton')}
                 </ScrollButton>
 
-                <ScrollButton
-                  targetId="ideas-home"
-                  variant="variant3"
-                  data-aos="zoom-in"
-                  data-aos-delay="1000"
-                >
+                <ScrollButton targetId="ideas-home" variant="variant3">
                   {t('contactButton')}
                 </ScrollButton>
               </div>
