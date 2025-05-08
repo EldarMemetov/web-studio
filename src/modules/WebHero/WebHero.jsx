@@ -12,7 +12,7 @@ export default async function WebHero({ locale }) {
       <Container>
         <AnimationInitializer
           options={{
-            duration: 1500,
+            duration: 800,
             easing: 'ease-in-out-bounce',
             offset: 20,
           }}

@@ -1,5 +1,3 @@
-'use client';
-
 import StepsOne from '@/shared/components/StepsAnimations/StepsOne/StepsOne';
 import StepsTwo from '@/shared/components/StepsAnimations/StepsTwo/StepsTwo';
 import StepsThree from '@/shared/components/StepsAnimations/StepsThree/StepsThree';
@@ -18,20 +16,20 @@ export default function StepsItem({ number, title, description, component }) {
   const Component = component ? components[component] : null;
 
   return (
-    <li className={s.listItem} data-aos="fade-right" data-aos-duration="1000">
+    <li className={s.listItem} data-aos="fade-right" data-aos-duration="500">
       <div className={s.containerContent}>
-        <h3 className={s.info} data-aos="fade-top" data-aos-delay="200">
+        <h3 className={s.info} data-aos="fade-top" data-aos-delay="100">
           {title}
         </h3>
-        <h4 className={s.number} data-aos="fade-right" data-aos-delay="400">
+        <h4 className={s.number} data-aos="fade-right" data-aos-delay="200">
           {number}
         </h4>
       </div>
-      <p className={s.infoTitle} data-aos="fade-top" data-aos-delay="600">
+      <p className={s.infoTitle} data-aos="fade-top" data-aos-delay="300">
         {description}
       </p>
       {Component && (
-        <div data-aos="zoom-in" data-aos-delay="800">
+        <div data-aos="zoom-in" data-aos-delay="400">
           <Component />
         </div>
       )}
