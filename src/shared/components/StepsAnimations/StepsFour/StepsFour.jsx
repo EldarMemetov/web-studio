@@ -27,37 +27,44 @@ export default function StepFour() {
   }, []);
 
   useEffect(() => {
-    if (!inView) return;
-
     const imgEl = imgRef.current;
     const searchIcon = iconRef.current;
 
-    tlRef.current = gsap.timeline({ onComplete: () => setShowSelected(true) });
+    if (inView) {
+      setShowSelected(false);
 
-    tlRef.current.fromTo(
-      imgEl,
-      { y: 1 },
-      { y: -60, duration: 7, ease: 'power1.inOut' }
-    );
+      tlRef.current = gsap.timeline({
+        onComplete: () => setShowSelected(true),
+      });
 
-    if (searchIcon) {
-      gsap.fromTo(
-        searchIcon,
-        { scale: 1 },
-        {
-          scale: 1.2,
-          duration: 7,
-          repeat: 1,
-          yoyo: true,
-          ease: 'power1.inOut',
-        }
+      tlRef.current.fromTo(
+        imgEl,
+        { y: 1 },
+        { y: -60, duration: 3, ease: 'power1.inOut' }
       );
+
+      if (searchIcon) {
+        gsap.fromTo(
+          searchIcon,
+          { scale: 1 },
+          {
+            scale: 1.2,
+            duration: 3,
+            repeat: 1,
+            yoyo: true,
+            ease: 'power1.inOut',
+          }
+        );
+      }
+    } else {
+      tlRef.current?.kill();
+      gsap.killTweensOf(searchIcon);
+      setShowSelected(false);
     }
 
     return () => {
       tlRef.current?.kill();
-
-      if (searchIcon) gsap.killTweensOf(searchIcon);
+      gsap.killTweensOf(searchIcon);
     };
   }, [inView]);
 

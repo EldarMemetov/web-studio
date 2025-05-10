@@ -40,6 +40,7 @@ export const NAMESPACES = [
   'toggleQuestionsWebDev',
   'webHero',
   'stepsToLaunch',
+  'effectiveSolutions',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

@@ -1,0 +1,203 @@
+{
+  "spanTitle": "Solutions, ",
+  "title": "we offer",
+  "descriptionBefore": "QVRIX offers a full range of solutions — from concept to launch. We adapt to your business to create ",
+  "SpanDescription": "effective, beautiful, and functional websites, ",
+  "descriptionAfter": " that truly work.",
+  "solutions": [
+    {
+      "title": "UI/UX Design",
+      "info": "We design, create, and iterate.",
+      "images": [
+        {
+          "src": "/image/effective/ui-mobile.png",
+          "alt": "ui/ux-design",
+          "width": 157,
+          "height": 82
+        }
+      ]
+    },
+    {
+      "title": "Landing Pages",
+      "info": "Convert at first glance",
+      "images": [
+        {
+          "src": "/image/effective/landing-mobile-figma.png",
+          "alt": "landing-pages",
+          "width": 72,
+          "height": 72
+        },
+        {
+          "src": "/image/effective/landing-mobile-ai.png",
+          "alt": "landing-pages",
+          "width": 56,
+          "height": 56
+        },
+        {
+          "src": "/image/effective/landing-mobile-ps.png",
+          "alt": "landing-pages",
+          "width": 56,
+          "height": 56
+        }
+      ]
+    },
+    {
+      "title": "SEO Promotion",
+      "info": "Your site at the top of search results.",
+      "images": [
+        {
+          "src": "/image/effective/seo-mobile.png",
+          "alt": "seo-promotion",
+          "width": 252,
+          "height": 170
+        },
+        {
+          "src": "/image/effective/seo-mobile-keyword.png",
+          "alt": "seo-promotion",
+          "width": 280,
+          "height": 40,
+          "hideOnMobile": true
+        }
+      ]
+    },
+    {
+      "title": "Website Redesign",
+      "info": "Refreshing your site for better results",
+      "images": [
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "title": "Online Stores",
+      "info": "We build sites that drive sales.",
+      "images": [
+        {
+          "src": "/image/effective/Internet-mobile.png",
+          "alt": "online-stores",
+          "width": 166,
+          "height": 102
+        },
+        {
+          "src": "/image/effective/Internet-mobile-crm.png",
+          "alt": "online-stores",
+          "width": 47,
+          "height": 36
+        },
+        {
+          "src": "/image/effective/Internet-mobile-one.png",
+          "alt": "online-stores",
+          "width": 49,
+          "height": 49
+        }
+      ]
+    },
+    {
+      "title": "Corporate Websites",
+      "info": "Developing sites for small and large businesses.",
+      "images": [
+        {
+          "src": "/image/effective/corporate-mobile.png",
+          "alt": "corporate-websites",
+          "width": 167,
+          "height": 167
+        },
+        {
+          "src": "/image/effective/corporate-mobile-schedule.png",
+          "alt": "corporate-websites",
+          "width": 177,
+          "height": 117,
+          "hideOnMobile": true
+        }
+      ]
+    },
+    {
+      "title": "Personal Blogs",
+      "info": "Creating platforms that highlight your uniqueness.",
+      "images": [
+        {
+          "src": "/image/effective/blog-mobile.png",
+          "alt": "personal-blogs",
+          "width": 81,
+          "height": 109
+        },
+        {
+          "src": "/image/effective/blog-mobile-two.png",
+          "alt": "personal-blogs",
+          "width": 54,
+          "height": 54
+        },
+        {
+          "src": "/image/effective/blog-mobile-one.png",
+          "alt": "personal-blogs",
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "title": "Technical Support",
+      "info": "Your site stays up—so you stay worry-free",
+      "images": [
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        }
+      ]
+    }
+  ]
+}

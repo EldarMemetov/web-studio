@@ -6,15 +6,11 @@ export default function HeroVideo() {
     <section className={s.section}>
       <Container>
         <div className={s.videoWrapper}>
-          <iframe
-            width="600px"
-            height="600px"
-            src="https://www.youtube.com/embed/K5yww7lCrvk"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <h1 className={s.title}>
+            Qvrix створює відео, які формують імідж бренду — від ідеї до
+            фінального монтажу. Професійний контент для впізнаваності, залучення
+            клієнтів і зміцнення довіри.
+          </h1>
         </div>
       </Container>
     </section>

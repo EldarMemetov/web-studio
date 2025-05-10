@@ -1,0 +1,355 @@
+.SpanDescription {
+  font-weight: 600;
+}
+.titleInfo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 146%;
+}
+.info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #dadbe6;
+}
+
+.listContent {
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 37px 44px 16px 16px;
+  width: 338px;
+  height: 136px;
+  overflow: hidden;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #adaaaa7d, #4140406e) 1;
+  background: linear-gradient(
+    268deg,
+    rgb(150 36 226 / 15%) 0%,
+    rgb(150 36 226 / 14%) 30%,
+    rgb(150 36 226 / 5%) 50%,
+    rgba(2, 7, 157, 0) 100%
+  );
+
+  @include media(tablet) {
+  }
+
+  @include media(desktop) {
+  }
+}
+
+//IMG//
+
+.hideOnMobile {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+  }
+}
+
+.absoluteImage {
+  position: absolute;
+  z-index: -1;
+}
+//UI/UX-дизайн
+.liUiDesign {
+  @include media(tablet) {
+    width: 310px;
+    height: 272px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  @include media(desktop) {
+    width: 392px;
+    height: 412px;
+    padding: 20px;
+  }
+  .infoMobile {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+  .infoTablet {
+    display: none;
+    @include media(tablet) {
+      display: block;
+    }
+  }
+}
+.imgUiDesign {
+  top: 5px;
+  right: 10px;
+  width: 157px;
+  height: 82px;
+  //   @include hover-transform(1.02, 0deg);
+  @include media(tablet) {
+    width: 222px;
+    height: 116px;
+    right: 30px;
+  }
+}
+//Лендинги
+.liLandingPages {
+  padding-top: 59px;
+  @include media(tablet) {
+    width: 310px;
+  }
+}
+.imgLandingPageFigma {
+  top: 25px;
+  right: 80px;
+}
+.imgLandingPageAi {
+  top: 5px;
+  right: 150px;
+}
+.imgLandingPagePs {
+  top: 5px;
+  right: 30px;
+}
+//SEO-просування
+.liSeoPromotion {
+  padding-top: 59px;
+  @include media(tablet) {
+    width: 310px;
+  }
+}
+.imgSeoChart {
+  top: 0px;
+  right: 0px;
+  width: 210px;
+  height: 140px;
+}
+//Редизайн сайтів
+.liRedesign {
+  @include media(tablet) {
+    width: 310px;
+  }
+}
+.imgRedesignMain {
+  top: 10px;
+  right: 45px;
+}
+.website-redesign {
+  top: -15px;
+  right: 175px;
+}
+.imgRedesignIconOne {
+  top: -13px;
+  right: 180px;
+}
+.imgRedesignIconTwo {
+  top: 10px;
+  right: 125px;
+}
+.imgRedesignIconThree {
+  top: 70px;
+  right: 10px;
+}
+.imgRedesignIconFour {
+  right: 55px;
+  top: 120px;
+}
+//Інтернет-магазини
+.liOnlineStores {
+  @include media(tablet) {
+    width: 310px;
+    height: 272px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .infoMobile {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+  .infoTablet {
+    display: none;
+    @include media(tablet) {
+      display: block;
+    }
+  }
+}
+.imgStoreMain {
+  top: 0;
+  right: 20px;
+  @include media(tablet) {
+    display: none;
+  }
+}
+.imgStoreCrm {
+  top: 12px;
+  right: 160px;
+  @include media(tablet) {
+    display: none;
+  }
+}
+.imgStoreIcon {
+  top: 80px;
+  right: 20px;
+  @include media(tablet) {
+    display: none;
+  }
+}
+.imgStoreIconTablet {
+  display: none;
+  @include media(tablet) {
+    display: block;
+    top: 0;
+    right: 50px;
+  }
+}
+//Корпоративні сайти
+.liCorporateWebsites {
+  @include media(tablet) {
+    width: 310px;
+    height: 272px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .infoMobile {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+  .infoTablet {
+    display: none;
+    @include media(tablet) {
+      display: block;
+    }
+  }
+}
+.imgCorporateMain {
+  top: -50px;
+  right: 10px;
+  @include media(tablet) {
+    width: 216px;
+    height: 216px;
+    top: 0;
+    left: -30px;
+  }
+}
+.imgCorporateSchedule {
+  display: none;
+  @include media(tablet) {
+    display: block;
+    top: 20px;
+    right: 20px;
+  }
+}
+//Персональні блоги
+.liPersonalBlogs {
+  @include media(tablet) {
+    width: 310px;
+    height: 272px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .infoMobile {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+  .infoTablet {
+    display: none;
+    @include media(tablet) {
+      display: block;
+    }
+  }
+}
+.imgBlogMain {
+  top: 1px;
+  right: 2px;
+  width: 81px;
+  height: 109px;
+  @include media(tablet) {
+    width: 103px;
+    height: 140px;
+    top: 13px;
+    right: 18px;
+  }
+  @include media(desktop) {
+    width: 136px;
+    height: 194px;
+  }
+}
+.imgBlogTwo {
+  top: 1px;
+  right: 130px;
+  width: 54px;
+  height: 54px;
+  @include media(tablet) {
+    width: 79px;
+    height: 79px;
+    top: 50px;
+    right: 180px;
+  }
+  @include media(desktop) {
+    width: 80px;
+    height: 80px;
+  }
+}
+.imgBlogOne {
+  top: -16px;
+  right: 84px;
+  width: 54px;
+  height: 54px;
+  @include media(tablet) {
+    width: 79px;
+    height: 79px;
+    top: 10px;
+    right: 130px;
+  }
+  @include media(desktop) {
+    width: 80px;
+    height: 80px;
+  }
+}
+//Техпідтримка
+.liTechnicalSupport {
+  padding-top: 59px;
+  @include media(tablet) {
+    width: 310px;
+  }
+}
+.imgSupportMain {
+  top: 25px;
+  right: 30px;
+}
+.imgSupportIconOne {
+  top: -13px;
+  right: 180px;
+}
+.imgSupportIconTwo {
+  top: 95px;
+  right: 30px;
+}
+.imgSupportIconThree {
+  top: 20px;
+  left: 80px;
+}
+.imgSupportIconFour {
+  top: 17px;
+  right: 120px;
+}
+
+.srOnly {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

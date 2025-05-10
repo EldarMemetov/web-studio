@@ -1,3 +1,4 @@
+import EffectiveSolutions from '@/modules/EffectiveSolutions/EffectiveSolutions';
 import s from './webDevelopment.module.scss';
 import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
 import StepsToLaunch from '@/modules/StepsToLaunch/StepsToLaunch';
@@ -15,6 +16,7 @@ export default async function WebDevelopment({ params: rawParams }) {
       <div className={s.container}>
         <WebHero locale={locale} />
         <StepsToLaunch locale={locale} />
+        <EffectiveSolutions locale={locale} />
         <ToggleQuestions locale={locale} namespace="toggleQuestionsWebDev" />
         <FeedbackForm />
       </div>

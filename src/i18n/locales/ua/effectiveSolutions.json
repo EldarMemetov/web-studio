@@ -1,0 +1,246 @@
+{
+  "spanTitle": "Рішення, ",
+  "title": "які ми пропонуємо",
+  "descriptionBefore": "QVRIX пропонує повний спектр рішень — від концепції до запуску. Ми адаптуємось під ваш бізнес, щоб створити ",
+  "SpanDescription": "ефективні, красиві й функціональні сайти, ",
+  "descriptionAfter": " які дійсно працюють.",
+  "solutions": [
+    {
+      "title": "UI/UX-дизайн",
+      "info": "Ми проєктуємо, створюємо і враховуємо.",
+      "infoTablet": "Ми проєктуємо логічну структуру, створюємо естетичний дизайн і враховуємо поведінку користувачів.",
+      "infoFull": "Інтерфейси, що захоплюють і ведуть до дії Ми проєктуємо логічну структуру, створюємо естетичний дизайн і враховуємо поведінку користувачів, щоб забезпечити зручність, інтуїтивність і WOW-ефект.",
+      "className": "liUiDesign",
+      "images": [
+        {
+          "src": "/image/effective/ui-mobile.png",
+          "alt": "ui/ux-design",
+          "width": 222,
+          "height": 116,
+          "className": "imgUiDesign"
+        }
+      ]
+    },
+    {
+      "title": "Лендинги",
+      "info": "Продають із першого погляду",
+      "className": "liLandingPages",
+      "images": [
+        {
+          "src": "/image/effective/landing-mobile-figma.png",
+          "alt": "landing-pages",
+          "width": 72,
+          "height": 72,
+          "className": "imgLandingPageFigma"
+        },
+        {
+          "src": "/image/effective/landing-mobile-ai.png",
+          "alt": "landing-pages",
+          "width": 56,
+          "height": 56,
+          "className": "imgLandingPageAi"
+        },
+        {
+          "src": "/image/effective/landing-mobile-ps.png",
+          "alt": "landing-pages",
+          "width": 56,
+          "height": 56,
+          "className": "imgLandingPagePs"
+        }
+      ]
+    },
+    {
+      "title": "SEO-просування",
+      "info": "Ваш сайт — у топі пошуковиків.",
+      "className": "liSeoPromotion",
+      "images": [
+        {
+          "src": "/image/effective/seo-mobile.png",
+          "alt": "seo-promotion",
+          "width": 252,
+          "height": 170,
+          "className": "imgSeoChart"
+        },
+        {
+          "src": "/image/effective/seo-mobile-keyword.png",
+          "alt": "seo-promotion",
+          "width": 280,
+          "height": 40,
+          "hideOnMobile": true,
+          "className": "imgSeoKeyword"
+        }
+      ]
+    },
+    {
+      "title": "Редизайн сайтів",
+      "info": "Оновлюємо, щоб сайт приносив результат",
+      "className": "liRedesign",
+      "images": [
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 64,
+          "height": 64,
+          "className": "imgRedesignMain"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 30,
+          "height": 30,
+          "className": "imgRedesignIconOne"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 30,
+          "height": 30,
+          "className": "imgRedesignIconTwo"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 30,
+          "height": 30,
+          "className": "imgRedesignIconThree"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 30,
+          "height": 30,
+          "className": "imgRedesignIconFour"
+        }
+      ]
+    },
+    {
+      "title": "Інтернет-магазини",
+      "info": "Ми створюємо сайти, які приносять продажі.",
+      "infoTablet": "Інтуїтивна структура, адаптація до мобільних, швидке завантаження, інтеграція з CRM та платіжними системами.",
+      "className": "liOnlineStores",
+      "images": [
+        {
+          "src": "/image/effective/Internet-mobile.png",
+          "alt": "online-stores",
+          "width": 166,
+          "height": 102,
+          "className": "imgStoreMain"
+        },
+        {
+          "src": "/image/effective/Internet-mobile-crm.png",
+          "alt": "online-stores",
+          "width": 47,
+          "height": 36,
+          "className": "imgStoreCrm"
+        },
+        {
+          "src": "/image/effective/Internet-mobile-one.png",
+          "alt": "online-stores",
+          "width": 49,
+          "height": 49,
+          "className": "imgStoreIcon"
+        },
+        {
+          "src": "/image/effective/Internet-tablet-one.png",
+          "alt": "online-stores",
+          "width": 212,
+          "height": 120,
+          "className": "imgStoreIconTablet"
+        }
+      ]
+    },
+    {
+      "title": "Корпоративні сайти",
+      "info": "Розробляємо сайти для малого та великого бізнесу.",
+      "infoTablet": "Розробляємо сайти для малого та великого бізнесу — від візиток до масштабних платформ.",
+      "className": "liCorporateWebsites",
+      "images": [
+        {
+          "src": "/image/effective/corporate-mobile.png",
+          "alt": "corporate-websites",
+          "width": 167,
+          "height": 167,
+          "className": "imgCorporateMain"
+        },
+        {
+          "src": "/image/effective/corporate-mobile-schedule.png",
+          "alt": "corporate-websites",
+          "width": 177,
+          "height": 117,
+          "className": "imgCorporateSchedule"
+        }
+      ]
+    },
+    {
+      "title": "Персональні блоги",
+      "info": "Ми створюємо платформи, які підкреслюють вашу унікальність.",
+      "infoTablet": "Ми створюємо стильні й функціональні платформи, які підкреслюють вашу унікальність і допомагають будувати спільноту.",
+      "className": "liPersonalBlogs",
+      "images": [
+        {
+          "src": "/image/effective/blog-mobile.png",
+          "alt": "personal-blogs",
+          "width": 103,
+          "height": 194,
+          "className": "imgBlogMain"
+        },
+        {
+          "src": "/image/effective/blog-mobile-two.png",
+          "alt": "personal-blogs",
+          "width": 80,
+          "height": 80,
+          "className": "imgBlogTwo"
+        },
+        {
+          "src": "/image/effective/blog-mobile-one.png",
+          "alt": "personal-blogs",
+          "width": 80,
+          "height": 80,
+          "className": "imgBlogOne"
+        }
+      ]
+    },
+    {
+      "title": "Техпідтримка",
+      "info": "Сайт працює — ви спокійні",
+      "className": "liTechnicalSupport",
+      "images": [
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 64,
+          "height": 64,
+          "className": "imgSupportMain"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 30,
+          "height": 30,
+          "className": "imgSupportIconOne"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 30,
+          "height": 30,
+          "className": "imgSupportIconTwo"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 30,
+          "height": 30,
+          "className": "imgSupportIconThree"
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 30,
+          "height": 30,
+          "className": "imgSupportIconFour"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "spanTitle": "Lösungen, ",
+  "title": "die wir anbieten",
+  "descriptionBefore": "QVRIX bietet ein vollständiges Spektrum an Lösungen – von der Konzeption bis zum Start. Wir passen uns Ihrem Unternehmen an, um ",
+  "SpanDescription": "effektive, schöne und funktionale Websites zu erstellen, ",
+  "descriptionAfter": " die wirklich funktionieren.",
+  "solutions": [
+    {
+      "title": "UI/UX-Design",
+      "info": "Wir entwerfen, erstellen und optimieren unter Berücksichtigung Ihrer Nutzer.",
+      "images": [
+        {
+          "src": "/image/effective/ui-mobile.png",
+          "alt": "ui/ux-design",
+          "width": 157,
+          "height": 82
+        }
+      ]
+    },
+    {
+      "title": "Landing-Pages",
+      "info": "Konvertieren auf den ersten Blick",
+      "images": [
+        {
+          "src": "/image/effective/landing-mobile-figma.png",
+          "alt": "landing-pages",
+          "width": 72,
+          "height": 72
+        },
+        {
+          "src": "/image/effective/landing-mobile-ai.png",
+          "alt": "landing-pages",
+          "width": 56,
+          "height": 56
+        },
+        {
+          "src": "/image/effective/landing-mobile-ps.png",
+          "alt": "landing-pages",
+          "width": 56,
+          "height": 56
+        }
+      ]
+    },
+    {
+      "title": "SEO-Optimierung",
+      "info": "Ihre Seite an der Spitze der Suchergebnisse.",
+      "images": [
+        {
+          "src": "/image/effective/seo-mobile.png",
+          "alt": "seo-promotion",
+          "width": 252,
+          "height": 170
+        },
+        {
+          "src": "/image/effective/seo-mobile-keyword.png",
+          "alt": "seo-promotion",
+          "width": 280,
+          "height": 40,
+          "hideOnMobile": true
+        }
+      ]
+    },
+    {
+      "title": "Website-Redesign",
+      "info": "Wir aktualisieren Ihre Seite für bessere Ergebnisse",
+      "images": [
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "website-redesign",
+          "width": 40,
+          "height": 40
+        }
+      ]
+    },
+    {
+      "title": "Online-Shops",
+      "info": "Wir erstellen Shops, die Verkäufe steigern.",
+      "images": [
+        {
+          "src": "/image/effective/Internet-mobile.png",
+          "alt": "online-stores",
+          "width": 166,
+          "height": 102
+        },
+        {
+          "src": "/image/effective/Internet-mobile-crm.png",
+          "alt": "online-stores",
+          "width": 47,
+          "height": 36
+        },
+        {
+          "src": "/image/effective/Internet-mobile-one.png",
+          "alt": "online-stores",
+          "width": 49,
+          "height": 49
+        }
+      ]
+    },
+    {
+      "title": "Firmenwebsites",
+      "info": "Wir entwickeln Webseiten für kleine und große Unternehmen.",
+      "images": [
+        {
+          "src": "/image/effective/corporate-mobile.png",
+          "alt": "corporate-websites",
+          "width": 167,
+          "height": 167
+        },
+        {
+          "src": "/image/effective/corporate-mobile-schedule.png",
+          "alt": "corporate-websites",
+          "width": 177,
+          "height": 117,
+          "hideOnMobile": true
+        }
+      ]
+    },
+    {
+      "title": "Persönliche Blogs",
+      "info": "Plattformen, die Ihre Einzigartigkeit hervorheben.",
+      "images": [
+        {
+          "src": "/image/effective/blog-mobile.png",
+          "alt": "personal-blogs",
+          "width": 81,
+          "height": 109
+        },
+        {
+          "src": "/image/effective/blog-mobile-two.png",
+          "alt": "personal-blogs",
+          "width": 54,
+          "height": 54
+        },
+        {
+          "src": "/image/effective/blog-mobile-one.png",
+          "alt": "personal-blogs",
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "title": "Technischer Support",
+      "info": "Ihre Seite bleibt online – Sie bleiben sorgenfrei",
+      "images": [
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "src": "/image/effective/redesign-mobile.png",
+          "alt": "technical-support",
+          "width": 40,
+          "height": 40
+        }
+      ]
+    }
+  ]
+}

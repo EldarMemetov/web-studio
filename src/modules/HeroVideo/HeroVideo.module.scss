@@ -1,23 +1,41 @@
-.videoWrapper {
+.section {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  background: #000; // фон до загрузки видео
-  transition: box-shadow 0.3s ease;
+  height: 300vh; // увеличена высота
+  background: #000;
 }
 
-.videoWrapper:hover {
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+.spacer {
+  height: 100vh;
 }
 
-.videoWrapper iframe {
-  position: absolute;
+.sticky {
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 600px;
-  height: 300px;
-  border: none;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.side {
+  width: 392px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.video {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
 }

@@ -1,5 +1,7 @@
 import HeroVideo from '@/modules/HeroVideo/HeroVideo';
 import s from './videography.module.scss';
+import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
+import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
 export default async function Videography({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
@@ -11,6 +13,8 @@ export default async function Videography({ params: rawParams }) {
     <main>
       <div className={s.container}>
         <HeroVideo />
+        <ToggleQuestions locale={locale} />
+        <FeedbackForm locale={locale} />
       </div>
     </main>
   );

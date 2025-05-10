@@ -1,0 +1,103 @@
+.section {
+  padding-bottom: 160px;
+
+  @include media(tablet) {
+    padding-bottom: 200px;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 130%;
+  text-transform: uppercase;
+  text-align: right;
+  background: linear-gradient(30deg, #ffffff 0%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  @include media(tablet) {
+    margin-bottom: 24px;
+    font-size: 64px;
+    line-height: 130%;
+  }
+
+  @include media(desktop) {
+    font-size: 80px;
+    line-height: 130%;
+  }
+  @include media(tablet) {
+    font-size: 64px;
+    line-height: 130%;
+  }
+
+  @include media(desktop) {
+    font-size: 80px;
+    line-height: 130%;
+  }
+}
+.spanTitle {
+  background: linear-gradient(30deg, #9624e2 0%, #9624e2 60%, #02079d 100%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 146%;
+  text-align: right;
+  color: #dadbe6;
+  max-width: 340px;
+  margin-bottom: 40px;
+  @include media(tablet) {
+    margin-bottom: 64px;
+    font-size: 24px;
+    line-height: 146%;
+    max-width: 640px;
+  }
+  @include media(desktop) {
+    margin-bottom: 80px;
+    max-width: 100%;
+  }
+}
+.SpanDescription {
+  font-weight: 600;
+}
+// .titleInfo {
+//   font-weight: 700;
+//   font-size: 24px;
+//   line-height: 146%;
+// }
+// .info {
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 140%;
+//   color: #dadbe6;
+// }
+// .listContent {
+//   padding: 37px 44px 16px 16px;
+//   width: 338px;
+//   height: 136px;
+//   border: 1px solid #3a3b40;
+//   background: linear-gradient(
+//     268deg,
+//     rgb(150 36 226 / 15%) 0%,
+//     rgb(150 36 226 / 14%) 30%,
+//     rgb(150 36 226 / 5%) 50%,
+//     rgba(2, 7, 157, 0) 100%
+//   );
+
+//   @include media(tablet) {
+//   }
+
+//   @include media(desktop) {
+//   }
+// }
+// .ListContent {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+// }

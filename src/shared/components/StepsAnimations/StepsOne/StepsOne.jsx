@@ -38,12 +38,12 @@ export default function StepsOne() {
   }, []);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      defaults: { ease: 'power4.out' },
-    });
+    if (!imgRef.current) return;
+
+    gsap.killTweensOf(imgRef.current);
 
     if (inView) {
-      tl.fromTo(
+      gsap.fromTo(
         imgRef.current,
         {
           y: 130,
@@ -54,7 +54,8 @@ export default function StepsOne() {
           y: -30,
           scale: 1,
           opacity: 1,
-          duration: 10,
+          duration: 4,
+          ease: 'power4.out',
           onStart: () => {
             if (containerRef.current) {
               containerRef.current.style.overflow = 'visible';
@@ -63,11 +64,12 @@ export default function StepsOne() {
         }
       );
     } else {
-      tl.to(imgRef.current, {
+      gsap.to(imgRef.current, {
         y: 100,
         scale: 0.1,
         opacity: 0.5,
-        duration: 7,
+        duration: 1,
+        ease: 'power3.inOut',
         onStart: () => {
           if (containerRef.current) {
             containerRef.current.style.overflow = 'hidden';

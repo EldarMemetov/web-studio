@@ -65,3 +65,18 @@ screen types:
 @mixin animation-rules($_prop: all, $_duration: '0.3s') {
   transition: $_prop $_duration ease;
 }
+$shadow-color: rgba(0, 0, 0, 0.15);
+$transition-speed: 0.4s;
+@mixin hover-transform($scale: 1.05, $rotate: 0deg) {
+  transition:
+    transform $transition-speed ease,
+    box-shadow $transition-speed ease,
+    filter $transition-speed ease;
+  &:hover {
+    transform: scale($scale) rotate($rotate);
+    box-shadow: 0 10px 20px $shadow-color;
+    filter: brightness(1.1);
+  }
+}
+@mixin hide-on-mobile {
+}
