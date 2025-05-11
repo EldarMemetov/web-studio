@@ -15,12 +15,15 @@
 }
 
 .listContent {
+  @include media(mobile) {
+    height: 136px;
+  }
   max-width: 100%;
   position: relative;
   z-index: 1;
   padding: 37px 44px 16px 16px;
   width: 338px;
-  height: 136px;
+  height: auto;
   overflow: hidden;
   border: 1px solid;
   border-image: linear-gradient(to bottom, #adaaaa7d, #4140406e) 1;
@@ -31,12 +34,6 @@
     rgb(150 36 226 / 5%) 50%,
     rgba(2, 7, 157, 0) 100%
   );
-
-  @include media(tablet) {
-  }
-
-  @include media(desktop) {
-  }
 }
 
 //IMG//
@@ -185,7 +182,6 @@
 }
 //SEO-просування
 .liSeoPromotion {
-  padding-top: 59px;
   @include media(tablet) {
     width: 310px;
   }
