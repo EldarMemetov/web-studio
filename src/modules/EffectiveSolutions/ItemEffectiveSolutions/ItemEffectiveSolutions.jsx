@@ -9,7 +9,9 @@ export function ItemEffectiveSolution({ item }) {
       <p className={`${s.info} ${s.infoMobile}`}>{item.info}</p>
 
       <p className={`${s.info} ${s.infoTablet}`}>{item.infoTablet}</p>
+      <p className={`${s.info} ${s.infoDesktop}`}>{item.infoDesktop}</p>
       <p className={s.srOnly}>{item.infoFull}</p>
+
       {item.images.map((img, idx) => (
         <Image
           key={idx}
