@@ -41,6 +41,7 @@ export const NAMESPACES = [
   'webHero',
   'stepsToLaunch',
   'effectiveSolutions',
+  'webWhyChoose',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

@@ -4,6 +4,7 @@ import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
 import StepsToLaunch from '@/modules/StepsToLaunch/StepsToLaunch';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import WebHero from '@/modules/WebHero/WebHero';
+import WebWhyChoose from '@/modules/WebWhyChoose/WebWhyChoose';
 export default async function WebDevelopment({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
@@ -17,6 +18,7 @@ export default async function WebDevelopment({ params: rawParams }) {
         <WebHero locale={locale} />
         <StepsToLaunch locale={locale} />
         <EffectiveSolutions locale={locale} />
+        <WebWhyChoose locale={locale} />
         <ToggleQuestions locale={locale} namespace="toggleQuestionsWebDev" />
         <FeedbackForm />
       </div>
