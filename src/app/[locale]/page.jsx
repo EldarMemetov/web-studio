@@ -1,6 +1,5 @@
-import FeedbackForm from '../../modules/FeedbackForm/FeedbackForm';
+import dynamic from 'next/dynamic';
 
-import ReviewsList from '@/modules/GetReview/Components/ReviewsList/ReviewsList';
 import { ReviewsSection } from '@/modules/GetReview/Components/ReviewsSection/ReviewsSection';
 import { GetReviews } from '@/services/api';
 
@@ -13,8 +12,14 @@ import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import s from './page.module.scss';
 import IdeasHome from '@/modules/IdeasHome/IdeasHome';
 import TitleHome from '@/modules/HomePageComponets/TitleHome/TitleHome';
-import Portfolio from '@/modules/Portfolio/Portfolio';
 
+const FeedbackForm = dynamic(
+  () => import('../../modules/FeedbackForm/FeedbackForm')
+);
+const ReviewsList = dynamic(
+  () => import('@/modules/GetReview/Components/ReviewsList/ReviewsList')
+);
+const Portfolio = dynamic(() => import('@/modules/Portfolio/Portfolio'));
 export default async function Home({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];

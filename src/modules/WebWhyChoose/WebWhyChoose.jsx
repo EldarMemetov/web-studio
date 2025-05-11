@@ -9,6 +9,7 @@ export default async function WebWhyChoose({ locale }) {
 
   return (
     <section className={s.section}>
+      <div className={s.background}></div>
       <Container>
         <div className={s.containerContent}>
           <div className={s.containerTitle}>
@@ -16,10 +17,10 @@ export default async function WebWhyChoose({ locale }) {
               {t('title')} <span className={s.titleSpan}>{t('spanTitle')}</span>
             </h2>
             <p className={s.description}>
-              {t('descriptionBefore')}{' '}
-              <span className={s.spanWeight}>{t('spanDescriptionOne')}</span>{' '}
-              {t('descriptionMiddle')}{' '}
-              <span className={s.spanWeight}>{t('spanDescriptionTwo')}</span>.{' '}
+              {t('descriptionBefore')}
+              <span className={s.spanWeight}>{t('spanDescriptionOne')}</span>
+              {t('descriptionMiddle')}
+              <span className={s.spanWeight}>{t('spanDescriptionTwo')}</span>.
               <span className={s.spanDescription}>{t('descriptionAfter')}</span>
             </p>
           </div>
