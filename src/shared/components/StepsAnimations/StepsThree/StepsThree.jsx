@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import s from './StepsThree.module.scss';
 import { WebText, WebTextDesktop } from '../../GetFullText/WebText';
+import useIntersectionObserver from '@/shared/useIntersectionObserver/useIntersectionObserver';
 
 function useIsDesktop(breakpoint = 1440) {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -31,7 +32,13 @@ export default function StepsThree() {
 
   const lastOverflowRef = useRef(0);
 
+  const isInView = useIntersectionObserver(textContainerRef, {
+    threshold: 0.5,
+  });
+
   useEffect(() => {
+    if (!isInView) return;
+
     let index = 0;
     let typingInterval;
 
@@ -70,7 +77,7 @@ export default function StepsThree() {
 
     startTyping();
     return () => clearInterval(typingInterval);
-  }, [fullText, textContainerRef, textInnerRef]);
+  }, [fullText, isInView]);
 
   return (
     <div className={s.container}>

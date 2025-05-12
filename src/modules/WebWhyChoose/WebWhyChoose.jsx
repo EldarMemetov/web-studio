@@ -20,7 +20,7 @@ export default async function WebWhyChoose({ locale }) {
               {t('descriptionBefore')}
               <span className={s.spanWeight}>{t('spanDescriptionOne')}</span>
               {t('descriptionMiddle')}
-              <span className={s.spanWeight}>{t('spanDescriptionTwo')}</span>.
+              <span className={s.spanWeight}>{t('spanDescriptionTwo')}</span>
               <span className={s.spanDescription}>{t('descriptionAfter')}</span>
             </p>
           </div>

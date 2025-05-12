@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Icon from '@/shared/Icon/Icon';
 import { gsap } from 'gsap';
 import s from './StepsFour.module.scss';
+import useIntersectionObserver from '@/shared/useIntersectionObserver/useIntersectionObserver';
 
 export default function StepFour() {
   const imgRef = useRef(null);
@@ -12,19 +13,10 @@ export default function StepFour() {
   const iconRef = useRef(null);
   const selectedIconRef = useRef(null);
 
-  const [inView, setInView] = useState(false);
   const [showSelected, setShowSelected] = useState(false);
   const tlRef = useRef(null);
 
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.5 }
-    );
-    const el = containerRef.current;
-    if (el) obs.observe(el);
-    return () => el && obs.unobserve(el);
-  }, []);
+  const inView = useIntersectionObserver(containerRef, { threshold: 0.5 });
 
   useEffect(() => {
     const imgEl = imgRef.current;

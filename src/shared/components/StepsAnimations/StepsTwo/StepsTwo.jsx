@@ -1,25 +1,15 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import AnimationInitializer from '@/shared/AnimationInitializer/AnimationInitializer';
 import s from './StepsTwo.module.scss';
+import useIntersectionObserver from '@/shared/useIntersectionObserver/useIntersectionObserver';
 
 export default function StepsTwo() {
   const containerRef = useRef(null);
-  const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-      },
-      { threshold: 0.5 }
-    );
-    const el = containerRef.current;
-    if (el) obs.observe(el);
-    return () => el && obs.unobserve(el);
-  }, []);
+  const inView = useIntersectionObserver(containerRef, { threshold: 0.5 });
 
   return (
     <>

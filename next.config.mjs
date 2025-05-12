@@ -14,14 +14,6 @@ const nextConfig = {
       @use "src/shared/styles/_colors.scss" as *;
       @use "src/shared/styles/_mixins.scss" as *;
       @use "src/shared/styles/_variables.scss" as *;
-
-
-      // @import "src/shared/styles/_breakpoints.scss";
-      // @import "src/shared/styles/_colors.scss";
-      // @import "src/shared/styles/_mixins.scss";
-      // @import "src/shared/styles/_variables.scss";
-
-
     `,
   },
   images: {

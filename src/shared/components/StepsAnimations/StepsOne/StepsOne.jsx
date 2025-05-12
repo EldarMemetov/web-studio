@@ -1,41 +1,17 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
 import s from './StepsOne.module.scss';
+import useIntersectionObserver from '@/shared/useIntersectionObserver/useIntersectionObserver';
 
 export default function StepsOne() {
   const imgRef = useRef(null);
   const containerRef = useRef(null);
-  const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setInView(true);
-          } else {
-            setInView(false);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    const currentImgRef = imgRef.current;
-
-    if (currentImgRef) {
-      observer.observe(currentImgRef);
-    }
-
-    return () => {
-      if (currentImgRef) {
-        observer.unobserve(currentImgRef);
-      }
-    };
-  }, []);
+  // Используем кастомный хук
+  const inView = useIntersectionObserver(imgRef, { threshold: 0.5 });
 
   useEffect(() => {
     if (!imgRef.current) return;
