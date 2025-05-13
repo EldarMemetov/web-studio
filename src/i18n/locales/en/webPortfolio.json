@@ -1,0 +1,34 @@
+{
+  "title": {
+    "prefix": "Our Completed ",
+    "span": "Projects"
+  },
+  "desc": {
+    "part1": "QVRIX offers a full range of solutions — from concept to launch. We adapt to your business to create efficient, ",
+    "span1": "beautiful and functional websites, ",
+    "span2": "that truly work."
+  },
+  "projects": {
+    "harmony": {
+      "title": "Harmony Beauty",
+      "description": "A platform for booking cosmetologist appointments with analytics and reservation features.",
+      "image1": "/image/portfolio/portfolio.jpg",
+      "image2": "/image/portfolio/portfolio.jpg",
+      "video": "/video/harmony.mp4"
+    },
+    "portfolio": {
+      "title": "QVRIX Showcase",
+      "description": "A showcase website highlighting the company's projects with dynamic elements.",
+      "image1": "/image/portfolio/full-stack.jpg",
+      "image2": "/image/portfolio/full-stack.jpg",
+      "video": "/video/portfolio.mp4"
+    },
+    "full-stack": {
+      "title": "Full Stack CRM",
+      "description": "A CRM system featuring client management, analytics, and role-based access.",
+      "image1": "/image/portfolio/harmony.jpg",
+      "image2": "/image/portfolio/harmony.jpg",
+      "video": "/video/fullstack.mp4"
+    }
+  }
+}

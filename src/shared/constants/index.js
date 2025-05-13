@@ -42,6 +42,7 @@ export const NAMESPACES = [
   'stepsToLaunch',
   'effectiveSolutions',
   'webWhyChoose',
+  'webPortfolio',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

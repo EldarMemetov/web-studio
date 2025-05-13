@@ -1,0 +1,98 @@
+{
+  "title": {
+    "prefix": "Наші реалізовані ",
+    "span": "проєкти"
+  },
+  "desc": {
+    "part1": "QVRIX пропонує повний спектр рішень — від концепції до запуску. Ми адаптуємось під ваш бізнес, щоб створити ефективні, ",
+    "span1": "красиві й функціональні сайти, ",
+    "span2": "які дійсно працюють."
+  },
+  "projects": {
+    "harmony": {
+      "title": "Harmony Beauty",
+      "description": "Платформа для запису до косметолога з системою аналітики та бронювання.",
+      "image1": {
+        "src": "/image/portfolio/harmony.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgHarmonyOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/harmony.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgHarmonyTwo"
+      },
+      "video": "/video/harmony.mp4"
+    },
+    "full-stack": {
+      "title": "Full Stack CRM",
+      "description": "CRM-система з функціоналом керування клієнтами, аналітикою та ролями.",
+      "image1": {
+        "src": "/image/portfolio/portfolio.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgFullStackOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/portfolio.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgFullStackTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    },
+    "diet-today": {
+      "title": "diet-today",
+      "description": "CRM-система з функціоналом керування клієнтами, аналітикою та ролями.",
+      "image1": {
+        "src": "/image/portfolio/diet-today.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgDietTodayOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/diet-today.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgDietTodayTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    },
+    "learn-lingo": {
+      "title": "learn-lingo",
+      "description": "CRM-система з функціоналом керування клієнтами, аналітикою та ролями.",
+      "image1": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgLearnLingoOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgLearnLingoTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    },
+    "book": {
+      "title": "book",
+      "description": "CRM-система з функціоналом керування клієнтами, аналітикою та ролями.",
+      "image1": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgBookOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgBookTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    }
+  }
+}

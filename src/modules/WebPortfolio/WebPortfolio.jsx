@@ -1,22 +1,42 @@
 import Container from '@/shared/container/Container';
+import Image from 'next/image';
+import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
+import { initServerI18n } from '@/i18n/utils/serverI18n';
 import s from './WebPortfolio.module.scss';
-export default function WebPortfolio() {
+export default async function PortfolioPage({ locale }) {
+  const { t } = await initServerI18n(locale, ['webPortfolio']);
+  const projects = t('projects', { returnObjects: true });
+
   return (
     <section className={s.section}>
       <div className={s.background}></div>
       <Container>
-        <div>
-          <h2 className={s.title}>
-            Наші реалізовані <span className={s.SpanTitle}>проєкти</span>
-          </h2>
-          <p className={s.descriptions}>
-            QVRIX пропонує повний спектр рішень — від концепції до запуску. Ми
-            адаптуємось під ваш бізнес, щоб створити ефективні,{' '}
-            <span className={s.SpanDescriptions}>
-              красиві й функціональні сайти,
-            </span>
-            <span>які дійсно працюють.</span>
-          </p>
+        <h2 className={s.title}>
+          {t('title.prefix')}{' '}
+          <span className={s.SpanTitle}>{t('title.span')}</span>
+        </h2>
+        <p className={s.descriptions}>
+          {t('desc.part1')}{' '}
+          <span className={s.SpanDescriptions}>{t('desc.span1')}</span>
+          <span>{t('desc.span2')}</span>
+        </p>
+
+        <div className={s.portfolioContainer}>
+          {Object.entries(projects).map(([id, project]) => (
+            <div key={id} className={s.portfolioItem}>
+              <div className={s.imageWrapper}>
+                <Image
+                  src={project.image1}
+                  alt={project.title}
+                  className={s[project.image1.className]}
+                />
+                <ButtonArrow
+                  href={`/${locale}/web-development/${id}`}
+                  className={s.arrowOverlay}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </Container>
     </section>
