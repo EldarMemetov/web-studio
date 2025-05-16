@@ -8,17 +8,20 @@ const Button = ({
   className,
   spanClassName,
   onClick,
+  as = 'button',
   ...props
 }) => {
+  const Component = as;
+
   return (
-    <button
-      type={type}
+    <Component
+      type={as === 'button' ? type : undefined}
       className={clsx(s.button, s[variant], className)}
       onClick={onClick}
       {...props}
     >
       <span className={spanClassName}>{children}</span>
-    </button>
+    </Component>
   );
 };
 

@@ -1,4 +1,6 @@
 {
+  "buttons": "Детальніше",
+  "buttonsGo": "Цікавлять інші проєкти? Напишіть нам",
   "title": {
     "prefix": "Наші реалізовані ",
     "span": "проєкти"
@@ -12,6 +14,7 @@
     "harmony": {
       "title": "Harmony Beauty",
       "description": "Платформа для запису до косметолога з системою аналітики та бронювання.",
+
       "image1": {
         "src": "/image/portfolio/harmony.jpg",
         "width": 392,

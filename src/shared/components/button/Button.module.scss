@@ -194,4 +194,106 @@
       color: #000000;
     }
   }
+  &.variant8 {
+    padding: 16px 44px;
+    width: 100%;
+    max-width: 338px;
+    height: 41px;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(89deg, #9624e2 50%, #02079d 100%);
+
+    @include media(tablet) {
+      width: 337px;
+      height: 47px;
+    }
+
+    &:hover span {
+      color: #000000;
+    }
+  }
+  &.variant9 {
+    padding: 16px 44px;
+    width: 100%;
+    max-width: 338px;
+    height: 41px;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(153, 153, 153, 0.32) 100%
+    );
+
+    @include media(tablet) {
+      width: 287px;
+      height: 47px;
+    }
+
+    @include media(desktop) {
+      width: 337px;
+      height: 47px;
+    }
+
+    &:hover span {
+      color: #000000;
+    }
+  }
+  &.variant10 {
+    padding: 12px 44px;
+    width: 100%;
+    max-width: 170px;
+    height: 42px;
+    border: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    @include media(tablet) {
+      width: 286px;
+      height: 55px;
+    }
+
+    @include media(desktop) {
+      width: 286px;
+      height: 55px;
+    }
+
+    &:hover span {
+      color: #000000;
+    }
+  }
+  &.variant11 {
+    width: 100%;
+    max-width: 338px;
+    height: 60px;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(89deg, #9624e2 50%, #02079d 100%);
+    box-shadow: 0 0 36px 2px rgba(109, 28, 207, 0.64);
+    background: linear-gradient(30deg, #9624e2 0%, #02079d 100%);
+    padding: 12px 48px;
+    margin-top: 20px;
+    @include media(mobile) {
+      box-sizing: border-box;
+    }
+    @include media(tablet) {
+      padding: 20px 48px;
+      width: 405px;
+      height: 61px;
+      margin-top: 40px;
+    }
+    @include media(desktop) {
+      padding: 20px 48px;
+      min-width: 557px;
+      height: 71px;
+      margin-top: 60px;
+    }
+    &:hover span {
+      color: #000000;
+    }
+  }
 }

@@ -5,6 +5,7 @@ export const ROUTES = {
   DEVELOPMENT: 'web-development',
   VIDEOGRAPHY: 'videography',
   POLICY: 'privacy-policy',
+  Blog: 'blog',
 };
 export const LINKDATA = {
   ABOUT: 'about-us',
@@ -13,6 +14,7 @@ export const LINKDATA = {
   DEVELOPMENT: 'web-development',
   VIDEOGRAPHY: 'videography',
   POLICY: 'privacy-policy',
+  Blog: 'blog',
 };
 export const LANGUAGES = { UA: 'ua', EN: 'en', DE: 'de' };
 
@@ -43,6 +45,7 @@ export const NAMESPACES = [
   'effectiveSolutions',
   'webWhyChoose',
   'webPortfolio',
+  'OrDevelopment',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

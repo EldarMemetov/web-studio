@@ -1,33 +1,99 @@
 {
+  "buttons": "Learn more ",
+  "buttonsGo": "Interested in more projects? Contact us",
   "title": {
-    "prefix": "Our Completed ",
-    "span": "Projects"
+    "prefix": "Our completed ",
+    "span": "projects"
   },
   "desc": {
     "part1": "QVRIX offers a full range of solutions — from concept to launch. We adapt to your business to create efficient, ",
     "span1": "beautiful and functional websites, ",
-    "span2": "that truly work."
+    "span2": "that really work."
   },
   "projects": {
     "harmony": {
       "title": "Harmony Beauty",
-      "description": "A platform for booking cosmetologist appointments with analytics and reservation features.",
-      "image1": "/image/portfolio/portfolio.jpg",
-      "image2": "/image/portfolio/portfolio.jpg",
+      "description": "A booking platform for cosmetology appointments with analytics and scheduling system.",
+      "image1": {
+        "src": "/image/portfolio/harmony.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgHarmonyOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/harmony.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgHarmonyTwo"
+      },
       "video": "/video/harmony.mp4"
-    },
-    "portfolio": {
-      "title": "QVRIX Showcase",
-      "description": "A showcase website highlighting the company's projects with dynamic elements.",
-      "image1": "/image/portfolio/full-stack.jpg",
-      "image2": "/image/portfolio/full-stack.jpg",
-      "video": "/video/portfolio.mp4"
     },
     "full-stack": {
       "title": "Full Stack CRM",
-      "description": "A CRM system featuring client management, analytics, and role-based access.",
-      "image1": "/image/portfolio/harmony.jpg",
-      "image2": "/image/portfolio/harmony.jpg",
+      "description": "CRM system with client management, analytics, and role-based access control.",
+      "image1": {
+        "src": "/image/portfolio/portfolio.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgFullStackOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/portfolio.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgFullStackTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    },
+    "diet-today": {
+      "title": "Diet Today",
+      "description": "CRM system with client management, analytics, and role-based access control.",
+      "image1": {
+        "src": "/image/portfolio/diet-today.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgDietTodayOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/diet-today.jpg",
+        "width": 392,
+        "height": 560,
+        "className": "imgDietTodayTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    },
+    "learn-lingo": {
+      "title": "Learn Lingo",
+      "description": "CRM system with client management, analytics, and role-based access control.",
+      "image1": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgLearnLingoOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgLearnLingoTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    },
+    "book": {
+      "title": "Book",
+      "description": "CRM system with client management, analytics, and role-based access control.",
+      "image1": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgBookOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/learn-lingo.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgBookTwo"
+      },
       "video": "/video/fullstack.mp4"
     }
   }

@@ -3,6 +3,9 @@ import Image from 'next/image';
 import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import s from './WebPortfolio.module.scss';
+import Link from 'next/link';
+import Button from '@/shared/components/button/Button';
+import ScrollButton from '@/shared/ScrollButton/ScrollButton';
 export default async function PortfolioPage({ locale }) {
   const { t } = await initServerI18n(locale, ['webPortfolio']);
   const projects = t('projects', { returnObjects: true });
@@ -30,13 +33,23 @@ export default async function PortfolioPage({ locale }) {
                   alt={project.title}
                   className={s[project.image1.className]}
                 />
-                <ButtonArrow
-                  href={`/${locale}/web-development/${id}`}
-                  className={s.arrowOverlay}
-                />
+
+                <div className={s.overlay}>
+                  <Link
+                    href={`/${locale}/web-development/${id}`}
+                    legacyBehavior
+                  >
+                    <Button variant="variant10" as="a">
+                      {t('buttons')}
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
+          <ScrollButton variant="variant11" targetId="feedback-form">
+            {t('buttonsGo')}
+          </ScrollButton>
         </div>
       </Container>
     </section>

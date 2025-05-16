@@ -6,6 +6,8 @@ import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import WebHero from '@/modules/WebHero/WebHero';
 import WebWhyChoose from '@/modules/WebWhyChoose/WebWhyChoose';
 import WebPortfolio from '@/modules/WebPortfolio/WebPortfolio';
+import OrDevelopment from '@/modules/OrDevelopment/OrDevelopment';
+
 export default async function WebDevelopment({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
@@ -21,6 +23,7 @@ export default async function WebDevelopment({ params: rawParams }) {
         <EffectiveSolutions locale={locale} />
         <WebWhyChoose locale={locale} />
         <WebPortfolio locale={locale} />
+        <OrDevelopment locale={locale} />
         <ToggleQuestions locale={locale} namespace="toggleQuestionsWebDev" />
         <FeedbackForm />
       </div>
