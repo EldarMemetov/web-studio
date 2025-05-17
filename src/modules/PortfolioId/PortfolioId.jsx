@@ -1,46 +1,84 @@
-// modules/PortfolioId/PortfolioId.js
 import Container from '@/shared/container/Container';
 import Image from 'next/image';
+import Link from 'next/link';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
+import s from './PortfolioId.module.scss';
 
 export default async function PortfolioId({ locale, id }) {
   const { t } = await initServerI18n(locale, ['webPortfolio']);
-  const projects = t('projects', { returnObjects: true });
+  const projects = t('projects', { returnObjects: true }) || {};
   const project = projects[id];
+  const ui = t('ui', { returnObjects: true }) || {};
 
   if (!project) {
     return (
-      <section>
+      <section className={s.section}>
         <Container>
-          <h1>Проєкт не знайдено</h1>
+          <h1 className={s.title}>{ui.projectNotFound}</h1>
         </Container>
       </section>
     );
   }
 
   return (
-    <section>
+    <section className={s.section}>
       <Container>
-        <h1>{project.title}</h1>
-        <p>{project.description}</p>
+        <h1 className={s.title}>{project.title}</h1>
+        <p className={s.description}>{project.description}</p>
 
-        <div className="project-images">
+        {project.features && (
+          <div className={s.featuresSection}>
+            <h2 className={s.featuresTitle}>{ui.featuresTitle}</h2>
+            <ul className={s.featuresList}>
+              {project.features.map((feature, index) => (
+                <li key={index} className={s.featuresItem}>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {project.technologies && (
+          <div className={s.technologiesSection}>
+            <h2 className={s.technologiesTitle}>{ui.technologies}</h2>
+            <ul className={s.technologiesList}>
+              {project.technologies.map((tech, index) => (
+                <li key={index} className={s.technologiesItem}>
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className={s.imagesWrapper}>
           <Image
-            src={project.image1}
+            src={project.image1.src}
             alt={project.title}
-            className={project.image1.className}
+            width={project.image1.width}
+            height={project.image1.height}
+            className={`${s.image} ${project.image1.className}`}
           />
           <Image
-            src={project.image2}
+            src={project.image2.src}
             alt={project.title}
-            className={project.image2.className}
+            width={project.image2.width}
+            height={project.image2.height}
+            className={`${s.image} ${project.image2.className}`}
           />
         </div>
 
-        <video controls width="800">
-          <source src={project.video} type="video/mp4" />
-          Ваш браузер не підтримує відео.
-        </video>
+        {project.liveUrl && (
+          <Link
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.goToSite}
+          >
+            {ui.goToSite}
+          </Link>
+        )}
       </Container>
     </section>
   );
