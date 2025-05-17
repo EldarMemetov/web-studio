@@ -101,7 +101,7 @@
 
 //IMG
 .imgHarmonyOne {
-  width: 338px;
+  width: 320px;
   height: 483px;
   @include media(tablet) {
     width: 640px;
@@ -113,7 +113,7 @@
   }
 }
 .imgFullStackOne {
-  width: 338px;
+  width: 320px;
   height: 483px;
   @include media(tablet) {
     width: 640px;
@@ -125,7 +125,7 @@
   }
 }
 .imgDietTodayOne {
-  width: 338px;
+  width: 320px;
   height: 483px;
   @include media(tablet) {
     width: 640px;
@@ -137,26 +137,26 @@
   }
 }
 .imgBookOne {
-  width: 338px;
-  height: 248px;
+  width: 320px;
+  height: 483px;
   @include media(tablet) {
     width: 640px;
-    height: 469px;
+    height: 914px;
   }
   @include media(desktop) {
-    width: 600px;
-    height: 440px;
+    width: 392px;
+    height: 560px;
   }
 }
 .imgLearnLingoOne {
-  width: 338px;
-  height: 248px;
+  width: 320px;
+  height: 483px;
   @include media(tablet) {
     width: 640px;
-    height: 469px;
+    height: 914px;
   }
   @include media(desktop) {
-    width: 600px;
-    height: 440px;
+    width: 392px;
+    height: 560px;
   }
 }

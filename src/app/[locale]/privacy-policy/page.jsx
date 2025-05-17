@@ -1,7 +1,16 @@
-export default function PrivacyPolicy() {
+import PrivacyPolicy from '@/modules/PrivacyPolicy/PrivacyPolicy';
+export default async function PrivacyPolicyPage({ params: rawParams }) {
+  const params = await rawParams;
+  const availableLocales = ['en', 'ua', 'de'];
+  const locale = availableLocales.includes(params?.locale)
+    ? params.locale
+    : 'en';
+
   return (
-    <div>
-      <h1>Welcome to privacyPolicy Page</h1>
-    </div>
+    <main>
+      <div>
+        <PrivacyPolicy locale={locale} />
+      </div>
+    </main>
   );
 }

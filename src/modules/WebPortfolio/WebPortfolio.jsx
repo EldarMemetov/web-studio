@@ -1,6 +1,5 @@
 import Container from '@/shared/container/Container';
 import Image from 'next/image';
-import ButtonArrow from '@/shared/components/ButtonArrow/ButtonArrow';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import s from './WebPortfolio.module.scss';
 import Link from 'next/link';
@@ -8,7 +7,7 @@ import Button from '@/shared/components/button/Button';
 import ScrollButton from '@/shared/ScrollButton/ScrollButton';
 export default async function PortfolioPage({ locale }) {
   const { t } = await initServerI18n(locale, ['webPortfolio']);
-  const projects = t('projects', { returnObjects: true });
+  const projects = t('projects', { returnObjects: true }) || {};
 
   return (
     <section className={s.section}>

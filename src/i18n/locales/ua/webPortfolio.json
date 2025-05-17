@@ -1,5 +1,5 @@
 {
-  "buttons": "Детальніше",
+  "buttons": "Детальніше ",
   "buttonsGo": "Цікавлять інші проєкти? Напишіть нам",
   "title": {
     "prefix": "Наші реалізовані ",
@@ -63,34 +63,51 @@
       },
       "video": "/video/fullstack.mp4"
     },
-    "learn-lingo": {
-      "title": "learn-lingo",
+    "organic": {
+      "title": "organic",
       "description": "CRM-система з функціоналом керування клієнтами, аналітикою та ролями.",
       "image1": {
-        "src": "/image/portfolio/learn-lingo.jpg",
+        "src": "/image/portfolio/organic.jpg",
         "width": 600,
         "height": 440,
         "className": "imgLearnLingoOne"
       },
       "image2": {
-        "src": "/image/portfolio/learn-lingo.jpg",
+        "src": "/image/portfolio/organic.jpg",
         "width": 600,
         "height": 440,
         "className": "imgLearnLingoTwo"
       },
       "video": "/video/fullstack.mp4"
     },
-    "book": {
+    "glasses": {
       "title": "book",
       "description": "CRM-система з функціоналом керування клієнтами, аналітикою та ролями.",
       "image1": {
-        "src": "/image/portfolio/learn-lingo.jpg",
+        "src": "/image/portfolio/glasses.jpg",
         "width": 600,
         "height": 440,
         "className": "imgBookOne"
       },
       "image2": {
-        "src": "/image/portfolio/learn-lingo.jpg",
+        "src": "/image/portfolio/glasses.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgBookTwo"
+      },
+      "video": "/video/fullstack.mp4"
+    },
+    "studio": {
+      "title": "book",
+      "description": "CRM-система з функціоналом керування клієнтами, аналітикою та ролями.",
+      "image1": {
+        "src": "/image/portfolio/studio.jpg",
+        "width": 600,
+        "height": 440,
+        "className": "imgBookOne"
+      },
+      "image2": {
+        "src": "/image/portfolio/studio.jpg",
         "width": 600,
         "height": 440,
         "className": "imgBookTwo"

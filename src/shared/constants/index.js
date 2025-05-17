@@ -46,6 +46,7 @@ export const NAMESPACES = [
   'webWhyChoose',
   'webPortfolio',
   'OrDevelopment',
+  'privacyPolicy',
 ];
 
 export const FLIPPED_TIME_MS = 15000;
