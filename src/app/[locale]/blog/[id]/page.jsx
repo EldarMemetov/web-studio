@@ -3,7 +3,6 @@ import { initServerI18n } from '@/i18n/utils/serverI18n';
 
 export async function generateMetadata({ params: rawParams }) {
   const params = await rawParams;
-  console.log('Params:', params);
 
   const availableLocales = ['en', 'ua', 'de'];
   const locale = availableLocales.includes(params?.locale)
@@ -41,7 +40,6 @@ export async function generateStaticParams() {
 
 export default async function BlogIdPage({ params: rawParams }) {
   const params = await rawParams;
-  console.log('Params in BlogIdPage:', params);
 
   const availableLocales = ['en', 'ua', 'de'];
   const locale = availableLocales.includes(params?.locale)

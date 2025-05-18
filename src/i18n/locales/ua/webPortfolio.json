@@ -27,15 +27,14 @@
         "Підтримка UA / EN мов",
         "Інтеграція платіжних систем",
         "Особистий кабінет та аналітика для волонтерів",
-        "Frontend на Next.js з SSR",
-        "Backend на Node.js (REST API)",
+        "Frontend на Next.js",
+        "Backend на Node.js",
         "Повністю адаптивна верстка"
       ],
 
       "technologies": [
         "Next.js",
-        "React",
-        "Tailwind CSS",
+        "SCSS",
         "Node.js",
         "REST API",
         "Stripe",

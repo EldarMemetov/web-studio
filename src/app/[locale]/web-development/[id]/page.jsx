@@ -1,21 +1,22 @@
 import PortfolioId from '@/modules/PortfolioId/PortfolioId';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 
-export async function generateMetadata({ params }) {
-  const locale = ['en', 'ua', 'de'].includes(params.locale)
+export async function generateMetadata({ params: rawParams }) {
+  const params = await rawParams;
+  const availableLocales = ['en', 'ua', 'de'];
+  const locale = availableLocales.includes(params?.locale)
     ? params.locale
     : 'en';
+  const id = params?.id;
 
-  const { t } = await import('@/i18n/utils/serverI18n').then((m) =>
-    m.initServerI18n(locale, ['webPortfolio'])
-  );
-
-  const project = t('projects', { returnObjects: true })[params.id];
-  if (!project) return {};
+  const { t } = await initServerI18n(locale, ['webPortfolio']);
+  const project = t('projects', { returnObjects: true });
+  const projectID = project[id];
+  if (!projectID) return {};
 
   return {
-    title: project.title,
-    description: project.description,
+    title: projectID.title,
+    description: projectID.description || '',
   };
 }
 
@@ -34,7 +35,6 @@ export async function generateStaticParams() {
 
 export default async function PortfolioItemPage({ params: rawParams }) {
   const params = await rawParams;
-  console.log('Params in BlogIdPage:', params);
 
   const availableLocales = ['en', 'ua', 'de'];
   const locale = availableLocales.includes(params?.locale)

@@ -7,8 +7,8 @@ import s from './PortfolioId.module.scss';
 export default async function PortfolioId({ locale, id }) {
   const { t } = await initServerI18n(locale, ['webPortfolio']);
   const projects = t('projects', { returnObjects: true }) || {};
-  const project = projects[id];
   const ui = t('ui', { returnObjects: true }) || {};
+  const project = projects[id];
 
   if (!project) {
     return (
@@ -28,11 +28,11 @@ export default async function PortfolioId({ locale, id }) {
 
         {project.features && (
           <div className={s.featuresSection}>
-            <h2 className={s.featuresTitle}>{ui.featuresTitle}</h2>
+            <h2 className={s.title}>{ui.featuresTitle}</h2>
             <ul className={s.featuresList}>
               {project.features.map((feature, index) => (
                 <li key={index} className={s.featuresItem}>
-                  {feature}
+                  <p className={s.featureText}>{feature}</p>
                 </li>
               ))}
             </ul>
@@ -41,11 +41,11 @@ export default async function PortfolioId({ locale, id }) {
 
         {project.technologies && (
           <div className={s.technologiesSection}>
-            <h2 className={s.technologiesTitle}>{ui.technologies}</h2>
+            <h2 className={s.title}>{ui.technologies}</h2>
             <ul className={s.technologiesList}>
               {project.technologies.map((tech, index) => (
                 <li key={index} className={s.technologiesItem}>
-                  {tech}
+                  <p className={s.listItem}>{tech}</p>
                 </li>
               ))}
             </ul>
