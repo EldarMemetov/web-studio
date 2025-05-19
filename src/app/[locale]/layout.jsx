@@ -7,7 +7,7 @@ import ErrorBoundaryWithTranslation from '@/shared/components/ErrorBoundary/Erro
 import Header from '@/modules/Header/Header';
 import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
-
+import Script from 'next/script';
 import { dir } from 'i18next';
 import SvgSpriteLoader from '@/shared/constants/SvgSpriteLoader/SvgSpriteLoader';
 import Footer from '@/modules/Footer/Footer';
@@ -92,6 +92,12 @@ export default async function Layout({ children, params }) {
         suppressHydrationWarning={true}
         className={clsx(rubik.variable, raleway.variable, oswald.variable)}
       >
+        <script
+          id="usercentrics-cmp"
+          src="https://web.cmp.usercentrics.eu/ui/loader.js"
+          data-settings-id="mCF852o5EDuKd1"
+          async
+        ></script>
         <SvgSpriteLoader />
         <TranslationsProvider
           namespaces={NAMESPACES}
