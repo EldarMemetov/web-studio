@@ -17,7 +17,7 @@ const nextConfig = {
     `,
   },
   images: {
-    domains: ['example.com'],
+    domains: ['cdn.sanity.io'],
   },
 };
 
