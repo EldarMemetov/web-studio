@@ -58,7 +58,7 @@ import Container from '@/shared/container/Container';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { portableTextComponents } from '@/lib/portableTextComponents';
-import { urlFor } from '@/lib/sanityClient'; // импортируем urlFor сюда
+import { urlFor } from '@/lib/sanityClient';
 import s from './BlogId.module.scss';
 
 export default function BlogId({ post, locale }) {

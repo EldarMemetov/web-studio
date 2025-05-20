@@ -62,7 +62,7 @@ export default async function SectionBlog({ locale }) {
               style={{ objectFit: 'cover' }}
             />
           )}
-          <Link href={`/${locale}/blog/${post._id}`}>Читать</Link>
+          <Link href={`/${locale}/blog/${post.customId.current}`}>Читать</Link>
         </article>
       ))}
     </section>

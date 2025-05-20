@@ -4,16 +4,19 @@ export const allPostsQuery = groq`
   *[_type == "post"]{
     _id,
     title,
+    slug,
     body,
-    mainImage
+    mainImage,
+    customId
   }
 `;
 
-export const postByIdQuery = groq`
-  *[_type == "post" && _id == $id][0]{
+export const postBySlugQuery = groq`
+  *[_type == "post" && customId.current == $id][0]{
     _id,
     title,
     body,
-    mainImage
+    mainImage,
+    customId
   }
 `;

@@ -47,6 +47,7 @@ export const NAMESPACES = [
   'webPortfolio',
   'OrDevelopment',
   'privacyPolicy',
+  'heroVideo',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

@@ -12,7 +12,7 @@ export default async function Videography({ params: rawParams }) {
   return (
     <main>
       <div className={s.container}>
-        <HeroVideo />
+        <HeroVideo locale={locale} />
         <ToggleQuestions locale={locale} />
         <FeedbackForm locale={locale} />
       </div>
