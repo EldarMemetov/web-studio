@@ -48,6 +48,7 @@ export const NAMESPACES = [
   'OrDevelopment',
   'privacyPolicy',
   'heroVideo',
+  'videoFaq',
 ];
 
 export const FLIPPED_TIME_MS = 15000;
