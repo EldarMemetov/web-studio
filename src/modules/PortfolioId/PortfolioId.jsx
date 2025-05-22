@@ -54,18 +54,18 @@ export default async function PortfolioId({ locale, id }) {
 
         <div className={s.imagesWrapper}>
           <Image
-            src={project.image1.src}
-            alt={project.title}
-            width={project.image1.width}
-            height={project.image1.height}
-            className={`${s.image} ${project.image1.className}`}
-          />
-          <Image
             src={project.image2.src}
             alt={project.title}
             width={project.image2.width}
             height={project.image2.height}
             className={`${s.image} ${project.image2.className}`}
+          />
+          <Image
+            src={project.image3.src}
+            alt={project.title}
+            width={project.image3.width}
+            height={project.image3.height}
+            className={`${s.imageMobile} ${project.image3.className}`}
           />
         </div>
 

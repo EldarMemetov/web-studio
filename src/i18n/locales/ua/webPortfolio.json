@@ -48,10 +48,16 @@
         "className": "imgHarmonyOne"
       },
       "image2": {
-        "src": "/image/portfolio/harmony.jpg",
-        "width": 392,
-        "height": 560,
+        "src": "/image/portfolio/harmony-mokap-desktop.png",
+        "width": 550,
+        "height": 350,
         "className": "imgHarmonyTwo"
+      },
+      "image3": {
+        "src": "/image/portfolio/harmony-mokap-mobile.png",
+        "width": 250,
+        "height": 500,
+        "className": "imgHarmonyTwoMokap"
       },
       "liveUrl": "https://inharmony.com.ua/ua"
     },
@@ -79,10 +85,16 @@
         "className": "imgFullStackOne"
       },
       "image2": {
-        "src": "/image/portfolio/portfolio.jpg",
-        "width": 392,
-        "height": 560,
-        "className": "imgFullStackTwo"
+        "src": "/image/portfolio/portfolio-mokap-desktop.png",
+        "width": 550,
+        "height": 350,
+        "className": "imgHarmonyTwo"
+      },
+      "image3": {
+        "src": "/image/portfolio/portfolio-mokap-mobile.png",
+        "width": 250,
+        "height": 500,
+        "className": "imgHarmonyTwoMokap"
       },
 
       "liveUrl": "https://kholodaet.github.io/project-profile2-0/"
@@ -109,10 +121,16 @@
         "className": "imgDietTodayOne"
       },
       "image2": {
-        "src": "/image/portfolio/diet-today.jpg",
-        "width": 392,
-        "height": 560,
-        "className": "imgDietTodayTwo"
+        "src": "/image/portfolio/diet-today-mokap-desktop.png",
+        "width": 550,
+        "height": 350,
+        "className": "imgHarmonyTwo"
+      },
+      "image3": {
+        "src": "/image/portfolio/diet-today-mokap-mobile.png",
+        "width": 250,
+        "height": 500,
+        "className": "imgHarmonyTwoMokap"
       },
 
       "liveUrl": "https://msannam.github.io/new_developers/"
@@ -149,10 +167,16 @@
         "className": "imgBookOne"
       },
       "image2": {
-        "src": "/image/portfolio/learn-lingo.jpg",
-        "width": 600,
-        "height": 440,
-        "className": "imgBookTwo"
+        "src": "/image/portfolio/learn-lingo-mokap-desktop.png",
+        "width": 550,
+        "height": 350,
+        "className": "imgHarmonyTwo"
+      },
+      "image3": {
+        "src": "/image/portfolio/learn-lingo-mokap-mobile.png",
+        "width": 250,
+        "height": 500,
+        "className": "imgHarmonyTwoMokap"
       },
 
       "liveUrl": "https://learn-lingo-six.vercel.app/"
@@ -188,10 +212,16 @@
         "className": "imgBookOne"
       },
       "image2": {
-        "src": "/image/portfolio/book.jpg",
-        "width": 600,
-        "height": 440,
-        "className": "imgBookTwo"
+        "src": "/image/portfolio/book-mokap-desktop.png",
+        "width": 550,
+        "height": 350,
+        "className": "imgHarmonyTwo"
+      },
+      "image3": {
+        "src": "/image/portfolio/book-mokap-mobile.png",
+        "width": 250,
+        "height": 500,
+        "className": "imgHarmonyTwoMokap"
       },
 
       "liveUrl": "https://read-journey-sandy.vercel.app/register"

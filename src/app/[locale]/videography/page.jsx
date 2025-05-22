@@ -3,6 +3,7 @@ import s from './videography.module.scss';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
 import VideoPortfolio from '@/modules/VideoPortfolio/VideoPortfolio';
+import WebWhyChoose from '@/modules/WebWhyChoose/WebWhyChoose';
 export default async function Videography({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
@@ -15,6 +16,7 @@ export default async function Videography({ params: rawParams }) {
       <div className={s.container}>
         <HeroVideo locale={locale} />
         <VideoPortfolio locale={locale} />
+        <WebWhyChoose locale={locale} namespace="videoWhyChoose" />
         <ToggleQuestions locale={locale} namespace="videoFaq" />
         <FeedbackForm locale={locale} />
       </div>

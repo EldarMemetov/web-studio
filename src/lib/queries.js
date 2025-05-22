@@ -1,7 +1,7 @@
 import groq from 'groq';
 
-export const allPostsQuery = groq`
-  *[_type == "post"]{
+export const postsByCategoryQuery = groq`
+  *[_type == "post" && category == $category]{
     _id,
     title,
     slug,

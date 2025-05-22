@@ -36,26 +36,3 @@ export const GetReviews = async () => {
     throw handleError(error);
   }
 };
-
-// export const GetBlog = async () => {
-//   try {
-//     console.log(`${BASE_URL}/api/blog`);
-//     const response = await axios.get(`${BASE_URL}/api/blogs`);
-//     return response.data;
-//   } catch (error) {
-//     console.error('GET BLOG ERROR:', error);
-//     throw handleError(error);
-//   }
-// };
-
-// export const GetBlogId = async (id) => {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/api/blogs/${id}`);
-//     return response.data;
-//   } catch (error) {
-//     if (error.response && error.response.data) {
-//       throw new Error(error.response.data.error || 'Error fetching blog by ID');
-//     }
-//     throw handleError(error);
-//   }
-// };

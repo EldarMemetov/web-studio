@@ -130,3 +130,37 @@
     line-height: 146%;
   }
 }
+.imagesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  max-width: 100%;
+  @include media(tablet) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 60px;
+    justify-content: space-between;
+  }
+  @include media(desktop) {
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.image {
+  width: 400px;
+  height: auto;
+  margin-bottom: 50px;
+  @include media(desktop) {
+    width: 650px;
+    height: auto;
+  }
+}
+.imageMobile {
+  width: 250px;
+  height: auto;
+  @include media(desktop) {
+    width: 300px;
+    height: auto;
+  }
+}

@@ -1,5 +1,6 @@
 import PortfolioId from '@/modules/PortfolioId/PortfolioId';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
+import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
 
 export async function generateMetadata({ params: rawParams }) {
   const params = await rawParams;
@@ -41,5 +42,10 @@ export default async function PortfolioItemPage({ params: rawParams }) {
     ? params.locale
     : 'en';
   const id = params?.id;
-  return <PortfolioId locale={locale} id={id} />;
+  return (
+    <main>
+      <PortfolioId locale={locale} id={id} />;
+      <FeedbackForm />;
+    </main>
+  );
 }

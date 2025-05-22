@@ -3,8 +3,11 @@ import s from './WebWhyChoose.module.scss';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import ListWebWhyChoose from './ListWebWhyChoose/ListWebWhyChoose';
 
-export default async function WebWhyChoose({ locale }) {
-  const { t } = await initServerI18n(locale, ['webWhyChoose']);
+export default async function WebWhyChoose({
+  locale,
+  namespace = 'webWhyChoose',
+}) {
+  const { t } = await initServerI18n(locale, [namespace]);
   const features = t('features', { returnObjects: true }) || [];
 
   return (
