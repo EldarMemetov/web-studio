@@ -12,10 +12,8 @@ import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import s from './page.module.scss';
 import IdeasHome from '@/modules/IdeasHome/IdeasHome';
 import TitleHome from '@/modules/HomePageComponets/TitleHome/TitleHome';
+import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
 
-const FeedbackForm = dynamic(
-  () => import('../../modules/FeedbackForm/FeedbackForm')
-);
 const ReviewsList = dynamic(
   () => import('@/modules/GetReview/Components/ReviewsList/ReviewsList')
 );
