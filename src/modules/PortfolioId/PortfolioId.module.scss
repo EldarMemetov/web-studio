@@ -136,6 +136,7 @@
   align-items: center;
   margin-bottom: 50px;
   max-width: 100%;
+
   @include media(tablet) {
     flex-direction: row;
     align-items: center;
@@ -162,5 +163,93 @@
   @include media(desktop) {
     width: 300px;
     height: auto;
+  }
+}
+.buttonLink {
+  background: transparent;
+  border: none;
+  font-weight: 500;
+  @include font(20, 26);
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  margin-left: auto;
+  margin-top: 10px;
+  align-items: flex-start;
+  @include media(tablet) {
+    @include font(24, 31);
+  }
+  @include media(desktop) {
+    background: transparent;
+
+    @include font(24, 31);
+
+    margin-left: auto;
+    margin-top: 20px;
+  }
+}
+
+.iconLink {
+  width: 28px;
+  height: 28px;
+  transform: rotate(45deg);
+  @include media(tablet) {
+    width: 36px;
+    height: 36px;
+  }
+}
+.backLink {
+  background: transparent;
+  border: none;
+  font-weight: 500;
+  @include font(20, 26);
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 70px;
+  align-items: center;
+  @include media(tablet) {
+    @include font(24, 31);
+    margin-bottom: 90px;
+  }
+  @include media(desktop) {
+    background: transparent;
+
+    @include font(24, 31);
+
+    margin-left: auto;
+    margin-bottom: 100px;
+  }
+}
+
+.backIcon {
+  width: 28px;
+  height: 28px;
+  transform: rotate(225deg);
+  @include media(tablet) {
+    width: 36px;
+    height: 36px;
+  }
+}
+.background {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  height: calc(100% + 100px);
+  background-image: url('/image/grid.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: -1;
+  @include media(tablet) {
+    top: 90%;
+  }
+  @include media(desktop) {
+    top: 70%;
   }
 }

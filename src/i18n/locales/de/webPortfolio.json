@@ -5,7 +5,8 @@
     "goToSite": "Zur Website gehen",
     "technologies": "Technologien",
     "featuresTitle": "Was umgesetzt wurde:",
-    "projectNotFound": "Projekt nicht gefunden"
+    "projectNotFound": "Projekt nicht gefunden",
+    "backLink": "Back to Portfolio"
   },
   "title": {
     "prefix": "Unsere realisierten ",

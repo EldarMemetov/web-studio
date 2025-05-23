@@ -5,7 +5,8 @@
     "goToSite": "Перейти на сайт",
     "technologies": "Технології",
     "featuresTitle": "Що реалізовано:",
-    "projectNotFound": "Проєкт не знайдено"
+    "projectNotFound": "Проєкт не знайдено",
+    "backLink": "Назад до портфоліо"
   },
   "title": {
     "prefix": "Наші реалізовані ",

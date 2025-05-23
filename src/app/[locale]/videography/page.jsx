@@ -15,7 +15,7 @@ export default async function Videography({ params: rawParams }) {
     <main>
       <div className={s.container}>
         <HeroVideo locale={locale} />
-        <VideoPortfolio locale={locale} />
+        <VideoPortfolio />
         <WebWhyChoose locale={locale} namespace="videoWhyChoose" />
         <ToggleQuestions locale={locale} namespace="videoFaq" />
         <FeedbackForm locale={locale} />

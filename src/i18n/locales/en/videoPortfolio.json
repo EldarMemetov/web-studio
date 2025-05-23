@@ -1,0 +1,32 @@
+{
+  "title": "Our completed ",
+  "titleSpan": "projects",
+  "descriptionOne": "A production that combines ",
+  "descriptionTwo": "style, storytelling, and purpose ",
+  "descriptionThree": "— so that every frame works for you.",
+  "videos": [
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    }
+  ],
+  "cta": {
+    "text": "Interested in more projects? Contact us"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Наші реалізовані ",
+  "titleSpan": "проєкти",
+  "descriptionOne": "Продакшн, що поєднує ",
+  "descriptionTwo": "стиль, історію та ціль ",
+  "descriptionThree": "— щоб кожен кадр працював на вас.",
+  "videos": [
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    },
+    {
+      "thumbnail": "/image/codding.jpg",
+      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+    }
+  ],
+  "cta": {
+    "text": "Цікавлять інші проєкти? Напишіть нам"
+  }
+}

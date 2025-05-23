@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import s from './PortfolioId.module.scss';
+import Icon from '@/shared/Icon/Icon';
 
 export default async function PortfolioId({ locale, id }) {
   const { t } = await initServerI18n(locale, ['webPortfolio']);
@@ -22,7 +23,16 @@ export default async function PortfolioId({ locale, id }) {
 
   return (
     <section className={s.section}>
+      <div className={s.background}></div>
       <Container>
+        <Link
+          href="/ua/web-development#portfolioSection"
+          className={s.backLink}
+        >
+          <Icon iconName="icon-arrow" className={s.backIcon} />
+          {ui.backLink}
+        </Link>
+
         <h1 className={s.title}>{project.title}</h1>
         <p className={s.description}>{project.description}</p>
 
@@ -74,9 +84,10 @@ export default async function PortfolioId({ locale, id }) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={s.goToSite}
+            className={s.buttonLink}
           >
             {ui.goToSite}
+            <Icon iconName="icon-arrow" className={s.iconLink} />
           </Link>
         )}
       </Container>

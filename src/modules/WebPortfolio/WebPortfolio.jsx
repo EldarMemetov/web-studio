@@ -10,7 +10,7 @@ export default async function PortfolioPage({ locale }) {
   const projects = t('projects', { returnObjects: true }) || {};
 
   return (
-    <section className={s.section}>
+    <section className={s.section} id="portfolioSection">
       <div className={s.background}></div>
       <Container>
         <h2 className={s.title}>
