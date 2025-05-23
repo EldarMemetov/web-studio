@@ -153,3 +153,17 @@
   font-size: 16px;
   line-height: 146%;
 }
+.teamImgVas {
+  position: absolute;
+  top: 130px;
+  left: 130px;
+  mix-blend-mode: normal;
+  z-index: 2;
+}
+.teamImgVasNext {
+  position: absolute;
+  top: 130px;
+  left: 140px;
+  mix-blend-mode: normal;
+  z-index: 2;
+}

@@ -28,11 +28,11 @@ export default function OurTeam() {
               <h4 className={s.jobTitle}>UI/UX Designer</h4>
               <p className={s.description}>Web & Mobile Design, Prototyping</p>
               <Image
-                src="/image/eldar.png"
+                src="/image/vasy.png"
                 alt="team"
-                width={350}
+                width={280}
                 height={420}
-                className={s.teamImg}
+                className={s.teamImgVas}
               />
               <h4 className={s.backgroundName}>Maria Soloveychenko</h4>
             </li>
@@ -41,11 +41,11 @@ export default function OurTeam() {
               <h4 className={s.jobTitle}>UI/UX Designer</h4>
               <p className={s.description}>Web & Mobile Design, Prototyping</p>
               <Image
-                src="/image/eldar.png"
+                src="/image/vasy1.png"
                 alt="team"
-                width={350}
+                width={250}
                 height={420}
-                className={s.teamImg}
+                className={s.teamImgVasNext}
               />
               <h4 className={s.backgroundName}>Maria Soloveychenko</h4>
             </li>
