@@ -34,18 +34,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Kyiv Type Sans';
-  src: url('/fonts/KyivTypeSans-Bold2.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Univermag';
-  src: url('/fonts/Univermag-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
 :root {
   font-weight: 400;
   color: #fff;
@@ -55,11 +43,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --font-family: 'Fixel Display', sans-serif; /* Основной шрифт */
-  --second-family: 'Oswald', sans-serif; /* "Oswald" (для Zen Dots) */
-  --third-family: 'Raleway', sans-serif; /* "Raleway" (для Unbounded) */
-  --font3: 'Rubik', sans-serif; /* "Rubik" (для NAMU) */
-  --font6: 'Kyiv Type Sans', sans-serif; /* "Kyiv Type Sans" */
-  --font7: 'Univermag', sans-serif; /* "Univermag" */
 }
 
 html {

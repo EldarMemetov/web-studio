@@ -7,7 +7,9 @@ export const postsByCategoryQuery = groq`
     slug,
     body,
     mainImage,
-    customId
+    customId,
+    author,       
+    publishedAt
   }
 `;
 
@@ -17,6 +19,8 @@ export const postBySlugQuery = groq`
     title,
     body,
     mainImage,
-    customId
+    customId,
+    author,         
+    publishedAt
   }
 `;

@@ -1,7 +1,6 @@
 import BlogId from '@/modules/BlogId/BlogId';
 import { client } from '@/lib/sanityClient';
 import { postBySlugQuery } from '@/lib/queries';
-import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
 
 export async function generateStaticParams() {
   const posts = await client.fetch(`*[_type == "post"]{ customId }`);
@@ -21,7 +20,6 @@ export default async function BlogIdPageId({ params }) {
   return (
     <main>
       <BlogId post={post} locale={locale} />
-      <FeedbackForm />
     </main>
   );
 }

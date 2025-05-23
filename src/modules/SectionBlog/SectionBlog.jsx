@@ -10,6 +10,7 @@ export default function SectionBlog({ posts = [], locale }) {
       {posts.map((post) => (
         <article key={post._id}>
           <h2>{post.title[locale]}</h2>
+
           {post.mainImage && (
             <Image
               src={urlFor(post.mainImage).width(400).url()}
@@ -19,6 +20,18 @@ export default function SectionBlog({ posts = [], locale }) {
               style={{ objectFit: 'cover' }}
             />
           )}
+
+          <p>{post.author}</p>
+          <p>
+            {post.publishedAt
+              ? new Date(post.publishedAt).toLocaleDateString(locale, {
+                  day: '2-digit',
+                  month: 'long',
+                  year: 'numeric',
+                })
+              : '—'}
+          </p>
+
           <Link href={`/${locale}/blog/${post.customId.current}`}>Читать</Link>
         </article>
       ))}
