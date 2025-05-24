@@ -44,8 +44,8 @@ export default async function PortfolioItemPage({ params: rawParams }) {
   const id = params?.id;
   return (
     <main>
-      <PortfolioId locale={locale} id={id} />;
-      <FeedbackForm />;
+      <PortfolioId locale={locale} id={id} />
+      <FeedbackForm />
     </main>
   );
 }
