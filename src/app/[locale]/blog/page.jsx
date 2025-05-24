@@ -1,6 +1,7 @@
 import BlogCategoryPage from '@/modules/BlogCategoryPage/BlogCategoryPage';
 import { client } from '@/lib/sanityClient';
 import { postsByCategoryQuery } from '@/lib/queries';
+import HeroBlog from '@/modules/HeroBlog/HeroBlog';
 
 export default async function BlogPage({ params: rawParams }) {
   const params = await rawParams;
@@ -15,6 +16,7 @@ export default async function BlogPage({ params: rawParams }) {
 
   return (
     <main>
+      <HeroBlog />
       <BlogCategoryPage
         initialPosts={posts}
         initialCategory={defaultCategory}

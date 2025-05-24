@@ -26,7 +26,7 @@ export default async function PortfolioId({ locale, id }) {
       <div className={s.background}></div>
       <Container>
         <Link
-          href="/ua/web-development#portfolioSection"
+          href={`/${locale}/web-development#portfolioSection`}
           className={s.backLink}
         >
           <Icon iconName="icon-arrow" className={s.backIcon} />

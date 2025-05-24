@@ -1,0 +1,45 @@
+.section {
+  position: relative;
+  z-index: 1;
+}
+.containerButton {
+  display: flex;
+  gap: 12px;
+  flex-direction: row;
+  margin-bottom: 64px;
+}
+
+.buttonItem {
+  padding: 1px;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, #414040, #2a2a2a);
+  display: inline-block;
+}
+
+.buttonItemActive {
+  background: linear-gradient(to bottom, #00072a, #001144);
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #dadbe6;
+  background: linear-gradient(#000116, rgba(255, 255, 255, 0.1));
+  transition: background 0.3s ease;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  background-clip: padding-box;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.buttonActive {
+  background: linear-gradient(#000116, rgba(255, 255, 255, 0.32));
+}
