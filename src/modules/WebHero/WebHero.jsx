@@ -3,7 +3,6 @@ import s from './WebHero.module.scss';
 import Container from '@/shared/container/Container';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 import ScrollButton from '@/shared/ScrollButton/ScrollButton';
-import Image from 'next/image';
 export default async function WebHero({ locale }) {
   const { t } = await initServerI18n(locale, ['webHero']);
 

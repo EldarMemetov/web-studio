@@ -19,7 +19,7 @@
   width: 392px;
   height: 493px;
   overflow: hidden;
-  padding: 16px;
+  padding: 24px;
   transition: background-color 0.3s ease;
 }
 
@@ -31,4 +31,25 @@
   border-radius: 2px;
   width: 344px;
   height: 183px;
+  margin-bottom: 24px;
+}
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 146%;
+  margin-bottom: 20px;
+}
+.author {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 146%;
+  color: #dadbe6;
+  margin-bottom: 8px;
+}
+.data {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 146%;
+  color: #dadbe6;
+  margin-bottom: 24px;
 }

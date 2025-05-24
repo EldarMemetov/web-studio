@@ -10,10 +10,11 @@
 }
 
 .buttonItem {
-  padding: 1px;
+  padding: 2px;
   border-radius: 12px;
-  background: linear-gradient(to bottom, #414040, #2a2a2a);
+  background: linear-gradient(to bottom, #858383, #262626);
   display: inline-block;
+  transition: box-shadow 0.3s ease;
 }
 
 .buttonItemActive {
@@ -28,7 +29,7 @@
   font-size: 18px;
   line-height: 130%;
   color: #dadbe6;
-  background: linear-gradient(#000116, rgba(255, 255, 255, 0.1));
+  background: #000116;
   transition: background 0.3s ease;
   cursor: pointer;
   display: block;
@@ -41,5 +42,5 @@
 }
 
 .buttonActive {
-  background: linear-gradient(#000116, rgba(255, 255, 255, 0.32));
+  background: #878787;
 }

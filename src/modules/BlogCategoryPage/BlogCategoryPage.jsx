@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import SectionBlog from '../SectionBlog/SectionBlog';
 import s from './BlogCategoryPage.module.scss';
 import Container from '@/shared/container/Container';
+import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 export default function BlogCategoryPage({
   initialPosts,
@@ -12,7 +13,7 @@ export default function BlogCategoryPage({
 }) {
   const [category, setCategory] = useState(initialCategory);
   const [posts, setPosts] = useState(initialPosts);
-
+  const { t, i18n } = useTranslation('BlogCategoryPage');
   const cache = useRef({ [initialCategory]: initialPosts });
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export default function BlogCategoryPage({
               onClick={() => setCategory('web')}
               className={clsx(s.button, category === 'web' && s.buttonActive)}
             >
-              Веб-розробка
+              {t('web')}
             </button>
           </div>
 
@@ -56,7 +57,7 @@ export default function BlogCategoryPage({
               onClick={() => setCategory('video')}
               className={clsx(s.button, category === 'video' && s.buttonActive)}
             >
-              Відеопродакшн
+              {t('video')}
             </button>
           </div>
         </div>
