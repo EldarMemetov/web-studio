@@ -8,7 +8,7 @@ import Icon from '@/shared/Icon/Icon';
 import Link from 'next/link';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
 export default async function BlogId({ post, locale }) {
-  const { t } = await initServerI18n(locale, ['blogCategoryPage']);
+  const { t } = await initServerI18n(locale, ['BlogCategoryPage']);
   return (
     <article>
       {/* === Hero Section === */}
