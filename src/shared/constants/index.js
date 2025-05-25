@@ -50,7 +50,7 @@ export const NAMESPACES = [
   'videoFaq',
   'videoWhyChoose',
   'videoPortfolio',
-  'blogCategoryPage',
+  'BlogCategoryPage',
   'heroBlog',
 ];
 
