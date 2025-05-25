@@ -6,7 +6,9 @@ import { urlFor } from '@/lib/sanityClient';
 import s from './BlogId.module.scss';
 import Icon from '@/shared/Icon/Icon';
 import Link from 'next/link';
-export default function BlogId({ post, locale }) {
+import { initServerI18n } from '@/i18n/utils/serverI18n';
+export default async function BlogId({ post, locale }) {
+  const { t } = await initServerI18n(locale, ['blogCategoryPage']);
   return (
     <article>
       {/* === Hero Section === */}
@@ -16,6 +18,7 @@ export default function BlogId({ post, locale }) {
             src={urlFor(post.mainImage).width(1600).height(600).url()}
             alt={post.title[locale]}
             fill
+            priority
             style={{ objectFit: 'cover' }}
           />
           <div className={s.heroOverlay}>
@@ -32,7 +35,7 @@ export default function BlogId({ post, locale }) {
           <div>
             <Link href={`/${locale}/blog#blog`} className={s.backLink}>
               <Icon iconName="icon-arrow" className={s.backIcon} />
-              Усі публікації
+              {t('next')}
             </Link>
           </div>
           <div className={s.article}>

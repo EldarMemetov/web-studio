@@ -29,7 +29,6 @@ export const NAMESPACES = [
   'IdeasToReality',
   'notFound',
   'errorGlobal',
-  'blog',
   'reviewsList',
   'successContent',
   'brandTransformation',
@@ -51,7 +50,8 @@ export const NAMESPACES = [
   'videoFaq',
   'videoWhyChoose',
   'videoPortfolio',
-  'BlogCategoryPage',
+  'blogCategoryPage',
+  'heroBlog',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

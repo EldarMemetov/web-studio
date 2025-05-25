@@ -13,7 +13,7 @@ export default function BlogCategoryPage({
 }) {
   const [category, setCategory] = useState(initialCategory);
   const [posts, setPosts] = useState(initialPosts);
-  const { t, i18n } = useTranslation('BlogCategoryPage');
+  const { t } = useTranslation('blogCategoryPage');
   const cache = useRef({ [initialCategory]: initialPosts });
 
   useEffect(() => {
