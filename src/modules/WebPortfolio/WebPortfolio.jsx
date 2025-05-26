@@ -34,13 +34,8 @@ export default async function PortfolioPage({ locale }) {
                 />
 
                 <div className={s.overlay}>
-                  <Link
-                    href={`/${locale}/web-development/${id}`}
-                    legacyBehavior
-                  >
-                    <Button variant="variant10" as="a">
-                      {t('buttons')}
-                    </Button>
+                  <Link href={`/${locale}/web-development/${id}`}>
+                    <Button variant="variant10">{t('buttons')}</Button>
                   </Link>
                 </div>
               </div>

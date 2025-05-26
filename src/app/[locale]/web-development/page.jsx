@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import EffectiveSolutions from '@/modules/EffectiveSolutions/EffectiveSolutions';
 import s from './webDevelopment.module.scss';
 import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';

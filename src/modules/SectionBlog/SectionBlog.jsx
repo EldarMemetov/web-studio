@@ -8,10 +8,10 @@ export default function SectionBlog({ posts = [], locale }) {
 
   return (
     <section className={s.section} id="blog">
-      <div className={s.cardWrapper}>
-        <div className={s.blogContainer}>
-          {posts.map((post) => (
-            <article key={post._id}>
+      <div className={s.blogContainer}>
+        {posts.map((post) => (
+          <div className={s.cardWrapper} key={post._id}>
+            <article className={s.BlogIdContainer}>
               {post.mainImage && (
                 <Image
                   src={urlFor(post.mainImage).width(400).url()}
@@ -31,11 +31,11 @@ export default function SectionBlog({ posts = [], locale }) {
               </p>
 
               <Link href={`/${locale}/blog/${post.customId.current}`} passHref>
-                <Button variant="variant8">Читати</Button>
+                <Button variant="variant12">Читати</Button>
               </Link>
             </article>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -297,4 +297,28 @@
       color: #000000;
     }
   }
+  &.variant12 {
+    max-width: 100%;
+    padding: 12px 44px;
+    width: 100%;
+    max-width: 266px;
+    height: 47px;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(89deg, #9624e2 50%, #02079d 100%);
+
+    @include media(tablet) {
+      width: 266px;
+      height: 47px;
+    }
+    @include media(desktop) {
+      max-width: 100%;
+      width: 344px;
+      height: 47px;
+    }
+
+    &:hover span {
+      color: #000000;
+    }
+  }
 }

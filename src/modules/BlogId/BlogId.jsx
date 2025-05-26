@@ -11,7 +11,6 @@ export default async function BlogId({ post, locale }) {
   const { t } = await initServerI18n(locale, ['BlogCategoryPage']);
   return (
     <article>
-      {/* === Hero Section === */}
       <section className={s.hero}>
         <div className={s.heroImageWrapper}>
           <Image
@@ -29,7 +28,6 @@ export default async function BlogId({ post, locale }) {
         </div>
       </section>
 
-      {/* === Article Body === */}
       <section className={s.section}>
         <Container>
           <div>

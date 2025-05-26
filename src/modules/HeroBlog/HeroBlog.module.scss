@@ -7,17 +7,21 @@
 .contentContainer {
   position: relative;
   display: flex;
+
   flex-direction: column;
-  align-items: center;
+  @include media(tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &::after {
     content: '';
     position: absolute;
-    top: -70px;
-    left: 50%;
+    width: 300px;
+    height: 700px;
     transform: translateX(-50%);
-    width: 1000px;
-    height: 500px;
+    top: -150px;
+    left: 50%;
     border-radius: 50%;
     background: radial-gradient(
       circle,
@@ -28,25 +32,52 @@
     z-index: -1;
     pointer-events: none;
     filter: blur(16px);
+    @include media(tablet) {
+      top: -150px;
+      width: 600px;
+      height: 700px;
+    }
+    @include media(desktop) {
+      width: 1000px;
+      height: 500px;
+      top: -70px;
+      left: 50%;
+    }
   }
 }
 
 .title {
   font-weight: 700;
-  font-size: 42px;
-  line-height: 130%;
   text-transform: uppercase;
   text-align: center;
+  line-height: 130%;
   margin-bottom: 32px;
+  margin-bottom: 24px;
+  @include media(tablet) {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  @include media(desktop) {
+    font-size: 42px;
+    line-height: 130%;
+  }
 }
 .description {
   font-weight: 300;
-  font-size: 20px;
-  line-height: 160%;
+  font-size: 18px;
+  line-height: 136%;
   text-align: center;
   color: #dadbe6;
   margin-bottom: 64px;
-  width: 500px;
+
+  @include media(tablet) {
+    font-size: 20px;
+    line-height: 136%;
+    width: 500px;
+  }
+  @include media(desktop) {
+    line-height: 160%;
+  }
 }
 .containerButton {
   display: flex;
@@ -72,7 +103,7 @@
   border-radius: 16px;
   z-index: -1;
   @include media(tablet) {
-    top: 90%;
+    top: 50%;
   }
   @include media(desktop) {
     top: 50%;

@@ -6,6 +6,7 @@ import s from './BlogCategoryPage.module.scss';
 import Container from '@/shared/container/Container';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
+import Icon from '@/shared/Icon/Icon';
 export default function BlogCategoryPage({
   initialPosts,
   initialCategory,
@@ -42,27 +43,35 @@ export default function BlogCategoryPage({
   return (
     <section className={s.section}>
       <Container>
-        <div className={s.containerButton}>
-          <div className={s.buttonItem}>
-            <button
-              onClick={() => setCategory('web')}
-              className={clsx(s.button, category === 'web' && s.buttonActive)}
-            >
-              {t('web')}
-            </button>
+        <div className={s.contentContainer}>
+          <div className={s.containerButton}>
+            <div className={s.iconContainer}>
+              <Icon iconName="icon-filter" className={s.icon} />
+            </div>
+            <div className={s.buttonItem}>
+              <button
+                onClick={() => setCategory('web')}
+                className={clsx(s.button, category === 'web' && s.buttonActive)}
+              >
+                {t('web')}
+              </button>
+            </div>
+
+            <div className={s.buttonItem}>
+              <button
+                onClick={() => setCategory('video')}
+                className={clsx(
+                  s.button,
+                  category === 'video' && s.buttonActive
+                )}
+              >
+                {t('video')}
+              </button>
+            </div>
           </div>
 
-          <div className={s.buttonItem}>
-            <button
-              onClick={() => setCategory('video')}
-              className={clsx(s.button, category === 'video' && s.buttonActive)}
-            >
-              {t('video')}
-            </button>
-          </div>
+          <SectionBlog posts={posts} locale={locale} />
         </div>
-
-        <SectionBlog posts={posts} locale={locale} />
       </Container>
     </section>
   );

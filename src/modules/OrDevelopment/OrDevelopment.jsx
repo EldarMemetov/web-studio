@@ -30,7 +30,6 @@ export default async function OrDevelopment({ locale }) {
           </p>
         </div>
         <div className={s.containerContent}>
-          {/* Constructor block */}
           <div className={s.containerConstructor}>
             <ListOrDevelopment
               title={constructorData.title}
@@ -41,7 +40,7 @@ export default async function OrDevelopment({ locale }) {
             />
           </div>
           <div className={s.divider} />
-          {/* Development block */}
+
           <div className={s.containerDevelopment}>
             <ListOrDevelopment
               title={developmentData.title}
@@ -52,7 +51,7 @@ export default async function OrDevelopment({ locale }) {
             />
           </div>
         </div>
-        {/* Conclusion and buttons */}
+
         <div className={s.conclusionWrapper}>
           <h4 className={s.conclusion}>
             {t('conclusion.beforeOne')}
