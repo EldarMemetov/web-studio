@@ -36,7 +36,7 @@ export default async function Home({ params: rawParams }) {
         <IdeasHome locale={locale} />
         <BrandTransformation locale={locale} />
         <TextAnimation locale={locale} />
-        {/* <Portfolio locale={locale} /> */}
+        <Portfolio locale={locale} />
         <ReviewsSection initialReviews={reviews}>
           <ReviewsList />
         </ReviewsSection>
