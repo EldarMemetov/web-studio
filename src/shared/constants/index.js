@@ -26,7 +26,6 @@ export const NAMESPACES = [
   'pixelPerfectBlock',
   'getBusinessSolutions',
   'toggleQuestions',
-  'IdeasToReality',
   'notFound',
   'errorGlobal',
   'reviewsList',
