@@ -1,13 +1,18 @@
 import dynamic from 'next/dynamic';
-import EffectiveSolutions from '@/modules/EffectiveSolutions/EffectiveSolutions';
 import s from './webDevelopment.module.scss';
 import FeedbackForm from '@/modules/FeedbackForm/FeedbackForm';
-import StepsToLaunch from '@/modules/StepsToLaunch/StepsToLaunch';
 import ToggleQuestions from '@/modules/ToggleQuestions/ToggleQuestions';
 import WebHero from '@/modules/WebHero/WebHero';
 import WebWhyChoose from '@/modules/WebWhyChoose/WebWhyChoose';
 import WebPortfolio from '@/modules/WebPortfolio/WebPortfolio';
 import OrDevelopment from '@/modules/OrDevelopment/OrDevelopment';
+
+const StepsToLaunch = dynamic(
+  () => import('@/modules/StepsToLaunch/StepsToLaunch')
+);
+const EffectiveSolutions = dynamic(
+  () => import('@/modules/EffectiveSolutions/EffectiveSolutions')
+);
 
 export default async function WebDevelopment({ params: rawParams }) {
   const params = await rawParams;
