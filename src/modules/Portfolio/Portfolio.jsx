@@ -42,7 +42,11 @@ export default async function Portfolio({ locale }) {
                 muted
                 playsInline
               />
-              <LinkButton path={`/${ROUTES.VIDEOGRAPHY}`} className={s.button}>
+              <LinkButton
+                path={`/${ROUTES.VIDEOGRAPHY}`}
+                className={s.button}
+                aria-label={t('button')}
+              >
                 {t('button')}
                 <Icon iconName="icon-arrow" className={s.icon} />
               </LinkButton>
@@ -109,6 +113,7 @@ export default async function Portfolio({ locale }) {
                 <LinkButton
                   path={`/${ROUTES.DEVELOPMENT}`}
                   className={s.buttonWeb}
+                  aria-label={t('button')}
                 >
                   {t('button')}
                   <Icon iconName="icon-arrow" className={s.icon} />
@@ -118,6 +123,7 @@ export default async function Portfolio({ locale }) {
             <LinkButton
               path={`/${ROUTES.DEVELOPMENT}`}
               className={s.buttonDesktop}
+              aria-label={t('button')}
             >
               {t('button')}
               <Icon iconName="icon-arrow" className={s.icon} />

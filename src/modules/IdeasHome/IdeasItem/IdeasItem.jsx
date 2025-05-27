@@ -50,7 +50,7 @@ export default function IdeasItem({ title, description, icon, list, cta }) {
 
       <div className={styles.ContainerClick}>
         <p className={styles.cta}>{cta}</p>
-        <ButtonArrow href={href} />
+        <ButtonArrow href={href} ariaLabel={`Перейти у розділ ${title}`} />
       </div>
     </li>
   );

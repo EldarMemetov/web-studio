@@ -61,11 +61,12 @@ export function generateStaticParams() {
 export default async function Layout({ children, params }) {
   const awaitedParams = await Promise.resolve(params);
   const { locale } = awaitedParams;
-
+  const langMap = { ua: 'uk', en: 'en', de: 'de' };
+  const htmlLang = langMap[locale] || 'en';
   const { resources } = await initTranslations(locale, NAMESPACES);
 
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang={htmlLang} dir={dir(locale)}>
       <body suppressHydrationWarning={true}>
         <SvgSpriteLoader />
         <TranslationsProvider

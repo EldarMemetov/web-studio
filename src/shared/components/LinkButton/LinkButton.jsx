@@ -3,7 +3,14 @@ import { clsx } from 'clsx';
 import { LINKDATA } from '@/shared/constants';
 import s from './LinkButton.module.scss';
 
-const LinkButton = ({ path, linkText, children, type, className }) => {
+const LinkButton = ({
+  path,
+  linkText,
+  children,
+  type,
+  className,
+  ...props
+}) => {
   let linkStyle = '';
   let icon = null;
 
@@ -14,7 +21,7 @@ const LinkButton = ({ path, linkText, children, type, className }) => {
     case LINKDATA.TYPE_DARK_HEART:
       linkStyle = s.backGroundHeart;
       icon = (
-        <svg className={s.icon}>
+        <svg className={s.icon} aria-hidden="true" focusable="false">
           <use href="/icons/sprite.svg#icon-heart"></use>
         </svg>
       );
@@ -28,7 +35,11 @@ const LinkButton = ({ path, linkText, children, type, className }) => {
   }
 
   return (
-    <Link href={path} className={clsx(s.defaultLink, linkStyle, className)}>
+    <Link
+      href={path}
+      className={clsx(s.defaultLink, linkStyle, className)}
+      {...props}
+    >
       {icon && <span className={s.iconWrapper}>{icon}</span>}
       {children || linkText}
     </Link>

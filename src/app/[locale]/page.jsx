@@ -31,6 +31,7 @@ export default async function Home({ params: rawParams }) {
       <div className={s.container}>
         <TitleHome locale={locale} />
         <FetchServices />
+
         <PixelPerfectBlock locale={locale} />
         <GetBusinessSolutions locale={locale} />
         <IdeasHome locale={locale} />
