@@ -1,0 +1,40 @@
+.section {
+  padding-bottom: 100px;
+  padding-top: 80px;
+  @include media(tablet) {
+    padding-top: 120px;
+  }
+}
+.title {
+  font-weight: 700;
+  @include font(32, 42);
+  text-transform: uppercase;
+  @include media(tablet) {
+    @include font(42, 55);
+    width: 500px;
+  }
+  @include media(desktop) {
+    width: 600px;
+    @include font(42, 55);
+  }
+}
+
+.description {
+  font-weight: 500;
+  @include font(20, 27);
+  color: white;
+  text-align: left;
+
+  @include media(tablet) {
+    width: 600px;
+    @include font(24, 33);
+  }
+}
+.containerButton {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  @include media(tablet) {
+    flex-direction: row;
+  }
+}

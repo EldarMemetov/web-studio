@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import s from './SectionBlog.module.scss';
 import Button from '@/shared/components/button/Button';
-export default function SectionBlog({ posts = [], locale }) {
+export default function SectionBlog({ posts = [], locale, readText }) {
   if (!posts.length) return <p>Нет постов</p>;
 
   return (
@@ -31,7 +31,7 @@ export default function SectionBlog({ posts = [], locale }) {
               </p>
 
               <Link href={`/${locale}/blog/${post.customId.current}`} passHref>
-                <Button variant="variant12">Читати</Button>
+                <Button variant="variant12">{readText}</Button>
               </Link>
             </article>
           </div>

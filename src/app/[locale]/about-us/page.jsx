@@ -1,5 +1,7 @@
 // import { GetReviews } from '@/services/api';
 
+import HeroAbout from '@/modules/HeroAbout/HeroAbout';
+
 export default async function AboutUs({ params: rawParams }) {
   const params = await rawParams;
   const availableLocales = ['en', 'ua', 'de'];
@@ -10,7 +12,7 @@ export default async function AboutUs({ params: rawParams }) {
   return (
     <main>
       <div>
-        <h1>Welcome to About Us Page</h1>
+        <HeroAbout locale={locale} />
       </div>
     </main>
   );

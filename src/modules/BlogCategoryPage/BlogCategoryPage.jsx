@@ -70,7 +70,7 @@ export default function BlogCategoryPage({
             </div>
           </div>
 
-          <SectionBlog posts={posts} locale={locale} />
+          <SectionBlog posts={posts} locale={locale} readText={t('read')} />
         </div>
       </Container>
     </section>
