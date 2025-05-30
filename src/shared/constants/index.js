@@ -51,6 +51,8 @@ export const NAMESPACES = [
   'videoPortfolio',
   'BlogCategoryPage',
   'heroBlog',
+  'aboutBrandTransformation',
+  'aboutWhyChoose',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

@@ -10,6 +10,23 @@ export default async function WebWhyChoose({
   const { t } = await initServerI18n(locale, [namespace]);
   const features = t('features', { returnObjects: true }) || [];
 
+  const descriptionBefore = t('descriptionBefore');
+  const spanDescriptionOne = t('spanDescriptionOne');
+  const descriptionMiddle = t('descriptionMiddle');
+  const spanDescriptionTwo = t('spanDescriptionTwo');
+  const descriptionAfter = t('descriptionAfter');
+
+  const isRealTranslation = (value, key) =>
+    value && value.trim() && value !== key;
+
+  const hasDescription = [
+    ['descriptionBefore', descriptionBefore],
+    ['spanDescriptionOne', spanDescriptionOne],
+    ['descriptionMiddle', descriptionMiddle],
+    ['spanDescriptionTwo', spanDescriptionTwo],
+    ['descriptionAfter', descriptionAfter],
+  ].some(([key, value]) => isRealTranslation(value, key));
+
   return (
     <section className={s.section}>
       <div className={s.background}></div>
@@ -19,13 +36,16 @@ export default async function WebWhyChoose({
             <h2 className={s.title}>
               {t('title')} <span className={s.titleSpan}>{t('spanTitle')}</span>
             </h2>
-            <p className={s.description}>
-              {t('descriptionBefore')}
-              <span className={s.spanWeight}>{t('spanDescriptionOne')}</span>
-              {t('descriptionMiddle')}
-              <span className={s.spanWeight}>{t('spanDescriptionTwo')}</span>
-              <span className={s.spanDescription}>{t('descriptionAfter')}</span>
-            </p>
+
+            {hasDescription && (
+              <p className={s.description}>
+                {descriptionBefore}
+                <span className={s.spanWeight}>{spanDescriptionOne}</span>
+                {descriptionMiddle}
+                <span className={s.spanWeight}>{spanDescriptionTwo}</span>
+                <span className={s.spanDescription}>{descriptionAfter}</span>
+              </p>
+            )}
           </div>
           <ListWebWhyChoose items={features} />
         </div>
