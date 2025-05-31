@@ -53,6 +53,8 @@ export const NAMESPACES = [
   'heroBlog',
   'aboutBrandTransformation',
   'aboutWhyChoose',
+  'heroAbout',
+  'aboutFactsSection',
 ];
 
 export const FLIPPED_TIME_MS = 15000;
