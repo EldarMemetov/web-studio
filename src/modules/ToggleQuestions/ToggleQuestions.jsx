@@ -10,7 +10,7 @@ export default async function ToggleQuestions({
   const { t } = await initServerI18n(locale, [namespace]);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="faq">
       <Container>
         <div className={styles.background}></div>
         <div className={styles.contentSize}>

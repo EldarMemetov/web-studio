@@ -23,7 +23,7 @@ export default async function HeroAbout({ locale }) {
                 {t('talkButton')}
               </ScrollButton>
 
-              <ScrollButton targetId="ideas-home" variant="variant3">
+              <ScrollButton targetId="faq" variant="variant3">
                 {t('servicesButton')}
               </ScrollButton>
             </div>
