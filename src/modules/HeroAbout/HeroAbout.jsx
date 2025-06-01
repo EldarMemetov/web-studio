@@ -3,6 +3,7 @@ import ScrollButton from '@/shared/ScrollButton/ScrollButton';
 import s from './HeroAbout.module.scss';
 import Image from 'next/image';
 import { initServerI18n } from '@/i18n/utils/serverI18n';
+import Link from 'next/link';
 
 export default async function HeroAbout({ locale }) {
   const { t } = await initServerI18n(locale, ['heroAbout']);

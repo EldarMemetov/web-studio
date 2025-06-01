@@ -7,7 +7,7 @@ export default async function EffectiveSolutions({ locale }) {
   const solutions = t('solutions', { returnObjects: true }) || [];
 
   return (
-    <section className={s.section}>
+    <section className={s.section} id="effective-web">
       <Container>
         <div className={s.containerContent}>
           <h2 className={s.title}>
