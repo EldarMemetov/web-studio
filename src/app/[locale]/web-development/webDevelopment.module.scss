@@ -1,3 +1,41 @@
 .container {
-  background: #000116;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4) 0%,
+      #000000 12%,
+      #000 100%
+    ),
+    linear-gradient(to right, #3200c4d9 0%, #5a17e0ab 40%, #0344f9f7 100%);
+  margin-top: -80px;
+  padding-top: 80px;
+  @include media(tablet) {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4) 0%,
+        #000000 12%,
+        #000 100%
+      ),
+      linear-gradient(
+        to right,
+        rgb(50 0 196 / 74%) 0%,
+        rgb(90 23 224 / 32%) 40%,
+        rgb(3 68 249 / 74%) 100%
+      );
+  }
+  @include media(desktop) {
+    background: linear-gradient(
+        to bottom,
+        rgb(0 0 0 / 36%) 0%,
+        rgb(0 0 0) 20%,
+        rgb(0 0 0) 100%
+      ),
+      linear-gradient(
+        to right,
+        #00008b 0%,
+        #00004d 30%,
+        #2c0bd4 50%,
+        #8a2be2 80%,
+        #8a2be2 100%
+      );
+  }
 }

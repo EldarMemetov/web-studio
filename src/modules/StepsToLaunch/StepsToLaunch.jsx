@@ -8,6 +8,7 @@ export default async function StepsToLaunch({ locale }) {
 
   return (
     <section className={styles.section}>
+      <div className={styles.background}></div>
       <Container>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>

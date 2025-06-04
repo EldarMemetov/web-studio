@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
@@ -28,6 +28,14 @@ function useIsMobile(breakpoint = 1154) {
   return isMobile;
 }
 
+const links = [
+  { href: '', key: 'home' },
+  { href: '/about-us', key: 'aboutUs' },
+  { href: '/web-development', key: 'webDevelopment' },
+  { href: '/videography', key: 'videography' },
+  { href: '/blog', key: 'blog' },
+];
+
 export default function NavMenu({
   variant = 'header',
   isMobileMenuOpen = false,
@@ -39,23 +47,28 @@ export default function NavMenu({
   const pathname = usePathname();
   const isMobile = useIsMobile(1154);
 
-  const links = useMemo(
-    () => [
-      { href: '', key: 'home' },
-      { href: '/about-us', key: 'aboutUs' },
-      { href: '/web-development', key: 'webDevelopment' },
-      { href: '/videography', key: 'videography' },
-      { href: '/blog', key: 'blog' },
-    ],
-    []
-  );
+  const isActive = (href) => pathname.startsWith(`/${locale}${href}`);
 
-  const activeClass = useMemo(() => {
-    return links.reduce((acc, { href, key }) => {
-      acc[key] = pathname === `/${locale}${href}`;
-      return acc;
-    }, {});
-  }, [pathname, locale, links]);
+  const renderLinks = (styleVariant) => (
+    <ul className={clsx(styles.navList, styles[styleVariant])}>
+      {links.map(({ href, key }) => (
+        <li
+          key={key}
+          className={clsx(styles.navItem, styles[styleVariant], {
+            [styles.active]: isActive(href),
+          })}
+        >
+          <Link
+            href={`/${locale}${href}`}
+            className={clsx(styles.navLink, styles[styleVariant])}
+            onClick={onCloseMenu}
+          >
+            {t(key)}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
 
   if (variant === 'header') {
     if (isMobile) {
@@ -82,66 +95,13 @@ export default function NavMenu({
               </div>
             </div>
           )}
-          <ul className={clsx(styles.navList, styles.header)}>
-            {links.map(({ href, key }) => (
-              <li
-                key={key}
-                className={clsx(styles.navItem, styles.header, {
-                  [styles.active]: activeClass[key],
-                })}
-              >
-                <Link
-                  href={`/${locale}${href}`}
-                  className={clsx(styles.navLink, styles.header)}
-                  onClick={onCloseMenu}
-                >
-                  {t(key)}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {renderLinks('header')}
         </div>
       );
     }
 
-    return (
-      <ul className={clsx(styles.navList, styles.header)}>
-        {links.map(({ href, key }) => (
-          <li
-            key={key}
-            className={clsx(styles.navItem, styles.header, {
-              [styles.active]: activeClass[key],
-            })}
-          >
-            <Link
-              href={`/${locale}${href}`}
-              className={clsx(styles.navLink, styles.header)}
-            >
-              {t(key)}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    );
+    return renderLinks('header');
   }
 
-  return (
-    <ul className={clsx(styles.navList, styles.footer)}>
-      {links.map(({ href, key }) => (
-        <li
-          key={key}
-          className={clsx(styles.navItem, styles.footer, {
-            [styles.active]: activeClass[key],
-          })}
-        >
-          <Link
-            href={`/${locale}${href}`}
-            className={clsx(styles.navLink, styles.footer)}
-          >
-            {t(key)}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
+  return renderLinks('footer');
 }
