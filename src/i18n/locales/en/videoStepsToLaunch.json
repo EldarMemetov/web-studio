@@ -1,0 +1,42 @@
+{
+  "title": {
+    "prefix": "From ",
+    "highlighted": "idea ",
+    "between": "to ",
+    "highlightedNext": "launch"
+  },
+  "subtitle": "At Qvrix, we believe",
+  "subtitleAnd": " that the success of every project depends on careful planning and attention to detail at every stage. Our approach to video production combines creativity, technology, and teamwork to achieve the best results.",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Consultation and Needs Analysis",
+      "description": "We start by understanding your idea and goals. Through in-depth analysis of your brand, target audience, and business strategy, we determine what type of video will best meet your objectives.",
+      "component": "StepsOne"
+    },
+    {
+      "number": 2,
+      "title": "Concept Development",
+      "description": "Our creative experts develop a video concept aligned with your strategy. We propose innovative ideas that reflect your brand essence and engage your audience.",
+      "component": "StepsTwo"
+    },
+    {
+      "number": 3,
+      "title": "Video Shooting",
+      "description": "Our professionals provide high-quality filming using modern equipment and techniques. We collaborate with specialists at every stage: from directing to location scouting.",
+      "component": "StepsThree"
+    },
+    {
+      "number": 4,
+      "title": "Post-production",
+      "description": "After filming, our team handles editing, color correction, sound design, and graphics creation. Every frame is fine-tuned to achieve perfect quality.",
+      "component": "StepFour"
+    },
+    {
+      "number": 5,
+      "title": "Delivery and Results Analysis",
+      "description": "Once the project is complete, we verify that the video meets your requirements and analyze its effectiveness. The video becomes a powerful tool for achieving your business goals.",
+      "component": null
+    }
+  ]
+}

@@ -56,6 +56,7 @@ export const NAMESPACES = [
   'heroAbout',
   'aboutFactsSection',
   'videoEffectiveSolutions',
+  'videoStepsToLaunch',
 ];
 
 export const FLIPPED_TIME_MS = 15000;

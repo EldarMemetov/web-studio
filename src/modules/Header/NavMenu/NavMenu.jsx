@@ -59,7 +59,19 @@ export default function NavMenu({
     }
   }, [i18n.language, locale, onCloseMenu]);
 
-  const isActive = (href) => pathname.startsWith(`/${i18n.language}${href}`);
+  const isActive = (href) => {
+    const localizedHref = `/${i18n.language}${href}`;
+
+    if (href === '') {
+      return (
+        pathname === `/${i18n.language}` || pathname === `/${i18n.language}/`
+      );
+    }
+
+    return (
+      pathname === localizedHref || pathname.startsWith(`${localizedHref}/`)
+    );
+  };
 
   const renderLinks = (styleVariant) => (
     <ul className={clsx(styles.navList, styles[styleVariant])}>

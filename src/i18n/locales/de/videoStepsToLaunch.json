@@ -1,0 +1,42 @@
+{
+  "title": {
+    "prefix": "Von ",
+    "highlighted": "der Idee ",
+    "between": "bis zum ",
+    "highlightedNext": "Launch"
+  },
+  "subtitle": "Bei Qvrix glauben wir",
+  "subtitleAnd": ", dass der Erfolg jedes Projekts von sorgfältiger Planung und Aufmerksamkeit für Details in jeder Phase abhängt. Unser Ansatz für Videoproduktion vereint Kreativität, Technologie und Teamarbeit, um die besten Ergebnisse zu erzielen.",
+  "steps": [
+    {
+      "number": 1,
+      "title": "Beratung und Bedarfsanalyse",
+      "description": "Wir beginnen damit, Ihre Idee und Ihre Ziele zu verstehen. Durch eine tiefgehende Analyse Ihrer Marke, Zielgruppe und Geschäftsstrategie bestimmen wir, welches Video Ihre Ziele am besten unterstützt.",
+      "component": "StepsOne"
+    },
+    {
+      "number": 2,
+      "title": "Konzeptentwicklung",
+      "description": "Unsere Kreativexperten erarbeiten ein Videokonzept, das zu Ihrer Strategie passt. Wir schlagen innovative Ideen vor, die das Wesen Ihrer Marke widerspiegeln und Ihr Publikum ansprechen.",
+      "component": "StepsTwo"
+    },
+    {
+      "number": 3,
+      "title": "Videodreh",
+      "description": "Unsere Profis sorgen für hochwertige Aufnahmen mit modernster Ausrüstung und Technik. Wir arbeiten mit Fachleuten in allen Phasen – von der Regie bis zur Locationsuche.",
+      "component": "StepsThree"
+    },
+    {
+      "number": 4,
+      "title": "Postproduktion",
+      "description": "Nach dem Dreh übernimmt unser Team den Schnitt, die Farbkorrektur, das Sounddesign und die Erstellung von Grafiken. Jeder Frame wird optimiert, um perfekte Qualität zu erreichen.",
+      "component": "StepFour"
+    },
+    {
+      "number": 5,
+      "title": "Übergabe und Ergebnisauswertung",
+      "description": "Nach Abschluss des Projekts prüfen wir, ob das Video Ihren Anforderungen entspricht, und analysieren seine Effektivität. Das Video wird zu einem starken Werkzeug für Ihre Geschäftsziele.",
+      "component": null
+    }
+  ]
+}
