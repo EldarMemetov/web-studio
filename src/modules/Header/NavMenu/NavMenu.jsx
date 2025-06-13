@@ -43,11 +43,23 @@ export default function NavMenu({
   onToggleMenu = () => {},
 }) {
   const { t, i18n } = useTranslation('header');
-  const locale = i18n.language;
+  const [locale, setLocale] = useState(i18n.language);
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
   const isMobile = useIsMobile(1154);
 
-  const isActive = (href) => pathname.startsWith(`/${locale}${href}`);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (locale !== i18n.language) {
+      onCloseMenu();
+      setLocale(i18n.language);
+    }
+  }, [i18n.language, locale, onCloseMenu]);
+
+  const isActive = (href) => pathname.startsWith(`/${i18n.language}${href}`);
 
   const renderLinks = (styleVariant) => (
     <ul className={clsx(styles.navList, styles[styleVariant])}>
@@ -59,7 +71,7 @@ export default function NavMenu({
           })}
         >
           <Link
-            href={`/${locale}${href}`}
+            href={`/${i18n.language}${href}`}
             className={clsx(styles.navLink, styles[styleVariant])}
             onClick={onCloseMenu}
           >
@@ -69,6 +81,8 @@ export default function NavMenu({
       ))}
     </ul>
   );
+
+  if (!isClient) return null;
 
   if (variant === 'header') {
     if (isMobile) {
