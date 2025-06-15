@@ -88,7 +88,7 @@ export default function VideoPortfolio() {
         <div className={s.modalOverlay} onClick={() => setModalVideo(null)}>
           <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
             <iframe
-              src={modalVideo}
+              src={modalVideo.replace('watch?v=', 'embed/')}
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen

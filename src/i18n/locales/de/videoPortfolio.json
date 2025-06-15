@@ -1,32 +1,32 @@
 {
-  "title": "Unsere umgesetzten ",
+  "title": "Unsere realisierten ",
   "titleSpan": "Projekte",
   "descriptionOne": "Eine Produktion, die ",
-  "descriptionTwo": "Stil, Geschichte und Ziel vereint ",
-  "descriptionThree": "— damit jeder Frame für Sie arbeitet.",
+  "descriptionTwo": "Stil, Geschichte und Ziel ",
+  "descriptionThree": "verbindet – damit jedes Bild für Sie arbeitet.",
   "videos": [
     {
-      "thumbnail": "/image/codding.jpg",
-      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+      "thumbnail": "/image/video/garna.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=w3GmYmwzcdA"
     },
     {
-      "thumbnail": "/image/codding.jpg",
-      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+      "thumbnail": "/image/video/ochi.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=uXk9m-w-h9I"
     },
     {
-      "thumbnail": "/image/codding.jpg",
-      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+      "thumbnail": "/image/video/memorial.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=XIXdImbjc9c"
     },
     {
-      "thumbnail": "/image/codding.jpg",
-      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+      "thumbnail": "/image/video/branch.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=jXkjGSeoZ5s"
     },
     {
-      "thumbnail": "/image/codding.jpg",
-      "videoUrl": "https://player.vimeo.com/video/1083567829?h=b97c7e28d6"
+      "thumbnail": "/image/video/anna.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=shjqBHc9aPM"
     }
   ],
   "cta": {
-    "text": "Mehr sehen? Kontaktieren Sie uns!"
+    "text": "Interessieren Sie sich für weitere Projekte? Schreiben Sie uns"
   }
 }
