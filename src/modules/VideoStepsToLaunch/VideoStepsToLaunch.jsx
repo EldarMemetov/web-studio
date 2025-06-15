@@ -4,7 +4,7 @@ import StepsList from './VideoStepsList/VideoStepsList';
 import styles from './VideoStepsToLaunch.module.scss';
 
 export default async function VideoStepsToLaunch({ locale }) {
-  const { t } = await initServerI18n(locale, ['stepsToLaunch']);
+  const { t } = await initServerI18n(locale, ['videoStepsToLaunch']);
 
   return (
     <section className={styles.section}>

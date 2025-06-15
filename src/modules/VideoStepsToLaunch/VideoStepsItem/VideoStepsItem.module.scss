@@ -131,3 +131,52 @@
     }
   }
 }
+
+.consultation {
+  width: 287px;
+  height: 247px;
+  @include media(tablet) {
+    width: 287px;
+    height: 247px;
+  }
+  @include media(desktop) {
+    width: 477px;
+    height: 409px;
+  }
+}
+.development {
+  width: 313px;
+  height: 202px;
+  @include media(tablet) {
+    width: 313px;
+    height: 202px;
+  }
+  @include media(desktop) {
+    width: 560px;
+    height: 351px;
+  }
+}
+.videographer {
+  width: 331px;
+  height: 182px;
+  @include media(tablet) {
+    width: 325px;
+    height: 178px;
+  }
+  @include media(desktop) {
+    width: 570px;
+    height: 338px;
+  }
+}
+.production {
+  width: 325px;
+  height: 175px;
+  @include media(tablet) {
+    width: 325px;
+    height: 175px;
+  }
+  @include media(desktop) {
+    width: 553px;
+    height: 321px;
+  }
+}

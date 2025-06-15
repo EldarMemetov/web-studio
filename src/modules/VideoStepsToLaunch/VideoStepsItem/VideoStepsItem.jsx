@@ -1,15 +1,45 @@
 import AnimationInitializer from '@/shared/AnimationInitializer/AnimationInitializer';
-import StepsOne from '@/shared/components/StepsAnimations/StepsOne/StepsOne';
-import StepsTwo from '@/shared/components/StepsAnimations/StepsTwo/StepsTwo';
-import StepsThree from '@/shared/components/StepsAnimations/StepsThree/StepsThree';
-import StepFour from '@/shared/components/StepsAnimations/StepsFour/StepsFour';
+
 import s from './VideoStepsItem.module.scss';
+import Image from 'next/image';
 
 const components = {
-  StepsOne,
-  StepsTwo,
-  StepsThree,
-  StepFour,
+  StepsOne: () => (
+    <Image
+      src="/image/video/consultation.png"
+      alt="consultation"
+      width={477}
+      height={409}
+      className={s.consultation}
+    />
+  ),
+  StepsTwo: () => (
+    <Image
+      src="/image/video/development.png"
+      alt="development"
+      width={560}
+      height={351}
+      className={s.development}
+    />
+  ),
+  StepsThree: () => (
+    <Image
+      src="/image/video/videographer.png"
+      alt="videographer"
+      width={615}
+      height={338}
+      className={s.videographer}
+    />
+  ),
+  StepFour: () => (
+    <Image
+      src="/image/video/production.png"
+      alt="production"
+      width={593}
+      height={321}
+      className={s.production}
+    />
+  ),
 };
 
 export default function VideoStepsItem({
