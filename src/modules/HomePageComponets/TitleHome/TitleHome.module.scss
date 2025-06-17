@@ -9,12 +9,17 @@
   font-weight: 700;
   @include font(32, 42);
   text-transform: uppercase;
+  width: 100%;
+  max-width: 600px;
+  min-height: 70px;
   @include media(tablet) {
     @include font(42, 55);
     width: 500px;
+    min-height: 90px;
   }
   @include media(desktop) {
-    width: 600px;
+    max-width: 600px;
+    min-height: 90px;
     @include font(42, 55);
   }
 }
@@ -24,9 +29,12 @@
   @include font(20, 27);
   color: white;
   text-align: left;
-
+  width: 100%;
+  max-width: 600px;
+  min-height: 60px;
   @include media(tablet) {
     width: 600px;
+    min-height: 70px;
     @include font(24, 33);
   }
 }
