@@ -75,9 +75,11 @@
         ]
       },
       {
-        "title": "6. Maßnahmen mit den erhaltenen personenbezogenen Daten",
+        "title": "6. Umgang mit erhaltenen personenbezogenen Daten",
         "points": [
-          "Der Betreiber führt die Erhebung, Aufzeichnung, Systematisierung, Speicherung, Aktualisierung, Nutzung, Übermittlung, Anonymisierung, Sperrung, Löschung und Vernichtung personenbezogener Daten gemäß den gesetzlichen Bestimmungen durch."
+          "Der Betreiber sammelt, erfasst, systematisiert, speichert, aktualisiert, verwendet, übermittelt, anonymisiert, sperrt, löscht und vernichtet personenbezogene Daten gemäß den gesetzlichen Bestimmungen.",
+          "6.1 Daten, die über das Kontaktformular gesammelt werden, werden ausschließlich zur Beantwortung der Anfrage des Nutzers verwendet und nicht an Dritte weitergegeben.",
+          "6.2 Nutzerbewertungen dürfen nur nach ausdrücklicher Zustimmung des Nutzers veröffentlicht werden, die beim Ausfüllen des entsprechenden Formulars eingeholt wird."
         ]
       },
       {
@@ -86,6 +88,14 @@
           "7.1 Zum Schutz personenbezogener Daten der Nutzer werden moderne technische und organisatorische Mittel eingesetzt, insbesondere die Dienste von Cloudflare mit entsprechenden Zertifikaten.",
           "7.2 Der Betreiber und Personen, die Zugang zu personenbezogenen Daten erhalten haben, sind verpflichtet, diese Daten ohne Zustimmung des Nutzers nicht offenzulegen oder zu verbreiten, außer in gesetzlich vorgesehenen Fällen.",
           "7.3 Der Nutzer kann sich für Erläuterungen zur Verarbeitung seiner personenbezogenen Daten an die E-Mail-Adresse: qvrix.studio@gmail.com wenden."
+        ]
+      },
+      {
+        "title": "8. Verwendung von Cookies",
+        "points": [
+          "8.1 Die Website verwendet nur notwendige Cookies, die ihre Funktionalität, Sicherheit und Leistung gewährleisten.",
+          "8.2 Wir verwenden keine Cookies, um das Nutzerverhalten zu Werbe- oder Marketingzwecken zu verfolgen.",
+          "8.3 Nutzer können das Speichern von Cookies in ihrem Browser einschränken oder deaktivieren, jedoch kann dies die Funktionalität bestimmter Website-Funktionen beeinträchtigen."
         ]
       }
     ]

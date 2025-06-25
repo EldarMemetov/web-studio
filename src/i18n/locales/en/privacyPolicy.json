@@ -77,15 +77,26 @@
       {
         "title": "6. Actions with Received Personal Data",
         "points": [
-          "The Operator carries out the collection, recording, systematization, storage, clarification, use, transfer, anonymization, blocking, deletion, and destruction of personal data in accordance with the law."
+          "The operator collects, records, systematizes, stores, updates, uses, transfers, anonymizes, blocks, deletes, and destroys personal data in accordance with the law.",
+          "6.1 Data collected through the feedback form is used exclusively to respond to the User’s request and is not shared with third parties.",
+          "6.2 User reviews may be published on the Website only after obtaining explicit consent from the user, which is given when filling out the respective form."
         ]
       },
+
       {
         "title": "7. Confidentiality of Personal Data",
         "points": [
           "7.1 Modern technical and organizational means are used to protect Users' personal data, including Cloudflare services with appropriate certifications.",
           "7.2 The Operator and persons who have access to personal data are obliged not to disclose or distribute this data without the User's consent, except as provided by law.",
           "7.3 The User may contact for explanations regarding the processing of their personal data by writing to the email address: qvrix.studio@gmail.com."
+        ]
+      },
+      {
+        "title": "8. Use of Cookies",
+        "points": [
+          "8.1 The website uses only necessary cookies that ensure its functionality, security, and performance.",
+          "8.2 We do not use cookies to track user behavior for advertising or marketing purposes.",
+          "8.3 Users can restrict or disable cookie storage in their browser, but this may affect the functionality of certain website features."
         ]
       }
     ]
