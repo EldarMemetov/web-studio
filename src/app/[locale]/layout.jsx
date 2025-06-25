@@ -8,6 +8,7 @@ import { NAMESPACES } from '@/shared/constants';
 import i18nConfig from '../../../i18nConfig';
 import { dir } from 'i18next';
 import SvgSpriteLoader from '@/shared/constants/SvgSpriteLoader/SvgSpriteLoader';
+import CookieNotice from '@/modules/CookieNotice/CookieNotice';
 const Footer = dynamic(() => import('@/modules/Footer/Footer'), {});
 
 const metadataDict = {
@@ -78,6 +79,7 @@ export default async function Layout({ children, params }) {
             <Header />
 
             <main>{children}</main>
+            <CookieNotice />
             <Footer />
           </ErrorBoundaryWithTranslation>
         </TranslationsProvider>
